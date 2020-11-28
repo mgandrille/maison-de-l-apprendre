@@ -28,8 +28,6 @@
 !/wp-content/themes/mda
 
 /wp-content/themes/mda/composer.json
-/wp-content/themes/mda/package-lock.json
-/wp-content/themes/mda/composer.lock
 /wp-content/themes/mda/package.json
 /wp-content/themes/mda/.eslintrc
 /wp-content/themes/mda/.stylelintrc.json
