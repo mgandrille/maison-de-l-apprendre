@@ -182,3 +182,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Custom Functions
  */
 require get_template_directory() . '/inc/custom-functions.php';
+
+/**
+ * Special file for getting all blocks info
+ */
+require get_template_directory() . '/inc/blocks-informations.php';
