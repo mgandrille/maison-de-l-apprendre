@@ -1,0 +1,246 @@
+/* ==== ======================== */
+/* ==== Default positions
+/* ==== ======================== */
+.absolute,
+.content-absolute > * {
+	position: absolute;
+	z-index: 200;
+}
+
+.relative {
+	position: relative;
+	z-index: 0;
+}
+
+.sticky {
+	position: absolute;
+	z-index: 300;
+}
+
+.fixed {
+	position: fixed;
+	z-index: 300;
+}
+
+.static {
+	position: static;
+	z-index: 0;
+}
+
+/* ==== ======================== */
+/* ==== Placement
+/* ==== ======================== */
+.xy-center {
+	top: 50;
+	left: 50;
+}
+
+.xy-center-y {
+	top: 50;
+	left: 0;
+}
+
+.xy-center-x {
+	top: 0;
+	left: 50;
+}
+
+.xy-contain {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.xy-tl {
+	top: 0;
+	left: 0;
+}
+
+.xy-tr {
+	top: 0;
+	right: 0;
+}
+
+.xy-bl {
+	bottom: 0;
+	left: 0;
+}
+
+.xy-br {
+	bottom: 0;
+	right: 0;
+}
+
+.xy_.t0 {
+	top: 0;
+}
+
+.xy_.t10 {
+	top: 10%;
+}
+
+.xy_.t15 {
+	top: 15%;
+}
+
+.xy_.t25 {
+	top: 25%;
+}
+
+.xy_.t50 {
+	top: 50%;
+}
+
+.xy_.b-80 {
+	bottom: -80%;
+}
+
+.xy_.b-50 {
+	bottom: -50%;
+}
+
+.xy_.b-20 {
+	bottom: -20%;
+}
+
+.xy_.b-10 {
+	bottom: -10%;
+}
+
+.xy_.b0 {
+	bottom: 0;
+}
+
+.xy_.b10 {
+	bottom: 10%;
+}
+
+.xy_.b15 {
+	bottom: 15%;
+}
+
+.xy_.b25 {
+	bottom: 25%;
+}
+
+.xy_.l-80 {
+	left: -80%;
+}
+
+.xy_.l-50 {
+	left: -50%;
+}
+
+.xy_.l-30 {
+	left: -30%;
+}
+
+.xy_.l-20 {
+	left: -20%;
+}
+
+.xy_.l-10 {
+	left: -10%;
+}
+
+.xy_.l0 {
+	left: 0;
+}
+
+.xy_.l10 {
+	left: 10%;
+}
+
+.xy_.l15 {
+	left: 15%;
+}
+
+.xy_.l20 {
+	left: 20%;
+}
+
+.xy_.l25 {
+	left: 25%;
+}
+
+.xy_.l30 {
+	left: 30%;
+}
+
+.xy_.l40 {
+	left: 40%;
+}
+
+.xy_.l50 {
+	left: 50%;
+}
+
+.xy_.l80 {
+	left: 80%;
+}
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+@media screen and (min-width: 1024px) {
+	/* ==== Default positions ==== */
+	.absolute-md,
+	.content-absolute-md > * {
+		position: absolute;
+		z-index: 200;
+	}
+	.relative-md {
+		position: relative;
+		z-index: 0;
+	}
+	.sticky-md {
+		position: absolute;
+		z-index: 300;
+	}
+	.fixed-md {
+		position: fixed;
+		z-index: 300;
+	}
+	.static-md {
+		position: static;
+		z-index: 0;
+	}
+	/* ==== Placement ==== */
+	.xy-center-md {
+		top: 50;
+		left: 50;
+	}
+	.xy-center-y-md {
+		top: 50;
+		left: 0;
+	}
+	.xy-center-x-md {
+		top: 0;
+		left: 50;
+	}
+	.xy-contain-md {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.xy-tl-md {
+		top: 0;
+		left: 0;
+	}
+	.xy-tr-md {
+		top: 0;
+		right: 0;
+	}
+	.xy-bl-md {
+		bottom: 0;
+		left: 0;
+	}
+	.xy-br-md {
+		bottom: 0;
+		right: 0;
+	}
+}
+
+/*# sourceMappingURL=position.css.map */

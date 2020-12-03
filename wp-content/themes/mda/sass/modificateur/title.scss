@@ -1,0 +1,67 @@
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: $font-head;
+}
+
+h1,
+.h1 {
+    font-size: $h1;
+}
+
+h2,
+.h2 {
+    font-size: $h2;
+}
+
+h3,
+.h3 {
+    font-size: $h3;
+}
+
+h4,
+.h4 {
+    font-size: $h4;
+}
+
+h5,
+.h5 {
+    font-size: $h5;
+}
+
+h6,
+.h6 {
+    font-size: $h6;
+}
+
+.title-landing {
+    font-size: $custom-font-size;
+}
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

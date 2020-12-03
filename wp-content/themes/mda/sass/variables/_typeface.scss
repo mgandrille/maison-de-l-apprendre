@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,300;1,400;1,700&display=swap');
+
+/* === Font family === */
+
+$base-font-size: 18px;
+$font-main:'Open Sans', sans-serif;
+$font-head: 'Economica', sans-serif;
+
+
+/* === Titles === */
+
+$h1: 2rem;
+$h2: calc(#{$h1} * .8);
+$h3: calc(#{$h1} * .58);
+$h4: calc(#{$h1} * .5);
+$h5: calc(#{$h1} * .42);
+$h6: calc(#{$h1} * .33);
+
+$custom-font-size: 5.8rem;

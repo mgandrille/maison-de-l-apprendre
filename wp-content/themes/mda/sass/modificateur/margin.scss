@@ -1,0 +1,126 @@
+.m-y {
+    margin-top: $margin;
+    margin-bottom: $margin;
+
+    &-children > * {
+        margin-top: $margin;
+        margin-bottom: $margin;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin-top: $margin-s;
+        margin-bottom: $margin-s;
+    }
+
+    &-m,
+    &-m-children > * {
+        margin-top: $margin-m;
+        margin-bottom: $margin-m;
+    }
+
+    &-b,
+    &-b-children > * {
+        margin-top: $margin-b;
+        margin-bottom: $margin-b;
+    }
+
+    &-none,
+    &-none-children > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &-auto,
+    &-auto-children > * {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+
+.m-x {
+    margin-left: $margin;
+    margin-right: $margin;
+
+    &-children > * {
+        margin-left: $margin;
+        margin-right: $margin;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin-left: $margin-s;
+        margin-right: $margin-s;
+    }
+
+    &-m,
+    &-m-children > * {
+        margin-left: $margin-m;
+        margin-right: $margin-m;
+    }
+
+    &-b,
+    &-b-children > * {
+        margin-left: $margin-b;
+        margin-right: $margin-b;
+    }
+
+    &-none,
+    &-none-children > * {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &-auto,
+    &-auto-children > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.m-l {
+    &-auto,
+    &-auto-children > * {
+        margin-left: auto;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin-left: $margin-s;
+    }
+}
+
+.m-b {
+    &-auto {
+        margin-bottom: auto;
+    }
+}
+
+.m {
+    margin: $margin;
+
+    &-children > * {
+        margin: $margin;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin: $margin-s;
+    }
+
+    &-m,
+    &-m-children > * {
+        margin: $margin-m;
+    }
+
+    &-none,
+    &-none-children > * {
+        margin: 0;
+    }
+
+    &-auto,
+    &-auto-children > * {
+        margin: auto;
+    }
+}

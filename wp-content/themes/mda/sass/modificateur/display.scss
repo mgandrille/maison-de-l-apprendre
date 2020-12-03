@@ -1,0 +1,161 @@
+.hidden,
+.content-hidden > * {
+    display: none;
+}
+
+.flex,
+.content-flex > * {
+    display: flex;
+}
+
+.block,
+.content-block > * {
+    display: block;
+}
+
+.inline-block,
+.content-inline-block > * {
+    display: inline-block;
+}
+
+.overflow {
+    &-hidden {
+        overflow: hidden;
+    }
+}
+
+
+/* ==== ======================== */
+/* ==== Flex config
+/* ==== ======================== */
+
+.row,
+.content-row > * {
+    flex-direction: row;
+}
+
+.col,
+.content-col > * {
+    flex-direction: column;
+}
+
+.wrap
+.content-wrap > * {
+    flex-wrap: wrap;
+}
+
+.nowrap,
+.content-nowrap > * {
+    flex-wrap: nowrap;
+}
+
+
+/* ==== ======================== */
+/* ==== Flex align
+/* ==== ======================== */
+
+.center,
+.content-center > * {
+    align-items: center;
+    justify-content: center;
+}
+
+.center-x,
+.content-center-x > * {
+    justify-content: center;
+}
+
+.center-y,
+.content-center-y > * {
+    align-items: center;
+}
+
+.end-y,
+.content-end-y > * {
+    align-items: flex-end;
+}
+
+.between,
+.content-between > * {
+    justify-content: space-between;
+}
+
+.around,
+.content-around > * {
+    justify-content: space-around;
+}
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* ==== Flex config ==== */
+
+    .row-md,
+    .content-row-md > * {
+        flex-direction: row;
+    }
+
+    .col-md,
+    .content-col-md > * {
+        flex-direction: column;
+    }
+
+    .wrap-md
+    .content-wrap-md > * {
+        flex-wrap: wrap;
+    }
+
+    .nowrap-md,
+    .content-nowrap-md > * {
+        flex-wrap: nowrap;
+    }
+
+
+    /* ==== Flex align ==== */
+
+    .center-md,
+    .content-center-md > * {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .center-x-md,
+    .content-center-x-md > * {
+        justify-content: center;
+    }
+
+    .center-y-md,
+    .content-center-y-md > * {
+        align-items: center;
+    }
+
+    .between-md,
+    .content-betwee-md > * {
+        justify-content: space-between;
+    }
+
+    .around-md,
+    .content-around-md > * {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

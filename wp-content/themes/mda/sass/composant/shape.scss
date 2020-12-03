@@ -1,0 +1,37 @@
+.angled {
+    border-radius: 0;
+}
+
+.rounded {
+    border-radius: $radius-b;
+}
+
+.rotate90 {
+    transform: rotate(90deg);
+}
+
+.elmt-border-dotted {
+    position: absolute;
+    width: 100%;
+    border-bottom-width: 4px;
+    border-bottom-style: dotted;
+    border-bottom-color: $color-dark;
+
+    &.main {
+        border-bottom-color: $color-main;
+    }
+}
+
+.elmt-circle {
+    &-b {
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+    }
+
+    &-m {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+    }
+}

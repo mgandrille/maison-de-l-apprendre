@@ -1,0 +1,33 @@
+.gallerie img {
+    min-width: 0;
+    min-height: 0;
+    margin: var(--margin-s);
+    flex-grow: 1;
+    flex-shrink: 1;
+    object-fit: cover;
+    object-position: center;  
+}
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

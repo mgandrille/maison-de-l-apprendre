@@ -1,0 +1,43 @@
+.card {
+    border-radius: $radius-s;
+    background-color: $color-white;
+    justify-content: space-between;
+    cursor: pointer;
+
+    & > * {
+        padding: $padding-s;
+    }
+
+    &-bg {
+       background-image: url("https://i.postimg.cc/rs2hG5F3/bg.jpg");
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       color: $color-white;
+    }
+}
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

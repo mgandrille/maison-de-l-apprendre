@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body, 
+main, 
+section,
+article, 
+aside, 
+ul, 
+li, 
+button, 
+nav, 
+div, 
+header, 
+footer, 
+figure, 
+img {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    width: auto;
+    height: auto;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+}

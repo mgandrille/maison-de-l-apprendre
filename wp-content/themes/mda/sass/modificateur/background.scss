@@ -1,0 +1,119 @@
+.bg {
+    &-main {
+        background-color: $color-main;
+
+        &-darker {
+            background-color: $color-main-darker;
+        }
+
+        &-lighter {
+            background-color: $color-main-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-main-shadow;
+        }
+
+        &-pale {
+            background-color: $color-main-pale;
+        }
+    }
+
+    
+    &-secondary {
+        background-color: $color-secondary;
+
+        &-darker {
+            background-color: $color-secondary-darker;
+        }
+
+        &-lighter {
+            background-color: $color-secondary-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-secondary-shadow;
+        }
+
+        &-pale {
+            background-color: $color-secondary-pale;
+        }
+    }
+
+
+    &-action {
+        background-color: $color-action;
+
+        &-darker {
+            background-color: $color-action-darker;
+        }
+
+        &-lighter {
+            background-color: $color-action-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-action-shadow;
+        }
+
+        &-pale {
+            background-color: $color-action-pale;
+        }
+    }
+
+
+    &-warm {
+        background-color: $color-warm;
+
+        &-darker {
+            background-color: $color-warm-darker;
+        }
+
+        &-lighter {
+            background-color: $color-warm-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-warm-shadow;
+        }
+
+        &-pale {
+            background-color: $color-warm-pale;
+        }
+    }
+
+    &-gradient {
+        background: $color-gradient;
+    }
+
+    &-white {
+        background-color: $color-white;
+    }
+
+    &-grey {
+        background-color: $color-grey;
+    }
+
+    &-dark {
+        background-color: $color-dark;
+    }
+}
+
+.bg-img_ {
+    background-image: url('https://i.postimg.cc/Yq89kzgZ/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.bgauto {
+        background-size: auto;
+    }
+
+    &.bgcontain {
+        background-size: contain;
+    }
+
+    &.bgbr {
+        background-position: bottom right;
+    }
+}
