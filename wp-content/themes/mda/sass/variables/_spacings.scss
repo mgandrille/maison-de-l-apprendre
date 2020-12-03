@@ -2,11 +2,13 @@ $spacing: 1rem;
 $spacing-s: .6rem;
 $spacing-m: 1.75rem;
 $spacing-b: 2rem;
+$spacing-xb: 2.85rem;
 
 $spacing-neg: -1rem;
 $spacing-s-neg: -.6rem;
 $spacing-m-neg: -1.75rem;
 $spacing-b-neg: -2rem;
+$spacing-xb-neg: -2.85rem;
 
 
 /* === Margin === */
@@ -15,6 +17,7 @@ $margin: $spacing;
 $margin-s: $spacing-s;
 $margin-m: $spacing-m;
 $margin-b: $spacing-b;
+$margin-xb: $spacing-xb;
 
 
 /* === Padding === */
@@ -23,8 +26,10 @@ $padding: $spacing;
 $padding-s: $spacing-s;
 $padding-m: $spacing-m;
 $padding-b: $spacing-b;
+$padding-xb: $spacing-xb;
 
 $padding-neg: $spacing-neg;
 $padding-s-neg: $spacing-s-neg;
 $padding-m-neg: $spacing-m-neg;
 $padding-b-neg: $spacing-b-neg;
+$padding-xb-neg: $spacing-xb-neg;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying page content in page.php
  *
@@ -17,14 +18,14 @@
 			du 21 au 27 janvier 2021
 			<span class="elmt-border-dotted main xy_ b-50 l-20"></span>
 		</h2>
-	
+
 		<h1 class="title-landing text-letter-spacing color-main">
-			festival de<br> 
+			festival de<br>
 			l'apprendre
 		</h1>
 
-		<h2 class="text-right h4 color-grey w-100"> 
-			en famille, entre collègues, entre amis,<br/> 
+		<h2 class="text-right h4 color-grey w-100">
+			en famille, entre collègues, entre amis,<br />
 			venez fêter le plaisir d'apprendre
 		</h2>
 
@@ -51,16 +52,36 @@
 	<figure class="h-100 bg-img_ bgauto bgbr"></figure>
 </section>
 
-<section class="h-100">
+<section class="row between wrap">
 	<header class="block-title">
-		<h2>
-			Découvrir<br/>
+		<h2 class="relative">
+			Découvrir<br />
 			le festival
+
+			<span class="elmt-border-dotted main xy_ t-10 l-60"></span>
 		</h2>
 
 		<h3>Une journée pour apprendre et découvrir</h3>
 	</header>
+
+	<div class="block-parag">
+		<p>
+			Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
+			est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
+			de développement des compétences tout au long de la vie.
+		</p>
+	</div>
 </section>
-	
 
+<section class="row">
+	<header class="block-title">
+		<h2 class="relative">
+			Ateliers<br />
+			et conférences
 
+			<span class="elmt-border-dotted main xy_ t-10 l-60"></span>
+		</h2>
+
+		<h3>Comprendre le monde de demain</h3>
+	</header>
+</section>

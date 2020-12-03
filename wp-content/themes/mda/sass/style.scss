@@ -66,10 +66,11 @@ main {
 }
 
 
+
 @import './reset.scss';
 @import './composant/composant-loader.scss';
 @import './modificateur/modificateur-loader.scss';
 
 section {
-    padding: $padding-b;
+    padding: $padding-xb;
 }

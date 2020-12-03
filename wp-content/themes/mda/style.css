@@ -235,6 +235,7 @@ button {
 
 .elmt-border-dotted {
 	position: absolute;
+	display: block;
 	width: 100%;
 	border-bottom-width: 4px;
 	border-bottom-style: dotted;
@@ -344,17 +345,25 @@ button {
 	width: 30%;
 }
 
-.block-title :first-child {
+.block-title > :first-child {
 	font-size: 4.5rem;
 	color: #ea0084;
 	margin-bottom: 0;
 }
 
-.block-title :last-child {
+.block-title > :last-child {
 	text-align: right;
 	text-transform: uppercase;
 	color: #545454;
 	margin-left: 20%;
+}
+
+.block-parag {
+	width: 60%;
+}
+
+.block-parag p {
+	text-align: justify;
 }
 
 .btn {
@@ -714,6 +723,10 @@ a:hover {
 	right: 0;
 }
 
+.xy_.t-10 {
+	top: -10%;
+}
+
 .xy_.t0 {
 	top: 0;
 }
@@ -768,6 +781,10 @@ a:hover {
 
 .xy_.l-80 {
 	left: -80%;
+}
+
+.xy_.l-60 {
+	left: -60%;
 }
 
 .xy_.l-50 {
@@ -1369,7 +1386,7 @@ h6,
 }
 
 section {
-	padding: 2rem;
+	padding: 2.85rem;
 }
 
 /*# sourceMappingURL=style.css.map */

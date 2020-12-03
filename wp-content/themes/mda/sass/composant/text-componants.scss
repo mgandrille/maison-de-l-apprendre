@@ -1,16 +1,24 @@
 .block-title {
 	width: 30%;
 
-	& :first-child {
+	& > :first-child {
 		font-size: 4.5rem;
 		color: $color-main;
 		margin-bottom: 0;
 	}
 
-	& :last-child {
+	& > :last-child {
 		text-align: right;
 		text-transform: uppercase;
 		color: $color-grey;
 		margin-left: 20%;
+	}
+}
+
+.block-parag {
+	width: 60%;
+
+	& p {
+		text-align: justify;
 	}
 }
