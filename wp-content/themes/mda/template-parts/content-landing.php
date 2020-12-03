@@ -12,7 +12,7 @@
 <section class="text-upper row between h-100 bg-gradient center-y overflow-hidden">
 
 	<!-- === Titre === -->
-	<div class="w-auto p-l-b m-none-children relative">
+	<div class="w-auto m-none-children relative">
 		<h2 class="h4 color-grey relative">
 			du 21 au 27 janvier 2021
 			<span class="elmt-border-dotted main xy_ b-50 l-20"></span>
@@ -49,6 +49,17 @@
 
 	<!-- === Image de fond === --->
 	<figure class="h-100 bg-img_ bgauto bgbr"></figure>
+</section>
+
+<section class="h-100">
+	<header class="block-title">
+		<h2>
+			Découvrir<br/>
+			le festival
+		</h2>
+
+		<h3>Une journée pour apprendre et découvrir</h3>
+	</header>
 </section>
 	
 

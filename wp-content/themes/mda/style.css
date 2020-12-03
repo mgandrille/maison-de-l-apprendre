@@ -67,12 +67,13 @@ body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1rem;
 	color: #151818;
+	flex-wrap: wrap;
 	background-color: #f5f9f9;
 }
 
 main {
 	max-width: 100%;
-	height: 100vh;
+	height: auto;
 	margin: auto;
 }
 
@@ -264,7 +265,7 @@ button {
 	display: flex;
 	align-items: stretch;
 	cursor: pointer;
-	transition: box-shadow 100ms ease-in, border 130ms ease-in;
+	transition: box-shadow 100ms ease-in, border 130ms ease-in;
 }
 
 .content-link li a {
@@ -339,6 +340,23 @@ button {
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
+.block-title {
+	width: 30%;
+}
+
+.block-title :first-child {
+	font-size: 4.5rem;
+	color: #ea0084;
+	margin-bottom: 0;
+}
+
+.block-title :last-child {
+	text-align: right;
+	text-transform: uppercase;
+	color: #545454;
+	margin-left: 20%;
+}
+
 .btn {
 	padding: 0.6rem;
 	height: 3rem;
@@ -350,7 +368,7 @@ button {
 	cursor: pointer;
 	box-shadow: none;
 	transform: scale(1);
-	transition: box-shadow 100ms ease-in, transform 130ms ease-in;
+	transition: box-shadow 100ms ease-in, transform 130ms ease-in;
 }
 
 .btn-sized {
@@ -1348,6 +1366,10 @@ h6,
 
 .border {
 	border: 1px solid red;
+}
+
+section {
+	padding: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

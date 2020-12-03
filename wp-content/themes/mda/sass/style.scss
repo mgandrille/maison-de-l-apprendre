@@ -55,6 +55,7 @@ body {
     font-family: $app-font;
     font-size: 1rem;
     color: $color-dark;
+    flex-wrap: wrap;
     background-color: $color-white;
 }
 
@@ -68,3 +69,7 @@ main {
 @import './reset.scss';
 @import './composant/composant-loader.scss';
 @import './modificateur/modificateur-loader.scss';
+
+section {
+    padding: $padding-b;
+}

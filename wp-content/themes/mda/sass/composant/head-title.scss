@@ -1,0 +1,16 @@
+.block-title {
+	width: 30%;
+
+	& :first-child {
+		font-size: 4.5rem;
+		color: $color-main;
+		margin-bottom: 0;
+	}
+
+	& :last-child {
+		text-align: right;
+		text-transform: uppercase;
+		color: $color-grey;
+		margin-left: 20%;
+	}
+}
