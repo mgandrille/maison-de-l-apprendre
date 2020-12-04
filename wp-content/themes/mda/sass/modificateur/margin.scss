@@ -79,6 +79,23 @@
     }
 }
 
+.m-t {
+    &-auto,
+    &-auto-children > * {
+        margin-top: auto;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin-top: $margin-s;
+    }
+
+    &-none,
+    &-none-children > * {
+        margin-top: 0;
+    }
+}
+
 .m-l {
     &-auto,
     &-auto-children > * {
@@ -104,8 +121,19 @@
 }
 
 .m-b {
-    &-auto {
+    &-auto,
+    &-auto-children > * {
         margin-bottom: auto;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin-bottom: $margin-s;
+    }
+
+    &-none,
+    &-none-children > * {
+        margin-bottom: 0;
     }
 }
 

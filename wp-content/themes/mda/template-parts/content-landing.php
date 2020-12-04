@@ -21,6 +21,8 @@
 	<div class="w-auto m-none-children relative">
 		<h2 class="h4 color-grey relative">
 			du 21 au 27 janvier 2021
+
+			<!-- === Separateur pointillé === -->
 			<span class="elmt-border-dotted main xy_ b-50 l-20"></span>
 		</h2>
 
@@ -139,9 +141,9 @@
 			</form>
 		</header>
 
-		<!-- === Article === --->
-		<div class="card-gallerie-4 p-m">
-			<article class="card bg-white-pure">
+		<!-- === Articles === --->
+		<div class="card-gallerie card-gallerie-4 p-m ">
+			<article class="card bg-white-pure overflow-hidden">
 				<header class="head card-bg h-20"></header>
 				<div class="body">
 					<ul class="card-tag">
@@ -150,11 +152,88 @@
 						<li class="m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3>Titre atelier</h3>	
-					<p>Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum</p>
+					<h3 class="relative w-100 h2 m-b-s">
+						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+						Titre atelier
+					</h3>	
+
+					<p class="m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
 				</div>
-				<footer class="foot"></footer>
+				<footer class="foot end-y">
+					<button class="btn">Voir l'atelier</button>
+				</footer>
 			</article>
+
+			<article class="card bg-white-pure overflow-hidden">
+				<header class="head card-bg h-20"></header>
+				<div class="body">
+					<ul class="card-tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="relative w-100 h2 m-b-s">
+						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+						Titre atelier
+					</h3>	
+
+					<p class="m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="foot end-y">
+					<button class="btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card bg-white-pure overflow-hidden">
+				<header class="head card-bg h-20"></header>
+				<div class="body">
+					<ul class="card-tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="relative w-100 h2 m-b-s">
+						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+						Titre atelier
+					</h3>	
+
+					<p class="m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="foot end-y">
+					<button class="btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card bg-white-pure overflow-hidden">
+				<header class="head card-bg h-20"></header>
+				<div class="body">
+					<ul class="card-tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="relative w-100 h2 m-b-s">
+						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+						Titre atelier
+					</h3>	
+
+					<p class="m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="foot end-y">
+					<button class="btn">Voir l'atelier</button>
+				</footer>
+			</article>	
 		</div>
 	</div>
 </section>
