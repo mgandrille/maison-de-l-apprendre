@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 @import './variables/_variables-loader.scss';
+@import './reset.scss';
 
 body, 
 main, 
@@ -68,7 +69,7 @@ main {
 
 
 
-@import './reset.scss';
+
 @import './composant/composant-loader.scss';
 @import './modificateur/modificateur-loader.scss';
 

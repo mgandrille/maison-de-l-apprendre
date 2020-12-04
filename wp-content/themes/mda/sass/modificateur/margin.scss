@@ -1,4 +1,4 @@
-.m-y {
+.margin--m-y {
     margin-top: $margin;
     margin-bottom: $margin;
 
@@ -39,7 +39,7 @@
 }
 
 
-.m-x {
+.margin--m-x {
     margin-left: $margin;
     margin-right: $margin;
 
@@ -79,7 +79,7 @@
     }
 }
 
-.m-t {
+.margin--m-t {
     &-auto,
     &-auto-children > * {
         margin-top: auto;
@@ -96,7 +96,7 @@
     }
 }
 
-.m-l {
+.margin--m-l {
     &-auto,
     &-auto-children > * {
         margin-left: auto;
@@ -108,7 +108,7 @@
     }
 }
 
-.m-r {
+.margin--m-r {
     &-auto,
     &-auto-children > * {
         margin-right: auto;
@@ -120,7 +120,7 @@
     }
 }
 
-.m-b {
+.margin--m-b {
     &-auto,
     &-auto-children > * {
         margin-bottom: auto;
@@ -137,7 +137,7 @@
     }
 }
 
-.m {
+.margin--m {
     margin: $margin;
 
     &-children > * {

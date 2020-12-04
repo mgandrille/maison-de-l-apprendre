@@ -68,10 +68,12 @@
     &-90 {
         height: 90vh;
     }
-    &-100 {
+    &-100,
+    &-100-children > * {
         height: 100vh;
     }
-    &-100p {
+    &-100p,
+    &-100p-children > * {
         height: 100%;
     }
     &-auto {

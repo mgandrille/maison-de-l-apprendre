@@ -1,28 +1,28 @@
 /* ==== ======================== */
 /* ==== Default positions
 /* ==== ======================== */
-.absolute,
-.content-absolute > * {
+.position--absolute,
+.position--content-absolute > * {
 	position: absolute;
 	z-index: 200;
 }
 
-.relative {
+.position--relative {
 	position: relative;
 	z-index: 0;
 }
 
-.sticky {
+.position--sticky {
 	position: absolute;
 	z-index: 300;
 }
 
-.fixed {
+.position--fixed {
 	position: fixed;
 	z-index: 300;
 }
 
-.static {
+.position--static {
 	position: static;
 	z-index: 0;
 }
@@ -30,22 +30,22 @@
 /* ==== ======================== */
 /* ==== Placement
 /* ==== ======================== */
-.xy-center {
+.position--xy-center {
 	top: 50;
 	left: 50;
 }
 
-.xy-center-y {
+.position--xy-center-y {
 	top: 50;
 	left: 0;
 }
 
-.xy-center-x {
+.position--xy-center-x {
 	top: 0;
 	left: 50;
 }
 
-.xy-contain {
+.position--xy-contain {
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -67,272 +67,213 @@
 	left: 0;
 }
 
-.xy-br {
+.position--xy-br {
 	bottom: 0;
 	right: 0;
 }
 
-.xy_.t-50 {
+.position--xy_.t-50 {
 	top: -50%;
 }
 
-.xy_.t-40 {
+.position--xy_.t-40 {
 	top: -40%;
 }
 
-.xy_.t-30 {
+.position--xy_.t-30 {
 	top: -30%;
 }
 
-.xy_.t-20 {
+.position--xy_.t-20 {
 	top: -20%;
 }
 
-.xy_.t-10 {
+.position--xy_.t-10 {
 	top: -10%;
 }
 
-.xy_.t0 {
+.position--xy_.t0 {
 	top: 0;
 }
 
-.xy_.t10 {
+.position--xy_.t10 {
 	top: 10%;
 }
 
-.xy_.t15 {
+.position--xy_.t15 {
 	top: 15%;
 }
 
-.xy_.t25 {
+.position--xy_.t25 {
 	top: 25%;
 }
 
-.xy_.t50 {
+.position--xy_.t50 {
 	top: 50%;
 }
 
-.xy_.b-80 {
+.position--xy_.b-80 {
 	bottom: -80%;
 }
 
-.xy_.b-50 {
+.position--xy_.b-50 {
 	bottom: -50%;
 }
 
-.xy_.b-20 {
+.position--xy_.b-20 {
 	bottom: -20%;
 }
 
-.xy_.b-10 {
+.position--xy_.b-10 {
 	bottom: -10%;
 }
 
-.xy_.b0 {
+.position--xy_.b0 {
 	bottom: 0;
 }
 
-.xy_.b10 {
+.position--xy_.b10 {
 	bottom: 10%;
 }
 
-.xy_.b15 {
+.position--xy_.b15 {
 	bottom: 15%;
 }
 
-.xy_.b20 {
+.position--xy_.b20 {
 	bottom: 20%;
 }
 
-.xy_.b25 {
+.position--xy_.b25 {
 	bottom: 25%;
 }
 
-.xy_.l-80 {
+.position--xy_.l-80 {
 	left: -80%;
 }
 
-.xy_.l-60 {
+.position--xy_.l-60 {
 	left: -60%;
 }
 
-.xy_.l-50 {
+.position--xy_.l-50 {
 	left: -50%;
 }
 
-.xy_.l-30 {
+.position--xy_.l-30 {
 	left: -30%;
 }
 
-.xy_.l-20 {
+.position--xy_.l-20 {
 	left: -20%;
 }
 
-.xy_.l-10 {
+.position--xy_.l-10 {
 	left: -10%;
 }
 
-.xy_.l0 {
+.position--xy_.l0 {
 	left: 0;
 }
 
-.xy_.l10 {
+.position--xy_.l10 {
 	left: 10%;
 }
 
-.xy_.l15 {
+.position--xy_.l15 {
 	left: 15%;
 }
 
-.xy_.l20 {
+.position--xy_.l20 {
 	left: 20%;
 }
 
-.xy_.l25 {
+.position--xy_.l25 {
 	left: 25%;
 }
 
-.xy_.l30 {
+.position--xy_.l30 {
 	left: 30%;
 }
 
-.xy_.l40 {
+.position--xy_.l40 {
 	left: 40%;
 }
 
-.xy_.l50 {
+.position--xy_.l50 {
 	left: 50%;
 }
 
-.xy_.l80 {
+.position--xy_.l80 {
 	left: 80%;
 }
 
-.xy_.r-80 {
+.position--xy_.r-80 {
 	right: -80%;
 }
 
-.xy_.r-60 {
+.position--xy_.r-60 {
 	right: -60%;
 }
 
-.xy_.r-50 {
+.position--xy_.r-50 {
 	right: -50%;
 }
 
-.xy_.r-40 {
+.position--xy_.r-40 {
 	right: -40%;
 }
 
-.xy_.r-30 {
+.position--xy_.r-30 {
 	right: -30%;
 }
 
-.xy_.r-20 {
+.position--xy_.r-20 {
 	right: -20%;
 }
 
-.xy_.r-10 {
+.position--xy_.r-10 {
 	right: -10%;
 }
 
-.xy_.r0 {
+.position--xy_.r0 {
 	right: 0;
 }
 
-.xy_.r10 {
+.position--xy_.r10 {
 	right: 10%;
 }
 
-.xy_.r15 {
+.position--xy_.r15 {
 	right: 15%;
 }
 
-.xy_.r20 {
+.position--xy_.r20 {
 	right: 20%;
 }
 
-.xy_.r25 {
+.position--xy_.r25 {
 	right: 25%;
 }
 
-.xy_.r30 {
+.position--xy_.r30 {
 	right: 30%;
 }
 
-.xy_.r40 {
+.position--xy_.r40 {
 	right: 40%;
 }
 
-.xy_.r50 {
+.position--xy_.r50 {
 	right: 50%;
 }
 
-.xy_.r80 {
+.position--xy_.r80 {
 	right: 80%;
 }
 
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
-@media screen and (min-width: 1024px) {
-	/* ==== Default positions ==== */
-	.absolute-md,
-	.content-absolute-md > * {
-		position: absolute;
-		z-index: 200;
-	}
-	.relative-md {
-		position: relative;
-		z-index: 0;
-	}
-	.sticky-md {
-		position: absolute;
-		z-index: 300;
-	}
-	.fixed-md {
-		position: fixed;
-		z-index: 300;
-	}
-	.static-md {
-		position: static;
-		z-index: 0;
-	}
-	/* ==== Placement ==== */
-	.xy-center-md {
-		top: 50;
-		left: 50;
-	}
-	.xy-center-y-md {
-		top: 50;
-		left: 0;
-	}
-	.xy-center-x-md {
-		top: 0;
-		left: 50;
-	}
-	.xy-contain-md {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-	.xy-tl-md {
-		top: 0;
-		left: 0;
-	}
-	.xy-tr-md {
-		top: 0;
-		right: 0;
-	}
-	.xy-bl-md {
-		bottom: 0;
-		left: 0;
-	}
-	.xy-br-md {
-		bottom: 0;
-		right: 0;
-	}
-}
 
 /*# sourceMappingURL=position.css.map */

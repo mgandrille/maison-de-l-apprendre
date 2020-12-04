@@ -86,11 +86,13 @@
 	height: 90vh;
 }
 
-.h-100 {
+.h-100,
+.h-100-children > * {
 	height: 100vh;
 }
 
-.h-100p {
+.h-100p,
+.h-100p-children > * {
 	height: 100%;
 }
 

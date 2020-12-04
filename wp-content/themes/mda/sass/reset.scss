@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: $base-font-size;
+    font-size: $app-font-size-base;
 }
 
 body, 
@@ -15,7 +15,9 @@ ul,
 li, 
 button, 
 nav, 
-div, 
+div,
+form,
+input, 
 header, 
 footer, 
 figure, 
@@ -42,4 +44,10 @@ button {
     border: none;
     font-size: inherit;
     font-family: inherit;
+}
+
+input {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
 }

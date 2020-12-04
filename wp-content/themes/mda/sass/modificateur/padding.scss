@@ -87,6 +87,11 @@
         padding: $padding-b;
     }
 
+    &-xb,
+    &-xb-children > * {
+        padding: $padding-xb;
+    }
+
     &-none,
     &-none-children > * {
         padding: 0;

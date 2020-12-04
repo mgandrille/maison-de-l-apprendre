@@ -1,127 +1,91 @@
-.hidden,
-.content-hidden > * {
+.display--hidden,
+.display--content-hidden > * {
 	display: none;
 }
 
-.flex,
-.content-flex > * {
+.display--flex,
+.display--content-flex > * {
 	display: flex;
 }
 
-.block,
-.content-block > * {
+.display--block,
+.display--content-block > * {
 	display: block;
 }
 
-.inline-block,
-.content-inline-block > * {
+.display--inline-block,
+.display--content-inline-block > * {
 	display: inline-block;
 }
 
-.overflow-hidden {
+.display--overflow-hidden {
 	overflow: hidden;
 }
 
 /* ==== ======================== */
 /* ==== Flex config
 /* ==== ======================== */
-.row,
-.content-row > * {
+.display--row,
+.display--content-row > * {
 	flex-direction: row;
 }
 
-.col,
-.content-col > * {
+.display--col,
+.display--content-col > * {
 	flex-direction: column;
 }
 
-.wrap
-.content-wrap > * {
+.display--wrap
+.display--content-wrap > * {
 	flex-wrap: wrap;
 }
 
-.nowrap,
-.content-nowrap > * {
+.display--nowrap,
+.display--content-nowrap > * {
 	flex-wrap: nowrap;
 }
 
 /* ==== ======================== */
 /* ==== Flex align
 /* ==== ======================== */
-.center,
-.content-center > * {
+.display--center,
+.display--content-center > * {
 	align-items: center;
 	justify-content: center;
 }
 
-.center-x,
-.content-center-x > * {
+.display--center-x,
+.display--content-center-x > * {
 	justify-content: center;
 }
 
-.center-y,
-.content-center-y > * {
+.display--center-y,
+.display--content-center-y > * {
 	align-items: center;
 }
 
-.end-y,
-.content-end-y > * {
+.display--end-y,
+.display--content-end-y > * {
 	align-items: flex-end;
 }
 
-.between,
-.content-between > * {
+.display--between-x,
+.display--content-between-x > * {
 	justify-content: space-between;
 }
 
-.around,
-.content-around > * {
+.display--between-y,
+.display--content-between-y > * {
+	align-items: space-between;
+}
+
+.display--around,
+.display--content-around > * {
 	justify-content: space-around;
 }
 
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
-@media screen and (min-width: 1024px) {
-	/* ==== Flex config ==== */
-	.row-md,
-	.content-row-md > * {
-		flex-direction: row;
-	}
-	.col-md,
-	.content-col-md > * {
-		flex-direction: column;
-	}
-	.wrap-md
-.content-wrap-md > * {
-		flex-wrap: wrap;
-	}
-	.nowrap-md,
-	.content-nowrap-md > * {
-		flex-wrap: nowrap;
-	}
-	/* ==== Flex align ==== */
-	.center-md,
-	.content-center-md > * {
-		align-items: center;
-		justify-content: center;
-	}
-	.center-x-md,
-	.content-center-x-md > * {
-		justify-content: center;
-	}
-	.center-y-md,
-	.content-center-y-md > * {
-		align-items: center;
-	}
-	.between-md,
-	.content-betwee-md > * {
-		justify-content: space-between;
-	}
-	.around-md,
-	.content-around-md > * {
-		justify-content: space-around;
-	}
-}
 
 /*# sourceMappingURL=display.css.map */

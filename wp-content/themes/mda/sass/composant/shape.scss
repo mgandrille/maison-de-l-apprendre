@@ -1,16 +1,16 @@
-.angled {
+.shape--angled {
     border-radius: 0;
 }
 
-.rounded {
+.shape--rounded {
     border-radius: $radius-b;
 }
 
-.rotate90 {
+.shape--rotate90 {
     transform: rotate(90deg);
 }
 
-.elmt-border-dotted {
+.shape--elmt-border-dotted {
     position: absolute;
     display: block;
     width: 100%;
@@ -23,7 +23,7 @@
     }
 }
 
-.elmt-circle {
+.shape--elmt-circle {
     &-b {
         width: 160px;
         height: 160px;
@@ -37,7 +37,7 @@
     }
 }
 
-.border {
+.shape--border {
     &-l,
     &-l-children > * {
         border-left-width: 1px;

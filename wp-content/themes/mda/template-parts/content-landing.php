@@ -15,42 +15,42 @@
 === HERO LANDING
 -->
 
-<section class="text-upper row between h-100 bg-gradient center-y overflow-hidden">
+<section class="text-upper display--row display--between-x h-100 bg-gradient display--center-y display--overflow-hidden position--relative">
 
 	<!-- === Titre === -->
-	<div class="w-auto m-none-children relative">
-		<h2 class="h4 color-grey relative">
+	<div class="w-auto margin--m-none-children position--relative">
+		<h2 class="title--h4 color-grey position--relative">
 			du 21 au 27 janvier 2021
 
 			<!-- === Separateur pointillé === -->
-			<span class="elmt-border-dotted main xy_ b-50 l-20"></span>
+			<span class="shape--elmt-border-dotted main position--xy_ b-50 l-20"></span>
 		</h2>
 
-		<h1 class="title-landing text-letter-spacing color-main">
+		<h1 class="title--title-landing text-letter-spacing color-main">
 			festival de<br>
 			l'apprendre
 		</h1>
 
-		<h2 class="text-right h4 color-grey w-100">
+		<h2 class="text-right title--h4 color-grey w-100">
 			en famille, entre collègues, entre amis,<br />
 			venez fêter le plaisir d'apprendre
 		</h2>
 
-		<span class="elmt-border-dotted main xy_ b-80 l-30 rotate90"></span>
+		<span class="shape--elmt-border-dotted main position--xy_ b-80 l-30 shape--rotate90"></span>
 	</div>
 
 	<!-- === Badges circulaires === --->
-	<div class="absolute w-40 h-70 xy_ t10 l40 between text-upper text-bold">
-		<div class="h-25 row end-y between">
-			<div class="elmt-circle-b m-b-auto bg-secondary color-white center">
+	<div class="position--absolute w-40 h-70 position--xy_ t10 l40 display--between-x text-upper text-bold">
+		<div class="h-25 display--row end-y display--between-x">
+			<div class="shape--elmt-circle-b margin--m-b-auto bg-secondary color-white display--center">
 				<span>Découvrir</span>
 			</div>
-			<div class="elmt-circle-m bg-warm color-white center">
+			<div class="shape--elmt-circle-m bg-warm color-white display--center">
 				<span class=" text-small">Rencontrer</span>
 			</div>
 		</div>
 
-		<div class="elmt-circle-m bg-main color-white m-l-s center">
+		<div class="shape--elmt-circle-m bg-main color-white margin--m-l-s display--center">
 			<span class=" text-small">Expérimenter</span>
 		</div>
 	</div>
@@ -64,15 +64,15 @@
 === CONTENT
 -->
 
-<section class="row between wrap">
+<section class="display--row display--between-x wrap">
 
 	<!-- === Titre de la section === --->
 	<header class="block-title">
-		<h2 class="relative">
+		<h2 class="position--relative">
 			Découvrir<br />
 			le festival
 
-			<span class="elmt-border-dotted main xy_ t-10 l-60"></span>
+			<span class="shape--elmt-border-dotted main position--xy_ t-10 l-60"></span>
 		</h2>
 
 		<h3>Une journée pour apprendre et découvrir</h3>
@@ -88,13 +88,13 @@
 	</div>
 </section>
 
-<section class="row between wrap">
+<section class="display--row display--between-x wrap">
 	<header class="block-title">
-		<h2 class="relative">
+		<h2 class="position--relative">
 			Ateliers<br />
 			et conférences
 
-			<span class="elmt-border-dotted main xy_ t-10 l-60"></span>
+			<span class="shape--elmt-border-dotted main position--xy_ t-10 l-60"></span>
 		</h2>
 
 		<h3>Comprendre le monde de demain</h3>
@@ -118,11 +118,14 @@
 	<div class="bg-white w-100">
 
 		<!-- === filter bar === --->
-		<header class="bg-white-pure">
-			<form class="row w-100">
-				<input type="text" class="searchbar" name="search" placeholder="Rechercher un atelier">
+		<header class="bg-white-pure h-10 display--center-x">
+			<form class="display--row w-100 display--center-y display--between-y">
 
-				<div class="row">
+				<!-- === search bar === --->
+				<input type="text" class="searchbar w-50 border" name="search" placeholder="Rechercher un atelier">
+
+				<!-- === filter on tag === --->
+				<div class="display--row align--center margin--m-s-children border">
 					<input type="checkbox" name="all" id="all">
 					<label for="all">Tout public</label>
 
@@ -130,12 +133,13 @@
 					<label for="young">Jeunesse</label>
 
 					<input type="checkbox" name="pro" id="pro">
-					<label for="pro">Jeunesse</label>
+					<label for="pro">Professionnels</label>
 				</div>
 
-				<ul class="row border-l-children border-grey-children">
+				<!-- === change display : cards by filter (date, category, etc...) / cards by workshop / png programm === --->
+				<ul class="display--row display--center-y display--between-x margin--m-s-children shape--border-l-children shape--border-grey-children">
 					<li>Tous</li>	
-					<li>Catégorie</li>
+					<li>Filtrer</li>
 					<li>Programme</li>
 				</ul>
 			</form>
@@ -143,21 +147,21 @@
 
 		<!-- === Articles === --->
 		<div class="card-gallerie card-gallerie-4 p-m ">
-			<article class="card bg-white-pure overflow-hidden">
+			<article class="card bg-white-pure display--overflow-hidden">
 				<header class="head card-bg h-20"></header>
 				<div class="body">
 					<ul class="card-tag">
 						<li>24/11/2020</li>
 						<li>14h30</li>
-						<li class="m-l-auto">jeunesse</li>
+						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="relative w-100 h2 m-b-s">
-						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+					<h3 class="position--relative w-100 title--h2 margin--m-b-s">
+						<span class="shape--elmt-border-dotted main position--xy_ t-50 r-30"></span>
 						Titre atelier
 					</h3>	
 
-					<p class="m-t-none">
+					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
 					</p>
 				</div>
@@ -166,21 +170,21 @@
 				</footer>
 			</article>
 
-			<article class="card bg-white-pure overflow-hidden">
+			<article class="card bg-white-pure display--overflow-hidden">
 				<header class="head card-bg h-20"></header>
 				<div class="body">
 					<ul class="card-tag">
 						<li>24/11/2020</li>
 						<li>14h30</li>
-						<li class="m-l-auto">jeunesse</li>
+						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="relative w-100 h2 m-b-s">
-						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+					<h3 class="position--relative w-100 title--h2 margin--m-b-s">
+						<span class="shape--elmt-border-dotted main position--xy_ t-50 r-30"></span>
 						Titre atelier
 					</h3>	
 
-					<p class="m-t-none">
+					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
 					</p>
 				</div>
@@ -189,21 +193,21 @@
 				</footer>
 			</article>
 
-			<article class="card bg-white-pure overflow-hidden">
+			<article class="card bg-white-pure display--overflow-hidden">
 				<header class="head card-bg h-20"></header>
 				<div class="body">
 					<ul class="card-tag">
 						<li>24/11/2020</li>
 						<li>14h30</li>
-						<li class="m-l-auto">jeunesse</li>
+						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="relative w-100 h2 m-b-s">
-						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+					<h3 class="position--position--relative w-100 title--h2 margin--m-b-s">
+						<span class="shape--elmt-border-dotted main position--xy_ t-50 r-30"></span>
 						Titre atelier
 					</h3>	
 
-					<p class="m-t-none">
+					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
 					</p>
 				</div>
@@ -212,21 +216,21 @@
 				</footer>
 			</article>
 
-			<article class="card bg-white-pure overflow-hidden">
+			<article class="card bg-white-pure display--overflow-hidden">
 				<header class="head card-bg h-20"></header>
 				<div class="body">
 					<ul class="card-tag">
 						<li>24/11/2020</li>
 						<li>14h30</li>
-						<li class="m-l-auto">jeunesse</li>
+						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="relative w-100 h2 m-b-s">
-						<span class="elmt-border-dotted main xy_ t-50 r-30"></span>
+					<h3 class="position--relative w-100 title--h2 margin--m-b-s">
+						<span class="shape--elmt-border-dotted main position--xy_ t-50 r-30"></span>
 						Titre atelier
 					</h3>	
 
-					<p class="m-t-none">
+					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
 					</p>
 				</div>
@@ -237,3 +241,11 @@
 		</div>
 	</div>
 </section>
+
+<footer class="bg-gradient h-20 ">
+	<figure class="bg-footer w-100 h-100p p-xb">
+	contact
+	Twitter
+	Réseau
+	</figure>
+</footer>
