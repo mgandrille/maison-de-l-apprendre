@@ -9,11 +9,38 @@
     }
 
     &-bg {
-       background-image: url("https://i.postimg.cc/rs2hG5F3/bg.jpg");
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: cover;
-       color: $color-white;
+        background-image: url("https://i.postimg.cc/rs2hG5F3/bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $color-white;
+    }
+}
+
+.card-gallerie {
+    &-4 > * {
+        width: 25%;
+    }
+}
+
+.card-tag {
+    color: $color-secondary;
+    font-size: .75rem;
+    text-transform: uppercase;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: bold;
+
+    & > * {
+        margin: 0 $margin-s
+    }
+
+    & > :first-child {
+        margin-left: 0;
+    }
+
+    & > :last-child {
+        margin-right: 0;
     }
 }
 

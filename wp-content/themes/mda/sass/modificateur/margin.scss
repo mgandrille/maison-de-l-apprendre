@@ -91,6 +91,18 @@
     }
 }
 
+.m-r {
+    &-auto,
+    &-auto-children > * {
+        margin-right: auto;
+    }
+
+    &-s,
+    &-s-children > * {
+        margin-right: $margin-s;
+    }
+}
+
 .m-b {
     &-auto {
         margin-bottom: auto;

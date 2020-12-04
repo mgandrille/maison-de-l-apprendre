@@ -45,6 +45,7 @@ nav,
 div,
 header,
 footer,
+form,
 ul,
 li,
 figure {
@@ -68,7 +69,7 @@ body {
 	font-size: 1rem;
 	color: #151818;
 	flex-wrap: wrap;
-	background-color: #f5f9f9;
+	background-color: #f4f4f4;
 }
 
 main {
@@ -182,7 +183,7 @@ button {
 	width: 100%;
 	margin: 0.6rem 0;
 	align-items: center;
-	background-color: #f5f9f9;
+	background-color: #f4f4f4;
 }
 
 @media screen and (min-width: 600px) {
@@ -202,7 +203,7 @@ button {
 	margin-right: 0.6rem;
 	padding: 0.6rem;
 	background-color: #ff914d;
-	color: #f5f9f9;
+	color: #f4f4f4;
 }
 
 /* ==== ======================== */
@@ -258,6 +259,18 @@ button {
 	border-radius: 100%;
 }
 
+.border-l,
+.border-l-children > * {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-color: #151818;
+}
+
+.border-grey,
+.border-grey-children > * {
+	border-color: #545454;
+}
+
 /* ==== ======================== */
 /* ==== Item
 /* ==== ======================== */
@@ -285,7 +298,7 @@ button {
 .content-link li:hover {
 	border: 2px solid #151818;
 	transform: translateY(3px);
-	box-shadow: 0px 5px 1px 1px #f5f9f9;
+	box-shadow: 0px 5px 1px 1px #f4f4f4;
 }
 
 /* ==== ======================== */
@@ -321,7 +334,7 @@ button {
 
 .card {
 	border-radius: 0.18rem;
-	background-color: #f5f9f9;
+	background-color: #f4f4f4;
 	justify-content: space-between;
 	cursor: pointer;
 }
@@ -335,7 +348,32 @@ button {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	color: #f5f9f9;
+	color: #f4f4f4;
+}
+
+.card-gallerie-4 > * {
+	width: 25%;
+}
+
+.card-tag {
+	color: #43beba;
+	font-size: .75rem;
+	text-transform: uppercase;
+	flex-direction: row;
+	justify-content: flex-start;
+	font-weight: bold;
+}
+
+.card-tag > * {
+	margin: 0 0.6rem;
+}
+
+.card-tag > :first-child {
+	margin-left: 0;
+}
+
+.card-tag > :last-child {
+	margin-right: 0;
 }
 
 /* ==== ======================== */
@@ -619,7 +657,11 @@ a:hover {
 }
 
 .bg-white {
-	background-color: #f5f9f9;
+	background-color: #f4f4f4;
+}
+
+.bg-white-pure {
+	background-color: #fff;
 }
 
 .bg-grey {
@@ -1088,6 +1130,16 @@ a:hover {
 	margin-left: 0.6rem;
 }
 
+.m-r-auto,
+.m-r-auto-children > * {
+	margin-right: auto;
+}
+
+.m-r-s,
+.m-r-s-children > * {
+	margin-right: 0.6rem;
+}
+
 .m-b-auto {
 	margin-bottom: auto;
 }
@@ -1152,12 +1204,16 @@ a:hover {
 	color: #ea0084;
 }
 
+.color-secondary {
+	color: #43beba;
+}
+
 .color-grey {
 	color: #545454;
 }
 
 .color-white {
-	color: #f5f9f9;
+	color: #f4f4f4;
 }
 
 h1,

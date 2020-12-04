@@ -10,6 +10,11 @@
 
 ?>
 
+
+<!-- 
+=== HERO LANDING
+-->
+
 <section class="text-upper row between h-100 bg-gradient center-y overflow-hidden">
 
 	<!-- === Titre === -->
@@ -48,11 +53,18 @@
 		</div>
 	</div>
 
-	<!-- === Image de fond === --->
+	<!-- === Illustration === --->
 	<figure class="h-100 bg-img_ bgauto bgbr"></figure>
 </section>
 
+
+<!-- 
+=== CONTENT
+-->
+
 <section class="row between wrap">
+
+	<!-- === Titre de la section === --->
 	<header class="block-title">
 		<h2 class="relative">
 			Découvrir<br />
@@ -64,6 +76,7 @@
 		<h3>Une journée pour apprendre et découvrir</h3>
 	</header>
 
+	<!-- === description de la section === --->
 	<div class="block-parag">
 		<p>
 			Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
@@ -73,7 +86,7 @@
 	</div>
 </section>
 
-<section class="row">
+<section class="row between wrap">
 	<header class="block-title">
 		<h2 class="relative">
 			Ateliers<br />
@@ -84,4 +97,64 @@
 
 		<h3>Comprendre le monde de demain</h3>
 	</header>
+
+	<div class="block-parag">
+		<p>
+			Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
+			est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
+			de développement des compétences tout au long de la vie.
+		</p>
+	</div>
+</section>
+
+
+<!-- 
+=== SELECTION DES ATELIERS
+-->
+
+<section class="bg-gradient">
+	<div class="bg-white w-100">
+
+		<!-- === filter bar === --->
+		<header class="bg-white-pure">
+			<form class="row w-100">
+				<input type="text" class="searchbar" name="search" placeholder="Rechercher un atelier">
+
+				<div class="row">
+					<input type="checkbox" name="all" id="all">
+					<label for="all">Tout public</label>
+
+					<input type="checkbox" name="young" id="young">
+					<label for="young">Jeunesse</label>
+
+					<input type="checkbox" name="pro" id="pro">
+					<label for="pro">Jeunesse</label>
+				</div>
+
+				<ul class="row border-l-children border-grey-children">
+					<li>Tous</li>	
+					<li>Catégorie</li>
+					<li>Programme</li>
+				</ul>
+			</form>
+		</header>
+
+		<!-- === Article === --->
+		<div class="card-gallerie-4 p-m">
+			<article class="card bg-white-pure">
+				<header class="head card-bg h-20"></header>
+				<div class="body">
+					<ul class="card-tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3>Titre atelier</h3>	
+					<p>Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum</p>
+				</div>
+				<footer class="foot"></footer>
+			</article>
+		</div>
+	</div>
 </section>
