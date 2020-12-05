@@ -1,4 +1,4 @@
-.btn {
+.button--btn {
     padding: $padding-s;
     height: 3rem;
     border-width: 2px;
@@ -27,14 +27,14 @@
 /* ==== Hover 
 /* ==== ======================== */
 
-.btn:hover {
+.button--btn:hover {
     transform: scale(.96);
 
     $box-shadow-color: $color-action;
     box-shadow: -5px 5px 1px 1px $box-shadow-color;
 }
 
-.btn.hover {
+.button--btn.hover {
     &-main:hover {
         $box-shadow-color: $color-main;
     }

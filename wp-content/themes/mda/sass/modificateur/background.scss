@@ -1,4 +1,4 @@
-.bg {
+.bg- {
     &-main {
         background-color: $color-main;
 
@@ -103,7 +103,7 @@
     }
 }
 
-.bg-img_ {
+.bg--img_ {
     background-image: url('https://i.postimg.cc/Yq89kzgZ/bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -122,7 +122,7 @@
     }
 }
 
-.bg-footer {
+.bg--footer {
     background-image: url('https://i.postimg.cc/bYQw8CJY/Sans-titre.png');
     background-size: cover;
     background-repeat: no-repeat;

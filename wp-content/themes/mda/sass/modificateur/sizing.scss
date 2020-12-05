@@ -1,82 +1,82 @@
-.w {
-    &-10 {
+.size--w {
+    &10 {
         width: 10%;
     }
-    &-20 {
+    &20 {
         width: 20%;
     }
-    &-30 {
+    &30 {
         width: 30%;
     }
-    &-40 {
+    &40 {
         width: 40%;
     }
-    &-50 {
+    &50 {
         width: 50%;
     }
-    &-60 {
+    &60 {
         width: 60%;
     }
-    &-70 {
+    &70 {
         width: 70%;
     }
-    &-80 {
+    &80 {
         width: 80%;
     }
-    &-90 {
+    &90 {
         width: 90%;
     }
-    &-100 {
+    &100 {
         width: 100%;
     }
-    &-odd3 {
+    &odd3 {
         width: calc(100% / 3);
     }
-    &-auto {
+    &auto {
         width:auto;
     }
 }
 
-.h {
-    &-10 {
+.size--h {
+    &10 {
         height: 10vh;
     }
-    &-20 {
+    &20 {
         height: 20vh;
     }
-    &-25 {
+    &25 {
         height: 25vh;
     }
-    &-30 {
+    &30 {
         height: 30vh;
     }
-    &-40 {
+    &40 {
         height: 40vh;
     }
-    &-50 {
+    &50 {
         height: 50vh;
     }
-    &-60 {
+    &60 {
         height: 60vh;
     }
-    &-70 {
+    &70 {
         height: 70vh;
     }
-    &-80 {
+    &80 {
         height: 80vh;
     }
-    &-90 {
+    &90 {
         height: 90vh;
     }
-    &-100,
-    &-100-children > * {
+    &100,
+    &100-children > * {
         height: 100vh;
     }
-    &-100p,
-    &-100p-children > * {
+    &100p,
+    &100p-children > * {
         height: 100%;
     }
-    &-auto {
+    &auto {
         height:auto;
     }
 }
@@ -91,80 +91,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .w-md {
-        &-10 {
-            width: 10%;
-        }
-        &-20 {
-            width: 20%;
-        }
-        &-30 {
-            width: 30%;
-        }
-        &-40 {
-            width: 40%;
-        }
-        &-50 {
-            width: 50%;
-        }
-        &-60 {
-            width: 60%;
-        }
-        &-70 {
-            width: 70%;
-        }
-        &-80 {
-            width: 80%;
-        }
-        &-90 {
-            width: 90%;
-        }
-        &-100 {
-            width: 100%;
-        }
-        &-odd3 {
-            width: calc(100% / 3);
-        }
-        &-auto {
-            width:auto;
-        }
-    }
-
-    .h-md {
-        &-10 {
-            height: 10vh;
-        }
-        &-20 {
-            height: 20vh;
-        }
-        &-30 {
-            height: 30vh;
-        }
-        &-40 {
-            height: 40vh;
-        }
-        &-50 {
-            height: 50vh;
-        }
-        &-60 {
-            height: 60vh;
-        }
-        &-70 {
-            height: 70vh;
-        }
-        &-80 {
-            height: 80vh;
-        }
-        &-90 {
-            height: 90vh;
-        }
-        &-100 {
-            height: 100vh;
-        }
-        &-auto {
-            height:auto;
-        }
-    }
+    
 }
 
 @media screen and (min-width: 1220px) {

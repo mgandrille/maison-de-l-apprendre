@@ -1,4 +1,4 @@
-.card {
+.card- {
     border-radius: $radius-s;
     background-color: $color-white;
     justify-content: space-between;
@@ -17,7 +17,7 @@
     }
 }
 
-.card-gallerie {
+.card--gallerie {
     flex-direction: row;
 
     &-4 > * {
@@ -36,7 +36,7 @@
     }
 }
 
-.card-tag {
+.card--tag {
     color: $color-secondary;
     font-size: .75rem;
     text-transform: uppercase;

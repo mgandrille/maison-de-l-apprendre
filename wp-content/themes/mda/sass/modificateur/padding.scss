@@ -1,9 +1,9 @@
-.p-y-auto,
-.p-y-auto-children > * {
+.padding--y-auto,
+.padding--y-auto-children > * {
     padding : auto 0
 }
 
-.p-l {
+.padding--l {
     &-children > * {
         padding-left: $padding;
     }
@@ -34,7 +34,7 @@
     }
 }
 
-.p-r {
+.padding--r {
     &-children > * {
         padding-right: $padding;
     }
@@ -65,7 +65,7 @@
     }
 }
 
-.p {
+.padding- {
     padding: $padding;
 
     &-children > * {

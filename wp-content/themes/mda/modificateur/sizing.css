@@ -1,178 +1,107 @@
-.w-10 {
+.size--w10 {
 	width: 10%;
 }
 
-.w-20 {
+.size--w20 {
 	width: 20%;
 }
 
-.w-30 {
+.size--w30 {
 	width: 30%;
 }
 
-.w-40 {
+.size--w40 {
 	width: 40%;
 }
 
-.w-50 {
+.size--w50 {
 	width: 50%;
 }
 
-.w-60 {
+.size--w60 {
 	width: 60%;
 }
 
-.w-70 {
+.size--w70 {
 	width: 70%;
 }
 
-.w-80 {
+.size--w80 {
 	width: 80%;
 }
 
-.w-90 {
+.size--w90 {
 	width: 90%;
 }
 
-.w-100 {
+.size--w100 {
 	width: 100%;
 }
 
-.w-odd3 {
+.size--wodd3 {
 	width: calc(100% / 3);
 }
 
-.w-auto {
+.size--wauto {
 	width: auto;
 }
 
-.h-10 {
+.size--h10 {
 	height: 10vh;
 }
 
-.h-20 {
+.size--h20 {
 	height: 20vh;
 }
 
-.h-25 {
+.size--h25 {
 	height: 25vh;
 }
 
-.h-30 {
+.size--h30 {
 	height: 30vh;
 }
 
-.h-40 {
+.size--h40 {
 	height: 40vh;
 }
 
-.h-50 {
+.size--h50 {
 	height: 50vh;
 }
 
-.h-60 {
+.size--h60 {
 	height: 60vh;
 }
 
-.h-70 {
+.size--h70 {
 	height: 70vh;
 }
 
-.h-80 {
+.size--h80 {
 	height: 80vh;
 }
 
-.h-90 {
+.size--h90 {
 	height: 90vh;
 }
 
-.h-100,
-.h-100-children > * {
+.size--h100,
+.size--h100-children > * {
 	height: 100vh;
 }
 
-.h-100p,
-.h-100p-children > * {
+.size--h100p,
+.size--h100p-children > * {
 	height: 100%;
 }
 
-.h-auto {
+.size--hauto {
 	height: auto;
 }
 
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
-@media screen and (min-width: 1024px) {
-	.w-md-10 {
-		width: 10%;
-	}
-	.w-md-20 {
-		width: 20%;
-	}
-	.w-md-30 {
-		width: 30%;
-	}
-	.w-md-40 {
-		width: 40%;
-	}
-	.w-md-50 {
-		width: 50%;
-	}
-	.w-md-60 {
-		width: 60%;
-	}
-	.w-md-70 {
-		width: 70%;
-	}
-	.w-md-80 {
-		width: 80%;
-	}
-	.w-md-90 {
-		width: 90%;
-	}
-	.w-md-100 {
-		width: 100%;
-	}
-	.w-md-odd3 {
-		width: calc(100% / 3);
-	}
-	.w-md-auto {
-		width: auto;
-	}
-	.h-md-10 {
-		height: 10vh;
-	}
-	.h-md-20 {
-		height: 20vh;
-	}
-	.h-md-30 {
-		height: 30vh;
-	}
-	.h-md-40 {
-		height: 40vh;
-	}
-	.h-md-50 {
-		height: 50vh;
-	}
-	.h-md-60 {
-		height: 60vh;
-	}
-	.h-md-70 {
-		height: 70vh;
-	}
-	.h-md-80 {
-		height: 80vh;
-	}
-	.h-md-90 {
-		height: 90vh;
-	}
-	.h-md-100 {
-		height: 100vh;
-	}
-	.h-md-auto {
-		height: auto;
-	}
-}
 
 /*# sourceMappingURL=sizing.css.map */
