@@ -22,8 +22,8 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-@import './variables/_variables-loader.scss';
-@import './reset.scss';
+@import './_variables/_variables-loader.scss';
+@import './_reset.scss';
 
 body, 
 main, 
@@ -72,9 +72,10 @@ main {
     margin: auto;
 }
 
-@import './composant/composant-loader.scss';
-@import './modificateur/modificateur-loader.scss';
+@import './_componants/_composant-loader.scss';
+@import './_modificator/_modificateur-loader.scss';
 
 section {
-    padding: $padding-xb;
+    padding-right: $padding-xb;
+    padding-left: $padding-xb;
 }

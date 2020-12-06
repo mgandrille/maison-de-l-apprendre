@@ -1,4 +1,4 @@
-.margin--m-y {
+.margin--y {
     margin-top: $margin;
     margin-bottom: $margin;
 
@@ -39,7 +39,7 @@
 }
 
 
-.margin--m-x {
+.margin--x {
     margin-left: $margin;
     margin-right: $margin;
 
@@ -79,7 +79,7 @@
     }
 }
 
-.margin--m-t {
+.margin--t {
     &-auto,
     &-auto-children > * {
         margin-top: auto;
@@ -96,7 +96,7 @@
     }
 }
 
-.margin--m-l {
+.margin--l {
     &-auto,
     &-auto-children > * {
         margin-left: auto;
@@ -108,7 +108,7 @@
     }
 }
 
-.margin--m-r {
+.margin--r {
     &-auto,
     &-auto-children > * {
         margin-right: auto;
@@ -120,10 +120,11 @@
     }
 }
 
-.margin--m-b {
-    &-auto,
-    &-auto-children > * {
-        margin-bottom: auto;
+.margin--b {
+    margin-bottom: $margin;
+
+    &-children > * {
+        margin-bottom: $margin;
     }
 
     &-s,
@@ -131,36 +132,64 @@
         margin-bottom: $margin-s;
     }
 
+    &-m,
+    &-m-children > * {
+        margin-bottom: $margin-m;
+    }
+
+    &-b,
+    &-b-children > * {
+        margin-bottom: $margin-b;
+    }
+
+    &-xb,
+    &-xb-children > * {
+        margin-bottom: $margin-xb;
+    }
+
     &-none,
     &-none-children > * {
         margin-bottom: 0;
     }
-}
-
-.margin--m {
-    margin: $margin;
-
-    &-children > * {
-        margin: $margin;
-    }
-
-    &-s,
-    &-s-children > * {
-        margin: $margin-s;
-    }
-
-    &-m,
-    &-m-children > * {
-        margin: $margin-m;
-    }
-
-    &-none,
-    &-none-children > * {
-        margin: 0;
-    }
 
     &-auto,
     &-auto-children > * {
+        margin-bottom: auto;
+    }
+}
+
+.margin {
+    margin: $margin;
+
+    &--children > * {
+        margin: $margin;
+    }
+
+    &--children > :first-child {
+        margin-left: 0;
+    }
+
+    &--children > :last-child {
+        margin-right: 0;
+    }
+
+    &--s,
+    &--s-children > * {
+        margin: $margin-s;
+    }
+
+    &--m,
+    &--m-children > * {
+        margin: $margin-m;
+    }
+
+    &--none,
+    &--none-children > * {
+        margin: 0;
+    }
+
+    &--auto,
+    &--auto-children > * {
         margin: auto;
     }
 }

@@ -38,15 +38,21 @@
 }
 
 .shape--border {
-    &-l,
-    &-l-children > * {
+    &-l_,
+    &-l-children_ > * {
         border-left-width: 1px;
         border-left-style: solid;
         border-color: $color-dark;
     }
 
-    &-grey,
-    &-grey-children > * {
-        border-color: $color-grey;
+    &-r_,
+    &-r-children_ > * {
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-color: $color-dark; 
     }
+}
+
+._grey {
+    border-color: $color-grey;
 }

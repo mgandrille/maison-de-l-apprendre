@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "text.css",
-	"sources": [
-		"../sass/modificateur/text.scss"
-	],
-	"names": [],
-	"mappings": "AAEE,AAAD,WAAO,CAAC;CACP,cAAc,EAAE,SAAS;CACzB;;AAEA,AAAD,oBAAgB,CAAC;CAChB,cAAc,EAAE,MAAM;CACtB"
-}

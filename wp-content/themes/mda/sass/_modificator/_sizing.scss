@@ -1,21 +1,57 @@
 .size--w {
-    &10 {
+    &5,
+    &5-children > * {
+        width: 5%;
+    }
+    &10,
+    &10-children > * {
         width: 10%;
     }
-    &20 {
+    &15,
+    &15-children > * {
+        width: 15%;
+    }
+    &20,
+    &20-children > * {
         width: 20%;
     }
-    &30 {
+    &25,
+    &25-children > * {
+        width: 25%;
+    }
+    &30,
+    &30-children > * {
         width: 30%;
     }
-    &40 {
+    &35,
+    &35-children > * {
+        width: 35%;
+    }
+    &40,
+    &40-children > * {
         width: 40%;
     }
-    &50 {
+    &40-margin {
+        width : calc(40% - (#{$margin} * 2))
+    }
+    &45,
+    &45-children > * {
+        width: 45%;
+    }
+    &50,
+    &50-children > * {
         width: 50%;
     }
-    &60 {
+    &60,
+    &60-children > * {
         width: 60%;
+    }
+    &60-margin {
+        width : calc(60% - (#{$margin} * 2))
+    }
+    &65,
+    &65-children > * {
+        width: 65%;
     }
     &70 {
         width: 70%;
@@ -50,14 +86,26 @@
     &30 {
         height: 30vh;
     }
-    &40 {
+    &40,
+    &40-children > * {
         height: 40vh;
     }
-    &50 {
+    &40p,
+    &40p-children > * {
+        height: 40%;
+    }
+    &50,
+    &50-children > * {
         height: 50vh;
     }
     &60 {
         height: 60vh;
+    }
+    &65 {
+        height: 65vh;
+    }
+    &65p {
+        height: 65%;
     }
     &70 {
         height: 70vh;
