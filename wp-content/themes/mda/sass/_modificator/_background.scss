@@ -1,5 +1,5 @@
-.bg- {
-    &-main {
+.bg {
+    &--main {
         background-color: $color-main;
 
         &-darker {
@@ -20,7 +20,7 @@
     }
 
     
-    &-secondary {
+    &--secondary {
         background-color: $color-secondary;
 
         &-darker {
@@ -41,7 +41,7 @@
     }
 
 
-    &-action {
+    &--action {
         background-color: $color-action;
 
         &-darker {
@@ -62,7 +62,7 @@
     }
 
 
-    &-warm {
+    &--warm {
         background-color: $color-warm;
 
         &-darker {
@@ -82,27 +82,27 @@
         }
     }
 
-    &-gradient {
+    &--gradient {
         background: $color-gradient;
     }
 
-    &-white {
+    &--white {
         background-color: $color-white;
     }
 
-    &-white-pure {
+    &--white-pure {
         background-color: #ffff;
     }
 
-    &-grey {
+    &--grey {
         background-color: $color-grey;
     }
 
-    &-light {
+    &--light {
         background-color: $color-light;
     }
 
-    &-dark {
+    &--dark {
         background-color: $color-dark;
     }
 }

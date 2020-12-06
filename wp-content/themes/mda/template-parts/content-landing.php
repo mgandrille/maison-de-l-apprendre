@@ -10,7 +10,6 @@
 
 ?>
 
-
 <!-- 
 === HERO LANDING
 -->
@@ -23,7 +22,7 @@
 			du 21 au 27 janvier 2021
 
 			<!-- === Separateur pointillé === -->
-			<span class="position--xy_ b-50 l-20 shape--elmt-border-dotted shape--main"></span>
+			<span class="position--xy_ b-50 l-20 shape--elmt-border-dotted_ _main"></span>
 		</h2>
 
 		<h1 class="title--title-landing text--letter-spacing text--main">
@@ -36,7 +35,7 @@
 			venez fêter le plaisir d'apprendre
 		</h2>
 
-		<span class="position--xy_ b-80 l-30 shape--elmt-border-dotted shape--main shape--rotate90"></span>
+		<span class="position--xy_ b-45 l-30 shape--elmt-border-dotted_ _main shape--rotate90"></span>
 	</div>
 
 	<!-- === Badges circulaires === --->
@@ -72,7 +71,7 @@
 			Découvrir<br />
 			le festival
 
-			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted shape--main"></span>
+			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted_ _main"></span>
 		</h2>
 
 		<h6>Une journée pour apprendre et découvrir</h6>
@@ -94,7 +93,7 @@
 			Ateliers<br />
 			et conférences
 
-			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted shape--main"></span>
+			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted_ _main"></span>
 		</h2>
 
 		<h6>Comprendre le monde de demain</h6>
@@ -114,7 +113,7 @@
 === SELECTION DES ATELIERS
 -->
 
-<section class="bg--gradient">
+<section class="bg--gradient padding--y-xb">
 	<div class="size--w100 bg--white">
 
 		<!-- === filter bar === --->
@@ -137,7 +136,7 @@
 				</div>
 
 				<!-- === change display : cards by filter (date, category, etc...) / cards by workshop / png programm === --->
-				<ul class="margin--m-s-children display--row display--center-y display--between-x shape--border-l-children shape--border-grey-children">
+				<ul class="margin--m-s-children display--row display--center-y display--between-x shape--border-l-children_ _grey">
 					<li>Tous</li>	
 					<li>Filtrer</li>
 					<li>Programme</li>
@@ -157,7 +156,7 @@
 					</ul>
 
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
 					</h3>	
 
@@ -180,7 +179,7 @@
 					</ul>
 
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
 					</h3>	
 
@@ -203,7 +202,7 @@
 					</ul>
 
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
 					</h3>	
 
@@ -226,7 +225,7 @@
 					</ul>
 
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
 					</h3>	
 

@@ -76,6 +76,5 @@ main {
 @import './_modificator/_modificateur-loader.scss';
 
 section {
-    padding-right: $padding-xb;
-    padding-left: $padding-xb;
+    padding:  $padding-m $padding-xb;
 }

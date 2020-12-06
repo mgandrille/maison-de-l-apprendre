@@ -75,6 +75,11 @@
     align-items: flex-end;
 }
 
+.display--end-x,
+.display--content-end-x > * {
+    justify-content: flex-end;
+}
+
 .display--between-x,
 .display--content-between-x > * {
     justify-content: space-between;

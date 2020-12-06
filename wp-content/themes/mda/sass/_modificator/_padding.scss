@@ -1,6 +1,47 @@
-.padding--y-auto,
-.padding--y-auto-children > * {
-    padding : auto 0
+.padding--y {
+    padding-top: $padding;
+    padding-bottom: $padding;
+
+    &-children > * {
+        padding-top: $padding;
+        padding-bottom: $padding;
+    }
+
+    &-s,
+    &-s-children > * {
+        padding-top: $padding-s;
+        padding-bottom: $padding-s;
+    }
+
+    &-m,
+    &-m-children > * {
+        padding-top: $padding-m;
+        padding-bottom: $padding-m;
+    }
+
+    &-b,
+    &-b-children > * {
+        padding-top: $padding-b;
+        padding-bottom: $padding-b;
+    }
+
+    &-xb,
+    &-xb-children > * {
+        padding-top: $padding-xb;
+        padding-bottom: $padding-xb;
+    }
+
+    &-none,
+    &-none-children > * {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &-auto,
+    &-auto-children > * {
+        padding-top: auto;
+        padding-bottom: auto;
+    }
 }
 
 .padding--x {

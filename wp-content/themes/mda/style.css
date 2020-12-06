@@ -238,17 +238,14 @@ main {
 	transform: rotate(90deg);
 }
 
-.shape--elmt-border-dotted {
+.shape--elmt-border-dotted_ {
 	position: absolute;
 	display: block;
 	width: 100%;
+	border-width: 0;
 	border-bottom-width: 4px;
-	border-bottom-style: dotted;
-	border-bottom-color: #151818;
-}
-
-.shape--elmt-border-dotted.shape--main {
-	border-bottom-color: #ea0084;
+	border-style: dotted;
+	border-color: #151818;
 }
 
 .shape--elmt-circle-b {
@@ -279,6 +276,10 @@ main {
 
 ._grey {
 	border-color: #545454;
+}
+
+._main {
+	border-color: #ea0084;
 }
 
 /* ==== ======================== */
@@ -532,6 +533,11 @@ main {
 .display--end-y,
 .display--content-end-y > * {
 	align-items: flex-end;
+}
+
+.display--end-x,
+.display--content-end-x > * {
+	justify-content: flex-end;
 }
 
 .display--between-x,
@@ -839,8 +845,28 @@ a:hover {
 	bottom: -80%;
 }
 
+.position--xy_.b-60 {
+	bottom: -60%;
+}
+
+.position--xy_.b-55 {
+	bottom: -55%;
+}
+
 .position--xy_.b-50 {
 	bottom: -50%;
+}
+
+.position--xy_.b-45 {
+	bottom: -45%;
+}
+
+.position--xy_.b-40 {
+	bottom: -40%;
+}
+
+.position--xy_.b-30 {
+	bottom: -30%;
 }
 
 .position--xy_.b-20 {
@@ -1038,9 +1064,50 @@ a:hover {
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
+.padding--y {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.padding--y-children > * {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.padding--y-s,
+.padding--y-s-children > * {
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+}
+
+.padding--y-m,
+.padding--y-m-children > * {
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
+}
+
+.padding--y-b,
+.padding--y-b-children > * {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.padding--y-xb,
+.padding--y-xb-children > * {
+	padding-top: 2.85rem;
+	padding-bottom: 2.85rem;
+}
+
+.padding--y-none,
+.padding--y-none-children > * {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .padding--y-auto,
 .padding--y-auto-children > * {
-	padding: auto 0;
+	padding-top: auto;
+	padding-bottom: auto;
 }
 
 .padding--x {
@@ -1505,6 +1572,8 @@ h6,
 
 .title--title-landing {
 	font-size: 5.8rem;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 /* ==== ======================== */
@@ -1684,8 +1753,7 @@ h6,
 }
 
 section {
-	padding-right: 2.85rem;
-	padding-left: 2.85rem;
+	padding: 1.75rem 2.85rem;
 }
 
 /*# sourceMappingURL=style.css.map */
