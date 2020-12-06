@@ -111,6 +111,10 @@ figure {
 	justify-content: flex-start;
 }
 
+img {
+	display: inline-block;
+}
+
 li {
 	width: auto;
 	flex-direction: row;
@@ -278,7 +282,8 @@ main {
 	display: flex;
 	align-items: stretch;
 	cursor: pointer;
-	transition: box-shadow 100ms ease-in, border 130ms ease-in;
+	transition: box-shadow 100ms ease-in,
+ border 130ms ease-in;
 }
 
 .nav--content-link li a {
@@ -382,6 +387,18 @@ main {
 	margin-left: 20%;
 }
 
+.text-componant--block-title-article > :first-child {
+	margin-bottom: 0.6rem;
+}
+
+.text-componant--block-title-article > :last-child {
+	margin-top: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #d6d6d6;
+	font-size: calc(4rem * .42);
+}
+
 .text-componant--block-parag {
 	width: 60%;
 }
@@ -401,7 +418,8 @@ main {
 	cursor: pointer;
 	box-shadow: none;
 	transform: scale(1);
-	transition: box-shadow 100ms ease-in, transform 130ms ease-in;
+	transition: box-shadow 100ms ease-in,
+ transform 130ms ease-in;
 }
 
 .button--btn-sized {
@@ -615,6 +633,10 @@ a:hover {
 
 .bg--grey {
 	background-color: #545454;
+}
+
+.bg--light {
+	background-color: #d6d6d6;
 }
 
 .bg--dark {
@@ -1211,19 +1233,23 @@ a:hover {
 	font-size: .8rem;
 }
 
-.text--color-main {
+.text--main {
 	color: #ea0084;
 }
 
-.text--color-secondary {
+.text--secondary {
 	color: #43beba;
 }
 
-.text--color-grey {
+.text--grey {
 	color: #545454;
 }
 
-.text--color-white {
+.text--light {
+	color: #d6d6d6;
+}
+
+.text--white {
 	color: #f4f4f4;
 }
 
@@ -1238,32 +1264,32 @@ h6 {
 
 h1,
 .title--h1 {
-	font-size: 2rem;
+	font-size: 4rem;
 }
 
 h2,
 .title--h2 {
-	font-size: calc(2rem * .8);
+	font-size: calc(4rem * .8);
 }
 
 h3,
 .title--h3 {
-	font-size: calc(2rem * .58);
+	font-size: calc(4rem * .58);
 }
 
 h4,
 .title--h4 {
-	font-size: calc(2rem * .5);
+	font-size: calc(4rem * .5);
 }
 
 h5,
 .title--h5 {
-	font-size: calc(2rem * .42);
+	font-size: calc(4rem * .42);
 }
 
 h6,
 .title--h6 {
-	font-size: calc(2rem * .33);
+	font-size: calc(4rem * .33);
 }
 
 .title--title-landing {

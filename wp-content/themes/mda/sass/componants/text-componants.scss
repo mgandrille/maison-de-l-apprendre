@@ -1,7 +1,8 @@
 .text-componant--block-title {
 	width: 30%;
 
-	& > :first-child {
+	& > :first-child,
+	& > .alone:last-child {
 		font-size: 4.5rem;
 		color: $color-main;
 		margin-bottom: 0;
@@ -12,6 +13,20 @@
 		text-transform: uppercase;
 		color: $color-grey;
 		margin-left: 20%;
+	}
+}
+
+.text-componant--block-title-article {
+	& > :first-child {
+		margin-bottom: $margin-s;
+	}
+
+	& > :last-child {
+		margin-top: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $color-light;
+		font-size: $h5;
 	}
 }
 

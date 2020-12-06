@@ -19,19 +19,19 @@
 
 	<!-- === Titre === -->
 	<div class=" position--relative size--wauto margin--m-none-children">
-		<h2 class="position--relative title--h4 text--color-grey">
+		<h2 class="position--relative title--h6 text--grey">
 			du 21 au 27 janvier 2021
 
 			<!-- === Separateur pointillé === -->
 			<span class="position--xy_ b-50 l-20 shape--elmt-border-dotted shape--main"></span>
 		</h2>
 
-		<h1 class="title--title-landing text--letter-spacing text--color-main">
+		<h1 class="title--title-landing text--letter-spacing text--main">
 			festival de<br>
 			l'apprendre
 		</h1>
 
-		<h2 class="size--w100 text--right title--h4 text--color-grey">
+		<h2 class="size--w100 text--right title--h6 text--grey">
 			en famille, entre collègues, entre amis,<br />
 			venez fêter le plaisir d'apprendre
 		</h2>
@@ -42,15 +42,15 @@
 	<!-- === Badges circulaires === --->
 	<div class="position--absolute position--xy_ t10 l40 size--w40 size--h70  display--between-x text--upper text--bold">
 		<div class="size--h25 display--row display--end-y display--between-x">
-			<div class="margin--m-b-auto display--center shape--elmt-circle-b text--color-white bg--secondary">
+			<div class="margin--m-b-auto display--center shape--elmt-circle-b text--white bg--secondary">
 				<span>Découvrir</span>
 			</div>
-			<div class="shape--elmt-circle-m display--center text--color-white bg--warm">
+			<div class="shape--elmt-circle-m display--center text--white bg--warm">
 				<span class="text--small">Rencontrer</span>
 			</div>
 		</div>
 
-		<div class="margin--m-l-s shape--elmt-circle-m display--center text--color-white bg--main">
+		<div class="margin--m-l-s shape--elmt-circle-m display--center text--white bg--main">
 			<span class="text--small">Expérimenter</span>
 		</div>
 	</div>
@@ -75,7 +75,7 @@
 			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted shape--main"></span>
 		</h2>
 
-		<h3>Une journée pour apprendre et découvrir</h3>
+		<h6>Une journée pour apprendre et découvrir</h6>
 	</header>
 
 	<!-- === description de la section === --->
@@ -97,7 +97,7 @@
 			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted shape--main"></span>
 		</h2>
 
-		<h3>Comprendre le monde de demain</h3>
+		<h6>Comprendre le monde de demain</h6>
 	</header>
 
 	<div class="text-componant--block-parag">
@@ -156,7 +156,7 @@
 						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="position--relative size--w100 margin--m-b-s title--h2">
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
 						Titre atelier
 					</h3>	
@@ -179,7 +179,7 @@
 						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="position--relative size--w100 margin--m-b-s title--h2">
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
 						Titre atelier
 					</h3>	
@@ -202,7 +202,7 @@
 						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="position--relative size--w100 margin--m-b-s title--h2">
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
 						Titre atelier
 					</h3>	
@@ -225,7 +225,7 @@
 						<li class="margin--m-l-auto">jeunesse</li>
 					</ul>
 
-					<h3 class="position--relative size--w100 margin--m-b-s title--h2">
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted shape--main"></span>
 						Titre atelier
 					</h3>	

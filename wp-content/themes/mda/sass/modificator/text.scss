@@ -29,7 +29,7 @@
 	}
 }
 
-.text--color {
+.text- {
 	&-main {
 		color: $color-main;
 	}
@@ -40,6 +40,10 @@
 
 	&-grey {
 		color: $color-grey;
+	}
+
+	&-light {
+		color: $color-light;
 	}
 
 	&-white {

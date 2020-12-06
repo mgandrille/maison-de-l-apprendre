@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "img.css",
+	"sources": [
+		"../sass/modificator/img.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,SAAS,CAAC;CACT,UAAU,EAAE,KAAK;CACjB,eAAe,EAAE,MAAM;CACvB"
+}

@@ -61,14 +61,16 @@ body {
     background-color: $color-white;
 }
 
+img {
+    display: inline-block;
+    width: 100%;
+}
+
 main {
     max-width: $app-w;
     height: $app-h;
     margin: auto;
 }
-
-
-
 
 @import './composant/composant-loader.scss';
 @import './modificateur/modificateur-loader.scss';

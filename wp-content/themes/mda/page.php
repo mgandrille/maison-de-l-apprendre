@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary">
 		<?php get_template_part( 'template-parts/content', 'landing' ); ?>
-	</main><!-- #main -->
+	</main>
 
 </body>
 <?php

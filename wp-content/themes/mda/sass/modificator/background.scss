@@ -91,11 +91,15 @@
     }
 
     &-white-pure {
-        background-color: #fff;
+        background-color: #ffff;
     }
 
     &-grey {
         background-color: $color-grey;
+    }
+
+    &-light {
+        background-color: $color-light;
     }
 
     &-dark {
@@ -119,6 +123,10 @@
 
     &.bgbr {
         background-position: bottom right;
+    }
+
+    &.bgbc {
+        background-position: bottom center;
     }
 }
 
