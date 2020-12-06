@@ -184,6 +184,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/custom-functions.php';
 
 /**
+ * ACF
+ */
+add_filter('acf/settings/save_json', '/inc/acf-json');
+
+function my_acf_json_save_point( $path ) {
+    // update path
+    $path = get_stylesheet_directory() . '/inc/acf-json';
+    // return
+    return $path;
+}
+
+
+/**
  * Special file for getting all blocks info
  */
 require get_template_directory() . '/inc/blocks-informations.php';
