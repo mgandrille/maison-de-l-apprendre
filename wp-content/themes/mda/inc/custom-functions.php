@@ -6,24 +6,29 @@
  */
 function automatic_posts() {
 
-    $post1 = [
-        'post_title' => 'premier article automatique',
-        'post_content' => 'ceci est un contenu',
-        'post_status' => 'publish',
-    ];
-    $post2 = [
-        'post_title' => 'deuxième article automatique',
-        'post_content' => 'ceci est un contenu',
-        'post_status' => 'publish',
-    ];
+    // $post1 = [
+    //     'post_title' => 'premier article automatique',
+    //     'post_content' => 'ceci est un contenu',
+    //     'post_status' => 'publish',
+    // ];
+    // $post2 = [
+    //     'post_title' => 'deuxième article automatique',
+    //     'post_content' => 'ceci est un contenu',
+    //     'post_status' => 'publish',
+    // ];
 
-    $posts = [$post1, $post2];
-    $existingPosts = get_posts();
+    // $posts = [$post1, $post2];
+    $posts = get_articles();
+    // d($posts);
+    // d(get_posts(['numberposts' => -1]));
+    $existingPosts = get_posts(['numberposts' => -1]);
 
     foreach($existingPosts as $existingPost) {
         $existingPostTitles[] =  $existingPost->post_title;
     };
+    // d($existingPostTitles);
     foreach($posts as $post) {
+        d(in_array($post['post_title'], $existingPostTitles));
         if(!in_array($post['post_title'], $existingPostTitles)) {
             wp_insert_post( $post );
         }
