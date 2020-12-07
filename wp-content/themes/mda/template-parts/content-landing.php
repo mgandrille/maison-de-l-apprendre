@@ -17,7 +17,7 @@
 <section class="position--relative size--h100 display--row display--between-x text--upper display--center-y display--overflow-hidden bg--gradient">
 
 	<!-- === Titre === -->
-	<div class=" position--relative size--wauto margin--m-none-children">
+	<div class=" position--relative size--w100 size--w-mdauto margin--m-none-children">
 		<h2 class="position--relative title--h6 text--grey">
 			du 21 au 27 janvier 2021
 
@@ -39,7 +39,7 @@
 	</div>
 
 	<!-- === Badges circulaires === --->
-	<div class="position--absolute position--xy_ t10 l40 size--w40 size--h70  display--between-x text--upper text--bold">
+	<div class="display-md--flex display--none position--absolute position--xy_ t10 l40  size--w100 size--w-md40 size--h70  display--between-x text--upper text--bold">
 		<div class="size--h25 display--row display--end-y display--between-x">
 			<div class="margin--m-b-auto display--center shape--elmt-circle-b text--white bg--secondary">
 				<span>Découvrir</span>
@@ -55,7 +55,7 @@
 	</div>
 
 	<!-- === Illustration === --->
-	<figure class="size--h100 bg--img_ bgauto bgbr"></figure>
+	<figure class="display--none display-md--flex size--h100 bg--img_ bgauto bgbr"></figure>
 </section>
 
 

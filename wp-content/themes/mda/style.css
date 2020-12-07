@@ -108,6 +108,7 @@ figure {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 
@@ -128,7 +129,6 @@ body {
 
 img {
 	display: inline-block;
-	width: 100%;
 }
 
 main {
@@ -298,9 +298,30 @@ main {
 	display: inline-block;
 }
 
-.nav--logo-squared {
-	width: 5rem;
-	height: 5rem;
+.nav--logo {
+	width: auto;
+	height: 50px;
+}
+
+.nav--full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #43beba;
+	display: flex;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
+	font-size: 1.75rem;
+}
+
+.nav--full * {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #f4f4f4;
 }
 
 /* ==== ======================== */
@@ -378,7 +399,7 @@ main {
 /* ==== Responsive 
 /* ==== ======================== */
 .text-componant--block-title {
-	width: 30%;
+	width: 100%;
 }
 
 .text-componant--block-title > :first-child,
@@ -422,11 +443,60 @@ main {
 }
 
 .text-componant--block-parag {
-	width: 60%;
+	width: 100%;
 }
 
 .text-componant--block-parag p {
 	text-align: justify;
+}
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+@media screen and (min-width: 1024px) {
+	.text-componant--block-title {
+		width: 30%;
+	}
+	.text-componant--block-title > :first-child,
+	.text-componant--block-title > .alone:last-child {
+		font-size: 4.5rem;
+		color: #ea0084;
+		margin-bottom: 0;
+	}
+	.text-componant--block-title > :last-child {
+		text-align: right;
+		text-transform: uppercase;
+		color: #545454;
+		margin-left: 20%;
+	}
+	.text-componant--block-title-article > :first-child {
+		margin-bottom: 0.6rem;
+	}
+	.text-componant--block-title-article > :last-child {
+		margin-top: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #ff914d;
+		font-size: calc(4rem * .42);
+	}
+	.text-componant--block-title-aside :first-child {
+		font-size: calc(4rem * .8);
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+	.text-componant--block-title-aside :last-child {
+		margin-top: 0;
+		width: 50%;
+		border-bottom-style: dotted;
+		border-bottom-width: 6px;
+		border-bottom-color: #ea0084;
+	}
+	.text-componant--block-parag {
+		width: 60%;
+	}
+	.text-componant--block-parag p {
+		text-align: justify;
+	}
 }
 
 .button--btn {
@@ -464,23 +534,19 @@ main {
 /* ==== Responsive 
 /* ==== ======================== */
 /* Add your own componants rules here */
-.display--hidden,
-.display--content-hidden > * {
+.display--none {
 	display: none;
 }
 
-.display--flex,
-.display--content-flex > * {
+.display--flex {
 	display: flex;
 }
 
-.display--block,
-.display--content-block > * {
+.display--block {
 	display: block;
 }
 
-.display--inline-block,
-.display--content-inline-block > * {
+.display--inline-block {
 	display: inline-block;
 }
 
@@ -558,6 +624,24 @@ main {
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
+@media screen and (min-width: 600px) {
+	.display-md--none {
+		display: none;
+	}
+	.display-md--flex {
+		display: flex;
+	}
+	.display-md--block {
+		display: block;
+	}
+	.display-md--inline-block {
+		display: inline-block;
+	}
+	.display-md--overflow-hidden {
+		overflow: hidden;
+	}
+}
+
 a {
 	cursor: pointer;
 	font-size: inherit;
@@ -1511,6 +1595,10 @@ a:hover {
 	font-size: .8rem;
 }
 
+.text--regular {
+	font-size: 1rem;
+}
+
 .text--main {
 	color: #ea0084;
 }
@@ -1529,6 +1617,54 @@ a:hover {
 
 .text--white {
 	color: #f4f4f4;
+}
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+@media screen and (min-width: 1024px) {
+	.text-md--upper {
+		text-transform: uppercase;
+	}
+	.text-md--letter-spacing {
+		letter-spacing: .05rem;
+	}
+	.text-md--right {
+		text-align: right;
+	}
+	.text-md--left {
+		text-align: left;
+	}
+	.text-md--justify {
+		text-align: justify;
+	}
+	.text-md--center {
+		text-align: center;
+	}
+	.text-md--bold {
+		font-weight: bold;
+	}
+	.text-md--small {
+		font-size: .8rem;
+	}
+	.text-md--regular {
+		font-size: 1rem;
+	}
+	.text-md--main {
+		color: #ea0084;
+	}
+	.text-md--secondary {
+		color: #43beba;
+	}
+	.text-md--grey {
+		color: #545454;
+	}
+	.text-md--light {
+		color: #e9e6e6;
+	}
+	.text-md--white {
+		color: #f4f4f4;
+	}
 }
 
 h1,
@@ -1748,6 +1884,134 @@ h6,
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
+@media screen and (min-width: 800px) {
+	.size--w-md5,
+	.size--w-md5-children > * {
+		width: 5%;
+	}
+	.size--w-md10,
+	.size--w-md10-children > * {
+		width: 10%;
+	}
+	.size--w-md15,
+	.size--w-md15-children > * {
+		width: 15%;
+	}
+	.size--w-md20,
+	.size--w-md20-children > * {
+		width: 20%;
+	}
+	.size--w-md25,
+	.size--w-md25-children > * {
+		width: 25%;
+	}
+	.size--w-md30,
+	.size--w-md30-children > * {
+		width: 30%;
+	}
+	.size--w-md35,
+	.size--w-md35-children > * {
+		width: 35%;
+	}
+	.size--w-md40,
+	.size--w-md40-children > * {
+		width: 40%;
+	}
+	.size--w-md40-margin {
+		width: calc(40% - (1rem * 2));
+	}
+	.size--w-md45,
+	.size--w-md45-children > * {
+		width: 45%;
+	}
+	.size--w-md50,
+	.size--w-md50-children > * {
+		width: 50%;
+	}
+	.size--w-md60,
+	.size--w-md60-children > * {
+		width: 60%;
+	}
+	.size--w-md60-margin {
+		width: calc(60% - (1rem * 2));
+	}
+	.size--w-md65,
+	.size--w-md65-children > * {
+		width: 65%;
+	}
+	.size--w-md70 {
+		width: 70%;
+	}
+	.size--w-md80 {
+		width: 80%;
+	}
+	.size--w-md90 {
+		width: 90%;
+	}
+	.size--w-md100 {
+		width: 100%;
+	}
+	.size--w-mdodd3 {
+		width: calc(100% / 3);
+	}
+	.size--w-mdauto {
+		width: auto;
+	}
+	.size--h-md10 {
+		height: 10vh;
+	}
+	.size--h-md20 {
+		height: 20vh;
+	}
+	.size--h-md25 {
+		height: 25vh;
+	}
+	.size--h-md30 {
+		height: 30vh;
+	}
+	.size--h-md40,
+	.size--h-md40-children > * {
+		height: 40vh;
+	}
+	.size--h-md40p,
+	.size--h-md40p-children > * {
+		height: 40%;
+	}
+	.size--h-md50,
+	.size--h-md50-children > * {
+		height: 50vh;
+	}
+	.size--h-md60 {
+		height: 60vh;
+	}
+	.size--h-md65 {
+		height: 65vh;
+	}
+	.size--h-md65p {
+		height: 65%;
+	}
+	.size--h-md70 {
+		height: 70vh;
+	}
+	.size--h-md80 {
+		height: 80vh;
+	}
+	.size--h-md90 {
+		height: 90vh;
+	}
+	.size--h-md100,
+	.size--h-md100-children > * {
+		height: 100vh;
+	}
+	.size--h-md100p,
+	.size--h-md100p-children > * {
+		height: 100%;
+	}
+	.size--h-mdauto {
+		height: auto;
+	}
+}
+
 .border {
 	border: 1px solid red;
 }

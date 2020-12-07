@@ -1,29 +1,24 @@
-.display--hidden,
-.display--content-hidden > * {
-    display: none;
-}
+.display {
+    &--none {
+        display: none;
+    }
 
-.display--flex,
-.display--content-flex > * {
-    display: flex;
-}
+    &--flex {
+        display: flex;
+    }
 
-.display--block,
-.display--content-block > * {
-    display: block;
-}
+    &--block {
+        display: block;
+    }
 
-.display--inline-block,
-.display--content-inline-block > * {
-    display: inline-block;
-}
-
-.display--overflow {
-    &-hidden {
+    &--inline-block {
+        display: inline-block;
+    }
+    
+    &--overflow-hidden {
         overflow: hidden;
     }
 }
-
 
 /* ==== ======================== */
 /* ==== Flex config
@@ -101,11 +96,30 @@
 /* ==== ======================== */
 
 @media screen and (min-width: 600px) {
-
+    .display-md {
+        &--none {
+            display: none;
+        }
+    
+        &--flex {
+            display: flex;
+        }
+    
+        &--block {
+            display: block;
+        }
+    
+        &--inline-block {
+            display: inline-block;
+        }
+        
+        &--overflow-hidden {
+            overflow: hidden;
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
-
 }
 
 @media screen and (min-width: 1220px) {
