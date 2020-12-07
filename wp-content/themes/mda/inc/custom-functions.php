@@ -27,12 +27,15 @@ function automatic_posts() {
         $existingPostTitles[] =  $existingPost->post_title;
     };
     // d($existingPostTitles);
-    foreach($posts as $post) {
-        d(in_array($post['post_title'], $existingPostTitles));
-        if(!in_array($post['post_title'], $existingPostTitles)) {
-            wp_insert_post( $post );
-        }
-    };
+    if(!empty($posts)) {
+        foreach($posts as $post) {
+            d(in_array($post['post_title'], $existingPostTitles));
+
+            if(!in_array($post['post_title'], $existingPostTitles)) {
+                wp_insert_post( $post );
+            }
+        };
+    }
 }
 
 

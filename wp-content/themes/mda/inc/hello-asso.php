@@ -127,22 +127,25 @@ function get_articles() {
 
     $events = get_forms_infos()->data;
     // d($events);
-    foreach($events as $event) {
-        // d(new DateTime($event->endDate));
-        // d($event);
-        if(new DateTime($event->endDate) >= $today)
-        {
-            $eventInfo['post_title'] = $event->title;
-            $eventInfo['post_content'] = $event->description;
-            $eventInfo['startDate'] = $event->startDate;
-            $eventInfo['endDate'] = $event->endDate;
-            $eventInfo['widgetButtonUrl'] = $event->widgetButtonUrl;
-            $eventInfo['state'] = $event->state;
-            $eventInfo['post_status'] = 'publish';
+    if(!empty($events)) {
+        foreach($events as $event) {
+            // d(new DateTime($event->endDate));
+            // d($event, $event->endDate);
+            if(new DateTime($event->endDate) >= $today && $event->formSlug !== 'dejeuners-communaute-4')
+            {
+                $eventInfo['post_title'] = $event->title;
+                $eventInfo['post_content'] = $event->description;
+                $eventInfo['startDate'] = $event->startDate;
+                $eventInfo['endDate'] = $event->endDate;
+                $eventInfo['widgetButtonUrl'] = $event->widgetButtonUrl;
+                $eventInfo['state'] = $event->state;
+                $eventInfo['post_status'] = 'publish';
 
-            array_push($eventDatas, $eventInfo);
+                array_push($eventDatas, $eventInfo);
+            }
         }
     }
+
     // d($eventDatas);
     return $eventDatas;
 }
