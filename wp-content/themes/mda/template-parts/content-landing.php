@@ -117,13 +117,13 @@
 	<div class="size--w100 bg--white">
 
 		<!-- === filter bar === --->
-		<header class="size--h10 display--center-x bg--white-pure">
+		<!-- <header class="size--h10 display--center-x bg--white-pure">
 			<form class=" size--w100 display--row display--center-y display--between-y">
 
-				<!-- === search bar === --->
+				<-- === search bar === 
 				<input type="text" class="size--w50" name="search" placeholder="Rechercher un atelier">
 
-				<!-- === filter on tag === --->
+				<-- === filter on tag === 
 				<div class="margin--m-s-children display--row display--center">
 					<input type="checkbox" name="all" id="all">
 					<label for="all">Tout public</label>
@@ -135,17 +135,17 @@
 					<label for="pro">Professionnels</label>
 				</div>
 
-				<!-- === change display : cards by filter (date, category, etc...) / cards by workshop / png programm === --->
+				<-- === change display : cards by filter (date, category, etc...) / cards by workshop / png programm === 
 				<ul class="margin--m-s-children display--row display--center-y display--between-x shape--border-l-children_ _grey">
 					<li>Tous</li>	
 					<li>Filtrer</li>
 					<li>Programme</li>
 				</ul>
 			</form>
-		</header>
+		</header> -->
 
 		<!-- === Articles === --->
-		<div class="card--gallerie card--gallerie-4 padding--m">
+		<div class="card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
 			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
 				<header class="size--h20 card--bg structure--head"></header>
 				<div class="structure--body">

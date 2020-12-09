@@ -34,6 +34,11 @@
             width: calc(25% - #{$margin});
         }
     }
+
+    &-2 > * {
+        margin: $margin 0;
+        width: 100%;
+    }
 }
 
 .card--tag {
@@ -63,11 +68,56 @@
 /* ==== ======================== */
 
 @media screen and (min-width: 800px) {
+    .card--gallerie-sm {
+        flex-direction: row;
 
+         &-2 > * {
+            margin: $margin;
+            width: calc(50% - ( #{$margin} * 2));
+    
+            &:nth-child(odd) {
+                margin: $margin;
+                width: calc(50% - (#{$margin} * 2));
+            }
+    
+            &:nth-child(even) {
+                margin: $margin;
+                width: calc(50% - (#{$margin} * 2));
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    .card--gallerie-md {
+        flex-direction: row;
 
+         &-2 > * {
+            margin: $margin;
+            width: calc(25% - ( #{$margin} * 2));
+    
+            &:nth-child(odd) {
+                margin: $margin;
+                width: calc(25% - (#{$margin} * 2));
+            }
+    
+            &:nth-child(even) {
+                margin: $margin;
+                width: calc(25% - (#{$margin} * 2));
+            }
+
+                
+            &:first-child {
+                margin-left:0;
+                width: calc(25% - #{$margin});
+            }
+    
+            &:last-child {
+                margin-right: 0;
+                width: calc(25% - #{$margin});
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1220px) {

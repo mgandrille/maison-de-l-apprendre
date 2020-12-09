@@ -389,6 +389,11 @@ main {
 	width: calc(25% - 1rem);
 }
 
+.card--gallerie-2 > * {
+	margin: 1rem 0;
+	width: 100%;
+}
+
 .card--tag {
 	color: #43beba;
 	font-size: .75rem;
@@ -413,8 +418,52 @@ main {
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
+@media screen and (min-width: 800px) {
+	.card--gallerie-sm {
+		flex-direction: row;
+	}
+	.card--gallerie-sm-2 > * {
+		margin: 1rem;
+		width: calc(50% - ( 1rem * 2));
+	}
+	.card--gallerie-sm-2 > *:nth-child(odd) {
+		margin: 1rem;
+		width: calc(50% - (1rem * 2));
+	}
+	.card--gallerie-sm-2 > *:nth-child(even) {
+		margin: 1rem;
+		width: calc(50% - (1rem * 2));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.card--gallerie-md {
+		flex-direction: row;
+	}
+	.card--gallerie-md-2 > * {
+		margin: 1rem;
+		width: calc(25% - ( 1rem * 2));
+	}
+	.card--gallerie-md-2 > *:nth-child(odd) {
+		margin: 1rem;
+		width: calc(25% - (1rem * 2));
+	}
+	.card--gallerie-md-2 > *:nth-child(even) {
+		margin: 1rem;
+		width: calc(25% - (1rem * 2));
+	}
+	.card--gallerie-md-2 > *:first-child {
+		margin-left: 0;
+		width: calc(25% - 1rem);
+	}
+	.card--gallerie-md-2 > *:last-child {
+		margin-right: 0;
+		width: calc(25% - 1rem);
+	}
+}
+
 .text-componant--block-title {
-	width: 100%;
+	width: 80%;
 }
 
 .text-componant--block-title > :first-child,
@@ -427,8 +476,8 @@ main {
 .text-componant--block-title > :last-child {
 	text-align: right;
 	text-transform: uppercase;
+	margin-left: auto;
 	color: #545454;
-	margin-left: 20%;
 }
 
 .text-componant--block-title-article > :first-child {
@@ -468,49 +517,21 @@ main {
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
 	.text-componant--block-title {
-		width: 30%;
-	}
-	.text-componant--block-title > :first-child,
-	.text-componant--block-title > .alone:last-child {
-		font-size: 4.5rem;
-		color: #ea0084;
-		margin-bottom: 0;
-	}
-	.text-componant--block-title > :last-child {
-		text-align: right;
-		text-transform: uppercase;
-		color: #545454;
-		margin-left: 20%;
-	}
-	.text-componant--block-title-article > :first-child {
-		margin-bottom: 0.6rem;
-	}
-	.text-componant--block-title-article > :last-child {
-		margin-top: 0;
-		text-transform: uppercase;
-		font-weight: bold;
-		color: #ff914d;
-		font-size: calc(4rem * .42);
-	}
-	.text-componant--block-title-aside :first-child {
-		font-size: calc(4rem * .8);
-		margin-top: 0;
-		margin-bottom: 1rem;
-	}
-	.text-componant--block-title-aside :last-child {
-		margin-top: 0;
-		width: 50%;
-		border-bottom-style: dotted;
-		border-bottom-width: 6px;
-		border-bottom-color: #ea0084;
+		width: 40%;
 	}
 	.text-componant--block-parag {
 		width: 60%;
 	}
-	.text-componant--block-parag p {
-		text-align: justify;
+}
+
+@media screen and (min-width: 1220px) {
+	.text-componant--block-title {
+		width: 30%;
+	}
+	.text-componant--block-parag {
+		width: 70%;
 	}
 }
 

@@ -1,5 +1,5 @@
 .text-componant--block-title {
-	width: 100%;
+	width: 80%;
 
 	& > :first-child,
 	& > .alone:last-child {
@@ -11,8 +11,8 @@
 	& > :last-child {
 		text-align: right;
 		text-transform: uppercase;
+		margin-left: auto;
 		color: $color-grey;
-		margin-left: 20%;
 	}
 }
 
@@ -60,69 +60,29 @@
 /* ==== ======================== */
 
 @media screen and (min-width: 800px) {
+	.text-componant--block-title {
+		width: 40%;
+	}
 
+	.text-componant--block-parag {
+		width: 60%;
+	}
+	
 }
 
 @media screen and (min-width: 1024px) {
-	.text-componant--block-title {
-		width: 30%;
 	
-		& > :first-child,
-		& > .alone:last-child {
-			font-size: 4.5rem;
-			color: $color-main;
-			margin-bottom: 0;
-		}
-	
-		& > :last-child {
-			text-align: right;
-			text-transform: uppercase;
-			color: $color-grey;
-			margin-left: 20%;
-		}
-	}
-	
-	.text-componant--block-title-article {
-		& > :first-child {
-			margin-bottom: $margin-s;
-		}
-	
-		& > :last-child {
-			margin-top: 0;
-			text-transform: uppercase;
-			font-weight: bold;
-			color: $color-warm;
-			font-size: $h5;
-		}
-	}
-	
-	.text-componant--block-title-aside {
-		& :first-child {
-			font-size: $h2;
-			margin-top: 0;
-			margin-bottom: $margin;
-		}
-	
-		& :last-child {
-			margin-top: 0;
-			width: 50%;
-			border-bottom-style: dotted;
-			border-bottom-width: 6px;
-			border-bottom-color: $color-main;
-		}
-	}
-	
-	.text-componant--block-parag {
-		width: 60%;
-	
-		& p {
-			text-align: justify;
-		}
-	}
 }
 
 @media screen and (min-width: 1220px) {
-    
+	.text-componant--block-title {
+		width: 30%;
+	}
+
+	.text-componant--block-parag {
+		width: 70%;
+	}
+	
 }
 
 @media screen and (min-width: 1366px) {
