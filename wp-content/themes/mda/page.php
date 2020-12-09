@@ -36,6 +36,23 @@ get_header();
 		<?php get_template_part( 'template-parts/content', 'landing' ); ?>
 	</main>	
 
+	<!-- === Footer === -->
+	<footer class="size--h20 bg--gradient">
+		<figure class="size--w100 text--main size--h100p padding--xb bg--footer display--row display--between-x  display--center-y">
+			<ul class="display--row size--wauto padding--s-children">
+				<li><a class="text--main" href="#">Contactez-nous</a></li>
+				<li><a class="text--main" href="#">HelloAsso</a></li>
+				<li><a class="text--main" href="#">L'équipe MDA</a></li>
+			</ul>
+
+			<ul class="display--row size--wauto  padding--s-children">
+				<li><i class="title--h4 fab fa-twitter-square"></i></li>
+				<li><i class="title--h4 fab fa-instagram-square"></i></li>
+				<li><i class="title--h4 fab fa-facebook-square"></i></li>
+			</ul>
+		</figure>
+	</footer>
+
 	<script>
 		const navMenu = document.getElementById('nav-menu');
 		const navMenuBtn = document.getElementById('nav-menu-btn');

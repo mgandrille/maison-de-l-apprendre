@@ -240,11 +240,3 @@
 		</div>
 	</div>
 </section>
-
-<footer class="size--h20 bg--gradient">
-	<figure class="size--w100 size--h100p padding--xb bg--footer">
-	contact
-	Twitter
-	Réseau
-	</figure>
-</footer>
