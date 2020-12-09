@@ -182,3 +182,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Custom Functions
  */
 require get_template_directory() . '/inc/custom-functions.php';
+
+/**
+ * Custom new menu
+ */
+
+function wpb_custom_new_menu() {
+	register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );

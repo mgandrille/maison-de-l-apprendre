@@ -21,6 +21,27 @@
 	<?php wp_head(); ?>
 </head>
 
+<!-- === Navigation === -->
+<header class="position--fixed bg--white padding--x-xb padding--y-s">
+	<nav class="display--row display--between-x display--center-y">
+		<img src="https://i.postimg.cc/HWMvPvmT/MDA-Logo-vectoris.png" class="nav--logo" alt="logo">
+
+		<div class="size--wauto display-md--none">
+			<p id="nav-menu-btn">menu</p>
+		</div>
+
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'my-custom-menu',
+					'menu_id' => 'nav-menu', 
+    				'container_class' => 'nav--bar' 
+				)
+			);
+		?>
+	</nav>
+</header>
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 

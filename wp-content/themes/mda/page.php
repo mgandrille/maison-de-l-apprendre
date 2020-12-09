@@ -14,22 +14,7 @@
 
 get_header();
 ?>	
-	<!-- === Navigation === -->
-	<header class="position--fixed bg--white padding--x-xb padding--y-s">
-		<nav class="display--row display--between-x display--center-y">
-			<img src="https://i.postimg.cc/HWMvPvmT/MDA-Logo-vectoris.png" class="nav--logo" alt="logo">
-
-			<div class="size--wauto display-md--none">
-				<p id="nav-menu-btn">menu</p>
-			</div>
-
-			<ul id="nav-menu" class="nav--bar nav-md--bar display--none display-md--flex">
-				<li><a href="#">Equipes</a></li>
-				<li><a href="#">Ateliers</a></li>
-				<li><a href="#">La Maison de l'apprendre</a></li>
-			</ul>
-		</nav>
-	</header>
+	
 	
 	<!-- === Affichage des templates de page === -->
 	<main id="primary">
@@ -54,11 +39,11 @@ get_header();
 	</footer>
 
 	<script>
-		const navMenu = document.getElementById('nav-menu');
+		const navMenu = document.querySelector('.nav--bar');
 		const navMenuBtn = document.getElementById('nav-menu-btn');
 
 		navMenuBtn.addEventListener('click', () => {
-			navMenu.classList.toggle("display--none");
+			navMenu.classList.toggle("display--block");
 		})
 	</script>
 </body>
