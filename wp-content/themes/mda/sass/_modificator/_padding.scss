@@ -227,3 +227,480 @@
         padding-bottom: auto;
     }
 }
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+    .padding--y-sm {
+        padding-top: $padding;
+        padding-bottom: $padding;
+    
+        &-children > * {
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-top: $padding-s;
+            padding-bottom: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-top: $padding-m;
+            padding-bottom: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-top: $padding-b;
+            padding-bottom: $padding-b;
+        }
+    
+        &-xb,
+        &-xb-children > * {
+            padding-top: $padding-xb;
+            padding-bottom: $padding-xb;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-top: auto;
+            padding-bottom: auto;
+        }
+    }
+    
+    .padding--x-sm {
+        padding-left: $padding;
+        padding-right: $padding;
+    
+        &-children > * {
+            padding-left: $padding;
+            padding-right: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-left: $padding-s;
+            padding-right: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-left: $padding-m;
+            padding-right: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-left: $padding-b;
+            padding-right: $padding-b;
+        }
+    
+        &-xb,
+        &-xb-children > * {
+            padding-left: $padding-xb;
+            padding-right: $padding-xb;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-left: auto;
+            padding-right: auto;
+        }
+    }
+    
+    .padding--l-sm {
+        &-children > * {
+            padding-left: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-left: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-left: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-left: $padding-b;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-left: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-left: auto;
+        }
+    }
+    
+    .padding--r-sm {
+        &-children > * {
+            padding-right: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-right: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-right: $padding-m;
+        }
+        
+        &-b,
+        &-b-children > * {
+            padding-right: $padding-b;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-right: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-right: auto;
+        }
+    }
+    
+    .padding-sm {
+        padding: $padding;
+    
+        &--children > * {
+            padding: $padding;
+        }
+    
+        &--s,
+        &--s-children > * {
+            padding: $padding-s;
+        }
+    
+        &--m,
+        &--m-children > * {
+            padding: $padding-m;
+        }
+    
+        &--b,
+        &--b-children > * {
+            padding: $padding-b;
+        }
+    
+        &--xb,
+        &--xb-children > * {
+            padding: $padding-xb;
+        }
+    
+        &--none,
+        &--none-children > * {
+            padding: 0;
+        }
+    
+        &--auto,
+        &--auto-children > * {
+            padding: auto;
+        }
+    }
+    
+    .padding--b-sm {
+        padding-bottom: $padding;
+    
+        &-children > * {
+            padding-bottom: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-bottom: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-bottom: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-bottom: $padding-b;
+        }
+    
+        &-xb,
+        &-xb-children > * {
+            padding-bottom: $padding-xb;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-bottom: 0;
+        }
+    
+        &--auto,
+        &--auto-children > * {
+            padding-bottom: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .padding--y-md {
+        padding-top: $padding;
+        padding-bottom: $padding;
+    
+        &-children > * {
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-top: $padding-s;
+            padding-bottom: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-top: $padding-m;
+            padding-bottom: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-top: $padding-b;
+            padding-bottom: $padding-b;
+        }
+    
+        &-xb,
+        &-xb-children > * {
+            padding-top: $padding-xb;
+            padding-bottom: $padding-xb;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-top: auto;
+            padding-bottom: auto;
+        }
+    }
+    
+    .padding--x-md {
+        padding-left: $padding;
+        padding-right: $padding;
+    
+        &-children > * {
+            padding-left: $padding;
+            padding-right: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-left: $padding-s;
+            padding-right: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-left: $padding-m;
+            padding-right: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-left: $padding-b;
+            padding-right: $padding-b;
+        }
+    
+        &-xb,
+        &-xb-children > * {
+            padding-left: $padding-xb;
+            padding-right: $padding-xb;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-left: auto;
+            padding-right: auto;
+        }
+    }
+    
+    .padding--l-md {
+        &-children > * {
+            padding-left: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-left: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-left: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-left: $padding-b;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-left: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-left: auto;
+        }
+    }
+    
+    .padding--r-md {
+        &-children > * {
+            padding-right: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-right: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-right: $padding-m;
+        }
+        
+        &-b,
+        &-b-children > * {
+            padding-right: $padding-b;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-right: 0;
+        }
+    
+        &-auto,
+        &-auto-children > * {
+            padding-right: auto;
+        }
+    }
+    
+    .padding-md {
+        padding: $padding;
+    
+        &--children > * {
+            padding: $padding;
+        }
+    
+        &--s,
+        &--s-children > * {
+            padding: $padding-s;
+        }
+    
+        &--m,
+        &--m-children > * {
+            padding: $padding-m;
+        }
+    
+        &--b,
+        &--b-children > * {
+            padding: $padding-b;
+        }
+    
+        &--xb,
+        &--xb-children > * {
+            padding: $padding-xb;
+        }
+    
+        &--none,
+        &--none-children > * {
+            padding: 0;
+        }
+    
+        &--auto,
+        &--auto-children > * {
+            padding: auto;
+        }
+    }
+    
+    .padding--b-md {
+        padding-bottom: $padding;
+    
+        &-children > * {
+            padding-bottom: $padding;
+        }
+    
+        &-s,
+        &-s-children > * {
+            padding-bottom: $padding-s;
+        }
+    
+        &-m,
+        &-m-children > * {
+            padding-bottom: $padding-m;
+        }
+    
+        &-b,
+        &-b-children > * {
+            padding-bottom: $padding-b;
+        }
+    
+        &-xb,
+        &-xb-children > * {
+            padding-bottom: $padding-xb;
+        }
+    
+        &-none,
+        &-none-children > * {
+            padding-bottom: 0;
+        }
+    
+        &--auto,
+        &--auto-children > * {
+            padding-bottom: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}

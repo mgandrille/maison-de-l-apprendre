@@ -17,7 +17,7 @@
 <section class="position--relative size--h100 display--row display--between-x text--upper display--center-y display--overflow-hidden bg--gradient">
 
 	<!-- === Titre === -->
-	<div class=" position--relative size--w100 size--w-mdauto margin--m-none-children">
+	<div class=" position--relative size--wauto margin--m-none-children">
 		<h2 class="position--relative title--h6 text--grey">
 			du 21 au 27 janvier 2021
 
@@ -30,7 +30,7 @@
 			l'apprendre
 		</h1>
 
-		<h2 class="size--w100 text--right title--h6 text--grey">
+		<h2 class="text--right title--h6 text--grey margin--l-auto">
 			en famille, entre collègues, entre amis,<br />
 			venez fêter le plaisir d'apprendre
 		</h2>
@@ -38,7 +38,7 @@
 		<span class="position--xy_ b-45 l-30 shape--elmt-border-dotted_ _main shape--rotate90"></span>
 	</div>
 
-	<!-- === Badges circulaires === --->
+	<!-- === Badges circulaires === -->
 	<div class="display-md--flex display--none position--absolute position--xy_ t10 l40  size--w100 size--w-md40 size--h70  display--between-x text--upper text--bold">
 		<div class="size--h25 display--row display--end-y display--between-x">
 			<div class="margin--m-b-auto display--center shape--elmt-circle-b text--white bg--secondary">
@@ -54,8 +54,8 @@
 		</div>
 	</div>
 
-	<!-- === Illustration === --->
-	<figure class="display--none display-md--flex size--h100 bg--img_ bgauto bgbr"></figure>
+	<!-- === Illustration === -->
+	<figure class="size--w100 size--h100p position--absolute position--xy-br bg--img_ _bg-br display--none display-sm--flex"></figure>
 </section>
 
 

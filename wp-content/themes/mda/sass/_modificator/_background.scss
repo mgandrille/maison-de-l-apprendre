@@ -109,23 +109,23 @@
 
 .bg--img_ {
     background-image: url('https://i.postimg.cc/Yq89kzgZ/bg.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
-    &.bgauto {
+    &._bg-auto {
         background-size: auto;
     }
 
-    &.bgcontain {
+    &._bg-contain {
         background-size: contain;
     }
 
-    &.bgbr {
+    &._bg-br {
         background-position: bottom right;
     }
 
-    &.bgbc {
+    &._bg-bc {
         background-position: bottom center;
     }
 }

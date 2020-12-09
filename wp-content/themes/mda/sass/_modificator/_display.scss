@@ -96,7 +96,7 @@
 /* ==== ======================== */
 
 @media screen and (min-width: 600px) {
-    .display-md {
+    .display-sm {
         &--none {
             display: none;
         }
@@ -120,6 +120,27 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .display-md {
+        &--none {
+            display: none;
+        }
+    
+        &--flex {
+            display: flex;
+        }
+    
+        &--block {
+            display: block;
+        }
+    
+        &--inline-block {
+            display: inline-block;
+        }
+        
+        &--overflow-hidden {
+            overflow: hidden;
+        }
+    }
 }
 
 @media screen and (min-width: 1220px) {
