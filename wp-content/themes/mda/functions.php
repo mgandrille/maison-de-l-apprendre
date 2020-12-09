@@ -186,14 +186,13 @@ require get_template_directory() . '/inc/custom-functions.php';
 /**
  * ACF
  */
-add_filter('acf/settings/save_json', '/inc/acf-json');
+require get_template_directory() . '/inc/setup.php';
 
-function my_acf_json_save_point( $path ) {
-    // update path
-    $path = get_stylesheet_directory() . '/inc/acf-json';
-    // return
-    return $path;
-}
+
+/**
+ * CUSTOM POST TYPES
+ */
+require get_template_directory() . '/inc/cpt/options.php';
 
 
 /**
