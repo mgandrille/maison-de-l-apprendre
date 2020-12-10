@@ -57,15 +57,3 @@ if( !function_exists( 'create_programmes' ) ){
 }
 
 add_action( 'init', 'create_options_page', 0 );
-
-// ******* [TODO] *********** //
-/** Code to Add in helloAsso.php for having API Key */
-$options = get_posts(array(
-	'post_type' => 'options_page',
-	'numberposts' => -1,
-));
-// d($options);
-
-$option_helloAsso = get_post($options[0]->ID);
-$helloAsso = get_post($option_helloAsso->ID);
-$helloAsso_vars = get_fields($helloAsso);  //array {'key', 'secret_key'}

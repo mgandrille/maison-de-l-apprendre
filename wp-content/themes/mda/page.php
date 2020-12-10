@@ -17,7 +17,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/evenements/test-festival-2/widget" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>		while ( have_posts() ) :
+		<?php
+		while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
