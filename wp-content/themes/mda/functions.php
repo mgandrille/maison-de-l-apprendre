@@ -184,6 +184,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/custom-functions.php';
 
 /**
+ * ACF
+ */
+require get_template_directory() . '/inc/setup.php';
+
+
+/**
+ * CUSTOM POST TYPES
+ */
+require get_template_directory() . '/inc/cpt/options.php';
+
+
+/**
  * Special file for getting all blocks info
  */
 require get_template_directory() . '/inc/blocks-informations.php';
