@@ -5,16 +5,6 @@
  * @package mda
  */
 
-// Informations about mda
-$clientKey = "";
-$clientSecret = "";
-$url = "https://api.helloasso.com/oauth2/token";
-$authorizeUrl = 'https://auth.helloasso.com/authorize';
-$siteUrl = $_SERVER['HTTP_REFERER'];
-$pkce = '';
-
-//Tell cURL where our certificate bundle is located.
-$certificate = "C:\MAMP\cacert.pem";
 
 /**
  * @return array|string
@@ -22,7 +12,6 @@ $certificate = "C:\MAMP\cacert.pem";
 function firstTokens()
 {
     global $clientKey, $clientSecret, $url;
-
     $post = [
         'client_id'     => $clientKey,
         'client_secret' => $clientSecret,
@@ -30,7 +19,6 @@ function firstTokens()
     ];
 
     $tokens = postCurl($url, $post);
-
     $refreshToken = $tokens['refresh_token'];
 
     return getSecondTokens($refreshToken);
@@ -52,7 +40,6 @@ function getSecondTokens(string $refreshToken)
     ];
 
     $tokens = postCurl($url, $post);
-
     return $tokens;
 }
 
@@ -117,7 +104,7 @@ function postCurl($url, array $post)
     curl_setopt($ch, CURLOPT_POSTFIELDS, $array);
     curl_setopt($ch, CURLOPT_CAINFO, $certificate);
     curl_setopt($ch, CURLOPT_CAPATH, $certificate);
-// curl_setopt($ch, CURLOPT_HTTPHEADER, array('application/x-www-form-urlencoded'));
+    // curl_setopt($ch, CURLOPT_HTTPHEADER, array('application/x-www-form-urlencoded'));
     // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
     $response = curl_exec($ch);

@@ -194,6 +194,11 @@ require get_template_directory() . '/inc/setup.php';
  */
 require get_template_directory() . '/inc/cpt/options.php';
 
+/**
+ * Config file
+ */
+require get_template_directory() . '/inc/config.php';
+
 
 /**
  * Special file for getting all blocks info
@@ -204,3 +209,4 @@ require get_template_directory() . '/inc/blocks-informations.php';
  * Special functions for HelloAsso API
  */
 require get_template_directory() . '/inc/hello-asso.php';
+

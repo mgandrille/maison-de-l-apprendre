@@ -34,3 +34,24 @@ function automatic_posts() {
 
 
 add_action('init', 'automatic_posts');
+
+
+/**
+ * get_api_key_helloAsso
+ * function for having HelloAsso API Key
+ *
+ * @return array {'key', 'secret_key'}
+ */
+function get_api_key_helloAsso() {
+    $options = get_posts(array(
+        'post_type' => 'options_page',
+        'numberposts' => -1,
+    ));
+    // d($options);
+
+    $option_helloAsso = get_post($options[0]->ID);
+    $helloAsso = get_post($option_helloAsso->ID);
+    $helloAsso_vars = get_fields($helloAsso);
+
+    return $helloAsso_vars;
+}
