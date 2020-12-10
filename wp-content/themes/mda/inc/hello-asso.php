@@ -196,7 +196,7 @@ function get_forms_infos() {
 
     $headers = [
         'Accepts: application/json',
-        'Authorization: Bearer '.$token,
+        'Authorization: Bearer '.$token['access_token'],
     ];
 
     $curl = curl_init();
@@ -231,9 +231,13 @@ function get_articles() {
             // d(new DateTime($event->endDate));
             // d($event, $event->endDate);
             $eventInfo = get_object_vars($event);
-            if(new DateTime($event->endDate) >= $today && $event->formSlug !== 'dejeuners-communaute-4')
-            {
-                array_push($eventDatas, $eventInfo);
+            try {
+                    if(new DateTime($event->endDate) >= $today && $event->formSlug !== 'dejeuners-communaute-4')
+                {
+                    array_push($eventDatas, $eventInfo);
+                }
+            }
+            catch (Exception $e) {
             }
         }
     }
