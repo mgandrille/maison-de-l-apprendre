@@ -14,29 +14,19 @@
 === HERO LANDING
 -->
 
-<section class="position--relative size--h100 display--row display--between-x text--upper display--center-y display--overflow-hidden bg--gradient">
+<section class="structure--hero">
 
 	<!-- === Titre === -->
-	<div class=" position--relative size--wauto margin--m-none-children">
-		<h2 class="position--relative title--h6 text--grey">
-			du 21 au 27 janvier 2021
+	<header>
+		<span></span>
 
-			<!-- === Separateur pointillé === -->
-			<span class="position--xy_ b-50 l-20 shape--elmt-border-dotted_ _main"></span>
+		<h2>du 21 au 27 janvier 2021</h2>
+		<h1>festival de<br>l'apprendre</h1>
+		<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre
 		</h2>
 
-		<h1 class="title--title-landing text--letter-spacing text--main">
-			festival de<br>
-			l'apprendre
-		</h1>
-
-		<h2 class="text--right title--h6 text--grey margin--l-auto">
-			en famille, entre collègues, entre amis,<br />
-			venez fêter le plaisir d'apprendre
-		</h2>
-
-		<span class="position--xy_ b-45 l-30 shape--elmt-border-dotted_ _main shape--rotate90"></span>
-	</div>
+		<span></span>
+	</header>
 
 	<!-- === Badges circulaires === -->
 	<div class="display-md--flex display--none position--absolute position--xy_ t10 l40  size--w100 size--w-md40 size--h70  display--between-x text--upper text--bold">
