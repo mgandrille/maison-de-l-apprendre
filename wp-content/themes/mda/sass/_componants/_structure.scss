@@ -77,81 +77,114 @@
 
 .structure--hero {
   padding: 0;
-  position: relative;
   height: 100vh;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  overflow: hidden;
-  background: $color-gradient;
+  overflow-y: hidden;
+  background: url("https://i.postimg.cc/YScdRdKZ/Copie-de-landings.png") bottom right / 40% no-repeat, 
+    $color-gradient;
 
-  & > :first-child {
-    padding: 0 $padding-xb;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
+    @media screen and (min-width:1220px) {
+      background-size: 30%, cover;
+    }
+}
 
-    & h2 {
-      margin: 0 auto 0 0;
-      color: $color-grey;
-      font-size: $h6;
-      text-align: left;
-    } 
+.structure--hero-title {
+  padding: 0 $padding-xb;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-    & h2:last-of-type {
+  & h1 {
+    font-size: $custom-font-size;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: $color-main;
+    letter-spacing: .05rem;
+  }
+
+  & h2 {
+    margin: 0 auto 0 0;
+    color: $color-grey;
+    font-size: $h6;
+    text-align: left;
+
+    &:last-of-type {
       text-align: right;
       margin: 0 0 0 auto;
-    } 
-    
-    & h1 {
-      font-size: $custom-font-size;
-      margin-bottom: 0;
-      margin-top: 0;
-      color: $color-main;
-      letter-spacing: .05rem;
     }
+  } 
 
-    & span {
-      position: absolute;
-      border-bottom: 4px dotted $color-main;
-    }
-    
-    & span:first-child {
-      width: 50%;
-      top: -10%;
-      left: 0;
-      
-    } 
+  & span {
+    position: absolute;
+    border-bottom: 4px dotted $color-main;
 
-    & span:last-child {
+    &:first-child {
       width: 80%;
-      bottom: -70%;
+      bottom: -80%;
       left: -10%;
       transform: rotate(90deg);
-
+  
       @media screen and (min-width:600px) {
-        bottom: -55%;
+        bottom: -60%;
       }
     }
 
-    @media screen and (min-width:600px) {
-      width: auto;
-      padding-left: $padding-xb;
-      align-items: center;
+    &:last-child {
+      width: 50%;
+      top: -10%;
+      left: 0;
     }
+  }
+
+  @media screen and (min-width:600px) {
+    width: 50%;
+    padding-left: $padding-xb;
+    padding-right: 0;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width:800px) {
+    width: 30%;
+  }
+}
+
+.structure--hero-slot {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: none;
+
+  & [class^="shape--badge"] {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+
+    &:first-of-type {
+      top:20%;
+      left: 10%;
+    }
+
+    &:last-of-type {
+      top: 75%;
+      left: 15%;
+    }
+  }
+
+  @media screen and (min-width:800px) {
+    width: 70%;
+    display: flex;
+    padding-right: $padding-xb;
   }
 }
 
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
-
-@media screen and (min-width: 800px) {
-
-}
 
 @media screen and (min-width: 1220px) {
     

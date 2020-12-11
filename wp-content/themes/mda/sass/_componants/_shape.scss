@@ -57,3 +57,28 @@
 ._main {
     border-color: $color-main;
 }
+
+.shape--badge {
+    &-b {
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        background-color: $color-main;
+        align-items: center;
+        justify-content: center;
+        color: $color-white;
+        font-weight: bold;
+    
+    }
+
+    &-m {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        background-color: $color-secondary;
+        align-items: center;
+        justify-content: center;
+        color: $color-white;
+        font-weight: bold;
+    }
+}

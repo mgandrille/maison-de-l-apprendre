@@ -17,35 +17,33 @@
 <section class="structure--hero">
 
 	<!-- === Titre === -->
-	<header>
+	<header class="structure--hero-title">
 		<span></span>
 
 		<h2>du 21 au 27 janvier 2021</h2>
 		<h1>festival de<br>l'apprendre</h1>
-		<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre
-		</h2>
+		<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
 
 		<span></span>
 	</header>
 
 	<!-- === Badges circulaires === -->
-	<div class="display-md--flex display--none position--absolute position--xy_ t10 l40  size--w100 size--w-md40 size--h70  display--between-x text--upper text--bold">
-		<div class="size--h25 display--row display--end-y display--between-x">
-			<div class="margin--m-b-auto display--center shape--elmt-circle-b text--white bg--secondary">
-				<span>Découvrir</span>
-			</div>
-			<div class="shape--elmt-circle-m display--center text--white bg--warm">
-				<span class="text--small">Rencontrer</span>
-			</div>
+	<div class="structure--hero-slot">
+		<div class="shape--badge-b">
+			<span>Découvrir</span>
 		</div>
 
-		<div class="margin--m-l-s shape--elmt-circle-m display--center text--white bg--main">
-			<span class="text--small">Expérimenter</span>
+		<div class="shape--badge-m">
+			<span>Rencontrer</span>
+		</div>
+
+		<div class="shape--badge-m">
+			<span>Expérimenter</span>
 		</div>
 	</div>
 
 	<!-- === Illustration === -->
-	<figure class="size--w100 size--h100p position--absolute position--xy-br bg--img_ _bg-br display--none display-sm--flex"></figure>
+	<!--<figure class="size--w100 size--h100p position--absolute position--xy-br bg--img_ _bg-br display--none display-sm--flex"></figure>-->
 </section>
 
 
