@@ -5,7 +5,26 @@
 .wpnav-menu {
     position: fixed;
     background-color: $color-white;
-    padding: $padding-s $padding-xb
+    padding: $padding-s $padding-xb;
+}
+
+.structure--nav {
+    border-bottom: 1px solid $color-light;
+    position: fixed;
+    color: $color-dark;
+    padding: $padding-s $padding-xb;
+    background-color: $color-white;
+    z-index: 300;
+
+    & ul li a {
+        color: $color-dark;
+        font-family: $font-head;
+        font-size: $h6;
+
+        &:hover {
+            color: $color-action;
+        }
+    }
 }
 
 .nav--content-link li {

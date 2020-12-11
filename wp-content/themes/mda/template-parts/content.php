@@ -26,7 +26,7 @@
 		<div class="structure--article-content" >
 
 			<header class="card--legend-article">
-				<img src="https://i.postimg.cc/rs2hG5F3/bg.jpg" alt="banniere-atelier">
+				<img src="http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/animer-atelier-ou-workshop-1000x640-1.jpg" alt="banniere-atelier">
 				<ul>
 					<li>Début : 14h30 </li>
 					<li>Durée : 1h30</li>
@@ -86,7 +86,7 @@
 		</aside>
 	</section>
 
-<section class="margin--b-none margin--t-m" style="background-image: url('https://i.postimg.cc/KY0rrS3f/Copie-de-first-child-alone-last-child-font-size-4-5rem-color-color-main-margin-botto.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
+<section class="margin--b-none margin--t-m" style="background-image: url('http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Copie-de-_-_first-child-.alone_last-child-font-size_-4.5rem-color_-color-main-margin-bottom_-0-.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
 	<header class="title--main-simple">
 		<h2>
 			Ateliers<br />

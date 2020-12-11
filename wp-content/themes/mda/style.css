@@ -222,7 +222,7 @@ main {
 	align-items: center;
 	text-transform: uppercase;
 	overflow-y: hidden;
-	background: url("https://i.postimg.cc/YScdRdKZ/Copie-de-landings.png") bottom right/40% no-repeat, linear-gradient(90deg, #86d0e9 0%, #f2daf4 100%);
+	background: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Copie-de-landings.png") bottom right/40% no-repeat, linear-gradient(90deg, #86d0e9 0%, #f2daf4 100%);
 }
 
 @media screen and (min-width: 1220px) {
@@ -470,6 +470,25 @@ main {
 	padding: 0.6rem 2.85rem;
 }
 
+.structure--nav {
+	border-bottom: 1px solid #e9e6e6;
+	position: fixed;
+	color: #151818;
+	padding: 0.6rem 2.85rem;
+	background-color: #f4f4f4;
+	z-index: 300;
+}
+
+.structure--nav ul li a {
+	color: #151818;
+	font-family: "Economica", sans-serif;
+	font-size: calc(4rem * .33);
+}
+
+.structure--nav ul li a:hover {
+	color: #4abc96;
+}
+
 .nav--content-link li {
 	width: auto;
 	display: flex;
@@ -557,7 +576,7 @@ main {
 }
 
 .card--bg {
-	background-image: url("https://i.postimg.cc/rs2hG5F3/bg.jpg");
+	background-image: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/animer-atelier-ou-workshop-1000x640-1.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -900,6 +919,58 @@ main {
 	border-bottom-color: #ea0084;
 }
 
+.title--main {
+	width: 100%;
+	margin-bottom: 2.85rem;
+}
+
+.title--main > :first-child {
+	position: relative;
+	font-size: 4.5rem;
+	color: #ea0084;
+	margin-bottom: 0;
+}
+
+.title--main span {
+	position: absolute;
+	width: 100%;
+	left: -50%;
+	top: -20%;
+	border-bottom-style: dotted;
+	border-bottom-width: 6px;
+	border-bottom-color: #ea0084;
+}
+
+.title--main > :last-child {
+	margin-top: 1rem;
+	text-align: right;
+	text-transform: uppercase;
+	margin-left: auto;
+	color: #545454;
+}
+
+.title--main + div {
+	width: 100%;
+	margin-top: 0;
+}
+
+.title--main + div p {
+	font-size: 1.25em;
+}
+
+@media screen and (min-width: 1024px) {
+	.title--main + div {
+		width: 60%;
+		margin-top: 10vh;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.title--main {
+		width: 30%;
+	}
+}
+
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
@@ -1194,7 +1265,7 @@ a:hover {
 }
 
 .bg--footer {
-	background-image: url("https://i.postimg.cc/bYQw8CJY/Sans-titre.png");
+	background-image: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Sans-titre.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom center;

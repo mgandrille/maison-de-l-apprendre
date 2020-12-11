@@ -63,6 +63,56 @@
 }
 
 
+.title--main {
+	width: 100%;
+	margin-bottom: $margin-xb;
+
+	& > :first-child {
+		position: relative;
+		font-size: 4.5rem;
+		color: $color-main;
+		margin-bottom: 0;
+	}
+
+	& span {
+		position: absolute;
+		width: 100%;
+		left: -50%;
+		top: -20%;
+		border-bottom-style: dotted;
+		border-bottom-width: 6px;
+		border-bottom-color: $color-main;
+	}
+
+	& > :last-child {
+		margin-top: $margin;
+		text-align: right;
+		text-transform: uppercase;
+		margin-left: auto;
+		color: $color-grey;
+	}
+
+	& + div {
+		width: 100%;
+		margin-top: 0;
+
+		& p {
+			font-size: 1.25em;
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 60%;
+			margin-top: 10vh;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		width: 30%;
+	}
+}
+
+
+
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
