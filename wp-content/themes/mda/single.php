@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -10,18 +11,19 @@
 get_header();
 ?>
 
-		<main id="primary">
+<main id="primary" style="margin-top: 100px">
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
+	<?php
+	while (have_posts()) :
+		the_post();
 
-				get_template_part( 'template-parts/content', get_post_type() );
+		get_template_part('template-parts/content', get_post_type());
 
-			endwhile; // End of the loop.
-			?>
+	endwhile;
+	?>
 
-		</main>
+</main>
 
-	</body>
-</html>
+
+<?php
+get_footer();

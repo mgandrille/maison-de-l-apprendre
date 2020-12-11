@@ -38,16 +38,48 @@
     }
 }
 
+.structure--article-content {
+  width: 100%;
+  margin: 0;
+
+  & p {
+    text-align: justify;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: calc(60% - #{$margin});
+    margin: $margin $margin $margin 0;
+  }
+}
+
+.structure--article-aside {
+  position: relative;
+  width:100%;
+  min-height: 60vh;
+  margin: 0;
+  padding: $padding-m;
+  background-color: $color-light;
+
+  @media screen and (min-width: 1024px) {
+    width: calc(40% - #{$margin});
+    min-height: 65vh;
+    margin: $margin 0 $margin $margin;
+  }
+
+  & p {
+    font-size: 1.25rem;
+  }
+
+  & a {
+    font-size: 1rem;
+  }
+}
 
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
 
 @media screen and (min-width: 800px) {
-
-}
-
-@media screen and (min-width: 1024px) {
 
 }
 

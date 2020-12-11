@@ -80,6 +80,8 @@
 }
 
 .margin--t {
+    margin-top: $margin;
+
     &-auto,
     &-auto-children > * {
         margin-top: auto;
@@ -88,6 +90,11 @@
     &-s,
     &-s-children > * {
         margin-top: $margin-s;
+    }
+
+    &-m,
+    &-m-children > * {
+        margin-top: $margin-m;
     }
 
     &-none,
@@ -283,6 +290,8 @@
     }
     
     .margin--t-sm {
+        margin-top: $margin;
+
         &-auto,
         &-auto-children > * {
             margin-top: auto;
@@ -291,6 +300,11 @@
         &-s,
         &-s-children > * {
             margin-top: $margin-s;
+        }
+
+        &-m,
+        &-m-children > * {
+            margin-top: $margin-m;
         }
     
         &-none,
@@ -481,6 +495,8 @@
     }
     
     .margin--t-md {
+        margin-top: $margin;
+        
         &-auto,
         &-auto-children > * {
             margin-top: auto;
@@ -489,6 +505,11 @@
         &-s,
         &-s-children > * {
             margin-top: $margin-s;
+        }
+
+        &-m,
+        &-m-children > * {
+            margin-top: $margin-m;
         }
     
         &-none,

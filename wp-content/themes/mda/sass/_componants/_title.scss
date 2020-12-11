@@ -1,0 +1,88 @@
+.title--article {
+	margin: 0;
+	padding: 0 $padding-xb;
+	text-align: center;
+	align-items: center;
+
+	& > :first-child {
+		margin-top: 0;
+		margin-bottom: $margin-s;
+	}
+
+	& > :last-child {
+		margin-top: 0;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $color-warm;
+		font-size: $h5;
+	}
+
+	@media screen and (min-width: 800px) {
+		text-align: left;
+		align-items: flex-start;
+	}
+}
+
+.title--secondary {
+	& :first-child {
+		font-size: $h3;
+		margin-top: 0;
+		margin-bottom: $margin;
+	}
+
+	& :last-child {
+		margin-top: 0;
+		width: 50%;
+		border-bottom-style: dotted;
+		border-bottom-width: 6px;
+		border-bottom-color: $color-main;
+	}
+}
+
+.title--main-simple {
+	width: 80%;
+	margin-bottom: $margin-xb;
+
+	& > :first-child {
+		position: relative;
+		font-size: 4.5rem;
+		color: $color-main;
+		margin-bottom: 0;
+	}
+
+	& span {
+		position: absolute;
+		width: 100%;
+		left: -50%;
+		top: -20%;
+		border-bottom-style: dotted;
+		border-bottom-width: 6px;
+		border-bottom-color: $color-main;
+	}
+}
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

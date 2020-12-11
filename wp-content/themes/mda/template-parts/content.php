@@ -10,73 +10,184 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
-	
-	<header class="text-componant--block-title-article padding--x-xb">
-		<h1>Créativité par le travail du bois</h1>
-		<p>Animé par Créabois</p>
-	</header>
 
-	<section class="display--row margin--children">
-		<div class="size--w60">
-			<header>
-				<img class="size--w100 size--h50 img--fit" src="https://i.postimg.cc/rs2hG5F3/bg.jpg" alt="banniere-atelier">
-				<ul class="display--row display--between-x bg--light padding--m-children title--h6 text--upper text--center">
-					<li class="shape--border-r_ _grey size--w100 display--center"><span class="text--bold">Début : </span> 14h30 </li>
-					<li class="shape--border-r_ _grey size--w100 display--center"><span class="text--bold">Durée : </span> 1h30</li>
-					<li class="text--main text--bold size--w100 display--center">Tout public</li>
+	<header class="title--article">
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1>', '</h1>' );
+			the_title( '<p>', '</p>' );
+		else :
+			the_title( '<h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+		?>
+	</header>
+	
+	<section class="display--row display--between-x">
+		<div class="structure--article-content" >
+
+			<header class="card--legend-article">
+				<img src="https://i.postimg.cc/rs2hG5F3/bg.jpg" alt="banniere-atelier">
+				<ul>
+					<li>Début : 14h30 </li>
+					<li>Durée : 1h30</li>
+					<li>Tout public</li>
 				</ul>
 			</header>
 
-            <div>
+			<div>
 				<h2>Au programme</h2>	
-				<p class="text--justify">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one  rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself.</p>
-			</div>
 				
+				<?php
+				the_content(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mda' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						wp_kses_post( get_the_title() )
+					)
+				);
+				?>
+				
+			</div>	
 		</div>
 
-		<aside class="position--relative size--w40 size--h65 padding--m-children bg--light">
+
+		<aside class="structure--article-aside">
 			<div>
-				<header class="text-componant--block-title-aside">
+				<header class="title--secondary">
 					<h3>Parcours</h3>
 					<span></span>
 				</header>
 
-				<p class="title--h6">Les événements à suivre après cet atelier</p>
+				<p>Les événements à suivre après cet atelier</p>
 			</div>
 
 			<div>
-				<header class="text-componant--block-title-aside">
+				<header class="title--secondary">
 					<h3>Intervenants</h3>
 					<span></span>
 				</header>
 
-				<p class="title--h6">Benedicte Guacamole</p>
+				<p>Benedicte Guacamole</p>
 				<a href="http://google.fr">www.site-de-l-intervenant.fr</a>
 			</div>
 
-			<div class="position--absolute position--xy_ b-10 l10 bg--action size--w80">
+			<div class="card--absolute">
 				<nav>
 					<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/evenements/test-festival-2/widget-bouton" style="width: 100%; height: 70px; border: none;"></iframe>
 				</nav>
 			</div>
 		</aside>
-</section>
+	</section>
 
-<section class="bg--img_ bgbc" style="background-image: url('https://i.postimg.cc/KY0rrS3f/Copie-de-first-child-alone-last-child-font-size-4-5rem-color-color-main-margin-botto.png');">
-	<header class="text-componant--block-title">
-		<h2 class="position--relative alone">
+<section class="margin--b-none margin--t-m" style="background-image: url('https://i.postimg.cc/KY0rrS3f/Copie-de-first-child-alone-last-child-font-size-4-5rem-color-color-main-margin-botto.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
+	<header class="title--main-simple">
+		<h2>
 			Ateliers<br />
 			similaires
-
-			<span class="position--xy_ t-10 l-60 shape--elmt-border-dotted shape--main"></span>
+			<span></span>
 		</h2>
 	</header>
+
+		<div class="card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+		</div>
+
 </section>
-
-<section class="bg--light">
-	<p>articles</p>
-</section>
-
-
-
-</article><?php the_ID(); ?>
+</article>
