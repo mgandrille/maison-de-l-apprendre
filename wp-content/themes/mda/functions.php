@@ -193,3 +193,31 @@ function wpb_custom_new_menu() {
 	register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
 }
 add_action( 'init', 'wpb_custom_new_menu' );
+
+/*
+ * ACF
+ */
+require get_template_directory() . '/inc/setup.php';
+
+
+/**
+ * CUSTOM POST TYPES
+ */
+require get_template_directory() . '/inc/cpt/options.php';
+
+/**
+ * Config file
+ */
+require get_template_directory() . '/inc/config.php';
+
+
+/**
+ * Special file for getting all blocks info
+ */
+require get_template_directory() . '/inc/blocks-informations.php';
+
+/**
+ * Special functions for HelloAsso API
+ */
+require get_template_directory() . '/inc/hello-asso.php';
+
