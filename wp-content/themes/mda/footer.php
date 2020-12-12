@@ -28,14 +28,6 @@
 </footer>
 
 <?php wp_footer(); ?>
-<script>
-		const navMenu = document.querySelector('.nav--bar');
-		const navMenuBtn = document.getElementById('nav-menu-btn');
-
-		navMenuBtn.addEventListener('click', () => {
-			navMenu.classList.toggle("display--flex");
-		})
-	</script>
 
 </body>
 </html>
