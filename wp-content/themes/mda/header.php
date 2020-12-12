@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 
 	<!-- === Navigation === -->
-	<header class="structure--nav">
+	<header /*class="structure--nav"*/>
 		<nav class="display--row display--between-x display--center-y">
 			<img src="http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/MDA_Logo_vectorise.png" class="nav--logo" alt="logo">
 

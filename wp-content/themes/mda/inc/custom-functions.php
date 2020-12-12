@@ -9,11 +9,16 @@ function automatic_posts() {
     $articles = get_articles();
     foreach($articles as $article) {
         $values = array(
+            'post_date'             => $article['meta']->createdAt,
             'post_content'          => $article['description'],
             'post_title'            => $article['title'],
-            'post_date'             => $article['meta']->createdAt,
+            'post_excerpt' => '',
             'post_status'           => 'publish',
+            'post_type' => 'post',
+            'comment_status' => 'closed',
+            'ping_status' => 'closed',
             'post_modified'         => $article['meta']->updatedAt,
+            'post_category'=> []
         );
         array_push($posts, $values);
     }

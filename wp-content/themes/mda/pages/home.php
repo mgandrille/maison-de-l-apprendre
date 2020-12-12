@@ -5,6 +5,27 @@
  * @package mda
 */
 
+/**
+ * get all posts/articles in an array ($events) to be dispatched in cards
+*/
+$articles = get_articles();
+$posts = get_posts();
+$events = array();
+foreach($articles as $article) {
+	foreach($posts as $post) {
+		$add_fields = get_fields();
+		$post = (array) $post;
+		if($add_fields) {
+			$post = array_merge($post, $add_fields);
+		}
+		if(array_search($post['post_title'], $article)) {
+			$event = array_merge($post, $article);
+			// d($event);
+		}
+	}
+	array_push($events, $event);
+}
+d($events);
 
 
 //add header section
@@ -22,7 +43,7 @@ get_header();
 	<header class="structure--hero-title">
 		<span></span>
 
-		<h2>du 21 au 27 janvier 2021</h2>
+		<div class="h2">du 21 au 27 janvier 2021</div>
 		<h1>festival de<br>l'apprendre</h1>
 		<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
 
@@ -46,7 +67,7 @@ get_header();
 </section>
 
 
-<!-- 
+<!--
 === CONTENT
 -->
 
@@ -92,7 +113,7 @@ get_header();
 </section>
 
 
-<!-- 
+<!--
 === SELECTION DES ATELIERS
 -->
 
@@ -103,10 +124,10 @@ get_header();
 		<!-- <header class="size--h10 display--center-x bg--white-pure">
 			<form class=" size--w100 display--row display--center-y display--between-y">
 
-				<-- === search bar === 
+				<-- === search bar ===
 				<input type="text" class="size--w50" name="search" placeholder="Rechercher un atelier">
 
-				<-- === filter on tag === 
+				<-- === filter on tag ===
 				<div class="margin--m-s-children display--row display--center">
 					<input type="checkbox" name="all" id="all">
 					<label for="all">Tout public</label>
@@ -129,97 +150,16 @@ get_header();
 
 		<!-- === Articles === --->
 		<div class="card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>	
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
-
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>	
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
-
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>	
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
-
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>	
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
+			<?php foreach($events as $event) :
+				get_template_part( 'template-parts/event-card', null, array(
+					'id' => $event['ID'],
+					'image' => $event['banner']->publicUrl,
+					'title' => $event['post_title'],
+					'categories'  => $event['categories'],
+					'date' => $event['startDate'],
+					'small_content' => $event['description'],
+					));
+			endforeach; ?>
 		</div>
 	</div>
 </section>

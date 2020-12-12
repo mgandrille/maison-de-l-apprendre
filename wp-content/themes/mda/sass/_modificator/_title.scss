@@ -7,12 +7,17 @@ h6 {
     font-family: $font-head;
 }
 
+.h2 {
+    @extend h2 ;
+    font-weight: bold;
+}
+
 h1,
 .title--h1 {
     font-size: $h1;
 }
 
-h2,
+h2, .h2,
 .title--h2 {
     font-size: $h2;
 }
