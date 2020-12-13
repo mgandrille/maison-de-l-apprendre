@@ -8,29 +8,8 @@
 /**
  * get all posts/articles in an array ($events) to be dispatched in cards
 */
-<<<<<<< HEAD
-$articles = get_articles();
-$posts = get_posts();
-$events = array();
-foreach($articles as $article) {
-	foreach($posts as $post) {
-		$add_fields = get_fields();
-		$post = (array) $post;
-		if($add_fields) {
-			$post = array_merge($post, $add_fields);
-		}
-		if(array_search($post['post_title'], $article)) {
-			$event = array_merge($post, $article);
-			// d($event);
-		}
-	}
-	array_push($events, $event);
-}
-//d($events);
-=======
 $events = get_all_posts_infos();
 d($events);
->>>>>>> a5cf908c763c70fdd667744ccf9cb362bb892e24
 
 
 //add header section

@@ -11,28 +11,11 @@
 /**
  * get all information in an array ($event) for one article
 */
-<<<<<<< HEAD
-$articles = get_articles();
-$post = get_post();
-$event = (array) $post;
-
-foreach($articles as $article) {
-	$add_fields = get_fields();
-	if($add_fields) {
-		$event = array_merge($event, $add_fields);
-	}
-	if(array_search($event['post_title'], $article)) {
-		$event = array_merge($event, $article);
-	}
-}
-//d($event);
-=======
 $event = get_post_infos();
 // d($event);
 
 // $categories = explode(', ', mb_strtoupper($event['categories']);
 // d($categories);
->>>>>>> a5cf908c763c70fdd667744ccf9cb362bb892e24
 
 /**
  * Conversion for all time/date
