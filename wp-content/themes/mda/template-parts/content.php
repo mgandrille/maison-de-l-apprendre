@@ -11,20 +11,11 @@
 /**
  * get all information in an array ($event) for one article
 */
-$articles = get_articles();
-$post = get_post();
-$event = (array) $post;
-
-foreach($articles as $article) {
-	$add_fields = get_fields();
-	if($add_fields) {
-		$event = array_merge($event, $add_fields);
-	}
-	if(array_search($event['post_title'], $article)) {
-		$event = array_merge($event, $article);
-	}
-}
+$event = get_post_infos();
 d($event);
+
+$categories = explode(', ', mb_strtoupper($event['categories']['tag']));
+d($categories);
 
 /**
  * Conversion for all time/date
@@ -38,6 +29,22 @@ $time = date_format($endTime, 'H:i');
 // Get the duration of the event
 $duree = $endTime->getTimestamp() - $startTime->getTimestamp();
 $duree = date('H:i', $duree);
+
+/**
+ * Get all events for making a search in categories
+ */
+$totalEvents = get_all_posts_infos();
+d($totalEvents);
+foreach($totalEvents as $totalEvent) {
+	$totalEvent_categories = explode(', ', mb_strtoupper($totalEvent['categories']['tag']));
+	foreach($totalEvent_categories as $totalEvent_category) {
+		$result = array_search($totalEvent_category, $categories);
+		d($result);
+	}
+
+
+}
+
 
 
 ?>
@@ -129,7 +136,7 @@ $duree = date('H:i', $duree);
 	</header>
 
 		<div class="card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+			<!-- <article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
 				<header class="size--h20 card--bg structure--head"></header>
 				<div class="structure--body">
 					<ul class="card--tag">
@@ -219,8 +226,8 @@ $duree = date('H:i', $duree);
 				<footer class="structure--foot display--end-y">
 					<button class="button--btn">Voir l'atelier</button>
 				</footer>
-			</article>
+			</article> -->
 		</div>
 
-</section>
+	</section>
 </article>
