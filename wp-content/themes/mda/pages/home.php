@@ -8,6 +8,7 @@
 /**
  * get all posts/articles in an array ($events) to be dispatched in cards
 */
+<<<<<<< HEAD
 $articles = get_articles();
 $posts = get_posts();
 $events = array();
@@ -26,6 +27,10 @@ foreach($articles as $article) {
 	array_push($events, $event);
 }
 //d($events);
+=======
+$events = get_all_posts_infos();
+d($events);
+>>>>>>> a5cf908c763c70fdd667744ccf9cb362bb892e24
 
 
 //add header section

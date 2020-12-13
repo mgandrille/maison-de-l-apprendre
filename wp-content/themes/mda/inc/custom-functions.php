@@ -60,3 +60,53 @@ function get_api_key_helloAsso() {
 
     return $helloAsso_vars;
 }
+
+
+/**
+ * get_all_posts_infos
+ *
+ * @return array
+ */
+function get_all_posts_infos() {
+	$articles = get_articles();
+	$posts = get_posts();
+	$events = array();
+	foreach($articles as $article) {
+		foreach($posts as $post) {
+			$add_fields = get_fields();
+			$post = (array) $post;
+			if($add_fields) {
+				$post = array_merge($post, $add_fields);
+			}
+			if(array_search($post['post_title'], $article)) {
+				$event = array_merge($post, $article);
+				// d($event);
+			}
+		}
+		array_push($events, $event);
+	}
+
+	return $events;
+}
+
+/**
+ * get_post_infos
+ *
+ * @return array
+ */
+function get_post_infos() {
+    $articles = get_articles();
+    $post = get_post();
+    $event = (array) $post;
+
+    foreach($articles as $article) {
+        $add_fields = get_fields();
+        if($add_fields) {
+            $event = array_merge($event, $add_fields);
+        }
+        if(array_search($event['post_title'], $article)) {
+            $event = array_merge($event, $article);
+        }
+    }
+    return $event;
+}
