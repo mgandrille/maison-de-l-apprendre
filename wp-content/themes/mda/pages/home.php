@@ -153,7 +153,7 @@ get_header();
 			<?php foreach($events as $event) :
 				get_template_part( 'template-parts/event-card', null, array(
 					'id' => $event['ID'],
-					'image' => $event['banner']->publicUrl,
+					'image' => $event['logo']->publicUrl,
 					'title' => $event['post_title'],
 					'categories'  => $event['categories'],
 					'date' => $event['startDate'],
