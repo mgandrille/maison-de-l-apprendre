@@ -9,8 +9,6 @@
  * get all posts/articles in an array ($events) to be dispatched in cards
 */
 $events = get_all_posts_infos();
-d($events);
-
 
 //add header section
 get_header();
@@ -133,17 +131,25 @@ get_header();
 		</header> -->
 
 		<!-- === Articles === --->
-		<div class="card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
+		<div class="button-group filters-button-group">
+				<button id="all" class="button is-checked" data-filter="*">show all</button>
+				<button id="buttontest" class="button" data-filter=".jeunesse">jeunesse</button>
+			</div>
+
+		<div class="grid card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
 			<?php foreach($events as $event) :
 				get_template_part( 'template-parts/event-card', null, array(
 					'id' => $event['ID'],
 					'image' => $event['logo']->publicUrl,
 					'title' => $event['post_title'],
-					'categories'  => $event['categories'],
+					'categories' => $event['categories'],
 					'date' => $event['startDate'],
-					'small_content' => $event['description'],
+					'small_content' => $event['description']
 					));
 			endforeach; ?>
+
 		</div>
 	</div>
 </section>
+
+<?php get_footer() ?>

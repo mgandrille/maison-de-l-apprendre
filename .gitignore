@@ -1,5 +1,7 @@
 .htaccess
 
+node_modules/
+
 /index.php
 /licence.txt
 /readme.html

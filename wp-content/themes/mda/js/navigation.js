@@ -96,4 +96,6 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+
+	console.log('ok');
 }() );
