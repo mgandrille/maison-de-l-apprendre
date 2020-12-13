@@ -119,7 +119,7 @@ $duree = date('H:i', $duree);
 		</aside>
 	</section>
 
-<section class="margin--b-none margin--t-m" style="background-image: url('http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Copie-de-_-_first-child-.alone_last-child-font-size_-4.5rem-color_-color-main-margin-bottom_-0-.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
+<section class="margin--b-none margin--t-m" style="background-image: url('<?=content_url()?>/themes/mda/img/bg-atelier-similaires.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
 	<header class="title--main-simple">
 		<h2>
 			Ateliers<br />

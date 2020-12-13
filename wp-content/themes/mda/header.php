@@ -26,7 +26,7 @@
 	<!-- === Navigation === -->
 	<header /*class="structure--nav"*/>
 		<nav class="display--row display--between-x display--center-y">
-			<img src="http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/MDA_Logo_vectorise.png" class="nav--logo" alt="logo">
+			<img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="nav--logo" alt="logo">
 
 			<div class="size--wauto display-md--none">
 				<p id="nav-menu-btn">menu</p>
