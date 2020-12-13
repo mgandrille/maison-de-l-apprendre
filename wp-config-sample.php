@@ -4,10 +4,10 @@
  *
  * Ce fichier est utilisé par le script de création de wp-config.php pendant
  * le processus d’installation. Vous n’avez pas à utiliser le site web, vous
- * pouvez simplement renommer ce fichier en « wp-config.php » et remplir les
+ * pouvez simplement renommer ce fichier en « wp-config.php » et remplir les
  * valeurs.
  *
- * Ce fichier contient les réglages de configuration suivants :
+ * Ce fichier contient les réglages de configuration suivants :
  *
  * Réglages MySQL
  * Préfixe de table
@@ -22,13 +22,13 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'votre_nom_de_bdd' );
+define( 'DB_NAME', 'maisonda' );
 
 /** Utilisateur de la base de données MySQL. */
-define( 'DB_USER', 'votre_utilisateur_de_bdd' );
+define( 'DB_USER', 'root' );
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', 'votre_mdp_de_bdd' );
+define( 'DB_PASSWORD', 'root' );
 
 /** Adresse de l’hébergement MySQL. */
 define( 'DB_HOST', 'localhost' );
@@ -68,7 +68,7 @@ define( 'NONCE_SALT',       'mettez une phrase unique ici' );
  *
  * Vous pouvez installer plusieurs WordPress sur une seule base de données
  * si vous leur donnez chacune un préfixe unique.
- * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
+ * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
 $table_prefix = 'wp_';
 
