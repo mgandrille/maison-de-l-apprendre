@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,92 +10,122 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>">
+<!-- 
+=== HERO LANDING
+-->
 
-	<header class="title--article">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1>', '</h1>' );
-			the_title( '<p>', '</p>' );
-		else :
-			the_title( '<h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-		?>
+<section class="structure--hero">
+
+	<!-- === Titre === -->
+	<header class="structure--hero-title">
+		<span></span>
+
+		<h2>du 21 au 27 janvier 2021</h2>
+		<h1>festival de<br>l'apprendre</h1>
+		<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
+
+		<span></span>
 	</header>
-	
-	<section class="display--row display--between-x">
-		<div class="structure--article-content" >
 
-			<header class="card--legend-article">
-				<img src="http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/animer-atelier-ou-workshop-1000x640-1.jpg" alt="banniere-atelier">
-				<ul>
-					<li>Début : 14h30 </li>
-					<li>Durée : 1h30</li>
-					<li>Tout public</li>
-				</ul>
-			</header>
-
-			<div>
-				<h2>Au programme</h2>	
-				
-				<?php
-				the_content(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mda' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						wp_kses_post( get_the_title() )
-					)
-				);
-				?>
-				
-			</div>	
+	<!-- === Badges circulaires === -->
+	<div class="structure--hero-slot">
+		<div class="shape--badge-b">
+			<span>Découvrir</span>
 		</div>
 
+		<div class="shape--badge-m">
+			<span>Rencontrer</span>
+		</div>
 
-		<aside class="structure--article-aside">
-			<div>
-				<header class="title--secondary">
-					<h3>Parcours</h3>
-					<span></span>
-				</header>
+		<div class="shape--badge-m">
+			<span>Expérimenter</span>
+		</div>
+	</div>
+</section>
 
-				<p>Les événements à suivre après cet atelier</p>
-			</div>
 
-			<div>
-				<header class="title--secondary">
-					<h3>Intervenants</h3>
-					<span></span>
-				</header>
+<!-- 
+=== CONTENT
+-->
 
-				<p>Benedicte Guacamole</p>
-				<a href="http://google.fr">www.site-de-l-intervenant.fr</a>
-			</div>
+<section class="display--row display--between-x display--wrap">
 
-			<div class="card--absolute">
-				<nav>
-					<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/evenements/test-festival-2/widget-bouton" style="width: 100%; height: 70px; border: none;"></iframe>
-				</nav>
-			</div>
-		</aside>
-	</section>
-
-<section class="margin--b-none margin--t-m" style="background-image: url('http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Copie-de-_-_first-child-.alone_last-child-font-size_-4.5rem-color_-color-main-margin-bottom_-0-.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
-	<header class="title--main-simple">
+	<!-- === Titre de la section === --->
+	<header class="title--main">
 		<h2>
-			Ateliers<br />
-			similaires
+			Découvrir<br />le festival
 			<span></span>
 		</h2>
+
+		<h6>Une journée pour apprendre et découvrir</h6>
 	</header>
 
+	<!-- === description de la section === --->
+	<div>
+		<p>
+			Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
+			est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
+			de développement des compétences tout au long de la vie.
+		</p>
+	</div>
+</section>
+
+<section class="display--row display--between-x">
+	<header class="title--main">
+		<h2>
+			Ateliers<br />et conférences
+			<span ></span>
+		</h2>
+
+		<h6>Comprendre le monde de demain</h6>
+	</header>
+
+	<div>
+		<p>
+			Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
+			est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
+			de développement des compétences tout au long de la vie.
+		</p>
+	</div>
+</section>
+
+
+<!-- 
+=== SELECTION DES ATELIERS
+-->
+
+<section class="bg--gradient padding--y-xb">
+	<div class="size--w100 bg--white">
+
+		<!-- === filter bar === --->
+		<!-- <header class="size--h10 display--center-x bg--white-pure">
+			<form class=" size--w100 display--row display--center-y display--between-y">
+
+				<-- === search bar === 
+				<input type="text" class="size--w50" name="search" placeholder="Rechercher un atelier">
+
+				<-- === filter on tag === 
+				<div class="margin--m-s-children display--row display--center">
+					<input type="checkbox" name="all" id="all">
+					<label for="all">Tout public</label>
+
+					<input type="checkbox" name="young" id="young">
+					<label for="young">Jeunesse</label>
+
+					<input type="checkbox" name="pro" id="pro">
+					<label for="pro">Professionnels</label>
+				</div>
+
+				<-- === change display : cards by filter (date, category, etc...) / cards by workshop / png programm === 
+				<ul class="margin--m-s-children display--row display--center-y display--between-x shape--border-l-children_ _grey">
+					<li>Tous</li>	
+					<li>Filtrer</li>
+					<li>Programme</li>
+				</ul>
+			</form>
+		</header> -->
+
+		<!-- === Articles === --->
 		<div class="card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
 			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
 				<header class="size--h20 card--bg structure--head"></header>
@@ -108,7 +139,7 @@
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
-					</h3>
+					</h3>	
 
 					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
@@ -131,7 +162,7 @@
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
-					</h3>
+					</h3>	
 
 					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
@@ -154,7 +185,7 @@
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
-					</h3>
+					</h3>	
 
 					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
@@ -177,7 +208,7 @@
 					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
 						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
 						Titre atelier
-					</h3>
+					</h3>	
 
 					<p class="margin--m-t-none">
 						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
@@ -188,6 +219,5 @@
 				</footer>
 			</article>
 		</div>
-
+	</div>
 </section>
-</article>

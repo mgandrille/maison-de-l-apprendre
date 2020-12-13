@@ -1,0 +1,200 @@
+.card- {
+    border-radius: $radius-s;
+    background-color: $color-white;
+    justify-content: space-between;
+    cursor: pointer;
+
+    & > * {
+        padding: $padding-s;
+    }
+
+    &-bg {
+        background-image: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/animer-atelier-ou-workshop-1000x640-1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $color-white;
+    }
+}
+
+.card--gallerie {
+    flex-direction: row;
+
+    &-4 > * {
+        margin: $margin;
+        width: calc(25% - ( #{$margin} * 2));
+
+        &:first-child {
+            margin-left: 0;
+            width: calc(25% - #{$margin});
+        }
+
+        &:last-child {
+            margin-right: 0;
+            width: calc(25% - #{$margin});
+        }
+    }
+
+    &-2 > * {
+        margin: $margin 0;
+        width: 100%;
+    }
+}
+
+.card--tag {
+    color: $color-secondary;
+    font-size: .75rem;
+    text-transform: uppercase;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: bold;
+
+    & > * {
+        margin: 0 $margin-s
+    }
+
+    & > :first-child {
+        margin-left: 0;
+    }
+
+    & > :last-child {
+        margin-right: 0;
+    }
+}
+
+
+.card--legend-article {
+    flex-direction: row;
+
+    & img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: center;
+        
+        @media screen and (min-width: 800px) {
+            height: 50vh;
+        }
+    }
+
+    & ul {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $color-light;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+
+        & li {
+            width: 100%;
+            padding: $padding;
+            align-items: center;
+            justify-content: center;
+            border: none;
+
+            &:first-child {
+                border: none;
+            }
+
+            &:last-child {
+                font-weight: bold;
+                
+            }
+
+            @media screen and (min-width: 800px) {
+                width: calc(100% / 3);
+                justify-content: flex-start;
+                border-left: 1px solid $color-grey;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            background-color: $color-light;
+        }
+    }
+}
+
+.card--absolute {
+    width: 80%;
+    height: 16vh;
+    position: absolute;
+    bottom: -8vh;
+    left: 10%;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary;
+
+    & * {
+        margin: 0;
+    }
+}
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+    .card--gallerie-sm {
+        flex-direction: row;
+
+         &-2 > * {
+            margin: $margin;
+            width: calc(50% - ( #{$margin} * 2));
+    
+            &:nth-child(odd) {
+                margin: $margin;
+                width: calc(50% - (#{$margin} * 2));
+            }
+    
+            &:nth-child(even) {
+                margin: $margin;
+                width: calc(50% - (#{$margin} * 2));
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card--gallerie-md {
+        flex-direction: row;
+
+         &-2 > * {
+            margin: $margin;
+            width: calc(25% - ( #{$margin} * 2));
+    
+            &:nth-child(odd) {
+                margin: $margin;
+                width: calc(25% - (#{$margin} * 2));
+            }
+    
+            &:nth-child(even) {
+                margin: $margin;
+                width: calc(25% - (#{$margin} * 2));
+            }
+
+                
+            &:first-child {
+                margin-left:0;
+                width: calc(25% - #{$margin});
+            }
+    
+            &:last-child {
+                margin-right: 0;
+                width: calc(25% - #{$margin});
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

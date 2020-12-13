@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5fc3b7c789a23",
-            "label": "Prestataire",
-            "name": "prestataire",
+            "label": "Intervenant",
+            "name": "presta",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5fc3b77089a21",
-            "label": "Date de l'évènement",
-            "name": "date",
-            "type": "text",
+            "key": "field_5fd5f09dd8511",
+            "label": "Site Intervenant",
+            "name": "web_site_presta",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -35,34 +35,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5fc3b78d89a22",
-            "label": "Image",
-            "name": "image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "placeholder": ""
         },
         {
             "key": "field_5fd003606d5c1",
@@ -118,5 +91,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1607634062
+    "modified": 1607856572
 }

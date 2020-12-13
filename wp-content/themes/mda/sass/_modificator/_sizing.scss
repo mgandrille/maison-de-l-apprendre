@@ -1,0 +1,413 @@
+.size--w {
+    &5,
+    &5-children > * {
+        width: 5%;
+    }
+    &10,
+    &10-children > * {
+        width: 10%;
+    }
+    &15,
+    &15-children > * {
+        width: 15%;
+    }
+    &20,
+    &20-children > * {
+        width: 20%;
+    }
+    &25,
+    &25-children > * {
+        width: 25%;
+    }
+    &30,
+    &30-children > * {
+        width: 30%;
+    }
+    &35,
+    &35-children > * {
+        width: 35%;
+    }
+    &40,
+    &40-children > * {
+        width: 40%;
+    }
+    &40-margin {
+        width : calc(40% - (#{$margin} * 2))
+    }
+    &45,
+    &45-children > * {
+        width: 45%;
+    }
+    &50,
+    &50-children > * {
+        width: 50%;
+    }
+    &60,
+    &60-children > * {
+        width: 60%;
+    }
+    &60-margin {
+        width : calc(60% - (#{$margin} * 2))
+    }
+    &65,
+    &65-children > * {
+        width: 65%;
+    }
+    &70 {
+        width: 70%;
+    }
+    &80 {
+        width: 80%;
+    }
+    &90 {
+        width: 90%;
+    }
+    &100 {
+        width: 100%;
+    }
+    &odd3 {
+        width: calc(100% / 3);
+    }
+    &auto {
+        width:auto;
+    }
+}
+
+.size--h {
+    &10 {
+        height: 10vh;
+    }
+    &20 {
+        height: 20vh;
+    }
+    &25 {
+        height: 25vh;
+    }
+    &30 {
+        height: 30vh;
+    }
+    &40,
+    &40-children > * {
+        height: 40vh;
+    }
+    &40p,
+    &40p-children > * {
+        height: 40%;
+    }
+    &50,
+    &50-children > * {
+        height: 50vh;
+    }
+    &60 {
+        height: 60vh;
+    }
+    &65 {
+        height: 65vh;
+    }
+    &65p {
+        height: 65%;
+    }
+    &70 {
+        height: 70vh;
+    }
+    &80 {
+        height: 80vh;
+    }
+    &90 {
+        height: 90vh;
+    }
+    &100,
+    &100-children > * {
+        height: 100vh;
+    }
+    &100p,
+    &100p-children > * {
+        height: 100%;
+    }
+    &auto {
+        height:auto;
+    }
+}
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+    .size--w-sm {
+        &5,
+        &5-children > * {
+            width: 5%;
+        }
+        &10,
+        &10-children > * {
+            width: 10%;
+        }
+        &15,
+        &15-children > * {
+            width: 15%;
+        }
+        &20,
+        &20-children > * {
+            width: 20%;
+        }
+        &25,
+        &25-children > * {
+            width: 25%;
+        }
+        &30,
+        &30-children > * {
+            width: 30%;
+        }
+        &35,
+        &35-children > * {
+            width: 35%;
+        }
+        &40,
+        &40-children > * {
+            width: 40%;
+        }
+        &40-margin {
+            width : calc(40% - (#{$margin} * 2))
+        }
+        &45,
+        &45-children > * {
+            width: 45%;
+        }
+        &50,
+        &50-children > * {
+            width: 50%;
+        }
+        &60,
+        &60-children > * {
+            width: 60%;
+        }
+        &60-margin {
+            width : calc(60% - (#{$margin} * 2))
+        }
+        &65,
+        &65-children > * {
+            width: 65%;
+        }
+        &70 {
+            width: 70%;
+        }
+        &80 {
+            width: 80%;
+        }
+        &90 {
+            width: 90%;
+        }
+        &100 {
+            width: 100%;
+        }
+        &odd3 {
+            width: calc(100% / 3);
+        }
+        &auto {
+            width:auto;
+        }
+    }
+    
+    .size--h-sm {
+        &10 {
+            height: 10vh;
+        }
+        &20 {
+            height: 20vh;
+        }
+        &25 {
+            height: 25vh;
+        }
+        &30 {
+            height: 30vh;
+        }
+        &40,
+        &40-children > * {
+            height: 40vh;
+        }
+        &40p,
+        &40p-children > * {
+            height: 40%;
+        }
+        &50,
+        &50-children > * {
+            height: 50vh;
+        }
+        &60 {
+            height: 60vh;
+        }
+        &65 {
+            height: 65vh;
+        }
+        &65p {
+            height: 65%;
+        }
+        &70 {
+            height: 70vh;
+        }
+        &80 {
+            height: 80vh;
+        }
+        &90 {
+            height: 90vh;
+        }
+        &100,
+        &100-children > * {
+            height: 100vh;
+        }
+        &100p,
+        &100p-children > * {
+            height: 100%;
+        }
+        &auto {
+            height:auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .size--w-md {
+        &5,
+        &5-children > * {
+            width: 5%;
+        }
+        &10,
+        &10-children > * {
+            width: 10%;
+        }
+        &15,
+        &15-children > * {
+            width: 15%;
+        }
+        &20,
+        &20-children > * {
+            width: 20%;
+        }
+        &25,
+        &25-children > * {
+            width: 25%;
+        }
+        &30,
+        &30-children > * {
+            width: 30%;
+        }
+        &35,
+        &35-children > * {
+            width: 35%;
+        }
+        &40,
+        &40-children > * {
+            width: 40%;
+        }
+        &40-margin {
+            width : calc(40% - (#{$margin} * 2))
+        }
+        &45,
+        &45-children > * {
+            width: 45%;
+        }
+        &50,
+        &50-children > * {
+            width: 50%;
+        }
+        &60,
+        &60-children > * {
+            width: 60%;
+        }
+        &60-margin {
+            width : calc(60% - (#{$margin} * 2))
+        }
+        &65,
+        &65-children > * {
+            width: 65%;
+        }
+        &70 {
+            width: 70%;
+        }
+        &80 {
+            width: 80%;
+        }
+        &90 {
+            width: 90%;
+        }
+        &100 {
+            width: 100%;
+        }
+        &odd3 {
+            width: calc(100% / 3);
+        }
+        &auto {
+            width:auto;
+        }
+    }
+    
+    .size--h-md {
+        &10 {
+            height: 10vh;
+        }
+        &20 {
+            height: 20vh;
+        }
+        &25 {
+            height: 25vh;
+        }
+        &30 {
+            height: 30vh;
+        }
+        &40,
+        &40-children > * {
+            height: 40vh;
+        }
+        &40p,
+        &40p-children > * {
+            height: 40%;
+        }
+        &50,
+        &50-children > * {
+            height: 50vh;
+        }
+        &60 {
+            height: 60vh;
+        }
+        &65 {
+            height: 65vh;
+        }
+        &65p {
+            height: 65%;
+        }
+        &70 {
+            height: 70vh;
+        }
+        &80 {
+            height: 80vh;
+        }
+        &90 {
+            height: 90vh;
+        }
+        &100,
+        &100-children > * {
+            height: 100vh;
+        }
+        &100p,
+        &100p-children > * {
+            height: 100%;
+        }
+        &auto {
+            height:auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}

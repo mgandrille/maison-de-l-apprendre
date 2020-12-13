@@ -1,0 +1,196 @@
+.text {
+	&--upper {
+		text-transform: uppercase;
+	}
+
+	&--letter-spacing {
+		letter-spacing: .05rem;
+	}
+
+	&--right {
+		text-align: right;
+	}
+
+	&--left {
+		text-align: left;
+	}
+
+	&--justify {
+		text-align: justify;
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--bold {
+		font-weight: bold;
+	}
+
+	&--small {
+		font-size: .8rem;
+	}
+
+	&--regular {
+		font-size: 1rem;
+	}
+}
+
+.text {
+	&--main {
+		color: $color-main;
+	}
+
+	&--secondary {
+		color: $color-secondary;
+	}
+
+	&--grey {
+		color: $color-grey;
+	}
+
+	&--light {
+		color: $color-light;
+	}
+
+	&--white {
+		color: $color-white;
+	}
+}
+
+
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
+
+@media screen and (min-width: 800px) {
+	.text-sm {
+		&--upper {
+			text-transform: uppercase;
+		}
+	
+		&--letter-spacing {
+			letter-spacing: .05rem;
+		}
+	
+		&--right {
+			text-align: right;
+		}
+	
+		&--left {
+			text-align: left;
+		}
+	
+		&--justify {
+			text-align: justify;
+		}
+	
+		&--center {
+			text-align: center;
+		}
+	
+		&--bold {
+			font-weight: bold;
+		}
+	
+		&--small {
+			font-size: .8rem;
+		}
+
+		&--regular {
+			font-size: 1rem;
+		}
+	}
+	
+	.text-sm {
+		&--main {
+			color: $color-main;
+		}
+	
+		&--secondary {
+			color: $color-secondary;
+		}
+	
+		&--grey {
+			color: $color-grey;
+		}
+	
+		&--light {
+			color: $color-light;
+		}
+	
+		&--white {
+			color: $color-white;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.text-md {
+		&--upper {
+			text-transform: uppercase;
+		}
+	
+		&--letter-spacing {
+			letter-spacing: .05rem;
+		}
+	
+		&--right {
+			text-align: right;
+		}
+	
+		&--left {
+			text-align: left;
+		}
+	
+		&--justify {
+			text-align: justify;
+		}
+	
+		&--center {
+			text-align: center;
+		}
+	
+		&--bold {
+			font-weight: bold;
+		}
+	
+		&--small {
+			font-size: .8rem;
+		}
+
+		&--regular {
+			font-size: 1rem;
+		}
+	}
+	
+	.text-md {
+		&--main {
+			color: $color-main;
+		}
+	
+		&--secondary {
+			color: $color-secondary;
+		}
+	
+		&--grey {
+			color: $color-grey;
+		}
+	
+		&--light {
+			color: $color-light;
+		}
+	
+		&--white {
+			color: $color-white;
+		}
+	}
+}
+
+@media screen and (min-width: 1220px) {
+    
+}
+
+@media screen and (min-width: 1366px) {
+    
+}

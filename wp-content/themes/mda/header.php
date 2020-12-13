@@ -22,38 +22,25 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mda' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mda_description = get_bloginfo( 'description', 'display' );
-			if ( $mda_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mda_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<!-- === Navigation === -->
+	<header /*class="structure--nav"*/>
+		<nav class="display--row display--between-x display--center-y">
+			<img src="http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/MDA_Logo_vectorise.png" class="nav--logo" alt="logo">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mda' ); ?></button>
+			<div class="size--wauto display-md--none">
+				<p id="nav-menu-btn">menu</p>
+			</div>
+
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
+				wp_nav_menu(
+					array(
+						'theme_location' => 'my-custom-menu',
+						'menu_id' => 'nav-menu',
+						'container_class' => 'nav--bar'
+					)
+				);
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>
+	</header>
+

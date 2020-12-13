@@ -18,7 +18,7 @@ $acf = get_fields();
 
 	<?php mda_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div style="width: 450px; border: 1px solid red">
 		<?php
 		the_content();
 

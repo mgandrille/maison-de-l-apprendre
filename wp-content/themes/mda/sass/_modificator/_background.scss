@@ -1,0 +1,138 @@
+.bg {
+    &--main {
+        background-color: $color-main;
+
+        &-darker {
+            background-color: $color-main-darker;
+        }
+
+        &-lighter {
+            background-color: $color-main-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-main-shadow;
+        }
+
+        &-pale {
+            background-color: $color-main-pale;
+        }
+    }
+
+    
+    &--secondary {
+        background-color: $color-secondary;
+
+        &-darker {
+            background-color: $color-secondary-darker;
+        }
+
+        &-lighter {
+            background-color: $color-secondary-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-secondary-shadow;
+        }
+
+        &-pale {
+            background-color: $color-secondary-pale;
+        }
+    }
+
+
+    &--action {
+        background-color: $color-action;
+
+        &-darker {
+            background-color: $color-action-darker;
+        }
+
+        &-lighter {
+            background-color: $color-action-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-action-shadow;
+        }
+
+        &-pale {
+            background-color: $color-action-pale;
+        }
+    }
+
+
+    &--warm {
+        background-color: $color-warm;
+
+        &-darker {
+            background-color: $color-warm-darker;
+        }
+
+        &-lighter {
+            background-color: $color-warm-lighter;
+        }
+
+        &-shadow {
+            background-color: $color-warm-shadow;
+        }
+
+        &-pale {
+            background-color: $color-warm-pale;
+        }
+    }
+
+    &--gradient {
+        background: $color-gradient;
+    }
+
+    &--white {
+        background-color: $color-white;
+    }
+
+    &--white-pure {
+        background-color: #ffff;
+    }
+
+    &--grey {
+        background-color: $color-grey;
+    }
+
+    &--light {
+        background-color: $color-light;
+    }
+
+    &--dark {
+        background-color: $color-dark;
+    }
+}
+
+.bg--img_ {
+    background-image: url('https://i.postimg.cc/Yq89kzgZ/bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &._bg-auto {
+        background-size: auto;
+    }
+
+    &._bg-contain {
+        background-size: contain;
+    }
+
+    &._bg-br {
+        background-position: bottom right;
+    }
+
+    &._bg-bc {
+        background-position: bottom center;
+    }
+}
+
+.bg--footer {
+    background-image: url('http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Sans-titre.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
