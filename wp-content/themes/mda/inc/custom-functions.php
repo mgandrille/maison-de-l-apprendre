@@ -73,7 +73,7 @@ function get_all_posts_infos() {
 	$events = array();
 	foreach($articles as $article) {
 		foreach($posts as $post) {
-			$add_fields = get_fields();
+			$add_fields = get_fields($post->ID);
 			$post = (array) $post;
 			if($add_fields) {
 				$post = array_merge($post, $add_fields);
@@ -100,7 +100,7 @@ function get_post_infos() {
     $event = (array) $post;
 
     foreach($articles as $article) {
-        $add_fields = get_fields();
+        $add_fields = get_fields($event['ID']);
         if($add_fields) {
             $event = array_merge($event, $add_fields);
         }
