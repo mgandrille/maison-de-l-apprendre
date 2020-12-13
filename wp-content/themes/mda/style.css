@@ -221,7 +221,7 @@ main {
 	align-items: center;
 	text-transform: uppercase;
 	overflow-y: hidden;
-	background: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Copie-de-landings.png") bottom right/40% no-repeat, linear-gradient(90deg, #86d0e9 0%, #f2daf4 100%);
+	background: url("./img/bg-illu-landing.png") bottom right/40% no-repeat, linear-gradient(90deg, #86d0e9 0%, #f2daf4 100%);
 }
 
 @media screen and (min-width: 1220px) {
@@ -575,7 +575,6 @@ main {
 }
 
 .card--bg {
-	background-image: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/animer-atelier-ou-workshop-1000x640-1.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1263,7 +1262,7 @@ a:hover {
 }
 
 .bg--footer {
-	background-image: url("http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Sans-titre.png");
+	background-image: url("./img/bg-footer.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom center;

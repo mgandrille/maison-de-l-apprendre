@@ -7,6 +7,39 @@
  * @package mda
  */
 
+
+/**
+ * get all information in an array ($event) for one article
+*/
+$articles = get_articles();
+$post = get_post();
+$event = (array) $post;
+
+foreach($articles as $article) {
+	$add_fields = get_fields();
+	if($add_fields) {
+		$event = array_merge($event, $add_fields);
+	}
+	if(array_search($event['post_title'], $article)) {
+		$event = array_merge($event, $article);
+	}
+}
+//d($event);
+
+/**
+ * Conversion for all time/date
+ */
+$startTime = new DateTime($event['startDate']);
+$endTime = new DateTime($event['endDate']);
+// Get the start date of the event
+$date = date_format($startTime, 'd/m/Y');
+// Get the start time of the event
+$time = date_format($endTime, 'H:i');
+// Get the duration of the event
+$duree = $endTime->getTimestamp() - $startTime->getTimestamp();
+$duree = date('H:i', $duree);
+
+
 ?>
 
 <article id="post-<?php the_ID(); ?>">
@@ -21,22 +54,22 @@
 		endif;
 		?>
 	</header>
-	
+
 	<section class="display--row display--between-x">
 		<div class="structure--article-content" >
 
 			<header class="card--legend-article">
-				<img src="http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/animer-atelier-ou-workshop-1000x640-1.jpg" alt="banniere-atelier">
+				<img src="<?=$event['banner']->publicUrl?>" alt="banniere-atelier">
 				<ul>
-					<li>Début : 14h30 </li>
-					<li>Durée : 1h30</li>
-					<li>Tout public</li>
+					<li>Début : <?=$date?></li>
+					<li>Durée : <?=$duree?></li>
+					<li><?=$event['categories']['tag']?></li>
 				</ul>
 			</header>
 
 			<div>
-				<h2>Au programme</h2>	
-				
+				<h2>Au programme</h2>
+
 				<?php
 				the_content(
 					sprintf(
@@ -74,19 +107,19 @@
 					<span></span>
 				</header>
 
-				<p>Benedicte Guacamole</p>
-				<a href="http://google.fr">www.site-de-l-intervenant.fr</a>
+				<p><?=$event['presta']?></p>
+				<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
 			</div>
 
 			<div class="card--absolute">
 				<nav>
-					<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/evenements/test-festival-2/widget-bouton" style="width: 100%; height: 70px; border: none;"></iframe>
+					<iframe id="haWidget" allowtransparency="true" src="<?=$event['widgetButtonUrl']?>" style="width: 100%; height: 70px; border: none;"></iframe>
 				</nav>
 			</div>
 		</aside>
 	</section>
 
-<section class="margin--b-none margin--t-m" style="background-image: url('http://localhost/wordpress/maison-de-l-apprendre/wp-content/uploads/2020/12/Copie-de-_-_first-child-.alone_last-child-font-size_-4.5rem-color_-color-main-margin-bottom_-0-.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
+<section class="margin--b-none margin--t-m" style="background-image: url('<?=content_url()?>/themes/mda/img/bg-atelier-similaires.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
 	<header class="title--main-simple">
 		<h2>
 			Ateliers<br />

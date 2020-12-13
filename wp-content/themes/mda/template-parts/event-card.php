@@ -15,9 +15,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
 
 
 <article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-    <header class="size--h20 card--bg structure--head">
-        <img src="<?=$args['image'];?>" alt="">
-    </header>
+    <header class="size--h20 card--bg structure--head" style="background-image: url('<?=$args['image'];?>');"></header>
     <div class="structure--body">
         <ul class="card--tag">
             <li><?=$date?></li>
