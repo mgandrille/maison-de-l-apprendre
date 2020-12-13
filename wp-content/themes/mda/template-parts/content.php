@@ -12,10 +12,10 @@
  * get all information in an array ($event) for one article
 */
 $event = get_post_infos();
-d($event);
+// d($event);
 
-$categories = explode(', ', mb_strtoupper($event['categories']['tag']));
-d($categories);
+// $categories = explode(', ', mb_strtoupper($event['categories']);
+// d($categories);
 
 /**
  * Conversion for all time/date
@@ -33,17 +33,15 @@ $duree = date('H:i', $duree);
 /**
  * Get all events for making a search in categories
  */
-$totalEvents = get_all_posts_infos();
-d($totalEvents);
-foreach($totalEvents as $totalEvent) {
-	$totalEvent_categories = explode(', ', mb_strtoupper($totalEvent['categories']['tag']));
-	foreach($totalEvent_categories as $totalEvent_category) {
-		$result = array_search($totalEvent_category, $categories);
-		d($result);
-	}
-
-
-}
+// $totalEvents = get_all_posts_infos();
+// d($totalEvents);
+// foreach($totalEvents as $totalEvent) {
+// 	$totalEvent_categories = explode(', ', mb_strtoupper($totalEvent['categories']['tag']));
+// 	foreach($totalEvent_categories as $totalEvent_category) {
+// 		$result = array_search($totalEvent_category, $categories);
+// 		d($result);
+// 	}
+// }
 
 
 
@@ -70,7 +68,7 @@ foreach($totalEvents as $totalEvent) {
 				<ul>
 					<li>Début : <?=$date?></li>
 					<li>Durée : <?=$duree?></li>
-					<li><?=$event['categories']['tag']?></li>
+					<li><?=$event['categories']?></li>
 				</ul>
 			</header>
 

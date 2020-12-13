@@ -20,7 +20,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
         <ul class="card--tag">
             <li><?=$date?></li>
             <li><?=$time?></li>
-            <li class="margin--m-l-auto"><?=$args['categories']['tag']?></li>
+            <li class="margin--m-l-auto"><?=$args['categories']?></li>
         </ul>
 
         <h3 class="position--relative size--w100 margin--m-b-s title--h4">
