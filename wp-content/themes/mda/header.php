@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 
 	<!-- === Navigation === -->
-	<header /*class="structure--nav"*/>
+	<header>
 		<nav class="display--row display--between-x display--center-y">
 			<img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="nav--logo" alt="logo">
 

@@ -8,6 +8,7 @@ function automatic_posts() {
 
     $articles = get_articles();
     foreach($articles as $article) {
+
         $values = array(
             'post_date'             => $article['meta']->createdAt,
             'post_content'          => $article['description'],
@@ -21,13 +22,15 @@ function automatic_posts() {
             'post_category'=> []
         );
         array_push($posts, $values);
-    }
 
+        
+    }
     $existingPosts = get_posts(['numberposts' => -1]);
 
     foreach($existingPosts as $existingPost) {
         $existingPostTitles[] =  $existingPost->post_title;
     };
+
     if(!empty($posts)) {
         foreach($posts as $post) {
             if(!in_array($post['post_title'], $existingPostTitles)) {
@@ -35,6 +38,7 @@ function automatic_posts() {
             }
         };
     }
+
 }
 
 
@@ -70,20 +74,39 @@ function get_api_key_helloAsso() {
 function get_all_posts_infos() {
 	$articles = get_articles();
 	$posts = get_posts();
-	$events = array();
+    $events = array();
+    
 	foreach($articles as $article) {
 		foreach($posts as $post) {
-			$add_fields = get_fields($post->ID);
-			$post = (array) $post;
+
+            $add_fields = get_fields($post->ID);
+
+            // pour récupérer la catégorie du post
+            $categoryTags = get_the_category($post->ID);
+
+            $post = (array) $post;
+            
+            // Tous les noms des catégories du post sont récupérés d'un coup sous forme de tableau
+            $categoryNames = array_map(function($categorie) {
+                return $categorie->name;
+            }, $categoryTags);
+
+            // J'ai ajouté un nouveau champ sur le post avec les catégories en valeur
+            $post['categoriesTag'] = $categoryNames;
+
 			if($add_fields) {
-				$post = array_merge($post, $add_fields);
-			}
+                $post = array_merge($post, $add_fields );
+            }
+            
 			if(array_search($post['post_title'], $article)) {
 				$event = array_merge($post, $article);
-				// d($event);
-			}
-		}
-		array_push($events, $event);
+            }
+
+        }
+        
+        //var_dump($event);
+        array_push($events, $event);
+        
 	}
 
 	return $events;
@@ -108,5 +131,6 @@ function get_post_infos() {
             $event = array_merge($event, $article);
         }
     }
+
     return $event;
 }
