@@ -24,13 +24,9 @@
 <?php wp_body_open(); ?>
 
 	<!-- === Navigation === -->
-	<header class="header">
-		<nav class="nav display--row display--between-x display--center-y">
+	<header class="header structure--nav">
+		<nav class="nav">
 			<img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="img nav--logo" alt="logo">
-
-			<div class="div size--wauto display-md--none">
-				<p id="nav-menu-btn">menu</p>
-			</div>
 
 			<?php
 				wp_nav_menu(

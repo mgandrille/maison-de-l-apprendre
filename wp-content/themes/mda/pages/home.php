@@ -141,12 +141,6 @@ get_header();
 			</header>
 
 			<!-- === Articles === --->
-			<!-- <div class="button-group filters-button-group">
-				<button id="all" class="button is-checked" data-filter="*">show all</button>
-				<button id="buttontest" class="button" data-filter=".jeunesse">jeunesse</button>
-				<button id="buttontest" class="button" data-filter=".conférences">conférence</button>
-			</div> -->
-
 			<div class="div grid card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
 				<?php foreach($events as $event) :
 					get_template_part( 'template-parts/event-card', null, array(

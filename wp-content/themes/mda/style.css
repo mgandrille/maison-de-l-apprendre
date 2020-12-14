@@ -474,15 +474,6 @@ input {
 	font-weight: bold;
 }
 
-/* ==== ======================== */
-/* ==== Item
-/* ==== ======================== */
-.wpnav-menu {
-	position: fixed;
-	background-color: #f4f4f4;
-	padding: 0.6rem 2.85rem;
-}
-
 .structure--nav {
 	border-bottom: 1px solid #e9e6e6;
 	position: fixed;
@@ -490,6 +481,22 @@ input {
 	padding: 0.6rem 2.85rem;
 	background-color: #f4f4f4;
 	z-index: 300;
+}
+
+.structure--nav .nav {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.structure--nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.structure--nav ul li {
+	padding: 0 1rem;
 }
 
 .structure--nav ul li a {
@@ -502,19 +509,6 @@ input {
 	color: #4abc96;
 }
 
-.nav--content-link li {
-	width: auto;
-	display: flex;
-	align-items: stretch;
-	cursor: pointer;
-	transition: box-shadow 100ms ease-in, border 130ms ease-in;
-}
-
-.nav--content-link li a {
-	width: 100%;
-	display: inline-block;
-}
-
 .nav--logo {
 	width: auto;
 	height: 50px;
@@ -523,6 +517,12 @@ input {
 .nav--bar {
 	display: none;
 	width: auto;
+}
+
+@media screen and (min-width: 600px) {
+	.nav--bar {
+		display: block;
+	}
 }
 
 .nav--bar ul {
@@ -538,26 +538,23 @@ input {
 	font-size: 1.75rem;
 }
 
+@media screen and (min-width: 600px) {
+	.nav--bar ul li {
+		padding-right: 1rem;
+	}
+}
+
 .nav--bar ul a {
 	color: #f4f4f4;
 }
 
-/* ==== ======================== */
-/* ==== Hover
-/* ==== ======================== */
-.nav--content-link li:hover {
-	border: 2px solid #151818;
-	transform: translateY(3px);
-	box-shadow: 0px 5px 1px 1px #f4f4f4;
+@media screen and (min-width: 600px) {
+	.nav--bar ul a {
+		color: #4abc96;
+	}
 }
 
-/* ==== ======================== */
-/* ==== Responsive 
-/* ==== ======================== */
 @media screen and (min-width: 600px) {
-	.nav--bar {
-		display: block;
-	}
 	.nav--bar ul {
 		display: flex;
 		position: static;
@@ -569,14 +566,11 @@ input {
 		align-items: center;
 		font-size: 1rem;
 	}
-	.nav--bar ul a {
-		color: #4abc96;
-	}
-	.nav--bar ul li {
-		padding-right: 1rem;
-	}
 }
 
+/* ==== ======================== */
+/* ==== Responsive 
+/* ==== ======================== */
 .card- {
 	border-radius: 0.18rem;
 	background-color: #f4f4f4;
