@@ -20,15 +20,15 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="body">
 <?php wp_body_open(); ?>
 
 	<!-- === Navigation === -->
-	<header>
-		<nav class="display--row display--between-x display--center-y">
-			<img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="nav--logo" alt="logo">
+	<header class="header">
+		<nav class="nav display--row display--between-x display--center-y">
+			<img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="img nav--logo" alt="logo">
 
-			<div class="size--wauto display-md--none">
+			<div class="div size--wauto display-md--none">
 				<p id="nav-menu-btn">menu</p>
 			</div>
 

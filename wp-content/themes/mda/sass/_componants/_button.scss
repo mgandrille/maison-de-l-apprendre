@@ -41,6 +41,18 @@
     }
 }
 
+
+
+.button--filter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & > * {
+        margin: $margin-s;
+    }
+}
+
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */

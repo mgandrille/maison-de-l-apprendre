@@ -182,6 +182,19 @@
   }
 }
 
+.structure--filter-bar {
+  height: 10vh;
+  justify-content: center;
+  background-color: white;
+
+  & .form {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */

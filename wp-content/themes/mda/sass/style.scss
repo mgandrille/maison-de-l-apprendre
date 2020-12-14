@@ -25,34 +25,34 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import './_variables/_variables-loader.scss';
 @import './_reset.scss';
 
-body, 
-main, 
-section, 
-article, 
-aside, 
-nav, 
-div,
-header, 
-footer,
-form,
-ul,
-li,
-figure {
+.body, 
+.main, 
+.section, 
+.article, 
+.aside, 
+.nav, 
+.div,
+.header, 
+.footer,
+.form,
+.ul,
+.li,
+.figure {
     width: 100%;
     height: auto;
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-li {
+.li {
     width: auto;
     flex-direction: row;
 }
 
-body {
+.body {
     position: relative;
     margin: 0 auto;
     font-family: $app-font;
@@ -62,11 +62,11 @@ body {
     background-color: $color-white;
 }
 
-img {
+.img {
     display: inline-block;
 }
 
-main {
+.main {
     max-width: $app-w;
     height: $app-h;
     margin: auto;
@@ -75,6 +75,6 @@ main {
 @import './_componants/_composant-loader.scss';
 @import './_modificator/_modificateur-loader.scss';
 
-section {
+.section {
     padding: $padding-m $padding-xb;
 }

@@ -90,33 +90,34 @@ input {
 	color: inherit;
 }
 
-body,
-main,
-section,
-article,
-aside,
-nav,
-div,
-header,
-footer,
-form,
-ul,
-li,
-figure {
+.body,
+.main,
+.section,
+.article,
+.aside,
+.nav,
+.div,
+.header,
+.footer,
+.form,
+.ul,
+.li,
+.figure {
 	width: 100%;
 	height: auto;
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 
-li {
+.li {
 	width: auto;
 	flex-direction: row;
 }
 
-body {
+.body {
 	position: relative;
 	margin: 0 auto;
 	font-family: "Open Sans", sans-serif;
@@ -126,11 +127,11 @@ body {
 	background-color: #f4f4f4;
 }
 
-img {
+.img {
 	display: inline-block;
 }
 
-main {
+.main {
 	max-width: 100%;
 	height: auto;
 	margin: auto;
@@ -327,6 +328,19 @@ main {
 		display: flex;
 		padding-right: 2.85rem;
 	}
+}
+
+.structure--filter-bar {
+	height: 10vh;
+	justify-content: center;
+	background-color: white;
+}
+
+.structure--filter-bar .form {
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /* ==== ======================== */
@@ -847,6 +861,16 @@ main {
 .button--btn:hover {
 	transform: scale(0.96);
 	box-shadow: -5px 5px 1px 1px #4abc96;
+}
+
+.button--filter {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.button--filter > * {
+	margin: 0.6rem;
 }
 
 /* ==== ======================== */
@@ -3386,7 +3410,7 @@ h6,
 	border: 1px solid red;
 }
 
-section {
+.section {
 	padding: 1.75rem 2.85rem;
 }
 
