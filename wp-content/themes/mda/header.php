@@ -33,7 +33,7 @@
 					array(
 						'theme_location' => 'my-custom-menu',
 						'menu_id' => 'nav-menu',
-						'container_class' => 'nav--bar'
+						'menu_class' => 'nav--menu'
 					)
 				);
 			?>

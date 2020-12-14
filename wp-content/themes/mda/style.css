@@ -134,89 +134,15 @@ input {
 .main {
 	max-width: 100%;
 	height: auto;
-	margin: auto;
+	margin: 10vh auto auto auto;
 }
 
-.structure--head, .structure--foot {
-	font-size: .95rem;
-	justify-content: flex-start;
-}
-
-.structure--head .structure--title {
-	font-size: .95rem;
-}
-
-.structure--body {
-	margin-bottom: auto;
-	justify-content: flex-start;
-}
-
-.structure--foot {
-	margin-top: auto;
-}
-
-.structure--scroll {
-	overflow: hidden;
-	scrollbar-width: none;
-}
-
-.structure--scroll::-webkit-scrollbar {
-	width: 0px;
-	background: transparent;
-}
-
-.structure--scroll-y:hover {
-	overflow-y: auto;
-}
-
-.structure--scroll-x:hover {
-	overflow-x: auto;
-}
-
-.structure--article-content {
-	width: 100%;
-	margin: 0;
-}
-
-.structure--article-content p {
-	text-align: justify;
-}
-
-@media screen and (min-width: 1024px) {
-	.structure--article-content {
-		width: calc(60% - 1rem);
-		margin: 1rem 1rem 1rem 0;
-	}
-}
-
-.structure--article-aside {
-	position: relative;
-	width: 100%;
-	min-height: 60vh;
-	margin: 0;
-	padding: 1.75rem;
-	background-color: #e9e6e6;
-}
-
-@media screen and (min-width: 1024px) {
-	.structure--article-aside {
-		width: calc(40% - 1rem);
-		min-height: 65vh;
-		margin: 1rem 0 1rem 1rem;
-	}
-}
-
-.structure--article-aside p {
-	font-size: 1.25rem;
-}
-
-.structure--article-aside a {
-	font-size: 1rem;
-}
-
+/**
+** LANDING
+**/
 .structure--hero {
 	padding: 0;
-	height: 100vh;
+	height: 90vh;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
@@ -279,14 +205,14 @@ input {
 }
 
 .structure--hero-title span:last-child {
-	width: 50%;
+	width: 80%;
 	top: -10%;
-	left: 0;
+	left: -35%;
 }
 
 @media screen and (min-width: 600px) {
 	.structure--hero-title {
-		width: 50%;
+		width: 70%;
 		padding-left: 2.85rem;
 		padding-right: 0;
 		align-items: flex-start;
@@ -295,41 +221,112 @@ input {
 
 @media screen and (min-width: 800px) {
 	.structure--hero-title {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.structure--hero-title {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.structure--hero-title {
 		width: 30%;
 	}
 }
 
-.structure--hero-slot {
+.structure--hero-badges {
 	position: relative;
-	width: 50%;
+	width: 30%;
 	height: 100%;
 	display: none;
 }
 
-.structure--hero-slot [class^="shape--badge"] {
+.structure--hero-badges .div[class*='shape--badge'] {
 	position: absolute;
-	top: 25%;
-	left: 50%;
+	top: 15%;
+	left: 55%;
 }
 
-.structure--hero-slot [class^="shape--badge"]:first-of-type {
-	top: 20%;
-	left: 10%;
-}
-
-.structure--hero-slot [class^="shape--badge"]:last-of-type {
-	top: 75%;
+.structure--hero-badges .div[class*='shape--badge']:first-of-type {
+	top: 0;
 	left: 15%;
 }
 
+.structure--hero-badges .div[class*='shape--badge']:last-of-type {
+	top: 75%;
+	left: 20%;
+}
+
 @media screen and (min-width: 800px) {
-	.structure--hero-slot {
-		width: 70%;
+	.structure--hero-badges {
+		width: 50%;
 		display: flex;
 		padding-right: 2.85rem;
 	}
 }
 
+@media screen and (min-width: 1024px) {
+	.structure--hero-badges {
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.structure--hero-badges {
+		width: 70%;
+	}
+}
+
+/**
+** ARTICLES
+**/
+.structure--article-content {
+	width: 100%;
+	margin: 0;
+}
+
+.structure--article-content p {
+	text-align: justify;
+}
+
+@media screen and (min-width: 1024px) {
+	.structure--article-content {
+		width: calc(60% - 1rem);
+		margin: 1rem 1rem 1rem 0;
+	}
+}
+
+.structure--article-aside {
+	position: relative;
+	width: 100%;
+	min-height: 60vh;
+	margin: 0;
+	padding: 1.75rem;
+	background-color: #e9e6e6;
+}
+
+@media screen and (min-width: 1024px) {
+	.structure--article-aside {
+		width: calc(40% - 1rem);
+		min-height: 65vh;
+		margin: 1rem 0 1rem 1rem;
+	}
+}
+
+.structure--article-aside p {
+	font-size: 1.25rem;
+}
+
+.structure--article-aside a {
+	font-size: 1rem;
+}
+
+/**
+** FORM
+**/
 .structure--filter-bar {
 	height: 10vh;
 	justify-content: center;
@@ -474,11 +471,18 @@ input {
 	font-weight: bold;
 }
 
+/**
+** NAV BAR
+**/
 .structure--nav {
-	border-bottom: 1px solid #e9e6e6;
 	position: fixed;
-	color: #151818;
+	height: 10vh;
+	top: 0;
+	left: 0;
+	right: 0;
 	padding: 0.6rem 2.85rem;
+	color: #151818;
+	border-bottom: 1px solid #e9e6e6;
 	background-color: #f4f4f4;
 	z-index: 300;
 }
@@ -489,88 +493,45 @@ input {
 	align-items: center;
 }
 
-.structure--nav ul {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.structure--nav ul li {
-	padding: 0 1rem;
-}
-
-.structure--nav ul li a {
-	color: #151818;
-	font-family: "Economica", sans-serif;
-	font-size: calc(4rem * .33);
-}
-
-.structure--nav ul li a:hover {
-	color: #4abc96;
-}
-
 .nav--logo {
 	width: auto;
 	height: 50px;
 }
 
-.nav--bar {
+/**
+** NAV MENU
+**/
+.nav--menu {
 	display: none;
 	width: auto;
 }
 
+.nav--menu ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nav--menu ul li {
+	padding: 0 1rem;
+}
+
+.nav--menu ul li a {
+	color: #151818;
+	font-family: "Economica", sans-serif;
+	font-size: calc(4rem * .33);
+}
+
+.nav--menu ul li a:hover {
+	color: #4abc96;
+}
+
 @media screen and (min-width: 600px) {
-	.nav--bar {
+	.nav--menu {
 		display: block;
 	}
 }
 
-.nav--bar ul {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: #43beba;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.75rem;
-}
-
-@media screen and (min-width: 600px) {
-	.nav--bar ul li {
-		padding-right: 1rem;
-	}
-}
-
-.nav--bar ul a {
-	color: #f4f4f4;
-}
-
-@media screen and (min-width: 600px) {
-	.nav--bar ul a {
-		color: #4abc96;
-	}
-}
-
-@media screen and (min-width: 600px) {
-	.nav--bar ul {
-		display: flex;
-		position: static;
-		width: auto;
-		height: auto;
-		background-color: #f4f4f4;
-		flex-direction: row;
-		justify-content: flex-end;
-		align-items: center;
-		font-size: 1rem;
-	}
-}
-
-/* ==== ======================== */
-/* ==== Responsive 
-/* ==== ======================== */
 .card- {
 	border-radius: 0.18rem;
 	background-color: #f4f4f4;
@@ -936,7 +897,7 @@ input {
 }
 
 .title--main {
-	width: 100%;
+	width: 65%;
 	margin-bottom: 2.85rem;
 }
 
@@ -978,6 +939,12 @@ input {
 	.title--main + div {
 		width: 60%;
 		margin-top: 10vh;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.title--main {
+		width: 50%;
 	}
 }
 

@@ -1,83 +1,10 @@
-.structure--head, .structure--foot {
-    font-size: .95rem;
-    justify-content: flex-start;
-}
-
-.structure--head .structure--title {
-  font-size: .95rem;
-}
-
-.structure--body {
-    margin-bottom: auto;
-    justify-content: flex-start;
-}
-
-.structure--foot {
-    margin-top: auto;
-}
-
-.structure--scroll {
-    overflow: hidden;
-
-    // Firefox
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-    width: 0px;
-
-    // Chrome/Safari/Webkit
-    background: transparent;
-    }
-
-  &-y:hover {
-    overflow-y: auto;
-  }
-
-  &-x:hover {
-    overflow-x: auto;
-    }
-}
-
-.structure--article-content {
-  width: 100%;
-  margin: 0;
-
-  & p {
-    text-align: justify;
-  }
-
-  @media screen and (min-width: 1024px) {
-    width: calc(60% - #{$margin});
-    margin: $margin $margin $margin 0;
-  }
-}
-
-.structure--article-aside {
-  position: relative;
-  width:100%;
-  min-height: 60vh;
-  margin: 0;
-  padding: $padding-m;
-  background-color: $color-light;
-
-  @media screen and (min-width: 1024px) {
-    width: calc(40% - #{$margin});
-    min-height: 65vh;
-    margin: $margin 0 $margin $margin;
-  }
-
-  & p {
-    font-size: 1.25rem;
-  }
-
-  & a {
-    font-size: 1rem;
-  }
-}
+/**
+** LANDING
+**/
 
 .structure--hero {
   padding: 0;
-  height: 100vh;
+  height: 90vh;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -135,52 +62,115 @@
     }
 
     &:last-child {
-      width: 50%;
+      width: 80%;
       top: -10%;
-      left: 0;
+      left: -35%;
     }
   }
 
   @media screen and (min-width:600px) {
-    width: 50%;
+    width: 70%;
     padding-left: $padding-xb;
     padding-right: 0;
     align-items: flex-start;
   }
 
   @media screen and (min-width:800px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width:1024px) {
+    width: 40%;
+  }
+
+  @media screen and (min-width:1280px) {
     width: 30%;
   }
 }
 
-.structure--hero-slot {
+.structure--hero-badges {
   position: relative;
-  width: 50%;
+  width: 30%;
   height: 100%;
   display: none;
 
-  & [class^="shape--badge"] {
+  & .div[class*='shape--badge'] {
     position: absolute;
-    top: 25%;
-    left: 50%;
+    top: 15%;
+    left: 55%;
 
     &:first-of-type {
-      top:20%;
-      left: 10%;
+      top: 0;
+      left: 15%;
     }
 
     &:last-of-type {
       top: 75%;
-      left: 15%;
+      left: 20%;
     }
   }
 
   @media screen and (min-width:800px) {
-    width: 70%;
+    width: 50%;
     display: flex;
     padding-right: $padding-xb;
   }
+
+  @media screen and (min-width:1024px) {
+    width: 60%;
+  }
+
+  @media screen and (min-width:1280px) {
+    width: 70%;
+  }
 }
+
+
+/**
+** ARTICLES
+**/
+
+.structure--article-content {
+  width: 100%;
+  margin: 0;
+
+  & p {
+    text-align: justify;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: calc(60% - #{$margin});
+    margin: $margin $margin $margin 0;
+  }
+}
+
+.structure--article-aside {
+  position: relative;
+  width:100%;
+  min-height: 60vh;
+  margin: 0;
+  padding: $padding-m;
+  background-color: $color-light;
+
+  @media screen and (min-width: 1024px) {
+    width: calc(40% - #{$margin});
+    min-height: 65vh;
+    margin: $margin 0 $margin $margin;
+  }
+
+  & p {
+    font-size: 1.25rem;
+  }
+
+  & a {
+    font-size: 1rem;
+  }
+}
+
+
+/**
+** FORM
+**/
 
 .structure--filter-bar {
   height: 10vh;

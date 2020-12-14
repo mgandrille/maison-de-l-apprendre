@@ -1,8 +1,16 @@
+/**
+** NAV BAR
+**/
+
 .structure--nav {
-    border-bottom: 1px solid $color-light;
     position: fixed;
-    color: $color-dark;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: $padding-s $padding-xb;
+    color: $color-dark;
+    border-bottom: 1px solid $color-light;
     background-color: $color-white;
     z-index: 300;
 
@@ -11,6 +19,21 @@
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.nav--logo {
+    width: auto;
+    height: 50px;
+}
+
+
+/**
+** NAV MENU
+**/
+
+.nav--menu {
+    display: none;
+    width: auto;
 
     & ul {
         display: flex;
@@ -31,75 +54,8 @@
             }
         }
     }
-}
-
-.nav--logo {
-    width: auto;
-    height: 50px;
-}
-
-.nav--bar {
-    display: none;
-    width: auto;
 
     @media screen and (min-width: 600px) {
         display: block;
     }
-}
-
-.nav--bar ul {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: $color-secondary;
-    flex-direction: column ;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.75rem;
-
-    & li {
-        @media screen and (min-width: 600px) {
-            padding-right: $padding;
-            $padding-left: $padding;
-        }
-    }
-
-    & a {
-        color: $color-white;
-
-        @media screen and (min-width: 600px)  {
-            color: $color-action;
-        }
-    }
-
-    @media screen and (min-width: 600px) {
-        display: flex;
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: $color-white;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 1rem;
-    }
-}
-
-
-/* ==== ======================== */
-/* ==== Responsive 
-/* ==== ======================== */
-
-
-@media screen and (min-width: 1024px) {
-}
-
-@media screen and (min-width: 1220px) {
-    
-}
-
-@media screen and (min-width: 1366px) {
-    
 }

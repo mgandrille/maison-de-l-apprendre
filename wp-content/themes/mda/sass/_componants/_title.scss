@@ -62,9 +62,8 @@
 	}
 }
 
-
 .title--main {
-	width: 100%;
+	width: 65%;
 	margin-bottom: $margin-xb;
 
 	& > :first-child {
@@ -104,6 +103,10 @@
 			width: 60%;
 			margin-top: 10vh;
 		}
+	}
+
+	@media screen and (min-width: 800px) {
+		width: 50%;
 	}
 
 	@media screen and (min-width: 1024px) {

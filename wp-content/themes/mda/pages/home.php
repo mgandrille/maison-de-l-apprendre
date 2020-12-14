@@ -33,7 +33,7 @@ get_header();
 		</header>
 
 		<!-- === Badges circulaires === -->
-		<div class="div structure--hero-slot">
+		<div class="div structure--hero-badges">
 			<div class="div shape--badge-b">
 				<span>Découvrir</span>
 			</div>

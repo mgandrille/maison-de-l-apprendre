@@ -69,7 +69,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .main {
     max-width: $app-w;
     height: $app-h;
-    margin: auto;
+    margin: 10vh auto auto auto;
 }
 
 @import './_componants/_composant-loader.scss';
