@@ -9,14 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article class="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="header entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php mda_post_thumbnail(); ?>
 
-	<div style="width: 450px; border: 1px solid red">
+	<div class="div" style="width: 450px; border: 1px solid red">
 		<?php
 		the_content();
 
@@ -30,7 +30,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="footer entry-footer">
 			<?php
 			edit_post_link(
 				sprintf(

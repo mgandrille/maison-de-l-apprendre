@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-<main id="primary" style="margin-top: 100px">
+<main id="primary" class="main" style="margin-top: 100px">
 
 	<?php
 	while (have_posts()) :

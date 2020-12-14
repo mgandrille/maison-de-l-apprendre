@@ -14,32 +14,33 @@
 }() );
 
 	
-	/**
-	 * Implémentation Isotope (wip)
-	 */
-	const button = document.getElementById('buttontest');
-	const all = document.getElementById('all');
+/**
+ * Implémentation Isotope
+ */
 
-	// Init Isotope
-	const isotope = new Isotope( '.grid', {
+const form = document.getElementById('article-filter');
+let storedFilterNames = [];
 
-		// options
-		itemSelector: '.grid-item',
-		layoutMode: 'fitRows',
-	});
+const isotope = new Isotope( '.grid', {
+	itemSelector: '.grid-item',
+	layoutMode: 'fitRows',
+});
 
-	button.addEventListener('click', function(event) {
-		const filterValue = event.target.getAttribute('data-filter');	
-		isotope.arrange({ filter: filterValue });
+form.addEventListener('change', function(event) {
+	const checkbox = event.target;
+	const filterName = checkbox.getAttribute('data-filter');
 
-		all.classList.remove('is-checked');
-		event.target.classList.add('is-checked');
-	})
+	if (checkbox.checked) {
+		checkbox.classList.add('is-checked');
+		storedFilterNames.push(filterName);
 
-	all.addEventListener('click', function(event) {
-		const filterValue = event.target.getAttribute('data-filter');	
-		isotope.arrange({ filter: filterValue });
+		return isotope.arrange({ filter: storedFilterNames.join('') });
+	}
+	
+	checkbox.classList.remove("is-checked");
 
-		button.classList.remove('is-checked');
-		event.target.classList.add('is-checked');
-	})
+	// On retire uniquement le filtre décoché du tableaux des filtres
+	storedFilterNames = storedFilterNames.filter(filter => !filter.includes(filterName))
+
+	return isotope.arrange({ filter: storedFilterNames.join('') });
+})
