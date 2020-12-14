@@ -75,17 +75,17 @@ function get_all_posts_infos() {
 	$articles = get_articles();
 	$posts = get_posts();
     $events = array();
-    
+
 	foreach($articles as $article) {
 		foreach($posts as $post) {
-
+            // Récupère les champs ACF
             $add_fields = get_fields($post->ID);
 
             // pour récupérer la catégorie du post
             $categoryTags = get_the_category($post->ID);
 
             $post = (array) $post;
-            
+
             // Tous les noms des catégories du post sont récupérés d'un coup sous forme de tableau
             $categoryNames = array_map(function($categorie) {
                 return $categorie->name;
@@ -97,16 +97,13 @@ function get_all_posts_infos() {
 			if($add_fields) {
                 $post = array_merge($post, $add_fields );
             }
-            
+
 			if(array_search($post['post_title'], $article)) {
 				$event = array_merge($post, $article);
             }
-
         }
-        
-        //var_dump($event);
+        // d($event);
         array_push($events, $event);
-        
 	}
 
 	return $events;
@@ -121,6 +118,15 @@ function get_post_infos() {
     $articles = get_articles();
     $post = get_post();
     $event = (array) $post;
+
+    // pour récupérer la catégorie du post
+    $categoryTags = get_the_category($post->ID);
+    // Tous les noms des catégories du post sont récupérés d'un coup sous forme de tableau
+    $categoryNames = array_map(function($categorie) {
+        return $categorie->name;
+    }, $categoryTags);
+    // J'ai ajouté un nouveau champ sur le post avec les catégories en valeur
+    $event['categoriesTag'] = $categoryNames;
 
     foreach($articles as $article) {
         $add_fields = get_fields($event['ID']);

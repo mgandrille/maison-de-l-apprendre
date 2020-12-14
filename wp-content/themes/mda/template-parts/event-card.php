@@ -29,7 +29,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
         </h3>
 
         <p class="margin--m-t-none">
-            Courte description <?=$args['small_content']?>
+            <?=$args['small_content']?>
         </p>
     </div>
     <footer class="structure--foot display--end-y">

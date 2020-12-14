@@ -12,7 +12,7 @@
  * get all information in an array ($event) for one article
 */
 $event = get_post_infos();
-// d($event);
+d($event);
 
 
 /**
@@ -31,17 +31,17 @@ $duree = date('H:i', $duree);
 /**
  * Get all events for making a search in categories
  */
-$categories = explode(', ', mb_strtoupper($event['categories']));
+$categories = $event['categoriesTag'];
 // d($categories);
 
 $totalEvents = get_all_posts_infos();
-$datas = array();
+$datas = [];
 foreach($totalEvents as $totalEvent) {
-	$totalEvent_categories = explode(', ', mb_strtoupper($totalEvent['categories']));
-
-	$result = array_diff($totalEvent_categories, $categories);
+	// d($totalEvent['categoriesTag']);
+	$result = array_diff($totalEvent['categoriesTag'], $categories);
+	// d($result);
 	if(count($result) <= 1 ) {
-		$datas[] = array_push($datas, $totalEvent);
+		array_push($datas, $totalEvent);
 	}
 }
 // d($datas);
@@ -71,7 +71,7 @@ foreach($totalEvents as $totalEvent) {
 				<ul class="ul">
 					<li class="li">Début : <?=$date?></li>
 					<li class="li">Durée : <?=$duree?></li>
-					<li class="li"><?=$event['categories']?></li>
+					<li class="li"><?=implode(', ', $event['categoriesTag'])?></li>
 				</ul>
 			</header>
 
@@ -94,8 +94,7 @@ foreach($totalEvents as $totalEvent) {
 					)
 				);
 				?>
-				
-			</div>	
+			</div>
 		</div>
 
 
@@ -143,7 +142,7 @@ foreach($totalEvents as $totalEvent) {
 						'id' => $data['ID'],
 						'image' => $data['logo']->publicUrl,
 						'title' => $data['post_title'],
-						'categories'  => $data['categories'],
+						'categories' => $event['categoriesTag'][0],
 						'date' => $data['startDate'],
 						'small_content' => $data['description'],
 						));
