@@ -157,86 +157,6 @@ input {
 	}
 }
 
-.structure--hero-title {
-	padding: 0 2.85rem;
-	width: 100%;
-	height: auto;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-
-.structure--hero-title h1 {
-	font-size: 5.8rem;
-	margin-bottom: 0;
-	margin-top: 0;
-	color: #ea0084;
-	letter-spacing: .05rem;
-}
-
-.structure--hero-title h2, .structure--hero-title .h2, .structure--hero-title .h2 {
-	margin: 0 auto 0 0;
-	color: #545454;
-	font-size: calc(4rem * .33);
-	text-align: left;
-}
-
-.structure--hero-title h2:last-of-type, .structure--hero-title .h2:last-of-type, .structure--hero-title .h2:last-of-type {
-	text-align: right;
-	margin: 0 0 0 auto;
-}
-
-.structure--hero-title span {
-	position: absolute;
-	border-bottom: 4px dotted #ea0084;
-}
-
-.structure--hero-title span:first-child {
-	width: 80%;
-	bottom: -80%;
-	left: -10%;
-	transform: rotate(90deg);
-}
-
-@media screen and (min-width: 600px) {
-	.structure--hero-title span:first-child {
-		bottom: -60%;
-	}
-}
-
-.structure--hero-title span:last-child {
-	width: 80%;
-	top: -10%;
-	left: -35%;
-}
-
-@media screen and (min-width: 600px) {
-	.structure--hero-title {
-		width: 70%;
-		padding-left: 2.85rem;
-		padding-right: 0;
-		align-items: flex-start;
-	}
-}
-
-@media screen and (min-width: 800px) {
-	.structure--hero-title {
-		width: 50%;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.structure--hero-title {
-		width: 40%;
-	}
-}
-
-@media screen and (min-width: 1280px) {
-	.structure--hero-title {
-		width: 30%;
-	}
-}
-
 .structure--hero-badges {
 	position: relative;
 	width: 30%;
@@ -325,7 +245,7 @@ input {
 }
 
 /**
-** FORM
+** SEARCHBAR
 **/
 .structure--filter-bar {
 	height: 10vh;
@@ -335,14 +255,23 @@ input {
 
 .structure--filter-bar .form {
 	width: 100%;
+	padding: 0.6rem 1rem;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
 
-/* ==== ======================== */
-/* ==== Responsive 
-/* ==== ======================== */
+.structure--filter-bar .form .div:first-child {
+	width: 20%;
+}
+
+.structure--filter-bar .form .div:last-child {
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	width: 80%;
+}
+
 .list--badge-list {
 	width: 100%;
 	flex-direction: row;
@@ -818,12 +747,6 @@ input {
 	box-shadow: -5px 5px 1px 1px #4abc96;
 }
 
-.button--filter {
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-
 .button--filter > * {
 	margin: 0.6rem;
 }
@@ -832,34 +755,94 @@ input {
 /* ==== Responsive 
 /* ==== ======================== */
 /* Add your own componants rules here */
-.title--article {
-	margin: 0;
+/** 
+** Title landing
+**/
+.title--hero {
 	padding: 0 2.85rem;
-	text-align: center;
+	width: 100%;
+	height: auto;
+	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
-.title--article > :first-child {
-	margin-top: 0;
-	margin-bottom: 0.6rem;
-}
-
-.title--article > :last-child {
-	margin-top: 0;
+.title--hero h1 {
+	font-size: 5.8rem;
 	margin-bottom: 0;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #ff914d;
-	font-size: calc(4rem * .42);
+	margin-top: 0;
+	color: #ea0084;
+	letter-spacing: .05rem;
 }
 
-@media screen and (min-width: 800px) {
-	.title--article {
-		text-align: left;
+.title--hero h2, .title--hero .h2,
+.title--hero .h2 {
+	margin: 0 auto 0 0;
+	color: #545454;
+	font-size: calc(4rem * .33);
+	text-align: left;
+}
+
+.title--hero h2:last-of-type, .title--hero .h2:last-of-type,
+.title--hero .h2:last-of-type {
+	text-align: right;
+	margin: 0 0 0 auto;
+}
+
+.title--hero span {
+	position: absolute;
+	border-bottom: 4px dotted #ea0084;
+}
+
+.title--hero span:first-child {
+	width: 80%;
+	bottom: -80%;
+	left: -10%;
+	transform: rotate(90deg);
+}
+
+@media screen and (min-width: 600px) {
+	.title--hero span:first-child {
+		bottom: -60%;
+	}
+}
+
+.title--hero span:last-child {
+	width: 80%;
+	top: -10%;
+	left: -35%;
+}
+
+@media screen and (min-width: 600px) {
+	.title--hero {
+		width: 70%;
+		padding-left: 2.85rem;
+		padding-right: 0;
 		align-items: flex-start;
 	}
 }
 
+@media screen and (min-width: 800px) {
+	.title--hero {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.title--hero {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.title--hero {
+		width: 30%;
+	}
+}
+
+/** 
+** Types de titres
+**/
 .title--secondary :first-child {
 	font-size: calc(4rem * .58);
 	margin-top: 0;
@@ -869,28 +852,6 @@ input {
 .title--secondary :last-child {
 	margin-top: 0;
 	width: 50%;
-	border-bottom-style: dotted;
-	border-bottom-width: 6px;
-	border-bottom-color: #ea0084;
-}
-
-.title--main-simple {
-	width: 80%;
-	margin-bottom: 2.85rem;
-}
-
-.title--main-simple > :first-child {
-	position: relative;
-	font-size: 4.5rem;
-	color: #ea0084;
-	margin-bottom: 0;
-}
-
-.title--main-simple span {
-	position: absolute;
-	width: 100%;
-	left: -50%;
-	top: -20%;
 	border-bottom-style: dotted;
 	border-bottom-width: 6px;
 	border-bottom-color: #ea0084;
@@ -954,9 +915,56 @@ input {
 	}
 }
 
-/* ==== ======================== */
-/* ==== Responsive 
-/* ==== ======================== */
+.title--main-simple {
+	width: 80%;
+	margin-bottom: 2.85rem;
+}
+
+.title--main-simple > :first-child {
+	position: relative;
+	font-size: 4.5rem;
+	color: #ea0084;
+	margin-bottom: 0;
+}
+
+.title--main-simple span {
+	position: absolute;
+	width: 100%;
+	left: -50%;
+	top: -20%;
+	border-bottom-style: dotted;
+	border-bottom-width: 6px;
+	border-bottom-color: #ea0084;
+}
+
+.title--article {
+	margin: 0;
+	padding: 0 2.85rem;
+	text-align: center;
+	align-items: center;
+}
+
+.title--article > :first-child {
+	margin-top: 0;
+	margin-bottom: 0.6rem;
+}
+
+.title--article > :last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ff914d;
+	font-size: calc(4rem * .42);
+}
+
+@media screen and (min-width: 800px) {
+	.title--article {
+		text-align: left;
+		align-items: flex-start;
+	}
+}
+
 .display--none {
 	display: none;
 }

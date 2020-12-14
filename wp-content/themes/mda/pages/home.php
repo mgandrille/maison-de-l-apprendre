@@ -10,29 +10,26 @@
 */
 $events = get_all_posts_infos();
 
-//add header section
 get_header();
-
 ?>
 
-<!--
-=== HERO LANDING
--->
+<!-- === HERO LANDING === -->
+
 <main class="main">
 	<section class="section structure--hero">
 
-		<!-- === Titre === -->
-		<header class="header structure--hero-title">
-			<span></span>
+		<!-- Titre -->
+		<header class="header title--hero">
+			<span><!-- bordure --></span>
 
 			<div class="div h2">du 21 au 27 janvier 2021</div>
 			<h1>festival de<br>l'apprendre</h1>
 			<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
 
-			<span></span>
+			<span><!-- bordure --></span>
 		</header>
 
-		<!-- === Badges circulaires === -->
+		<!-- Badges circulaires -->
 		<div class="div structure--hero-badges">
 			<div class="div shape--badge-b">
 				<span>Découvrir</span>
@@ -49,13 +46,11 @@ get_header();
 	</section>
 
 
-	<!--
-	=== CONTENT
-	-->
+	<!-- === PRESENTATION === -->
 
 	<section class="section display--row display--between-x display--wrap">
 
-		<!-- === Titre de la section === --->
+		<!-- Titre de la section --->
 		<header class="header title--main">
 			<h2>
 				Découvrir<br />le festival
@@ -65,7 +60,7 @@ get_header();
 			<h6>Une journée pour apprendre et découvrir</h6>
 		</header>
 
-		<!-- === description de la section === --->
+		<!-- description de la section--->
 		<div class="div">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
@@ -95,52 +90,38 @@ get_header();
 	</section>
 
 
-	<!--
-	=== SELECTION DES ATELIERS
-	-->
+	<!-- === SELECTION DES ATELIERS === -->
 
 	<section class="section bg--gradient padding--y-xb">
 		<div class="div size--w100 bg--white">
 
-			<!-- === filter bar === --->
+			<!-- filter bar -->
 			<header class="header structure--filter-bar">
 				<form id="article-filter" class="form">
 
-					<!-- === search bar === -->
-					<input type="text" class="size--w50" name="search" placeholder="Rechercher un atelier">
+					<!-- Searchbar -->
+					<div class="div">
+						<input id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
+					</div>
 
-					<!-- === filter on tag === -->
+					<!-- Filtres -->
 					<div class="div button--filter">
 						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
 						<label for="all">Tous</label>
 
-						<input type="checkbox" name="tout-public" id="tout-public" data-filter=".tout-public">
-						<label for="tout-public">Tout public</label>
-
 						<input type="checkbox" name="jeunesse" id="jeunesse" data-filter=".jeunesse">
 						<label for="jeunesse">Jeunesse</label>
-
-						<input type="checkbox" name="pprofessionnelro" id="professionnel" data-filter=".professionnel">
-						<label for="professionnel">Professionnels</label>
 
 						<input type="checkbox" name="conference" id="conference" data-filter=".conference">
 						<label for="conference">Conférences</label>
 
-						<input type="checkbox" name="atelier" id="atelier" data-filter=".atelier">
-						<label for="atelier">Atelier</label>
-
 						<input type="checkbox" name="environnement" id="environnement" data-filter=".environnement">
 						<label for="environnement">Environnement</label>
-
-						<input type="checkbox" name="bien-etre" id="bien-etre" data-filter=".bien-etre">
-						<label for="bien-etre">Bien-etre</label>
 					</div>
-
-					
 				</form>
 			</header>
 
-			<!-- === Articles === --->
+			<!-- Liste des articles -->
 			<div class="div grid card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
 				<?php foreach($events as $event) :
 					get_template_part( 'template-parts/event-card', null, array(
@@ -152,9 +133,9 @@ get_header();
 						'small_content' => $event['description']
 						));
 				endforeach; ?>
-
 			</div>
 		</div>
 	</section>
 </main>
+
 <?php get_footer() ?>
