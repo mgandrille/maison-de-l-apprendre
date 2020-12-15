@@ -16,7 +16,7 @@
 
 	<?php mda_post_thumbnail(); ?>
 
-	<div class="div" style="width: 450px; border: 1px solid red">
+	<div class="div">
 		<?php
 		the_content();
 

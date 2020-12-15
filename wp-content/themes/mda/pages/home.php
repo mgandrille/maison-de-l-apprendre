@@ -9,7 +9,21 @@
  * get all posts/articles in an array ($events) to be dispatched in cards
 */
 $events = get_all_posts_infos();
+// d($events);
 
+// Get all categories for the search bar
+$categories = (array) get_categories();
+$categoryTags = [];
+foreach($categories as $category) {
+	// d($category);
+	if($category->term_id !== 1) {
+		array_push($categoryTags, $category);
+	}
+}
+// d($categoryTags);
+
+
+//add header section
 get_header();
 ?>
 
@@ -109,14 +123,18 @@ get_header();
 						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
 						<label for="all">Tous</label>
 
-						<input type="checkbox" name="jeunesse" id="jeunesse" data-filter=".jeunesse">
+						<?php foreach($categoryTags as $tag) : ?>
+							<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
+							<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+						<?php endforeach; ?>
+						<!-- <input type="checkbox" name="jeunesse" id="jeunesse" data-filter=".jeunesse">
 						<label for="jeunesse">Jeunesse</label>
 
 						<input type="checkbox" name="conference" id="conference" data-filter=".conference">
 						<label for="conference">Conférences</label>
 
 						<input type="checkbox" name="environnement" id="environnement" data-filter=".environnement">
-						<label for="environnement">Environnement</label>
+						<label for="environnement">Environnement</label> -->
 					</div>
 				</form>
 			</header>
@@ -138,4 +156,5 @@ get_header();
 	</section>
 </main>
 
-<?php get_footer() ?>
+<?php
+get_footer();
