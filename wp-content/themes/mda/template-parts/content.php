@@ -31,19 +31,15 @@ $duree = date('H:i', $duree);
  * Get all events for making a search in categories
  */
 $categories = $event['categoriesTag'];
-// d($categories);
 
 $totalEvents = get_all_posts_infos();
 $datas = [];
 foreach($totalEvents as $totalEvent) {
-	// d($totalEvent['categoriesTag']);
 	$result = array_diff($totalEvent['categoriesTag'], $categories);
-	// d($result);
 	if(count($result) <= 1 ) {
 		array_push($datas, $totalEvent);
 	}
 }
-// d($datas);
 
 
 

@@ -9,18 +9,15 @@
  * get all posts/articles in an array ($events) to be dispatched in cards
 */
 $events = get_all_posts_infos();
-// d($events);
 
 // Get all categories for the search bar
 $categories = (array) get_categories();
 $categoryTags = [];
 foreach($categories as $category) {
-	// d($category);
 	if($category->term_id !== 1) {
 		array_push($categoryTags, $category);
 	}
 }
-// d($categoryTags);
 
 
 //add header section
