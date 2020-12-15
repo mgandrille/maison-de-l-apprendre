@@ -115,13 +115,11 @@ $duree = date('H:i', $duree);
 				<p><?=$event['presta']?></p>
 				<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
 			</div>
-
-			<div class="div card--absolute">
-				<nav class="nav">
-					<iframe id="haWidget" allowtransparency="true" src="<?=$event['widgetButtonUrl']?>" style="width: 100%; height: 70px; border: none;"></iframe>
-				</nav>
-			</div>
 		</aside>
+	</section>
+
+	<section class="section">
+		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 	</section>
 
 <section class="section margin--b-none margin--t-m" style="background-image: url('<?=content_url()?>/themes/mda/img/bg-atelier-similaires.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">

@@ -11,7 +11,7 @@ $date = date_format(new DateTime($args['date']), 'd/m/Y');
 $time = date_format(new DateTime($args['date']), 'H:i');
 ?>
 
-<article class="grid-item <?=$args['categories']?> card--article" data-category="<?=$args['categories']?>">
+<article class="grid-item card--article <?=$args['categories']?>" data-category="<?=$args['categories']?>">
     <header class="card--article-head" style="background-image: url('<?=$args['image'];?>');">
         <!-- background atelier -->
     </header>
@@ -29,7 +29,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
         </h3>
 
         <p class="margin--m-t-none">
-            Courte description <?=$args['small_content']?>
+            <?=$args['small_content']?>
         </p>
     </div>
 

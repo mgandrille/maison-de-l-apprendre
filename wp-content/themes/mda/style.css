@@ -517,6 +517,7 @@ input {
 **/
 .card--gallerie {
 	flex-direction: row;
+	height: auto;
 }
 
 .card--gallerie > * {

@@ -55,6 +55,7 @@
 
 .card--gallerie {
     flex-direction: row;
+    height: auto;
 
     & > * {
         width: 100%;
