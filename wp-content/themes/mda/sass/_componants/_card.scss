@@ -1,48 +1,34 @@
-.card- {
+/**
+** CARD ARTICLES
+**/
+
+.card--article {
     border-radius: $radius-s;
-    background-color: $color-white;
     justify-content: space-between;
+    overflow: hidden;
+    background-color: white;
     cursor: pointer;
 
     & > * {
         padding: $padding-s;
     }
-
-    &-bg {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: $color-white;
-    }
 }
 
-.card--gallerie {
-    flex-direction: row;
+.card--article-head {
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $color-secondary-pale;
 
-    &-4 > * {
-        margin: $margin;
-        width: calc(25% - ( #{$margin} * 2));
-
-        &:first-child {
-            margin-left: 0;
-            width: calc(25% - #{$margin});
-        }
-
-        &:last-child {
-            margin-right: 0;
-            width: calc(25% - #{$margin});
-        }
-    }
-
-    &-2 > * {
-        margin: $margin 0;
-        width: 100%;
+    @media screen and (min-width: 800px) {
+        height: 20vh;
     }
 }
 
 .card--tag {
     color: $color-secondary;
-    font-size: .75rem;
+    font-size: .95rem;
     text-transform: uppercase;
     flex-direction: row;
     justify-content: flex-start;
@@ -57,10 +43,34 @@
     }
 
     & > :last-child {
+        margin-left: auto;
         margin-right: 0;
     }
 }
 
+
+/**
+** GALLERIE
+**/
+
+.card--gallerie {
+    flex-direction: row;
+
+    & > * {
+        width: 100%;
+        margin: $margin 0;
+
+        @media screen and (min-width: 800px) {
+            width: calc(50% - ( #{$margin-m} * 2) );
+            margin: $margin-m;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: calc(25% - ( #{$margin-m} * 2) );
+            margin: $margin-m;
+        }
+    }
+}
 
 .card--legend-article {
     flex-direction: row;
@@ -127,73 +137,4 @@
     & * {
         margin: 0;
     }
-}
-
-/* ==== ======================== */
-/* ==== Responsive 
-/* ==== ======================== */
-
-@media screen and (min-width: 800px) {
-    .card--gallerie-sm {
-        flex-direction: row;
-
-         &-2 > * {
-            margin: $margin;
-            width: calc(50% - ( #{$margin} * 2));
-    
-            &:nth-child(odd) {
-                margin: $margin;
-                width: calc(50% - (#{$margin} * 2));
-            }
-    
-            &:nth-child(even) {
-                margin: $margin;
-                width: calc(50% - (#{$margin} * 2));
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .card--gallerie-md {
-        flex-direction: row;
-
-         &-2 > * {
-            margin: $margin;
-            width: calc(25% - ( #{$margin} * 2));
-    
-            &:nth-child(odd) {
-                margin: $margin;
-                width: calc(25% - (#{$margin} * 2));
-            }
-    
-            &:nth-child(even) {
-                margin: $margin;
-                width: calc(25% - (#{$margin} * 2));
-            }
-
-                
-            &:first-child {
-                margin-left:0;
-                width: calc(25% - #{$margin});
-            }
-    
-            &:last-child {
-                margin-right: 0;
-                width: calc(25% - #{$margin});
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1220px) {
-    
-}
-
-@media screen and (min-width: 1366px) {
-    
-}
-
-@media screen and (min-width: 1440px) {
-    
 }

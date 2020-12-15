@@ -122,7 +122,7 @@ get_header();
 			</header>
 
 			<!-- Liste des articles -->
-			<div class="div grid card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
+			<div class="div grid card--gallerie">
 				<?php foreach($events as $event) :
 					get_template_part( 'template-parts/event-card', null, array(
 						'id' => $event['ID'],
