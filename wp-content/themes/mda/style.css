@@ -272,6 +272,54 @@ input {
 	width: 80%;
 }
 
+/**
+** HEADER / FOOTER
+**/
+.structure--footer {
+	height: 15vh;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #f4f4f4;
+	border-top: 1px solid #e9e6e6;
+}
+
+.structure--footer > * {
+	padding: 0 2.85rem;
+}
+
+@media screen and (min-width: 800px) {
+	.structure--footer {
+		justify-content: space-between;
+	}
+}
+
+.footer--menu {
+	width: auto;
+	flex-direction: row;
+}
+
+.footer--menu > * {
+	padding: 0.6rem;
+}
+
+.footer--menu li a {
+	color: #545454;
+}
+
+.footer--menu li a:hover {
+	color: #4abc96;
+}
+
+.footer--menu li i {
+	font-size: calc(4rem * .5);
+	cursor: pointer;
+}
+
+.footer--menu li i:hover {
+	color: #4abc96;
+}
+
 .list--badge-list {
 	width: 100%;
 	flex-direction: row;
