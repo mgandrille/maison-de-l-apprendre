@@ -12,10 +12,8 @@
  * get all information in an array ($event) for one article
 */
 $event = get_post_infos();
-// d($event);
+d($event);
 
-// $categories = explode(', ', mb_strtoupper($event['categories']);
-// d($categories);
 
 /**
  * Conversion for all time/date
@@ -33,15 +31,20 @@ $duree = date('H:i', $duree);
 /**
  * Get all events for making a search in categories
  */
-// $totalEvents = get_all_posts_infos();
-// d($totalEvents);
-// foreach($totalEvents as $totalEvent) {
-// 	$totalEvent_categories = explode(', ', mb_strtoupper($totalEvent['categories']['tag']));
-// 	foreach($totalEvent_categories as $totalEvent_category) {
-// 		$result = array_search($totalEvent_category, $categories);
-// 		d($result);
-// 	}
-// }
+$categories = $event['categoriesTag'];
+// d($categories);
+
+$totalEvents = get_all_posts_infos();
+$datas = [];
+foreach($totalEvents as $totalEvent) {
+	// d($totalEvent['categoriesTag']);
+	$result = array_diff($totalEvent['categoriesTag'], $categories);
+	// d($result);
+	if(count($result) <= 1 ) {
+		array_push($datas, $totalEvent);
+	}
+}
+// d($datas);
 
 
 
@@ -68,7 +71,7 @@ $duree = date('H:i', $duree);
 				<ul class="ul">
 					<li class="li">Début : <?=$date?></li>
 					<li class="li">Durée : <?=$duree?></li>
-					<li class="li"><?=$event['categories']?></li>
+					<li class="li"><?=implode(', ', $event['categoriesTag'])?></li>
 				</ul>
 			</header>
 
@@ -91,8 +94,7 @@ $duree = date('H:i', $duree);
 					)
 				);
 				?>
-				
-			</div>	
+			</div>
 		</div>
 
 
@@ -131,98 +133,19 @@ $duree = date('H:i', $duree);
 		</h2>
 	</header>
 
-		<div class="div card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
-			<!-- <article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
-
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
-
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article>
-
-			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
-				<header class="size--h20 card--bg structure--head"></header>
-				<div class="structure--body">
-					<ul class="card--tag">
-						<li>24/11/2020</li>
-						<li>14h30</li>
-						<li class="margin--m-l-auto">jeunesse</li>
-					</ul>
-
-					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
-						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-						Titre atelier
-					</h3>
-
-					<p class="margin--m-t-none">
-						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
-					</p>
-				</div>
-				<footer class="structure--foot display--end-y">
-					<button class="button--btn">Voir l'atelier</button>
-				</footer>
-			</article> -->
+	<div class="div card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
+			<?php foreach($datas as $data) :
+				if(is_array($data) && ($event['post_title'] !== $data['post_title'])) :
+					get_template_part( 'template-parts/event-card', null, array(
+						'id' => $data['ID'],
+						'image' => $data['logo']->publicUrl,
+						'title' => $data['post_title'],
+						'categories' => $event['categoriesTag'][0],
+						'date' => $data['startDate'],
+						'small_content' => $data['description'],
+						));
+				endif;
+			endforeach;	?>
 		</div>
 
 	</section>
