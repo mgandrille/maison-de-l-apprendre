@@ -7,18 +7,16 @@
  * @package mda
  */
 
-$acf = get_fields();
-// d($acf);
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article class="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="header entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php mda_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="div" style="width: 450px; border: 1px solid red">
 		<?php
 		the_content();
 
@@ -32,7 +30,7 @@ $acf = get_fields();
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="footer entry-footer">
 			<?php
 			edit_post_link(
 				sprintf(

@@ -22,81 +22,59 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
+@import './_variables/_variables-loader.scss';
+@import './_reset.scss';
 
---------------------------------------------------------------*/
+.body, 
+.main, 
+.section, 
+.article, 
+.aside,
+.nav,
+.div,
+.header, 
+.footer,
+.form,
+.ul,
+.li,
+.figure {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 
-// Import variables and mixins.
-@import "abstracts/abstracts";
+.li {
+    width: auto;
+    flex-direction: row;
+}
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
+.body {
+    position: relative;
+    margin: 0 auto;
+    font-family: $app-font;
+    font-size: 1rem;
+    color: $color-dark;
+    flex-wrap: wrap;
+    background-color: $color-white;
+}
 
-/* Normalize
---------------------------------------------- */
-@import "generic/normalize";
+.img {
+    display: inline-block;
+}
 
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
+.main {
+    max-width: $app-w;
+    height: $app-h;
+    margin: 10vh auto auto auto;
+}
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
+@import './_componants/_composant-loader.scss';
+@import './_modificator/_modificateur-loader.scss';
 
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components";
-
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
+.section {
+    padding: $padding-m $padding-xb;
+}

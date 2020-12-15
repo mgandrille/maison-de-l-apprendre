@@ -1,0 +1,10 @@
+a {
+    cursor: pointer;
+    font-size: inherit;
+    color: $color-action;
+    font-weight: bold;
+}
+
+a:hover {
+    color: $color-action-darker;
+}

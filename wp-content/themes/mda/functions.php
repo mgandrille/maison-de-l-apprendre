@@ -140,10 +140,13 @@ add_action( 'widgets_init', 'mda_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mda_scripts() {
+	wp_enqueue_style( 'font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'mda-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'mda-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'mda-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array(), null, true );
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -184,6 +187,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/custom-functions.php';
 
 /**
+ * Custom new menu
+ */
+
+function wpb_custom_new_menu() {
+	register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+/*
  * ACF
  */
 require get_template_directory() . '/inc/setup.php';

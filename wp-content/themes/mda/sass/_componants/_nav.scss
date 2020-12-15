@@ -1,0 +1,61 @@
+/**
+** NAV BAR
+**/
+
+.structure--nav {
+    position: fixed;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $padding-s $padding-xb;
+    color: $color-dark;
+    border-bottom: 1px solid $color-light;
+    background-color: $color-white;
+    z-index: 300;
+
+    & .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav--logo {
+    width: auto;
+    height: 50px;
+}
+
+
+/**
+** NAV MENU
+**/
+
+.nav--menu {
+    display: none;
+    width: auto;
+
+    & ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        & li {
+            padding: 0 $padding;
+
+            & a {
+                color: $color-dark;
+                font-family: $font-head;
+                font-size: $h6;
+        
+                &:hover {
+                    color: $color-action;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        display: block;
+    }
+}

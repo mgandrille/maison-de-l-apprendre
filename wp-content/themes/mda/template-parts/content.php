@@ -7,57 +7,223 @@
  * @package mda
  */
 
+
+/**
+ * get all information in an array ($event) for one article
+*/
+$event = get_post_infos();
+// d($event);
+
+// $categories = explode(', ', mb_strtoupper($event['categories']);
+// d($categories);
+
+/**
+ * Conversion for all time/date
+ */
+$startTime = new DateTime($event['startDate']);
+$endTime = new DateTime($event['endDate']);
+// Get the start date of the event
+$date = date_format($startTime, 'd/m/Y');
+// Get the start time of the event
+$time = date_format($endTime, 'H:i');
+// Get the duration of the event
+$duree = $endTime->getTimestamp() - $startTime->getTimestamp();
+$duree = date('H:i', $duree);
+
+/**
+ * Get all events for making a search in categories
+ */
+// $totalEvents = get_all_posts_infos();
+// d($totalEvents);
+// foreach($totalEvents as $totalEvent) {
+// 	$totalEvent_categories = explode(', ', mb_strtoupper($totalEvent['categories']['tag']));
+// 	foreach($totalEvent_categories as $totalEvent_category) {
+// 		$result = array_search($totalEvent_category, $categories);
+// 		d($result);
+// 	}
+// }
+
+
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article class="article" id="post-<?php the_ID(); ?>">
+
+	<header class="header title--article">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1>', '</h1>' );
+			the_title( '<p>', '</p>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				mda_posted_on();
-				mda_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php mda_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mda' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mda' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
-	</div><!-- .entry-content -->
+	</header>
 
-	<footer class="entry-footer">
-		<?php mda_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<section class="section display--row display--between-x">
+		<div class="div structure--article-content" >
+
+			<header class="header card--legend-article">
+				<img class="img" src="<?=$event['banner']->publicUrl?>" alt="banniere-atelier">
+				<ul class="ul">
+					<li class="li">Début : <?=$date?></li>
+					<li class="li">Durée : <?=$duree?></li>
+					<li class="li"><?=$event['categories']?></li>
+				</ul>
+			</header>
+
+			<div class="div">
+				<h2>Au programme</h2>
+
+				<?php
+				the_content(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mda' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						wp_kses_post( get_the_title() )
+					)
+				);
+				?>
+				
+			</div>	
+		</div>
+
+
+		<aside class="aside structure--article-aside">
+			<div class="div">
+				<header class="header title--secondary">
+					<h3>Parcours</h3>
+					<span></span>
+				</header>
+
+				<p>Les événements à suivre après cet atelier</p>
+			</div>
+
+			<div class="div">
+				<header class="header title--secondary">
+					<h3>Intervenants</h3>
+					<span></span>
+				</header>
+
+				<p><?=$event['presta']?></p>
+				<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
+			</div>
+		</aside>
+	</section>
+
+	<section class="section">
+		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
+	</section>
+
+<section class="section margin--b-none margin--t-m" style="background-image: url('<?=content_url()?>/themes/mda/img/bg-atelier-similaires.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
+	<header class="header title--main-simple">
+		<h2>
+			Ateliers<br />
+			similaires
+			<span></span>
+		</h2>
+	</header>
+
+		<div class="div card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
+			<!-- <article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article>
+
+			<article class="card--card display--overflow-hidden padding--s-children bg--white-pure">
+				<header class="size--h20 card--bg structure--head"></header>
+				<div class="structure--body">
+					<ul class="card--tag">
+						<li>24/11/2020</li>
+						<li>14h30</li>
+						<li class="margin--m-l-auto">jeunesse</li>
+					</ul>
+
+					<h3 class="position--relative size--w100 margin--m-b-s title--h4">
+						<span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
+						Titre atelier
+					</h3>
+
+					<p class="margin--m-t-none">
+						Courte description lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora earum numquam libero quod eum
+					</p>
+				</div>
+				<footer class="structure--foot display--end-y">
+					<button class="button--btn">Voir l'atelier</button>
+				</footer>
+			</article> -->
+		</div>
+
+	</section>
+</article>

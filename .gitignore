@@ -1,5 +1,7 @@
 .htaccess
 
+node_modules/
+
 /index.php
 /licence.txt
 /readme.html
@@ -35,3 +37,4 @@
 /wp-content/themes/mda/license
 /wp-content/themes/mda/vendor
 /wp-content/themes/mda/node_modules
+wp-content/debug.log

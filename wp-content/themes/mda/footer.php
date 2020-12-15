@@ -11,22 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mda' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'mda' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mda' ), 'mda', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer size--h20 bg--gradient">
+	<figure class="figure size--w100 text--main size--h100p padding--xb bg--footer display--row display--between-x  display--center-y">
+		<ul class="ul display--row size--wauto padding--s-children">
+			<li class="li"><a class="text--main" href="#">Contactez-nous</a></li>
+			<li class="li"><a class="text--main" href="#">HelloAsso</a></li>
+			<li class="li"><a class="text--main" href="#">L'équipe MDA</a></li>
+		</ul>
+
+		<ul class="ul display--row size--wauto  padding--s-children">
+			<li class="li"><i class="title--h4 fab fa-twitter-square"></i></li>
+			<li class="li"><i class="title--h4 fab fa-instagram-square"></i></li>
+			<li class="li"><i class="title--h4 fab fa-facebook-square"></i></li>
+		</ul>
+	</figure>
+</footer>
 
 <?php wp_footer(); ?>
 

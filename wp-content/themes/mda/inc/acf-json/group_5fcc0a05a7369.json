@@ -1,11 +1,11 @@
 {
-    "key": "group_5fc3b71e7900d",
-    "title": "Atelier",
+    "key": "group_5fcc0a05a7369",
+    "title": "API",
     "fields": [
         {
-            "key": "field_5fc3b7c789a23",
-            "label": "Intervenant",
-            "name": "presta",
+            "key": "field_5fcc0a0f2b291",
+            "label": "key",
+            "name": "key",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,25 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5fd5f09dd8511",
-            "label": "Site Intervenant",
-            "name": "web_site_presta",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5fd003606d5c1",
-            "label": "Catégories",
-            "name": "categories",
+            "key": "field_5fcc0a202b292",
+            "label": "secret key",
+            "name": "secret_key",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -62,17 +46,17 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "options_page"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1607876138
+    "modified": 1607856090
 }
