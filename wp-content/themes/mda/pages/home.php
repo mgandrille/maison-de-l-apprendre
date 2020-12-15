@@ -127,14 +127,6 @@ get_header();
 							<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
 							<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
 						<?php endforeach; ?>
-						<!-- <input type="checkbox" name="jeunesse" id="jeunesse" data-filter=".jeunesse">
-						<label for="jeunesse">Jeunesse</label>
-
-						<input type="checkbox" name="conference" id="conference" data-filter=".conference">
-						<label for="conference">Conférences</label>
-
-						<input type="checkbox" name="environnement" id="environnement" data-filter=".environnement">
-						<label for="environnement">Environnement</label> -->
 					</div>
 				</form>
 			</header>

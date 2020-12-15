@@ -12,7 +12,6 @@
  * get all information in an array ($event) for one article
 */
 $event = get_post_infos();
-d($event);
 
 
 /**
@@ -133,7 +132,7 @@ foreach($totalEvents as $totalEvent) {
 		</h2>
 	</header>
 
-	<div class="div card--gallerie card--gallerie-2 card--gallerie-sm-2 card--gallerie-md-2 padding--m">
+	<div class="div card--gallerie">
 			<?php foreach($datas as $data) :
 				if(is_array($data) && ($event['post_title'] !== $data['post_title'])) :
 					get_template_part( 'template-parts/event-card', null, array(
