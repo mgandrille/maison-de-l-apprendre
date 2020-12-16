@@ -119,7 +119,7 @@ foreach($totalEvents as $totalEvent) {
 		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 	</section>
 
-<section class="section margin--b-none margin--t-m" style="background-image: url('<?=content_url()?>/themes/mda/img/bg-atelier-similaires.png'); background-position: top top; background-repeat: no-repeat; background-size:contain">
+<section class="section margin--b-none margin--t-m">
 	<header class="header title--main-simple">
 		<h2>
 			Ateliers<br />

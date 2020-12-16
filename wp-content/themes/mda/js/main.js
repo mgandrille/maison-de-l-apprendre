@@ -13,6 +13,16 @@
 	} );
 }() );*/
 
+/**
+ * Affichage menu
+ */
+const navMenu = document.querySelector('.nav--menu');
+const navMenuBtn = document.getElementById('nav-btn');
+
+navMenuBtn.addEventListener( 'click', () => {
+	navMenu.classList.toggle( 'display--flex' );
+} );
+
 	
 /**
  * Implémentation Isotope
