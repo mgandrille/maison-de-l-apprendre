@@ -26,13 +26,14 @@
 	<!-- === Navigation === -->
 	<header class="header structure--nav">
 		<nav class="nav">
-			<img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="img nav--logo" alt="logo">
+			<a href="http://localhost/maison-de-l-apprendre/"><img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="img nav--logo" alt="logo"></a>
+			<i id="nav-btn" class="nav--toggle-icon fas fa-bars"></i>
 
 			<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'my-custom-menu',
-						'menu_id' => 'nav-menu',
+						'theme_location' => 'primary',
+						'menu_id' => 'primary-menu',
 						'menu_class' => 'nav--menu'
 					)
 				);
