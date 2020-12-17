@@ -67,7 +67,7 @@
         }
 
         @media screen and (min-width: 1024px) {
-            width: calc(25% - ( #{$margin-m} * 2) );
+            width: calc((100% / 3) - ( #{$margin-m} * 2) );
             margin: $margin-m;
         }
     }
@@ -81,6 +81,7 @@
         height: 40vh;
         object-fit: cover;
         object-position: center;
+        background-color: $color-secondary-pale;
         
         @media screen and (min-width: 800px) {
             height: 50vh;

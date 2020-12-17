@@ -64,8 +64,8 @@ foreach($totalEvents as $totalEvent) {
 			<header class="header card--legend-article">
 				<img class="img" src="<?=$event['banner']->publicUrl?>" alt="banniere-atelier">
 				<ul class="ul">
-					<li class="li">Début : <?=$date?></li>
-					<li class="li">Durée : <?=$duree?></li>
+					<li class="li">Date : <?=$date?></li>
+					<li class="li">Début : <?=$duree?></li>
 					<li class="li"><?=implode(', ', $event['categoriesTag'])?></li>
 				</ul>
 			</header>
@@ -113,6 +113,10 @@ foreach($totalEvents as $totalEvent) {
 				<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
 			</div>
 		</aside>
+	</section>
+	
+	<section class="section">		
+		<h2>S'inscrire</h2>
 	</section>
 
 	<section class="section">

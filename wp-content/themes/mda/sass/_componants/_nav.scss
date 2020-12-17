@@ -2,7 +2,7 @@
 ** NAV BAR
 **/
 
-.structure--nav {
+.type--navbar {
     position: fixed;
     height: 10vh;
     top: 0;
@@ -10,18 +10,15 @@
     right: 0;
     padding: $padding-s $padding-xb;
     color: $color-dark;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid $color-light;
     background-color: $color-white;
     z-index: 300;
-
-    & .nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
 }
 
-.nav--logo {
+.type--logo {
+    display: inline-block;
     width: auto;
     height: 50px;
 }
@@ -31,7 +28,7 @@
 ** NAV MENU
 **/
 
-.nav--menu {
+.type--menu {
     position: fixed;
     display: none;
     top: 10vh;
@@ -92,7 +89,7 @@
     }
 }
 
-.nav--toggle-icon {
+.type--toggle-icon {
     display: block;
     cursor: pointer;
 

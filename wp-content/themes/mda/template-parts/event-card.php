@@ -18,8 +18,8 @@ $time = date_format(new DateTime($args['date']), 'H:i');
 
     <div class="div">
         <ul class="ul card--tag">
-            <li class="li"><?=$date?></li>
-            <li class="li"><?=$time?></li>
+            <li class="li">Date : <?=$date?></li>
+            <li class="li">début : <?=$time?></li>
             <li class="li"><?=$args['categories']?></li>
         </ul>
 

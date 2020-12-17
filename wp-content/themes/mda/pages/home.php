@@ -26,7 +26,7 @@ get_header();
 
 <!-- === HERO LANDING === -->
 
-<main class="main">
+<main class="container-main">
 	<section class="section structure--hero">
 
 		<!-- Titre -->
