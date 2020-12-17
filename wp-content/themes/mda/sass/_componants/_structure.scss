@@ -132,31 +132,19 @@
 ** HEADER / FOOTER
 **/
 
-.structure--footer {
+.type--footer {
   height: 15vh;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: $color-white;
   border-top: 1px solid $color-light;
 
-  & > * {
-    padding: 0 $padding-xb;
-  }
-
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 600px) {
     justify-content: space-between;
   }
 }
 
-.footer--menu {
-  width: auto;
-  flex-direction: row;
-
-  & > * {
-    padding: $padding-s;
-  }
-
+.type--menu {
   & li a {
     color: $color-grey;
 

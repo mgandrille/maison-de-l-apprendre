@@ -1,0 +1,13 @@
+.container {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: $padding-s $padding-xb;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	&-row {
+		flex-direction: row;
+	}
+}

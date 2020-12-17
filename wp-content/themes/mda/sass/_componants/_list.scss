@@ -1,3 +1,26 @@
+.list {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    & > li {
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: $padding $padding-s;
+    }
+
+    &-row {
+        flex-direction: row;
+
+        & > li {
+            padding: $padding-s $padding;
+        }
+    }
+}
+
 .list--badge-list {
     width: 100%;
     flex-direction: row;
