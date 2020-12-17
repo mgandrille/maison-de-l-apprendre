@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="main site-main">
+	<main id="primary" class="main">
 
 	<?php
 
