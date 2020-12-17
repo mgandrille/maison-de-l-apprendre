@@ -90,3 +90,19 @@ searchbar.addEventListener( 'keyup', debounce( function(e) {
 	isotope.arrange();
 	
 }, 200 ) );
+
+
+
+const grid = document.querySelector('.grid-gallery');
+let iso;
+
+imagesLoaded( grid, function() {
+	// init Isotope after all images have loaded
+	iso = new Isotope( grid, {
+	  itemSelector: '.wp-block-image',
+	  percentPosition: true,
+	  masonry: {
+		columnWidth: '.grid-gallery-sizer'
+	  }
+	});
+  });

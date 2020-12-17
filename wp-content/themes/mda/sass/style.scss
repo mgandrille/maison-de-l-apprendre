@@ -67,6 +67,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .container-main {
+    padding: 0;
+    background-color: transparent;
     max-width: $app-w;
     height: $app-h;
     margin: 10vh auto auto auto;
@@ -81,6 +83,42 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     padding: $padding-m $padding-xb;
 }
 
-#wpadminbar + .structure--nav {
+#wpadminbar + .type--navbar {
     margin-top: 32px;
+}
+
+.grid-gallery {
+    padding: $padding-s $padding-xb;
+}
+
+/* clear fix */
+.grid-gallery:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-gallery-sizer,
+.wp-block-image {
+    width: 200px;
+}
+
+.wp-block-image {
+    float: left;
+}
+
+.wp-block-image {
+    display: block;
+    max-width: 100%;
+}
+
+.wp-block-columns {
+    padding: $padding-s $padding-xb;
+}
+
+.wp-image-8 {
+    object-position: center;
+    object-fit: cover;
+    width: 400px;
+    height: auto;
 }

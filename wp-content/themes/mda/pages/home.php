@@ -59,10 +59,10 @@ get_header();
 
 	<!-- === PRESENTATION === -->
 
-	<section class="section display--row display--between-x display--wrap">
+	<section class="container container-row display--between-x display--wrap">
 
 		<!-- Titre de la section --->
-		<header class="header title--main">
+		<header class="container title--main">
 			<h2>
 				Découvrir<br />le festival
 				<span></span>
@@ -72,7 +72,7 @@ get_header();
 		</header>
 
 		<!-- description de la section--->
-		<div class="div">
+		<div class="container">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
