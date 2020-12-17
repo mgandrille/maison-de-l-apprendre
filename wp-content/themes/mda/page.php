@@ -18,13 +18,10 @@ get_header();
 	<main id="primary" class="container-main">
 
 	<?php
-
 		get_template_part( 'template-parts/content', 'page' );
-
 	?>
 
-	</main><!-- #main -->
+	</main>
 
 <?php
-// get_sidebar();
 get_footer();

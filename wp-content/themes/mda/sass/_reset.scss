@@ -6,27 +6,6 @@ html {
     font-size: $app-font-size-base;
 }
 
-body, 
-main, 
-section,
-article, 
-aside, 
-ul, 
-li, 
-button, 
-nav, 
-div,
-form,
-input, 
-header, 
-footer, 
-figure, 
-img {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-}
-
 a {
     text-decoration: none;
     color: inherit;

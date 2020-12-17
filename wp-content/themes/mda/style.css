@@ -44,27 +44,6 @@ html {
 	font-size: 14px;
 }
 
-body,
-main,
-section,
-article,
-aside,
-ul,
-li,
-button,
-nav,
-div,
-form,
-input,
-header,
-footer,
-figure,
-img {
-	margin: 0;
-	padding: 0;
-	background-color: transparent;
-}
-
 a {
 	text-decoration: none;
 	color: inherit;
@@ -132,6 +111,8 @@ input {
 }
 
 .container-main {
+	padding: 0;
+	background-color: transparent;
 	max-width: 100%;
 	height: auto;
 	margin: 10vh auto auto auto;
@@ -390,6 +371,26 @@ input {
 	object-position: center;
 }
 
+.type--gallerie {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*.wp-block-image.size-large {
+    width: 100px;
+    height: 100px;
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}*/
 /* ==== ======================== */
 /* ==== Responsive 
 /* ==== ======================== */
@@ -3469,8 +3470,44 @@ h6,
 	padding: 1.75rem 2.85rem;
 }
 
-#wpadminbar + .structure--nav {
+#wpadminbar + .type--navbar {
 	margin-top: 32px;
+}
+
+.grid-gallery {
+	padding: 0.6rem 2.85rem;
+}
+
+/* clear fix */
+.grid-gallery:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.grid-gallery-sizer,
+.wp-block-image {
+	width: 200px;
+}
+
+.wp-block-image {
+	float: left;
+}
+
+.wp-block-image {
+	display: block;
+	max-width: 100%;
+}
+
+.wp-block-columns {
+	padding: 0.6rem 2.85rem;
+}
+
+.wp-image-8 {
+	object-position: center;
+	object-fit: cover;
+	width: 400px;
+	height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
