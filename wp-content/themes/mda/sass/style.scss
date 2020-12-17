@@ -66,14 +66,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display: inline-block;
 }
 
-.main {
+.container-main {
     max-width: $app-w;
     height: $app-h;
     margin: 10vh auto auto auto;
 }
 
+@import './_layout.scss';
 @import './_componants/_composant-loader.scss';
 @import './_modificator/_modificateur-loader.scss';
+
 
 .section {
     padding: $padding-m $padding-xb;
