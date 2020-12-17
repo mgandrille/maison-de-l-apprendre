@@ -16,7 +16,7 @@
 /**
  * Affichage menu
  */
-const navMenu = document.querySelector('.nav--menu');
+const navMenu = document.querySelector('.type--menu');
 const navMenuBtn = document.getElementById('nav-btn');
 
 navMenuBtn.addEventListener( 'click', () => {

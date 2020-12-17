@@ -303,20 +303,20 @@ input {
 	}
 }
 
-.type--menu li a {
+.type--footer-menu li a {
 	color: #545454;
 }
 
-.type--menu li a:hover {
+.type--footer-menu li a:hover {
 	color: #4abc96;
 }
 
-.type--menu li i {
+.type--footer-menu li i {
 	font-size: calc(4rem * .5);
 	cursor: pointer;
 }
 
-.type--menu li i:hover {
+.type--footer-menu li i:hover {
 	color: #4abc96;
 }
 
@@ -474,7 +474,7 @@ input {
 /**
 ** NAV BAR
 **/
-.structure--nav {
+.type--navbar {
 	position: fixed;
 	height: 10vh;
 	top: 0;
@@ -482,18 +482,15 @@ input {
 	right: 0;
 	padding: 0.6rem 2.85rem;
 	color: #151818;
+	justify-content: space-between;
+	align-items: center;
 	border-bottom: 1px solid #e9e6e6;
 	background-color: #f4f4f4;
 	z-index: 300;
 }
 
-.structure--nav .nav {
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav--logo {
+.type--logo {
+	display: inline-block;
 	width: auto;
 	height: 50px;
 }
@@ -501,7 +498,7 @@ input {
 /**
 ** NAV MENU
 **/
-.nav--menu {
+.type--menu {
 	position: fixed;
 	display: none;
 	top: 10vh;
@@ -511,7 +508,7 @@ input {
 	background-color: #43beba;
 }
 
-.nav--menu ul {
+.type--menu ul {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -520,35 +517,35 @@ input {
 	justify-content: center;
 }
 
-.nav--menu ul li {
+.type--menu ul li {
 	padding: 0 1rem;
 	width: auto;
 }
 
-.nav--menu ul li a {
+.type--menu ul li a {
 	color: #f4f4f4;
 	font-family: "Economica", sans-serif;
 	font-size: calc(4rem * .33);
 }
 
-.nav--menu ul li a:hover {
+.type--menu ul li a:hover {
 	color: #151818;
 }
 
 @media screen and (min-width: 800px) {
-	.nav--menu ul li a:hover {
+	.type--menu ul li a:hover {
 		color: #4abc96;
 	}
 }
 
 @media screen and (min-width: 800px) {
-	.nav--menu ul li a {
+	.type--menu ul li a {
 		color: #151818;
 	}
 }
 
 @media screen and (min-width: 800px) {
-	.nav--menu ul {
+	.type--menu ul {
 		width: auto;
 		height: auto;
 		display: flex;
@@ -559,7 +556,7 @@ input {
 }
 
 @media screen and (min-width: 800px) {
-	.nav--menu {
+	.type--menu {
 		position: static;
 		width: auto;
 		flex-direction: row;
@@ -570,13 +567,13 @@ input {
 	}
 }
 
-.nav--toggle-icon {
+.type--toggle-icon {
 	display: block;
 	cursor: pointer;
 }
 
 @media screen and (min-width: 800px) {
-	.nav--toggle-icon {
+	.type--toggle-icon {
 		display: none;
 	}
 }
@@ -654,7 +651,7 @@ input {
 
 @media screen and (min-width: 1024px) {
 	.card--gallerie > * {
-		width: calc(25% - ( 1.75rem * 2));
+		width: calc((100% / 3) - ( 1.75rem * 2));
 		margin: 1.75rem;
 	}
 }
@@ -668,6 +665,7 @@ input {
 	height: 40vh;
 	object-fit: cover;
 	object-position: center;
+	background-color: #c1f3f1;
 }
 
 @media screen and (min-width: 800px) {

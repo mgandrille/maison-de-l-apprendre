@@ -12,6 +12,7 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,23 +22,21 @@
 </head>
 
 <body class="body">
-<?php wp_body_open(); ?>
+	<?php wp_body_open(); ?>
 
 	<!-- === Navigation === -->
-	<header class="header structure--nav">
-		<nav class="nav">
-			<a href="http://localhost/maison-de-l-apprendre/"><img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="img nav--logo" alt="logo"></a>
-			<i id="nav-btn" class="nav--toggle-icon fas fa-bars"></i>
+	<nav class="container container-row type--navbar">
+		<a href="http://localhost/maison-de-l-apprendre/"><img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="type--logo" alt="logo"></a>
+		<i id="nav-btn" class="type--toggle-icon fas fa-bars"></i>
 
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'menu_id' => 'primary-menu',
-						'menu_class' => 'nav--menu'
-					)
-				);
-			?>
-		</nav>
-	</header>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+					'menu_class' => 'type--menu'
+				)
+			);
+		?>
+	</nav>
 
