@@ -36,7 +36,7 @@
 
 	<!-- === Navigation === -->
 	<nav class="container container-row type--navbar">
-		<a href="https://www.festivaldelapprendre.fr/"><img src="<?=content_url()?>/themes/mda/img/logo_mda.png" class="type--logo" alt="logo"></a>
+		<a href="https://www.festivaldelapprendre.fr/"><img src="<?=content_url()?>/themes/mda/img/logo_festival.png" class="type--logo" alt="logo"></a>
 		<i id="nav-btn" class="type--toggle-icon fas fa-bars"></i>
 
 		<?php
