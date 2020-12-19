@@ -38,3 +38,4 @@ node_modules/
 /wp-content/themes/mda/vendor
 /wp-content/themes/mda/node_modules
 wp-content/debug.log
+wp-config_mda.php
