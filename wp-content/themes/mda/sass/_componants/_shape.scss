@@ -2,6 +2,10 @@
     border-radius: 0;
 }
 
+.shape--sweet {
+    border-radius: $radius-m;
+}
+
 .shape--rounded {
     border-radius: $radius-b;
 }

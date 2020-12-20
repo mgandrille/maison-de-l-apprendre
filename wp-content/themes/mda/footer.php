@@ -15,7 +15,6 @@
 		<ul class="list list-row type--footer-menu">
 			<li><a href="https://www.maisondelapprendre.org/" target="_blank">La Maison de l'Apprendre</a></li>
 			<li><a href="https://www.maisondelapprendre.org/contact" target="_blank">Nous Contacter</a></li>
-			<li><a href="https://www.helloasso.com/associations/la-maison-de-l-apprendre" target="_blank">HelloAsso</a></li>
 		</ul>
 
 		<ul class="list list-row type--footer-menu">
