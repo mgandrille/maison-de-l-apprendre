@@ -88,7 +88,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .grid-gallery {
-    padding: $padding-s $padding-xb;
+    width: 100%;
+    padding: $padding-s 5rem;
 }
 
 /* clear fix */
@@ -100,7 +101,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .grid-gallery-sizer,
 .wp-block-image {
-    width: 200px;
+    width: 100px;
 }
 
 .wp-block-image {
@@ -121,4 +122,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     object-fit: cover;
     width: 400px;
     height: auto;
+}
+
+.wp-block-cover.is-position-bottom-right {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wp-block-group__inner-container {
+    width: 100%;
+}
+
+.wp-block-cover.aligncenter.has-background-dim-20.has-background-dim.has-parallax.has-custom-content-position.is-position-bottom-right.container.structure--hero {
+    background-repeat: no-repeat;
+    background-size: cover;
 }

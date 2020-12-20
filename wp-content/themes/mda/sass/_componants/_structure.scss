@@ -10,8 +10,6 @@
   align-items: center;
   text-transform: uppercase;
   overflow-y: hidden;
-  background: url("./img/bg-illu-landing.png") bottom right / 40% no-repeat, 
-    $color-gradient;
 
     @media screen and (min-width:1220px) {
       background-size: 30%, cover;

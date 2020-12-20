@@ -17,13 +17,24 @@
  * Affichage menu
  */
 const navMenu = document.querySelector('.type--menu');
+const navMenuList = document.querySelector('.type--menu ul');
 const navMenuBtn = document.getElementById('nav-btn');
 
 navMenuBtn.addEventListener( 'click', () => {
 	navMenu.classList.toggle( 'display--flex' );
 } );
 
-	
+const menuItemTemp = document.createElement("li");
+menuItemTemp.classList.add("page_item");
+
+const menuLinkTemp = document.createElement("a");
+menuLinkTemp.setAttribute("style", "color: #545454; cursor: default; opacity: .8;");
+menuLinkTemp.setAttribute("disabled", "disabled");
+menuLinkTemp.textContent = "Programme 2021 (à venir)";
+
+menuItemTemp.append(menuLinkTemp);
+navMenuList.append(menuItemTemp);
+
 /**
  * Implémentation Isotope
  */
