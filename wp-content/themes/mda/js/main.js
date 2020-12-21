@@ -1,27 +1,12 @@
 /**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
-/*( function() {
-	const navMenu = document.querySelector( '.nav--menu' );
-	const navMenuBtn = document.getElementById( 'nav-menu-btn' );
-
-	navMenuBtn.addEventListener( 'click', () => {
-		navMenu.classList.toggle( 'display--flex' );
-	} );
-}() );*/
-
-/**
  * Affichage menu
  */
-const navMenu = document.querySelector('.type--menu');
-const navMenuList = document.querySelector('.type--menu ul');
+const navMenu = document.querySelector('.main-menu');
+const navMenuList = document.querySelector('.main-menu ul');
 const navMenuBtn = document.getElementById('nav-btn');
 
 navMenuBtn.addEventListener( 'click', () => {
-	navMenu.classList.toggle( 'display--flex' );
+	navMenu.classList.toggle( 'display-flex' );
 } );
 
 const menuItemTemp = document.createElement("li");

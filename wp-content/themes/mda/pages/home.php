@@ -27,42 +27,43 @@ get_header();
 <!-- === HERO LANDING === -->
 
 <main class="container-main">
-	<section class="section structure--hero">
+	<section class="container wrapper-hero">
 
 		<!-- Titre -->
-		<header class="header title--hero">
-			<span><!-- bordure --></span>
+		<header class="heading-hero">
+			<span class="_dotted-border"><!-- bordure --></span>
 
-			<div class="div h2">du 21 au 27 janvier 2021</div>
-			<h1>festival de<br>l'apprendre</h1>
-			<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
+			<h2 class="_subtitle">du 21 au 27 janvier 2021</h2>
+			<h1 class="_title">festival de<br>l'apprendre</h1>
+			<h2 class="_subtitle">en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
 
-			<span><!-- bordure --></span>
+			<span class="_dotted-border"><!-- bordure --></span>
 		</header>
 
-		<!-- Badges circulaires -->
-		<div class="div structure--hero-badges">
-			<div class="div shape--badge-b">
+		<!-- Badges circulaires 
+		<div class="wrapper-badges">
+			<div class="wrapper shape-badge-b">
 				<span>Découvrir</span>
 			</div>
 
-			<div class="div shape--badge-m">
+			<div class="wrapper shape-badge-m">
 				<span>Rencontrer</span>
 			</div>
 
-			<div class="div shape--badge-m">
+			<div class="wrapper shape-badge-m">
 				<span>Expérimenter</span>
 			</div>
 		</div>
+		-->
 	</section>
 
 
 	<!-- === PRESENTATION === -->
 
-	<section class="container container-row display--between-x display--wrap">
+	<section class="container-row display-between-x">
 
 		<!-- Titre de la section --->
-		<header class="container title--main">
+		<header class="wrapper heading-section-parag">
 			<h2>
 				Découvrir<br />le festival
 				<span></span>
@@ -81,8 +82,8 @@ get_header();
 		</div>
 	</section>
 
-	<section class="section display--row display--between-x">
-		<header class="header title--main">
+	<section class="wrapper-row display-between-x">
+		<header class="wrapper heading-section-parag">
 			<h2>
 				Ateliers<br />et conférences
 				<span ></span>
@@ -91,7 +92,7 @@ get_header();
 			<h6>Comprendre le monde de demain</h6>
 		</header>
 
-		<div class="div">
+		<div class="wrapper">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 

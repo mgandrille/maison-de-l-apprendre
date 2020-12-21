@@ -45,9 +45,9 @@ foreach($totalEvents as $totalEvent) {
 
 ?>
 
-<article class="article" id="post-<?php the_ID(); ?>">
+<article class="container" id="post-<?php the_ID(); ?>">
 
-	<header class="header title--article">
+	<header class="heading-article">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1>', '</h1>' );
@@ -58,19 +58,19 @@ foreach($totalEvents as $totalEvent) {
 		?>
 	</header>
 
-	<section class="section display--row display--between-x">
-		<div class="div structure--article-content" >
-
-			<header class="header card--legend-article">
+	<section class="container-row">
+		<div class="container-article" >
+			<header class="card-legended">
 				<img class="img" src="<?=$event['banner']->publicUrl?>" alt="banniere-atelier">
-				<ul class="ul">
-					<li class="li">Date : <?=$date?></li>
-					<li class="li">Début : <?=$duree?></li>
-					<li class="li"><?=implode(', ', $event['categoriesTag'])?></li>
+
+				<ul class="wrapper-row">
+					<li>Date : <?=$date?></li>
+					<li>Début : <?=$duree?></li>
+					<li><?=implode(', ', $event['categoriesTag'])?></li>
 				</ul>
 			</header>
 
-			<div class="div">
+			<div class="container">
 				<h2>Au programme</h2>
 
 				<?php
@@ -93,9 +93,9 @@ foreach($totalEvents as $totalEvent) {
 		</div>
 
 
-		<aside class="aside structure--article-aside">
-			<div class="div">
-				<header class="header title--secondary">
+		<aside class="container-aside">
+			<div class="wrapper">
+				<header class="heading-simple">
 					<h3>Parcours</h3>
 					<span></span>
 				</header>
@@ -103,8 +103,8 @@ foreach($totalEvents as $totalEvent) {
 				<p>Les événements à suivre après cet atelier</p>
 			</div>
 
-			<div class="div">
-				<header class="header title--secondary">
+			<div class="wrapper">
+				<header class="heading-simple">
 					<h3>Intervenants</h3>
 					<span></span>
 				</header>
@@ -115,24 +115,21 @@ foreach($totalEvents as $totalEvent) {
 		</aside>
 	</section>
 	
-	<section class="section">		
+	<section class="container">		
 		<h2>S'inscrire</h2>
 	</section>
 
-	<section class="section">
+	<section class="wrapper">
 		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 	</section>
 
-<section class="section margin--b-none margin--t-m">
-	<header class="header title--main-simple">
-		<h2>
-			Ateliers<br />
-			similaires
-			<span></span>
-		</h2>
-	</header>
+	<section class="container">
+		<header class="heading-section">
+			<span class="_dotted"></span>
+			<h2 class="_title"> Ateliers<br /> similaires </h2>
+		</header>
 
-	<div class="div card--gallerie">
+		<div class="card-gallerie">
 			<?php foreach($datas as $data) :
 				if(is_array($data) && ($event['post_title'] !== $data['post_title'])) :
 					get_template_part( 'template-parts/event-card', null, array(
@@ -146,6 +143,5 @@ foreach($totalEvents as $totalEvent) {
 				endif;
 			endforeach;	?>
 		</div>
-
 	</section>
 </article>

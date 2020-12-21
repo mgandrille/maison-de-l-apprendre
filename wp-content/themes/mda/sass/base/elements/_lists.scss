@@ -1,0 +1,44 @@
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+.list {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    & > li {
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: $padding $padding-s;
+    }
+
+    &-row {
+		width: auto;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+        flex-direction: row;
+
+        & > li {
+            padding: $padding-s $padding;
+        }
+    }
+}
