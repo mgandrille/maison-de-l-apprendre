@@ -619,104 +619,21 @@ h6, .h6 {
 	}
 }
 
-.heading-section-parag {
-	width: 65%;
-	margin-bottom: 2.85rem;
-}
-
-.heading-section-parag > :first-child {
-	position: relative;
-	font-size: 4.5rem;
-	color: #ea0084;
-	margin-bottom: 0;
-}
-
-.heading-section-parag span {
-	position: absolute;
-	width: 100%;
-	left: -50%;
-	top: -20%;
-	border-bottom-style: dotted;
-	border-bottom-width: 6px;
-	border-bottom-color: #ea0084;
-}
-
-.heading-section-parag > :last-child {
-	margin-top: 1rem;
-	text-align: right;
-	text-transform: uppercase;
-	margin-left: auto;
-	color: #545454;
-}
-
-.heading-section-parag + div {
-	width: 100%;
-	margin-top: 0;
-}
-
-.heading-section-parag + div p {
-	font-size: 1.25em;
-}
-
-@media screen and (min-width: 1024px) {
-	.heading-section-parag + div {
-		width: 60%;
-		margin-top: 10vh;
-	}
-}
-
-@media screen and (min-width: 800px) {
-	.heading-section-parag {
-		width: 50%;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.heading-section-parag {
-		width: 30%;
-	}
-}
-
-/*.heading-section  {
-	width: auto;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	margin-bottom: $margin-xb;
-	position: relative;
-
-	& > ._title {
-		font-size: $h1;
-		color: $color-dark;
-		margin: 0;
-		padding:  0;
-		line-height: $h1;
-	}
-
-	// border dotted
-	& ._dotted {
-		position: absolute;
-		width: 100%;
-		left: -75%;
-		top: -1.50rem;
-		border-bottom-style: dotted;
-		border-bottom-width: 6px;
-		border-bottom-color: $color-main;
-	}
-}*/
 .heading-simple {
+	width: 100%;
+	/*flex*/
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 }
 
-.heading-simple :first-child {
+.heading-simple ._title {
 	font-size: calc(4rem * .58);
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
 
-.heading-simple :last-child {
+.heading-simple ._dotted-border {
 	margin-top: 0;
 	width: 50%;
 	border-bottom-style: dotted;
@@ -725,34 +642,39 @@ h6, .h6 {
 }
 
 .heading-article {
-	margin: 0;
-	padding: 0 2.85rem;
+	margin-bottom: 2.85rem;
+	text-align: center;
+	/*flex*/
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	text-align: center;
-	align-items: center;
 }
 
-.heading-article > :first-child {
+@media screen and (min-width: 800px) {
+	.heading-article {
+		text-align: left;
+	}
+}
+
+.heading-article ._title {
+	font-size: calc(4rem * .58);
 	margin-top: 0;
 	margin-bottom: 0.6rem;
 }
 
-.heading-article > :last-child {
+@media screen and (min-width: 800px) {
+	.heading-article ._title {
+		font-size: calc(4rem * .8);
+	}
+}
+
+.heading-article ._subtitle {
 	margin-top: 0;
 	margin-bottom: 0;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #ff914d;
 	font-size: calc(4rem * .42);
-}
-
-@media screen and (min-width: 800px) {
-	.heading-article {
-		text-align: left;
-		align-items: flex-start;
-	}
 }
 
 p {
@@ -961,7 +883,7 @@ body {
 	}
 }
 
-.wrapper-section-presentation .paragraphe {
+.wrapper-section-presentation ._paragraphe {
 	width: 100%;
 	margin-left: 0;
 	margin-top: 0;
@@ -969,55 +891,54 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-	.wrapper-section-presentation .paragraphe {
+	.wrapper-section-presentation ._paragraphe {
 		width: calc(60% - 2.85rem);
 		margin-left: 2.85rem;
 		margin-top: 2.85rem;
 	}
 }
 
-.container-article {
+.wrapper-article {
 	width: 100%;
 	margin: 0;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
 }
 
-.container-article p {
+.wrapper-article p {
 	text-align: justify;
 }
 
 @media screen and (min-width: 1024px) {
-	.container-article {
+	.wrapper-article {
 		width: calc(60% - 1rem);
 		margin: 1rem 1rem 1rem 0;
 	}
 }
 
-.container-aside {
+.wrapper-aside {
 	position: relative;
 	width: 100%;
-	min-height: 60vh;
-	margin: 0;
+	height: auto;
+	margin: 2rem 0 0 0;
 	padding: 1.75rem;
+	/*background*/
 	background-color: #e9e6e6;
 }
 
 @media screen and (min-width: 1024px) {
-	.container-aside {
+	.wrapper-aside {
 		width: calc(40% - 1rem);
-		min-height: 65vh;
 		margin: 1rem 0 1rem 1rem;
 	}
 }
 
-.container-aside p {
-	font-size: 1.25rem;
+.wrapper-aside-section {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1.75rem;
 }
 
-.container-aside a {
-	font-size: 1rem;
+.wrapper-aside-section .heading-simple {
+	margin-bottom: 1rem;
 }
 
 .container-filter-bar {

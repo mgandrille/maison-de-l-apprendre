@@ -73,7 +73,7 @@ get_header();
 		</header>
 
 		<!-- description de la section--->
-		<div class="paragraphe">
+		<div class="_paragraphe">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
@@ -92,7 +92,7 @@ get_header();
 			<h6 class="_subtitle">Comprendre le monde de demain</h6>
 		</header>
 
-		<div class="paragraphe">
+		<div class="_paragraphe">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 

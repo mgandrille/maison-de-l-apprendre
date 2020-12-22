@@ -48,18 +48,17 @@ foreach($totalEvents as $totalEvent) {
 <article class="container" id="post-<?php the_ID(); ?>">
 
 	<header class="heading-article">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1>', '</h1>' );
-			the_title( '<p>', '</p>' );
-		else :
-			the_title( '<h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-		?>
+		<h1 class="_title">
+			<?=$event['title']?>
+		</h1>
+
+		<h2 class="_subtitle">
+			<?=implode(', ', $event['categoriesTag'])?>
+		</h2>
 	</header>
 
-	<section class="container-row">
-		<div class="container-article" >
+	<section class="wrapper-row">
+		<div class="wrapper wrapper-article" >
 			<header class="card-legended">
 				<img class="img" src="<?=$event['banner']->publicUrl?>" alt="banniere-atelier">
 
@@ -70,7 +69,7 @@ foreach($totalEvents as $totalEvent) {
 				</ul>
 			</header>
 
-			<div class="container">
+			<div class="wrapper">
 				<h2>Au programme</h2>
 
 				<?php
@@ -92,41 +91,56 @@ foreach($totalEvents as $totalEvent) {
 			</div>
 		</div>
 
-
-		<aside class="container-aside">
-			<div class="wrapper">
+		<aside class="wrapper wrapper-aside">
+			<div class="wrapper wrapper-aside-section">
 				<header class="heading-simple">
-					<h3>Parcours</h3>
-					<span></span>
+					<h3 class="_title">Parcours</h3>
+					<span class="_dotted-border"><!-- bordure --></span>
 				</header>
-
-				<p>Les événements à suivre après cet atelier</p>
+				
+				<div class="_paragraphe">
+					<p>Les événements à suivre après cet atelier</p>
+				</div>
 			</div>
 
-			<div class="wrapper">
+			<div class="wrapper wrapper-aside-section">
 				<header class="heading-simple">
-					<h3>Intervenants</h3>
-					<span></span>
+					<h3 class="_title">Intervenants</h3>
+					<span class="_dotted-border"><!-- bordure --></span>
 				</header>
-
-				<p><?=$event['presta']?></p>
-				<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
+				
+				<div class="_paragraphe">
+					<p><?=$event['presta']?></p>
+					<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
+				</div>
 			</div>
+
+			<div class="wrapper wrapper-aside-section">
+				<header class="heading-simple">
+					<h3 class="_title">Nombre de participants</h3>
+					<span class="_dotted-border"><!-- bordure --></span>
+				</header>
+				
+				<div class="_paragraphe">
+					<p>
+						Rejoignez { int } participants pour cet atelier !<br/>
+						{ int }places restantes
+					</p>
+				</div>
+			</div>	
 		</aside>
 	</section>
 	
-	<section class="container">		
+	<section class="wrapper">		
 		<h2>S'inscrire</h2>
-	</section>
-
-	<section class="wrapper">
 		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 	</section>
 
-	<section class="container">
+	<section class="wrapper">
 		<header class="heading-section">
-			<span class="_dotted"></span>
-			<h2 class="_title"> Ateliers<br /> similaires </h2>
+			<h2 class="_title"> Ateliers<br /> similaires 
+				<span class="_dotted-border"></span>
+			</h2>
 		</header>
 
 		<div class="card-gallerie">
