@@ -1,0 +1,22 @@
+/* Neutral backgrounds */
+
+.bg {
+	&-white {
+		background-color: $color-white;
+	}
+
+	&-grey {
+		background-color: $color-grey;
+	}
+
+	&-dark {
+		background-color: $color-dark;
+	}
+}
+
+
+/* Custom backgrounds */
+
+.bg-gradient {
+	background: $color-gradient;
+}

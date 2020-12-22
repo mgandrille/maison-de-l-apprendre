@@ -225,3 +225,23 @@ h6, .h6 {
 		font-size: $h5;
 	}
 }
+
+.text {
+	font-size: 1rem;
+	
+	&-s {
+		font-size: .85rem;
+	}
+
+	&-m {
+		font-size: 1.5rem;
+	}
+
+	&-b {
+		font-size: 2rem;
+	}
+
+	&-xb {
+		font-size: 2.5rem;
+	}
+}

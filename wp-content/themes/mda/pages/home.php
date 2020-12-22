@@ -104,11 +104,11 @@ get_header();
 
 	<!-- === SELECTION DES ATELIERS === -->
 
-	<section class="section bg--gradient padding--y-xb">
-		<div class="div size--w100 bg--white">
+	<section class="container bg-gradient">
+		<div class="wrapper">
 
 			<!-- filter bar -->
-			<header class="header structure--filter-bar">
+			<header class="wrapper-row wrapper-filter-bar">
 				<form id="article-filter" class="form">
 
 					<!-- Searchbar -->
@@ -127,10 +127,10 @@ get_header();
 						<?php endforeach; ?>
 					</div>
 				</form>
-			</header>
+			</header> 
 
 			<!-- Liste des articles -->
-			<div class="div grid card--gallerie">
+			<div class="grid">
 				<?php foreach($events as $event) :
 					get_template_part( 'template-parts/event-card', null, array(
 						'id' => $event['ID'],
@@ -138,7 +138,7 @@ get_header();
 						'title' => $event['post_title'],
 						'categories' => $event['categoriesTag'][0],
 						'date' => $event['startDate'],
-						'small_content' => $event['description']
+						'small_content' => substr($event['description'], 0, 110) . "..."
 						));
 				endforeach; ?>
 			</div>

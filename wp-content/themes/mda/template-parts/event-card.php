@@ -11,30 +11,27 @@ $date = date_format(new DateTime($args['date']), 'd/m/Y');
 $time = date_format(new DateTime($args['date']), 'H:i');
 ?>
 
-<article class="grid-item card--article <?=$args['categories']?>" data-category="<?=$args['categories']?>">
-    <header class="card--article-head" style="background-image: url('<?=$args['image'];?>');">
-        <!-- background atelier -->
+<article class="grid-item wrapper wrap-card <?=$args['categories']?>" data-category="<?=$args['categories']?>">
+    <header class="_head" style="background-image: url('<?=$args['image'];?>');">
+        <!-- header img -->
     </header>
 
-    <div class="div">
-        <ul class="ul card--tag">
-            <li class="li">Date : <?=$date?></li>
-            <li class="li">début : <?=$time?></li>
-            <li class="li"><?=$args['categories']?></li>
-        </ul>
+    <div class="wrapper _body">
+        <header class="_head">
+            <ul class="list-row">
+                <li>Date : <?=$date?></li>
+                <li>début : <?=$time?></li>
+                <li><?=$args['categories']?></li>
+            </ul>
+        </header>
 
-        <h3 class="position--relative size--w100 margin--m-b-s title--h4">
-            <span class="position--xy_ t-50 r-30 shape--elmt-border-dotted_ _main"></span>
-            <?=$args['title']?>
-        </h3>
+        <h3 class="_title"> <?=$args['title']?> </h3>
 
-        <p class="margin--m-t-none">
-            <?=$args['small_content']?>
-        </p>
+        <p class="_paragraphe"> <?=$args['small_content']?> </p>
     </div>
 
-    <footer class="footer structure--foot display--end-y">
-        <a class="button--btn" href="<?php echo get_permalink($args['id'])?>">Voir l'atelier</a>
+    <footer class="wrapper _foot">
+        <a href="<?php echo get_permalink($args['id'])?>">Voir l'atelier</a>
     </footer>
 </article>
 

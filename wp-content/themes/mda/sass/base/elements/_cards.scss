@@ -1,22 +1,78 @@
-.card-gallerie {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.wrap-card {
     height: auto;
+    width: calc( 100% - (#{ $margin-xb } * 2) );
+    margin: $margin-m $margin-xb;
+    border-radius: $radius;
+    overflow: hidden;
+    cursor: pointer;
+    /*background*/
+    background-color: $color-white;
+    /*animation*/
+    transition: box-shadow 150ms ease-in,
+    transform 150ms ease-in;
 
-    & > * {
+    &:hover {
+        box-shadow: -11px 10px 0 $color-secondary; 
+        transform: translate(11px, -10px); 
+    }
+
+    @media screen and (min-width: 800px) {
+        width: calc( 50% - (#{ $margin-xb } * 2) );
+        margin: $margin-xb;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: calc( (100% / 3) - (#{ $margin-xb } * 2) );
+    }
+
+    & > ._head {
         width: 100%;
-        margin: $margin 0;
+        height: 30vh;
+        padding: $padding-s $padding;
+        font-size: .5rem;
+        /*background*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $color-secondary-pale;
+    }
 
-        @media screen and (min-width: 800px) {
-            width: calc(50% - ( #{$margin-m} * 2) );
-            margin: $margin-m;
+    & > ._body {
+        width: 100%;
+        height: auto;
+
+        & > *:not(._head) {
+            padding: $padding-s $padding-m;
         }
 
-        @media screen and (min-width: 1024px) {
-            width: calc((100% / 3) - ( #{$margin-m} * 2) );
-            margin: $margin-m;
+        & ._head {
+            font-size: .85rem;
+            margin-top: $margin-s;
+            margin-bottom: $margin-s;
+            border-bottom: 1px solid $color-main-lighter;
+
+            & > * {
+                padding: $padding-s $padding-m;
+            }
         }
+
+        & ._title {
+            font-size: $h6;
+            margin-top: $margin-s;
+            margin-bottom: $margin-s;
+        }
+
+        & ._paragraphe {
+            margin-top: $margin-s;
+            margin-bottom: 0;
+        }
+    }
+
+    & > ._foot {
+        width: 100%;
+        height: auto;
+        margin-bottom: $margin-s;
+        padding: $padding-s $padding-m;
     }
 }
 
