@@ -22,118 +22,106 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-@import './_variables/_variables-loader.scss';
-@import './_reset.scss';
+/*!
+Theme Name: mda
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: mda
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+mda is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
 
-.body, 
-.main, 
-.section, 
-.article, 
-.aside,
-.nav,
-.div,
-.header, 
-.footer,
-.form,
-.ul,
-.li,
-.figure {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# Utilities
+	- Accessibility
+	- Alignments
+--------------------------------------------------------------*/
 
-.li {
-    width: auto;
-    flex-direction: row;
-}
+// Import variables and mixins.
+@import "abstracts/abstracts";
 
-.body {
-    position: relative;
-    margin: 0 auto;
-    font-family: $app-font;
-    font-size: 1rem;
-    color: $color-dark;
-    flex-wrap: wrap;
-    background-color: $color-white;
-}
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
 
-.img {
-    display: inline-block;
-}
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
 
-.container-main {
-    padding: 0;
-    background-color: transparent;
-    max-width: $app-w;
-    height: $app-h;
-    margin: 10vh auto auto auto;
-}
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
 
-@import './_layout.scss';
-@import './_componants/_composant-loader.scss';
-@import './_modificator/_modificateur-loader.scss';
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
 
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
 
-.section {
-    padding: $padding-m $padding-xb;
-}
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
 
-#wpadminbar + .type--navbar {
-    margin-top: 32px;
-}
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
 
-.grid-gallery {
-    width: 100%;
-    padding: $padding-s 5rem;
-}
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
 
-/* clear fix */
-.grid-gallery:after {
-    content: '';
-    display: block;
-    clear: both;
-}
+/* Shapes
+--------------------------------------------- */
+@import "generic/shapes";
 
-.grid-gallery-sizer,
-.wp-block-image {
-    width: 100px;
-}
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
 
-.wp-block-image {
-    float: left;
-}
+/* Spacings
+--------------------------------------------- */
+@import "generic/spacings";
 
-.wp-block-image {
-    display: block;
-    max-width: 100%;
-}
+/* Display
+--------------------------------------------- */
+@import "generic/display";
 
-.wp-block-columns {
-    padding: $padding-s $padding-xb;
-}
-
-.wp-image-8 {
-    object-position: center;
-    object-fit: cover;
-    width: 400px;
-    height: auto;
-}
-
-.wp-block-cover.is-position-bottom-right {
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.wp-block-group__inner-container {
-    width: 100%;
-}
-
-.wp-block-cover.aligncenter.has-background-dim-20.has-background-dim.has-parallax.has-custom-content-position.is-position-bottom-right.container.structure--hero {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/* Backgrounds
+--------------------------------------------- */
+@import "generic/backgrounds";

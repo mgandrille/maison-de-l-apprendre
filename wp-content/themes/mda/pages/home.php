@@ -27,52 +27,53 @@ get_header();
 <!-- === HERO LANDING === -->
 
 <main class="container-main">
-	<section class="section structure--hero">
+	<section class="container wrapper-hero">
 
 		<!-- Titre -->
-		<header class="header title--hero">
-			<span><!-- bordure --></span>
+		<header class="heading-hero">
+			<span class="_dotted-border"><!-- bordure --></span>
 
-			<div class="div h2">du 21 au 27 janvier 2021</div>
-			<h1>festival de<br>l'apprendre</h1>
-			<h2>en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
+			<h2 class="_subtitle">du 21 au 27 janvier 2021</h2>
+			<h1 class="_title">festival de<br>l'apprendre</h1>
+			<h2 class="_subtitle">en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
 
-			<span><!-- bordure --></span>
+			<span class="_dotted-border"><!-- bordure --></span>
 		</header>
 
-		<!-- Badges circulaires -->
-		<div class="div structure--hero-badges">
-			<div class="div shape--badge-b">
+		<!-- Badges circulaires 
+		<div class="wrapper-badges">
+			<div class="wrapper shape-badge-b">
 				<span>Découvrir</span>
 			</div>
 
-			<div class="div shape--badge-m">
+			<div class="wrapper shape-badge-m">
 				<span>Rencontrer</span>
 			</div>
 
-			<div class="div shape--badge-m">
+			<div class="wrapper shape-badge-m">
 				<span>Expérimenter</span>
 			</div>
 		</div>
+		-->
 	</section>
 
 
 	<!-- === PRESENTATION === -->
 
-	<section class="container container-row display--between-x display--wrap">
+	<section class="container-row wrapper-section-presentation">
 
 		<!-- Titre de la section --->
-		<header class="container title--main">
-			<h2>
+		<header class="heading-section">
+			<h2 class="_title">
 				Découvrir<br />le festival
-				<span></span>
+				<span class="_dotted-border"><!-- bordure --></span>
 			</h2>
 
-			<h6>Une journée pour apprendre et découvrir</h6>
+			<h6 class="_subtitle">Une journée pour apprendre et découvrir</h6>
 		</header>
 
 		<!-- description de la section--->
-		<div class="container">
+		<div class="_paragraphe">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
@@ -81,17 +82,17 @@ get_header();
 		</div>
 	</section>
 
-	<section class="section display--row display--between-x">
-		<header class="header title--main">
-			<h2>
-				Ateliers<br />et conférences
-				<span ></span>
+	<section class="container-row wrapper-section-presentation">
+		<header class="heading-section">
+			<h2 class="_title">
+				Ateliers et<br /> conférences
+				<span class="_dotted-border"></span>
 			</h2>
 
-			<h6>Comprendre le monde de demain</h6>
+			<h6 class="_subtitle">Comprendre le monde de demain</h6>
 		</header>
 
-		<div class="div">
+		<div class="_paragraphe">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
@@ -103,33 +104,37 @@ get_header();
 
 	<!-- === SELECTION DES ATELIERS === -->
 
-	<section class="section bg--gradient padding--y-xb">
-		<div class="div size--w100 bg--white">
+	<section class="container bg-gradient">
+		<div class="wrapper">
 
 			<!-- filter bar -->
-			<header class="header structure--filter-bar">
-				<form id="article-filter" class="form">
+			<header class="wrapper-row wrapper-filter-bar">
+				<form id="article-filter" class="_body">
 
 					<!-- Searchbar -->
-					<div class="div">
+					<div class="_searchbar">
 						<input id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
 					</div>
 
 					<!-- Filtres -->
-					<div class="div button--filter">
-						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
-						<label for="all">Tous</label>
+					<div class="_filters button--filter">
+						<div>
+							<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
+							<label for="all">Tous</label>
+						</div>
 
 						<?php foreach($categoryTags as $tag) : ?>
-							<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
-							<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+							<div>
+								<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
+								<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+							</div>
 						<?php endforeach; ?>
 					</div>
 				</form>
-			</header>
+			</header> 
 
 			<!-- Liste des articles -->
-			<div class="div grid card--gallerie">
+			<div class="grid">
 				<?php foreach($events as $event) :
 					get_template_part( 'template-parts/event-card', null, array(
 						'id' => $event['ID'],
@@ -137,7 +142,7 @@ get_header();
 						'title' => $event['post_title'],
 						'categories' => $event['categoriesTag'][0],
 						'date' => $event['startDate'],
-						'small_content' => $event['description']
+						'small_content' => substr($event['description'], 0, 110) . "..."
 						));
 				endforeach; ?>
 			</div>

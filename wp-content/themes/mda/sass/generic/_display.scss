@@ -1,0 +1,15 @@
+.display {
+	&-none {
+		display: none;
+	}
+
+	&-flex {
+		display: flex;
+	}
+}
+
+.display {
+	&-between-x {
+		justify-content: space-between;
+	}
+}
