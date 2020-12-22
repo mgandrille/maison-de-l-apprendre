@@ -60,20 +60,20 @@ get_header();
 
 	<!-- === PRESENTATION === -->
 
-	<section class="container-row display-between-x">
+	<section class="container-row wrapper-section-presentation">
 
 		<!-- Titre de la section --->
-		<header class="wrapper heading-section-parag">
-			<h2>
+		<header class="heading-section">
+			<h2 class="_title">
 				Découvrir<br />le festival
-				<span></span>
+				<span class="_dotted-border"><!-- bordure --></span>
 			</h2>
 
-			<h6>Une journée pour apprendre et découvrir</h6>
+			<h6 class="_subtitle">Une journée pour apprendre et découvrir</h6>
 		</header>
 
 		<!-- description de la section--->
-		<div class="container">
+		<div class="paragraphe">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
@@ -82,17 +82,17 @@ get_header();
 		</div>
 	</section>
 
-	<section class="wrapper-row display-between-x">
-		<header class="wrapper heading-section-parag">
-			<h2>
-				Ateliers<br />et conférences
-				<span ></span>
+	<section class="container-row wrapper-section-presentation">
+		<header class="heading-section">
+			<h2 class="_title">
+				Ateliers et<br /> conférences
+				<span class="_dotted-border"></span>
 			</h2>
 
-			<h6>Comprendre le monde de demain</h6>
+			<h6 class="_subtitle">Comprendre le monde de demain</h6>
 		</header>
 
-		<div class="wrapper">
+		<div class="paragraphe">
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 

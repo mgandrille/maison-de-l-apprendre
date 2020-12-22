@@ -41,7 +41,7 @@ h6, .h6 {
 
 
 /* === ========================== */
-/* === SPECIAL HEADINGS
+/* === CUSTOM HEADINGS
 /* === ========================== */
 
 .heading-hero {
@@ -126,6 +126,54 @@ h6, .h6 {
 	}
 }
 
+.heading-section {
+	width: auto;
+	height: auto;
+	/* flex */
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-start;
+
+	& ._title {
+		position: relative;
+		margin-bottom: 0;
+		font-size: $custom-font-size - 2.5rem;
+		line-height:  $custom-font-size - 2.5rem;
+		color: $color-main;
+
+		@media screen and (min-width:1024px) {
+			font-size: $custom-font-size - 1.5rem;
+			line-height:  $custom-font-size - 1.5rem;
+		}
+	}
+
+	& ._dotted-border {
+		position: absolute;
+		width: 100%;
+		left: -50%;
+		top: -20%;
+		border-bottom: 6px dotted $color-main;
+	}
+
+	& ._subtitle {
+		margin-top: $margin;
+		margin-left: auto;
+		text-align: right;
+		text-transform: uppercase;
+		color: $color-grey;
+		font-size: calc( (#{ $h6 }) - .25rem );
+		line-height: $h6;
+
+		@media screen and (min-width:1024px) {
+			font-size: $h6;
+			line-height:  $h6;
+		}
+	}
+
+
+}
+
 .heading-section-parag {
 	width: 65%;
 	margin-bottom: $margin-xb;
@@ -179,7 +227,7 @@ h6, .h6 {
 	}
 }
 
-.heading-section  {
+/*.heading-section  {
 	width: auto;
 	display: flex;
 	flex-direction: column;
@@ -205,7 +253,7 @@ h6, .h6 {
 		border-bottom-width: 6px;
 		border-bottom-color: $color-main;
 	}
-}
+}*/
 
 .heading-simple {
 	display: flex;
