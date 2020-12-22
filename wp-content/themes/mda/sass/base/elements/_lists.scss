@@ -48,4 +48,28 @@ dd {
             padding: 0;
         }
     }
+
+    &-row-auto {
+        width: auto;
+        height: auto;
+        /*flex*/
+		display: flex;
+		flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > li {
+            width: auto;
+            height: auto;
+            padding: $padding-s $padding;
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
 }

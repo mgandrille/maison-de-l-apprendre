@@ -131,19 +131,21 @@ foreach($totalEvents as $totalEvent) {
 		</aside>
 	</section>
 	
-	<section class="wrapper">		
+	<section class="wrapper margin-bottom-xb">		
 		<h2>S'inscrire</h2>
 		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 	</section>
 
-	<section class="wrapper">
+	<section class="wrapper margin-bottom-xb">
 		<header class="heading-section">
 			<h2 class="_title"> Ateliers<br /> similaires 
 				<span class="_dotted-border"></span>
 			</h2>
 		</header>
+	</section>
 
-		<div class="card-gallerie">
+	<section class="wrapper bg-gradient">
+		<div class="grid">
 			<?php foreach($datas as $data) :
 				if(is_array($data) && ($event['post_title'] !== $data['post_title'])) :
 					get_template_part( 'template-parts/event-card', null, array(
@@ -152,7 +154,7 @@ foreach($totalEvents as $totalEvent) {
 						'title' => $data['post_title'],
 						'categories' => $event['categoriesTag'][0],
 						'date' => $data['startDate'],
-						'small_content' => $data['description'],
+						'small_content' => substr($event['description'], 0, 110) . "...",
 						));
 				endif;
 			endforeach;	?>

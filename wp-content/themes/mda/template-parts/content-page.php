@@ -9,7 +9,7 @@
 
 ?>
 
-<section>
+<section class="wrapper">
 	<?php
 		the_content(
 			sprintf(

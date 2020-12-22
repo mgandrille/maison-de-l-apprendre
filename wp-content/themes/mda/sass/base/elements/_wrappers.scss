@@ -190,27 +190,35 @@
 	}
 }
 
-.container-filter-bar {
+.wrapper-filter-bar {
 	height: 10vh;
+	padding: $padding-xb;
+	/*flex*/
 	justify-content: center;
-	background-color: white;
 
-	& .form {
+	& ._body {
 		width: 100%;
 		padding: $padding-s $padding;
+		/* flex */
+		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
 
-		& .div:first-child {
-			width: 20%;
+		& ._searchbar {
+			width: auto;
 		}
 
-		& .div:last-child {
+		& ._filters {
+			width: auto;
+			/* flex */
+			display: flex;
 			flex-direction: row;
 			align-items: center;
-			justify-content: flex-end;
-			width: 80%;
+			
+			& > * {
+				padding: 0 $padding;
+			}
 		}
 	}
 }

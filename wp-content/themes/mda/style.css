@@ -961,29 +961,37 @@ body {
 	margin-bottom: 1rem;
 }
 
-.container-filter-bar {
+.wrapper-filter-bar {
 	height: 10vh;
+	padding: 2.85rem;
+	/*flex*/
 	justify-content: center;
-	background-color: white;
 }
 
-.container-filter-bar .form {
+.wrapper-filter-bar ._body {
 	width: 100%;
 	padding: 0.6rem 1rem;
+	/* flex */
+	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.container-filter-bar .form .div:first-child {
-	width: 20%;
+.wrapper-filter-bar ._body ._searchbar {
+	width: auto;
 }
 
-.container-filter-bar .form .div:last-child {
+.wrapper-filter-bar ._body ._filters {
+	width: auto;
+	/* flex */
+	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: flex-end;
-	width: 80%;
+}
+
+.wrapper-filter-bar ._body ._filters > * {
+	padding: 0 1rem;
 }
 
 .wrapper-footer {
@@ -1219,6 +1227,30 @@ dd {
 	height: auto;
 	margin: 0;
 	padding: 0;
+}
+
+.list-row-auto {
+	width: auto;
+	height: auto;
+	/*flex*/
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.list-row-auto > li {
+	width: auto;
+	height: auto;
+	padding: 0.6rem 1rem;
+}
+
+.list-row-auto > li:first-of-type {
+	padding-left: 0;
+}
+
+.list-row-auto > li:last-of-type {
+	padding-right: 0;
 }
 
 /* Make sure embeds and iframes fit their containers. */

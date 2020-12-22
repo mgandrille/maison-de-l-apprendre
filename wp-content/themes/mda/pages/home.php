@@ -109,21 +109,25 @@ get_header();
 
 			<!-- filter bar -->
 			<header class="wrapper-row wrapper-filter-bar">
-				<form id="article-filter" class="form">
+				<form id="article-filter" class="_body">
 
 					<!-- Searchbar -->
-					<div class="div">
+					<div class="_searchbar">
 						<input id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
 					</div>
 
 					<!-- Filtres -->
-					<div class="div button--filter">
-						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
-						<label for="all">Tous</label>
+					<div class="_filters button--filter">
+						<div>
+							<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
+							<label for="all">Tous</label>
+						</div>
 
 						<?php foreach($categoryTags as $tag) : ?>
-							<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
-							<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+							<div>
+								<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
+								<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+							</div>
 						<?php endforeach; ?>
 					</div>
 				</form>
