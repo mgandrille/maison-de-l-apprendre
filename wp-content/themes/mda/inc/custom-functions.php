@@ -8,37 +8,49 @@ function automatic_posts() {
 
     $articles = get_articles();
     foreach($articles as $article) {
+        if(strpos($article['formSlug'], 'festival-de-l-apprendre-lyon-') !== false) {
+            $slug = str_replace('festival-de-l-apprendre-lyon-', '', $article['formSlug']);
+        } else {
+            $slug = $article['formSlug'];
+        }
 
         $values = array(
             'post_date'             => $article['meta']->createdAt,
             'post_content'          => $article['description'],
             'post_title'            => $article['title'],
-            'post_excerpt' => '',
+            'post_name'             => $slug,
+            'post_excerpt'          => '',
             'post_status'           => 'publish',
-            'post_type' => 'post',
-            'comment_status' => 'closed',
-            'ping_status' => 'closed',
+            'post_type'             => 'post',
+            'comment_status'        => 'closed',
+            'ping_status'           => 'closed',
             'post_modified'         => $article['meta']->updatedAt,
             'post_category'=> []
         );
         array_push($posts, $values);
 
-        
     }
+    // d($posts);
+
     $existingPosts = get_posts(['numberposts' => -1]);
 
-    foreach($existingPosts as $existingPost) {
-        $existingPostTitles[] =  $existingPost->post_title;
-    };
-
+    if(!empty($existingPosts)) {
+        foreach($existingPosts as $existingPost) {
+            $existingPostSlug[] =  $existingPost->post_name;
+        };
+    }
+    // d($existingPosts, $existingPostSlug);
     if(!empty($posts)) {
         foreach($posts as $post) {
-            if(!in_array($post['post_title'], $existingPostTitles)) {
+            if(!empty($existingPosts)) {
+                if(!in_array($post['post_name'], $existingPostSlug)) {
+                    wp_insert_post( $post );
+                }
+            } else {
                 wp_insert_post( $post );
             }
         };
     }
-
 }
 
 
@@ -73,8 +85,9 @@ function get_api_key_helloAsso() {
  */
 function get_all_posts_infos() {
 	$articles = get_articles();
-	$posts = get_posts();
+	$posts = get_posts(['numberposts' => -1]);
     $events = array();
+    // d($posts, $articles);
 
 	foreach($articles as $article) {
 		foreach($posts as $post) {

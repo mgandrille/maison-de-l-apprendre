@@ -177,11 +177,7 @@ function checkCurlError($response, $error)
  * Get all informations of all forms of the API Hello Asso for MDA
  */
 function get_forms_infos() {
-<<<<<<< HEAD
-    $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?states=Public&states=Private&states=Draft&formTypes=Event&pageIndex=1&pageSize=30";
-=======
-    $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?formTypes=Event&pageIndex=1&pageSize=30";
->>>>>>> 655490b63834730e9053c012975c2690a0dc86ee
+    $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?states=Public&states=Draft&formTypes=Event&pageIndex=1&pageSize=30";
     $request = "{$url}";
     $token = firstTokens();
 
@@ -223,7 +219,7 @@ function get_articles() {
             // d($event, $event->endDate);
             $eventInfo = get_object_vars($event);
             try {
-                    if(new DateTime($event->endDate) >= $today && $event->formSlug !== 'dejeuners-communaute-4')
+                    if(new DateTime($event->endDate) >= $today)
                 {
                     array_push($eventDatas, $eventInfo);
                 }
