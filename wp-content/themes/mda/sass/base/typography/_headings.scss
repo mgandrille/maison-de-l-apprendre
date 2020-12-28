@@ -1,0 +1,247 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-family: $font-head;
+}
+
+h1,
+.h1 {
+	font-size: $h1;
+}
+
+h2, .h2 {
+    font-size: $h2;
+}
+
+h3, .h3 {
+    font-size: $h3;
+}
+
+h4, .h4 {
+    font-size: $h4;
+}
+
+h5, .h5 {
+    font-size: $h5;
+}
+
+h6, .h6 {
+    font-size: $h6;
+}
+
+.h-landing {
+    font-size: $custom-font-size;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+/* === ========================== */
+/* === CUSTOM HEADINGS
+/* === ========================== */
+
+.heading-hero {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 0 $padding-xb;
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	@media screen and (min-width:800px) {
+		width: 70%;
+		padding-left: $padding-xb;
+		padding-right: 0;
+		/* flex */
+		align-items: flex-start;
+	}
+
+	@media screen and (min-width:1024px) {
+		width: auto;
+	}
+
+	& ._title {
+		width: auto;
+		margin: $margin-s auto;
+		font-size:  $h1;
+		color: $color-main;
+		letter-spacing: .05rem;
+		line-height: $h1;
+
+		@media screen and (min-width:600px) {
+			font-size: $custom-font-size - .5rem;
+			line-height: $custom-font-size - .5rem;
+		}
+
+		@media screen and (min-width:800px) {
+			font-size: $custom-font-size;
+			line-height: $custom-font-size;
+		}
+	}
+
+	& ._subtitle {
+		margin: 0 auto 0 0;
+		color: $color-grey;
+		font-size: $h6;
+		text-align: left;
+
+		&:last-of-type {
+			margin: 0 0 0 auto;
+			text-align: right;
+		}
+	}
+
+	& ._dotted-border {
+		position: absolute;
+		border-bottom: 4px dotted $color-main;
+
+		&:first-child {
+			width: 80%;
+			bottom: -80%;
+			left: -10%;
+			transform: rotate(90deg);
+
+			@media screen and (min-width:800px) {
+				bottom: -60%;
+			}
+
+			@media screen and (min-width:1024px) {
+				bottom: -50%;
+			}
+		}
+
+		&:last-child {
+			width: 80%;
+			top: -10%;
+			left: -35%;
+		}
+	}
+}
+
+.heading-section {
+	width: auto;
+	height: auto;
+	/* flex */
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-start;
+
+	& ._title {
+		position: relative;
+		margin-bottom: 0;
+		font-size: $custom-font-size - 2.5rem;
+		line-height:  $custom-font-size - 2.5rem;
+		color: $color-main;
+
+		@media screen and (min-width:1024px) {
+			font-size: $custom-font-size - 1.5rem;
+			line-height:  $custom-font-size - 1.5rem;
+		}
+	}
+
+	& ._dotted-border {
+		position: absolute;
+		width: 100%;
+		left: -50%;
+		top: -20%;
+		border-bottom: 6px dotted $color-main;
+	}
+
+	& ._subtitle {
+		margin-top: $margin;
+		margin-left: auto;
+		text-align: right;
+		text-transform: uppercase;
+		color: $color-grey;
+		font-size: calc( (#{ $h6 }) - .25rem );
+		line-height: $h6;
+
+		@media screen and (min-width:1024px) {
+			font-size: $h6;
+			line-height:  $h6;
+		}
+	}
+}
+
+.heading-simple {
+	width: 100%;
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	& ._title {
+		font-size: $h3;
+		margin-top: 0;
+		margin-bottom: $margin;
+	}
+
+	& ._dotted-border {
+		margin-top: 0;
+		width: 50%;
+		border-bottom-style: dotted;
+		border-bottom-width: 6px;
+		border-bottom-color: $color-main;
+	}
+}
+
+.heading-article {
+	margin-bottom: $margin-xb;
+	text-align: center;
+	/*flex*/
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	@media screen and (min-width:800px) {
+		text-align: left;
+	}
+
+	& ._title {
+		font-size: $h3;
+		margin-top: 0;
+		margin-bottom: $margin-s;
+
+		@media screen and (min-width:800px) {
+			font-size: $h2;
+		}
+	}
+
+	& ._subtitle {
+		margin-top: 0;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $color-warm;
+		font-size: $h5;
+	}
+}
+
+.text {
+	font-size: 1rem;
+	
+	&-s {
+		font-size: .85rem;
+	}
+
+	&-m {
+		font-size: 1.5rem;
+	}
+
+	&-b {
+		font-size: 2rem;
+	}
+
+	&-xb {
+		font-size: 2.5rem;
+	}
+}

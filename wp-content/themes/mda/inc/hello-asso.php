@@ -177,7 +177,11 @@ function checkCurlError($response, $error)
  * Get all informations of all forms of the API Hello Asso for MDA
  */
 function get_forms_infos() {
+<<<<<<< HEAD
     $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?states=Public&states=Private&states=Draft&formTypes=Event&pageIndex=1&pageSize=30";
+=======
+    $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?formTypes=Event&pageIndex=1&pageSize=30";
+>>>>>>> 655490b63834730e9053c012975c2690a0dc86ee
     $request = "{$url}";
     $token = firstTokens();
 

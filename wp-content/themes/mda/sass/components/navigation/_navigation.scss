@@ -1,0 +1,248 @@
+#wpadminbar + .main-navigation {
+	top: 92px;
+
+	@media screen and (min-width: 600px) {
+		top: 46px;
+	}
+
+	
+	@media screen and (min-width: 800px) {
+		top: 32px;
+	}
+}
+
+#wpadminbar + .main-navigation .main-menu.display-flex {
+	top: 92px;
+
+	@media screen and (min-width: 600px) {
+		top: 46px;
+	}
+
+	
+	@media screen and (min-width: 800px) {
+		top: 32px;
+	}
+}
+
+.main-navigation {
+    position: fixed;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $padding-s $padding-xb;
+	color: $color-dark;
+	display: flex;
+	flex-direction: row;
+		justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-light;
+    background-color: $color-white;
+	z-index: 300;
+	
+	& > a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		height: 100%;
+	}
+}
+
+.main-menu {
+	position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+	bottom: 0;
+	margin: 0;
+	background-color: $color-secondary;
+
+    & ul {
+        width: 100%;
+		height: 100%;
+		margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & li {
+            padding: 0 $padding;
+            width: auto;
+
+            & a {
+                color: $color-white;
+                font-family: $font-head;
+                font-size: $h6;
+        
+                &:hover {
+                    color: $color-dark;
+
+                    @media screen and (min-width: 800px) {
+                        color: $color-action;
+                    }
+                }
+
+                @media screen and (min-width: 800px) {
+                    color: $color-dark;
+                }
+			}
+        }
+
+        @media screen and (min-width: 800px) {
+            width: auto;
+            height: 100%;
+            display: flex;
+            flex-direction: row ;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        position: static;
+		width: auto;
+		height: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        background-color: transparent;
+    }
+}
+
+.main-logo {
+    display: inline-block;
+    width: auto;
+	height: 50px;
+	margin: 0;
+}
+
+
+.main-navigation-toggle-icon {
+	display: block;
+    cursor: pointer;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}
+
+/*.main-navigation {
+	display: block;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+				color: $color-action;
+			}
+
+			a:hover,
+			a.focus {
+				color: $color-action;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+			color: $color-action;
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color-action;
+	}
+}*/
+
+/* Small menu. */
+/*.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}*/
+

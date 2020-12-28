@@ -45,32 +45,31 @@ foreach($totalEvents as $totalEvent) {
 
 ?>
 
-<article class="article" id="post-<?php the_ID(); ?>">
+<article class="container" id="post-<?php the_ID(); ?>">
 
-	<header class="header title--article">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1>', '</h1>' );
-			the_title( '<p>', '</p>' );
-		else :
-			the_title( '<h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-		?>
+	<header class="heading-article">
+		<h1 class="_title">
+			<?=$event['title']?>
+		</h1>
+
+		<h2 class="_subtitle">
+			<?=implode(', ', $event['categoriesTag'])?>
+		</h2>
 	</header>
 
-	<section class="section display--row display--between-x">
-		<div class="div structure--article-content" >
-
-			<header class="header card--legend-article">
+	<section class="wrapper-row">
+		<div class="wrapper wrapper-article" >
+			<header class="card-legended">
 				<img class="img" src="<?=$event['banner']->publicUrl?>" alt="banniere-atelier">
-				<ul class="ul">
-					<li class="li">Date : <?=$date?></li>
-					<li class="li">Début : <?=$duree?></li>
-					<li class="li"><?=implode(', ', $event['categoriesTag'])?></li>
+
+				<ul class="wrapper-row">
+					<li>Date : <?=$date?></li>
+					<li>Début : <?=$duree?></li>
+					<li><?=implode(', ', $event['categoriesTag'])?></li>
 				</ul>
 			</header>
 
-			<div class="div">
+			<div class="wrapper">
 				<h2>Au programme</h2>
 
 				<?php
@@ -92,47 +91,61 @@ foreach($totalEvents as $totalEvent) {
 			</div>
 		</div>
 
-
-		<aside class="aside structure--article-aside">
-			<div class="div">
-				<header class="header title--secondary">
-					<h3>Parcours</h3>
-					<span></span>
+		<aside class="wrapper wrapper-aside">
+			<div class="wrapper wrapper-aside-section">
+				<header class="heading-simple">
+					<h3 class="_title">Parcours</h3>
+					<span class="_dotted-border"><!-- bordure --></span>
 				</header>
-
-				<p>Les événements à suivre après cet atelier</p>
+				
+				<div class="_paragraphe">
+					<p>Les événements à suivre après cet atelier</p>
+				</div>
 			</div>
 
-			<div class="div">
-				<header class="header title--secondary">
-					<h3>Intervenants</h3>
-					<span></span>
+			<div class="wrapper wrapper-aside-section">
+				<header class="heading-simple">
+					<h3 class="_title">Intervenants</h3>
+					<span class="_dotted-border"><!-- bordure --></span>
 				</header>
-
-				<p><?=$event['presta']?></p>
-				<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
+				
+				<div class="_paragraphe">
+					<p><?=$event['presta']?></p>
+					<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
+				</div>
 			</div>
+
+			<div class="wrapper wrapper-aside-section">
+				<header class="heading-simple">
+					<h3 class="_title">Nombre de participants</h3>
+					<span class="_dotted-border"><!-- bordure --></span>
+				</header>
+				
+				<div class="_paragraphe">
+					<p>
+						Rejoignez { int } participants pour cet atelier !<br/>
+						{ int }places restantes
+					</p>
+				</div>
+			</div>	
 		</aside>
 	</section>
 	
-	<section class="section">		
+	<section class="wrapper margin-bottom-xb">		
 		<h2>S'inscrire</h2>
-	</section>
-
-	<section class="section">
 		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?=$event['widgetFullUrl']?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 	</section>
 
-<section class="section margin--b-none margin--t-m">
-	<header class="header title--main-simple">
-		<h2>
-			Ateliers<br />
-			similaires
-			<span></span>
-		</h2>
-	</header>
+	<section class="wrapper margin-bottom-xb">
+		<header class="heading-section">
+			<h2 class="_title"> Ateliers<br /> similaires 
+				<span class="_dotted-border"></span>
+			</h2>
+		</header>
+	</section>
 
-	<div class="div card--gallerie">
+	<section class="wrapper bg-gradient">
+		<div class="grid">
 			<?php foreach($datas as $data) :
 				if(is_array($data) && ($event['post_title'] !== $data['post_title'])) :
 					get_template_part( 'template-parts/event-card', null, array(
@@ -141,11 +154,10 @@ foreach($totalEvents as $totalEvent) {
 						'title' => $data['post_title'],
 						'categories' => $event['categoriesTag'][0],
 						'date' => $data['startDate'],
-						'small_content' => $data['description'],
+						'small_content' => substr($event['description'], 0, 110) . "...",
 						));
 				endif;
 			endforeach;	?>
 		</div>
-
 	</section>
 </article>

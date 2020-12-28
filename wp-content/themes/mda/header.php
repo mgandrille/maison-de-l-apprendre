@@ -31,20 +31,20 @@
 	</script> -->
 </head>
 
-<body class="body">
+<body>
 	<?php wp_body_open(); ?>
 
 	<!-- === Navigation === -->
-	<nav class="container container-row type--navbar">
-		<a href="https://www.festivaldelapprendre.fr/"><img src="<?=content_url()?>/themes/mda/img/logo_festival.png" class="type--logo" alt="logo"></a>
-		<i id="nav-btn" class="type--toggle-icon fas fa-bars"></i>
+	<nav class="container-row main-navigation">
+		<a href="https://www.festivaldelapprendre.fr/"><img src="<?=content_url()?>/themes/mda/img/logo_festival.png" class="main-logo" alt="logo"></a>
+		<i id="nav-btn" class="main-navigation-toggle-icon fas fa-bars"></i>
 
 		<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'primary',
 					'menu_id' => 'primary-menu',
-					'menu_class' => 'type--menu'
+					'menu_class' => 'main-menu'
 				)
 			);
 		?>
