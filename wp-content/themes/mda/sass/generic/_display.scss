@@ -1,3 +1,5 @@
+/* type de display */ 
+
 .display {
 	&-none {
 		display: none;
@@ -8,8 +10,16 @@
 	}
 }
 
+
+/* Positionnement flex */
+
 .display {
 	&-between-x {
 		justify-content: space-between;
+	}
+
+	&-center {
+		justify-content: center;
+		align-items: center;
 	}
 }

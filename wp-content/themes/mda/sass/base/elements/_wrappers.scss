@@ -3,7 +3,7 @@
 /* === ========================== */
 
 .container-main {
-	max-width: $app-w;
+	width: $app-w;
 	height: $app-h;
 	/* margin-top : navbar size */
 	margin: 10vh auto auto auto;
@@ -74,6 +74,16 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+.wrapper-hero-banner-2 {
+	width: 100%;
+	height: 90vh;
+	text-transform: uppercase;
+	overflow-y: hidden;
+	/*flex*/
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 /*

@@ -69,7 +69,7 @@ h6, .h6 {
 	}
 
 	& ._title {
-		width: auto;
+		width: 395px;
 		margin: $margin-s auto;
 		font-size:  $h1;
 		color: $color-main;
@@ -94,6 +94,7 @@ h6, .h6 {
 		text-align: left;
 
 		&:last-of-type {
+			width: 280px;
 			margin: 0 0 0 auto;
 			text-align: right;
 		}
