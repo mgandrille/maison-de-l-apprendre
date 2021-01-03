@@ -369,3 +369,64 @@
 	}
 }
 
+.padding-y {
+	padding-top: $padding;
+	padding-bottom: $padding;
+
+    &-auto {
+		padding-top: auto;
+		padding-bottom: auto;
+		
+		&-only {
+			padding: auto 0;
+		}
+    }
+
+    &-s {
+		padding-top: $padding-s;
+		padding-bottom: $padding-s;
+		
+		&-only {
+			padding: $padding-s 0;
+		}
+    }
+
+    &-m {
+		padding-top: $padding-m;
+		padding-bottom: $padding-m;
+		
+		&-only {
+			padding: $padding-m 0;
+		}
+	}
+	
+	&-b {
+		padding-top: $padding-b;
+		padding-bottom: $padding-b;
+		
+		&-only {
+			padding: $padding-b 0;
+		}
+	}
+	
+	&-xb {
+		padding-top: $padding-xb;
+		padding-bottom: $padding-xb;
+		
+		&-only {
+			padding: $padding-xb 0;
+		}
+    }
+
+    &-none {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	&-only {
+		padding: $padding 0;
+	}
+}
+
+
+

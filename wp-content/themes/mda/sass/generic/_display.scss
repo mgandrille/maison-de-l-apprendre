@@ -21,5 +21,13 @@
 	&-center {
 		justify-content: center;
 		align-items: center;
+
+		&-y {
+			align-items: center;
+		}
+	}
+
+	&-end-x {
+		justify-content: flex-end;
 	}
 }

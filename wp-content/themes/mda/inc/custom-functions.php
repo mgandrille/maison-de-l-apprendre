@@ -100,12 +100,17 @@ function get_all_posts_infos() {
             $post = (array) $post;
 
             // Tous les noms des catégories du post sont récupérés d'un coup sous forme de tableau
-            $categoryNames = array_map(function($categorie) {
+            $categorySlug = array_map(function($categorie) {
                 return $categorie->slug;
+            }, $categoryTags);
+
+            $categoryNames = array_map(function($categorie) {
+                return $categorie->name;
             }, $categoryTags);
 
             // J'ai ajouté un nouveau champ sur le post avec les catégories en valeur
             $post['categoriesTag'] = $categoryNames;
+            $post['categoriesTagSlug'] = $categorySlug;
 
 			if($add_fields) {
                 $post = array_merge($post, $add_fields );

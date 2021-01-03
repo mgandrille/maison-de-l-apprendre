@@ -139,6 +139,7 @@ foreach($totalEvents as $totalEvent) {
 						'image' => $data['logo']->publicUrl,
 						'title' => $data['post_title'],
 						'categories' =>$event['categoriesTag'],
+						'categoriesSlug' =>$event['categoriesTagSlug'],
 						'date' => $data['startDate'],
 						'small_content' => substr($event['description'], 0, 110) . "...",
 						));
