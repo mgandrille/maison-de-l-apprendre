@@ -21,6 +21,10 @@
 	&-center {
 		justify-content: center;
 		align-items: center;
+
+		&-y {
+			align-items: center;
+		}
 	}
 
 	&-end-x {

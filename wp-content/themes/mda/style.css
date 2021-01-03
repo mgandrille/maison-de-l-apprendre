@@ -721,6 +721,10 @@ h6, .h6 {
 	font-size: 1.25rem;
 }
 
+.text-s {
+	font-size: .75rem;
+}
+
 .text-justify {
 	text-align: justify;
 }
@@ -1232,6 +1236,15 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+}
+
+.border-bottom-grey {
+	border-bottom: 1px solid #545454;
+}
+
+.border-y-light {
+	border-bottom: 1px solid #e9e6e6;
+	border-top: 1px solid #e9e6e6;
 }
 
 ol {
@@ -2340,6 +2353,65 @@ textarea {
 	padding: 0 0 0 0.6rem;
 }
 
+.padding-y {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.padding-y-auto {
+	padding-top: auto;
+	padding-bottom: auto;
+}
+
+.padding-y-auto-only {
+	padding: auto 0;
+}
+
+.padding-y-s {
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+}
+
+.padding-y-s-only {
+	padding: 0.6rem 0;
+}
+
+.padding-y-m {
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
+}
+
+.padding-y-m-only {
+	padding: 1.75rem 0;
+}
+
+.padding-y-b {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.padding-y-b-only {
+	padding: 2rem 0;
+}
+
+.padding-y-xb {
+	padding-top: 2.85rem;
+	padding-bottom: 2.85rem;
+}
+
+.padding-y-xb-only {
+	padding: 2.85rem 0;
+}
+
+.padding-y-none {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.padding-y-only {
+	padding: 1rem 0;
+}
+
 /* Display
 --------------------------------------------- */
 /* type de display */
@@ -2358,6 +2430,10 @@ textarea {
 
 .display-center {
 	justify-content: center;
+	align-items: center;
+}
+
+.display-center-y {
 	align-items: center;
 }
 
@@ -2399,6 +2475,10 @@ textarea {
 
 .bg-dark {
 	background-color: #151818;
+}
+
+.bg-light {
+	background-color: #e9e6e6;
 }
 
 /* Custom backgrounds */

@@ -110,7 +110,7 @@ get_header();
 		</div>
 	</section>
 
-	<section class="container-row wrapper-section-presentation">
+	<section class="container-row wrapper-section-presentation margin-bottom-xb">
 		<header class="heading-section">
 			<h2 class="_title">
 				Ateliers et<br /> conférences
@@ -142,37 +142,42 @@ get_header();
 		</div>
 	</section>
 
+	<section class="container-row padding-s-y display-center-y border-y-light" style="column-gap: 20px;">
+		<i class="fas fa-calendar-check text-m display-flex display-center-y" style="align-items: center;"></i>
+		<h2>Réservez vos ateliers des maintenant</h2>
+	</section>
+	
+	<section class="container-row padding-y display-center-y">
+		<header class="wrapper-row wrapper-filter-bar display-center-y" style="padding: unset; height: unset; justify-content: unset">
+			<form id="article-filter" class="_body">
+
+				<!-- Searchbar -->
+				<div class="_searchbar">
+					<input id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
+				</div>
+
+				<!-- Filtres -->
+				<div class="_filters button--filter">
+					<div>
+						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
+						<label for="all">TOUS</label>
+					</div>
+
+					<?php foreach ($categoryTags as $tag) : ?>
+						<div>
+							<input type="checkbox" name="<?= $tag->slug ?>" id="<?= $tag->slug ?>" data-filter=".<?= $tag->slug ?>">
+							<label for="<?= $tag->slug ?>"><?= strtoupper($tag->name) ?></label>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</form>
+		</header>
+	</section>
 
 	<!-- === SELECTION DES ATELIERS === -->
 
 	<section class="container bg-gradient">
 		<div class="wrapper">
-
-			<!-- filter bar -->
-			<header class="wrapper-row wrapper-filter-bar">
-				<form id="article-filter" class="_body">
-
-					<!-- Searchbar -->
-					<div class="_searchbar">
-						<input id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
-					</div>
-
-					<!-- Filtres -->
-					<div class="_filters button--filter">
-						<div>
-							<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
-							<label for="all">Tous</label>
-						</div>
-
-						<?php foreach ($categoryTags as $tag) : ?>
-							<div>
-								<input type="checkbox" name="<?= $tag->slug ?>" id="<?= $tag->slug ?>" data-filter=".<?= $tag->slug ?>">
-								<label for="<?= $tag->slug ?>"><?= strtoupper($tag->name) ?></label>
-							</div>
-						<?php endforeach; ?>
-					</div>
-				</form>
-			</header>
 
 			<!-- Liste des articles -->
 			<div class="grid" style="display: flex; flex-wrap: wrap">
@@ -191,7 +196,7 @@ get_header();
 		</div>
 	</section>
 
-	<section class="container-row wrapper-section-presentation">
+	<section class="container-row wrapper-section-presentation margin-top-xb margin-bottom-xb">
 		<header class="heading-section">
 			<h2 class="_title">
 				Learning Planet<br /> Festival
