@@ -11,7 +11,7 @@ $date = date_format(new DateTime($args['date']), 'd/m/Y');
 $time = date_format(new DateTime($args['date']), 'H:i');
 ?>
 
-<article class="grid-item wrapper wrap-card <?$args['categories'][0]?> <?=$args['categories'][1]?>" data-category="<?=$args['categories'][0]?>">
+<article class="grid-item wrapper wrap-card <?$args['categoriesSlug'][0]?> <?=$args['categoriesSlug'][1]?>" data-category="<?=$args['categoriesSlug'][0]?>">
     <header class="_head" style="background-image: url('<?=$args['image'];?>');">
         <!-- header img -->
     </header>
@@ -20,8 +20,8 @@ $time = date_format(new DateTime($args['date']), 'H:i');
         <header class="_head">
             <ul class="list-row">
                 <li>Date : <?=$date?></li>
-                <li>début : <?=$time?></li>
-                <li><?=$args['categories']?></li>
+                <li>Début : <?=$time?></li>
+                <li><?= implode(", ",  $args['categories'])?></li>
             </ul>
         </header>
 

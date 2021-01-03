@@ -76,6 +76,7 @@ get_header();
 
 		<!-- description de la section--->
 		<div class="_paragraphe">
+		
 			<p>
 				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
 				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
@@ -127,8 +128,8 @@ get_header();
 
 						<?php foreach($categoryTags as $tag) : ?>
 							<div>
-								<input type="checkbox" name="<?=$tag->name?>" id="<?=$tag->name?>" data-filter=".<?=$tag->name?>">
-								<label for="<?=$tag->name?>"><?=strtoupper($tag->name)?></label>
+								<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
+								<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
 							</div>
 						<?php endforeach; ?>
 					</div>
@@ -143,6 +144,7 @@ get_header();
 						'image' => $event['logo']->publicUrl,
 						'title' => $event['post_title'],
 						'categories' =>$event['categoriesTag'],
+						'categoriesSlug' =>$event['categoriesTagSlug'],
 						'date' => $event['startDate'],
 						'small_content' => substr($event['description'], 0, 110) . "..."
 						));
