@@ -860,10 +860,28 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	/*backgorund*/
-	background: linear-gradient(90deg, #86d0e9 0%, #f2daf4 100%);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	background: url("https://www.festivaldelapprendre.fr/wp-content/uploads/2021/01/bg-illu-landing.png"), linear-gradient(90deg, #86d0e9 0%, #f2daf4 100%);
+	background-size: 0, cover;
+	background-position: bottom right, center;
+	background-repeat: no-repeat, no-repeat;
+}
+
+@media screen and (min-width: 600px) {
+	.wrapper-hero {
+		background-size: 30%, cover;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.wrapper-hero {
+		background-size: 45%, cover;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.wrapper-hero {
+		background-size: 35%, cover;
+	}
 }
 
 .wrapper-hero-banner-2 {
@@ -1365,6 +1383,39 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
 	border-color: #4ba185;
+}
+
+.btn-link {
+	padding: 0.6rem 1rem;
+	color: #f4f4f4;
+	border-radius: 0.65rem;
+	background-color: #43beba;
+	transition: box-shadow 150ms ease-in, transform 150ms ease-in;
+}
+
+.btn-link:hover {
+	box-shadow: -5px 5px 0 #ea0084;
+	transform: translate(5px, -5px);
+}
+
+.btn-link a {
+	color: #f4f4f4;
+}
+
+.btn {
+	width: auto;
+}
+
+.btn-s {
+	width: 75px;
+}
+
+.btn-m {
+	width: 200px;
+}
+
+.btn-b {
+	width: 320px;
 }
 
 input[type="text"],
@@ -2308,6 +2359,10 @@ textarea {
 .display-center {
 	justify-content: center;
 	align-items: center;
+}
+
+.display-end-x {
+	justify-content: flex-end;
 }
 
 /* Backgrounds

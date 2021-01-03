@@ -19,3 +19,37 @@ input[type="submit"] {
 		border-color: $color-action-darker;
 	}
 }
+
+.btn-link {
+	padding: $padding-s $padding;
+	color: $color-white;
+	border-radius: $radius-b;
+	background-color: $color-secondary;
+	transition: box-shadow 150ms ease-in,
+    transform 150ms ease-in;
+
+	&:hover {
+        box-shadow: -5px 5px 0 $color-main; 
+        transform: translate(5px, -5px); 
+    }
+
+	& a {
+		color: $color-white;
+	}
+}
+
+.btn {
+	width:auto;
+
+	&-s {
+		width: 75px;
+	}
+
+	&-m {
+		width: 200px;
+	}
+
+	&-b {
+		width:320px;
+	}
+}

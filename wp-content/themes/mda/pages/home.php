@@ -1,20 +1,21 @@
 <?php
+
 /**
  * Template Name: Accueil
  *
  * @package mda
-*/
+ */
 
 /**
  * get all posts/articles in an array ($events) to be dispatched in cards
-*/
+ */
 $events = get_all_posts_infos();
 
 // Get all categories for the search bar
 $categories = (array) get_categories();
 $categoryTags = [];
-foreach($categories as $category) {
-	if($category->term_id !== 1) {
+foreach ($categories as $category) {
+	if ($category->term_id !== 1) {
 		array_push($categoryTags, $category);
 	}
 }
@@ -31,13 +32,15 @@ get_header();
 
 		<!-- Titre -->
 		<header class="heading-hero">
-			<span class="_dotted-border"><!-- bordure --></span>
+			<span class="_dotted-border">
+				<!-- bordure --></span>
 
 			<h2 class="_subtitle">du 24 au 31 janvier 2021</h2>
 			<h1 class="_title">festival de<br>l'apprendre</h1>
 			<h2 class="_subtitle">Prendre soin de soi, des autres<br />et de la planète</h2>
 
-			<span class="_dotted-border"><!-- bordure --></span>
+			<span class="_dotted-border">
+				<!-- bordure --></span>
 		</header>
 
 		<!-- Badges circulaires 
@@ -57,7 +60,7 @@ get_header();
 		-->
 	</section>
 
-	
+
 
 
 	<!-- === PRESENTATION === -->
@@ -68,7 +71,8 @@ get_header();
 		<header class="heading-section">
 			<h2 class="_title">
 				Découvrir<br />le festival
-				<span class="_dotted-border"><!-- bordure --></span>
+				<span class="_dotted-border">
+					<!-- bordure --></span>
 			</h2>
 
 			<h6 class="_subtitle">Une journée pour apprendre et découvrir</h6>
@@ -76,12 +80,33 @@ get_header();
 
 		<!-- description de la section--->
 		<div class="_paragraphe">
-		
+			<h4>Festival de l’Apprendre : de quoi s’agit-il ?</h4>
+
 			<p>
-				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
-				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
-				de développement des compétences tout au long de la vie.
+				L’intention de la Fête de l’Apprendre est un temps fort organisé partout en France pour célébrer tous les apprentissages, 
+				tous les acteurs et tous les lieux qui les permettent dans chaque territoire.
 			</p>
+
+			<p>
+				Une telle fête pourra se déployer progressivement sur tout le territoire français, comme la fête de la musique qui encourage chacun
+				à participer à sa manière et selon ses goûts, impliquant les acteurs institutionnels, les collectivités, les entreprises, les associations 
+				et les familles pour impulser des échanges intergénérationnels afin que tous puissent progresser et bénéficier de la société apprenante.
+			</p>
+
+			<p>
+				​Le but d’un tel événement ? Célébrer la diversité et la continuité des apprentissages ! Face aux défis sociaux, environnementaux et
+				économiques, nous invitons chacun.es à être acteur de sa vie et d’une société durable par le développement du pouvoir d’apprendre !
+			</p>
+
+			<div class="wrapper-row display-end-x"  style="column-gap: 20px;">
+				<button class="btn btn-link">
+					<a href="https://drive.google.com/file/d/1CXhFuykV5iDVa5lgv9sBQSMHdMvkO1xm/view?usp=sharing" target="_blank">Voir notre bilan 2020</a>
+				</button>
+
+				<button class="btn btn-link">
+					<a href="https://drive.google.com/file/d/1gAbBeVFWeAFt_6u1SB_LVRJal9krLq4B/view" target="_blank">Voir notre dossier de presse</a>
+				</button>
+			</div>
 		</div>
 	</section>
 
@@ -96,10 +121,23 @@ get_header();
 		</header>
 
 		<div class="_paragraphe">
+			<h4>Comment y prendre part ?</h4>
+
 			<p>
-				Première édition sur le territoire lyonnais, cette manifestation est impulsée par La Maison de l'Apprendre dont le rôle 
-				est de fédérer un réseau territorial d'acteurs pour répondre, ensemble, aux enjeux actuels et futurs d'apprentissage et 
-				de développement des compétences tout au long de la vie.
+				Chaque année,  la Maison de l’Apprendre invite les acteurs du territoire lyonnais à prendre part au Festival de l’Apprendre.
+				Associations, entreprises, collectivités, établissement scolaire ou d’enseignement supérieur, toutes les structures agissant pour le développement des talents 
+				et la transmission des compétences sont la bienvenue.
+			</p>
+
+			<p>
+				​Ateliers découvertes, forum des initiatives, conférences, portes ouvertes, visites… Le Festival de l’Apprendre revêt différents formats, selon ce qui convient 
+				à chacun. Un Appel à Manifestation d’Intérêt est organisé au mois de novembre précédent pour recueillir les propositions des acteurs du territoire. 
+				​La sélection est effectuée avant la fin de l’année  par un Comité d’Ambassadeurs représentatifs du continuum éducatif, de la petite enfance à la formation 
+				professionnelle, en passant par le monde scolaire ou encore de l’éducation populaire.
+			</p>
+
+			<p>
+				Cet évènement fédérateur et ouvert au grand public se déroule chaque année entre le 24 et le 31 Janvier.	
 			</p>
 		</div>
 	</section>
@@ -126,29 +164,65 @@ get_header();
 							<label for="all">Tous</label>
 						</div>
 
-						<?php foreach($categoryTags as $tag) : ?>
+						<?php foreach ($categoryTags as $tag) : ?>
 							<div>
-								<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
-								<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+								<input type="checkbox" name="<?= $tag->slug ?>" id="<?= $tag->slug ?>" data-filter=".<?= $tag->slug ?>">
+								<label for="<?= $tag->slug ?>"><?= strtoupper($tag->name) ?></label>
 							</div>
 						<?php endforeach; ?>
 					</div>
 				</form>
-			</header> 
+			</header>
 
 			<!-- Liste des articles -->
 			<div class="grid" style="display: flex; flex-wrap: wrap">
-				<?php foreach($events as $event) :
-					get_template_part( 'template-parts/event-card', null, array(
+				<?php foreach ($events as $event) :
+					get_template_part('template-parts/event-card', null, array(
 						'id' => $event['ID'],
 						'image' => $event['logo']->publicUrl,
 						'title' => $event['post_title'],
-						'categories' =>$event['categoriesTag'],
-						'categoriesSlug' =>$event['categoriesTagSlug'],
+						'categories' => $event['categoriesTag'],
+						'categoriesSlug' => $event['categoriesTagSlug'],
 						'date' => $event['startDate'],
 						'small_content' => substr($event['description'], 0, 110) . "..."
-						));
+					));
 				endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="container-row wrapper-section-presentation">
+		<header class="heading-section">
+			<h2 class="_title">
+				Learning Planet<br /> Festival
+				<span class="_dotted-border"></span>
+			</h2>
+
+			<h6 class="_subtitle">Inspirer les apprenants</h6>
+		</header>
+
+		<div class="_paragraphe">
+			<h4>En savoir plus sur Learning Planet</h4>
+
+			<p>
+				Le Festival de l’Apprendre s’inscrit dans la dynamique Learning Planet impulsée par le Centre de Recherches Interdisciplinaire et l’Unesco.
+			</p>
+
+			<p>
+				LearningPlanet est un collectif ouvert qui s’est donné pour mission d’inspirer les apprenants de tous âges et de leur donner les moyens de 
+				contribuer à faire face aux défis sociétaux et environnementaux. De nouvelles manières d’apprendre, d’enseigner, de faire de la recherche et 
+				de mobiliser l’intelligence collective sont nécessaires pour cela.
+			</p>
+
+			<p>
+				Avec l’aide de nos partenaires internationaux, nous identifions, développons et amplifions les approches les plus innovantes permettant 
+				de résoudre collectivement les problèmes complexes, locaux et globaux, comme les Objectifs de développement durable (ODD).	
+			</p>
+
+			<div class="wrapper-row display-end-x" style="column-gap: 20px;">
+				<button class="btn btn-link">
+					<a href="https://learning-planet.org/fr" target="_blank">Le site de Learning Planet</a>
+				</button>
 			</div>
 		</div>
 	</section>
