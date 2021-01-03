@@ -1,3 +1,29 @@
+/* Thème backgrounds */
+
+.bg {
+	&-main {
+		background-color: $color-main;
+	}
+
+	&-secondary {
+		background-color: $color-secondary;
+
+		&-pale {
+			background-color: $color-secondary-pale;
+		}
+	}
+
+	&-action {
+		background-color: $color-action;
+	}
+
+	&-warm {
+		background-color: $color-warm;
+	}
+}
+
+
+
 /* Neutral backgrounds */
 
 .bg {
