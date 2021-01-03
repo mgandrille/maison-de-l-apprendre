@@ -22,3 +22,19 @@
         font-weight: bold;
     }
 }
+
+.shape-radius {
+    border-radius: $radius;
+
+    &-s {
+        border-radius: $radius-s;
+    }
+
+    &-m {
+        border-radius: $radius-m;
+    }
+
+    &-b {
+        border-radius: $radius-b;
+    }
+}

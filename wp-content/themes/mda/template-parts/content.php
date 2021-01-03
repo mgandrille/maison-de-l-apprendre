@@ -114,20 +114,6 @@ foreach($totalEvents as $totalEvent) {
 					<a href="<?=$event['web_site_presta']?>"><?=$event['web_site_presta']?></a>
 				</div>
 			</div>
-
-			<div class="wrapper wrapper-aside-section">
-				<header class="heading-simple">
-					<h3 class="_title">Nombre de participants</h3>
-					<span class="_dotted-border"><!-- bordure --></span>
-				</header>
-				
-				<div class="_paragraphe">
-					<p>
-						Rejoignez { int } participants pour cet atelier !<br/>
-						{ int }places restantes
-					</p>
-				</div>
-			</div>	
 		</aside>
 	</section>
 	
@@ -145,14 +131,14 @@ foreach($totalEvents as $totalEvent) {
 	</section>
 
 	<section class="wrapper bg-gradient">
-		<div class="grid">
+		<div class="grid" style="display: flex; flex-wrap: wrap">
 			<?php foreach($datas as $data) :
 				if(is_array($data) && ($event['post_title'] !== $data['post_title'])) :
 					get_template_part( 'template-parts/event-card', null, array(
 						'id' => $data['ID'],
 						'image' => $data['logo']->publicUrl,
 						'title' => $data['post_title'],
-						'categories' => $event['categoriesTag'][0],
+						'categories' =>$event['categoriesTag'],
 						'date' => $data['startDate'],
 						'small_content' => substr($event['description'], 0, 110) . "...",
 						));

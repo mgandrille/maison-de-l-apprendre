@@ -1,0 +1,32 @@
+/* colors neutral*/
+
+.text {
+	&-grey {
+		color: $color-grey;
+	}
+
+	&-white {
+		color:$color-white;
+	}
+
+	&-dark {
+		color: $color-dark;
+	}
+}
+
+
+/* transform font */
+
+.text {
+	&-regular {
+		font-size: 1rem;
+	}
+
+	&-m {
+		font-size: 1.25rem;
+	}
+
+	&-justify {
+		text-align: justify;
+	}
+}

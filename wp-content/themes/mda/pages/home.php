@@ -33,9 +33,9 @@ get_header();
 		<header class="heading-hero">
 			<span class="_dotted-border"><!-- bordure --></span>
 
-			<h2 class="_subtitle">du 21 au 27 janvier 2021</h2>
+			<h2 class="_subtitle">du 24 au 31 janvier 2021</h2>
 			<h1 class="_title">festival de<br>l'apprendre</h1>
-			<h2 class="_subtitle">en famille, entre collègues, entre amis,<br />venez fêter le plaisir d'apprendre</h2>
+			<h2 class="_subtitle">Prendre soin de soi, des autres<br />et de la planète</h2>
 
 			<span class="_dotted-border"><!-- bordure --></span>
 		</header>
@@ -56,6 +56,8 @@ get_header();
 		</div>
 		-->
 	</section>
+
+	
 
 
 	<!-- === PRESENTATION === -->
@@ -125,8 +127,8 @@ get_header();
 
 						<?php foreach($categoryTags as $tag) : ?>
 							<div>
-								<input type="checkbox" name="<?=$tag->slug?>" id="<?=$tag->slug?>" data-filter=".<?=$tag->slug?>">
-								<label for="<?=$tag->slug?>"><?=strtoupper($tag->name)?></label>
+								<input type="checkbox" name="<?=$tag->name?>" id="<?=$tag->name?>" data-filter=".<?=$tag->name?>">
+								<label for="<?=$tag->name?>"><?=strtoupper($tag->name)?></label>
 							</div>
 						<?php endforeach; ?>
 					</div>
@@ -134,13 +136,13 @@ get_header();
 			</header> 
 
 			<!-- Liste des articles -->
-			<div class="grid">
+			<div class="grid" style="display: flex; flex-wrap: wrap">
 				<?php foreach($events as $event) :
 					get_template_part( 'template-parts/event-card', null, array(
 						'id' => $event['ID'],
 						'image' => $event['logo']->publicUrl,
 						'title' => $event['post_title'],
-						'categories' => $event['categoriesTag'][0],
+						'categories' =>$event['categoriesTag'],
 						'date' => $event['startDate'],
 						'small_content' => substr($event['description'], 0, 110) . "..."
 						));
