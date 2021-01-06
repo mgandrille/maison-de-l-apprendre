@@ -209,25 +209,31 @@ function get_forms_infos() {
 function get_articles() {
     $eventDatas = [];
     $today = new DateTime();
+
     // d($today);
 
     $events = get_forms_infos()->data;
+
     // d($events);
     if(!empty($events)) {
         foreach($events as $event) {
             // d(new DateTime($event->endDate));
             // d($event, $event->endDate);
+
             $eventInfo = get_object_vars($event);
             try {
-                    if(new DateTime($event->endDate) >= $today)
+                if(new DateTime($event->endDate) >= $today)
                 {
                     array_push($eventDatas, $eventInfo);
                 }
+
             }
             catch (Exception $e) {
             }
         }
     }
+
+    echo($eventDatas);
 
     // d($eventDatas);
     return $eventDatas;
