@@ -16,13 +16,19 @@
         transform: translate(11px, -10px); 
     }
 
-    @media screen and (min-width: 800px) {
-        width: calc( 50% - (#{ $margin-xb } * 2) );
-        margin: $margin-xb;
+    @media screen and (min-width: 600px) {
+        width: calc( 50% - (#{ $margin-m } * 2) );
+        margin: $margin-m;
     }
 
-    @media screen and (min-width: 1280px) {
-        width: calc( (100% / 3) - (#{ $margin-xb } * 2) );
+    @media screen and (min-width: 1024px) {
+        width: calc( (100% / 3) - (#{ $margin-m } * 2) );
+        margin: $margin-m;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: calc( 25% - (#{ $margin-m } * 2) );
+        margin: $margin-m;
     }
 
     & > ._head {
@@ -31,9 +37,8 @@
         padding: $padding-s $padding;
         font-size: .5rem;
         /*background*/
-        background-position: center;
+        background-position:left;
         background-repeat: no-repeat;
-        background-size: cover;
         background-color: $color-secondary-pale;
     }
 
@@ -83,14 +88,10 @@
 
     & img {
         width: 100%;
-        height: 40vh;
+        height: 295px;
         object-fit: cover;
-        object-position: center;
+        object-position: left;
         background-color: $color-secondary-pale;
-        
-        @media screen and (min-width: 800px) {
-            height: 50vh;
-        }
     }
 
     & ul {
@@ -123,7 +124,7 @@
             }
 
             @media screen and (min-width: 800px) {
-                width: calc(100% / 3);
+                width: calc(100% / 4);
                 justify-content: flex-start;
                 border-left: 1px solid $color-grey;
             }

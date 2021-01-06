@@ -27,7 +27,28 @@
 		}
 	}
 
-	&-end-x {
-		justify-content: flex-end;
+	&-end {
+		&-x {
+			justify-content: flex-end; 
+		}
+
+		&-y {
+			align-items: flex-end;
+		}
+		
+	}
+
+	&-nowrap {
+		flex-wrap: nowrap;
+	}
+
+	&-wrap {
+		flex-wrap: wrap;
+	}
+
+	&-nowrap-md {
+		@media screen and (min-width: 1024px) {
+			flex-wrap: nowrap;
+		}
 	}
 }

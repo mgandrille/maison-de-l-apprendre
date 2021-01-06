@@ -42,22 +42,6 @@ get_header();
 			<span class="_dotted-border">
 				<!-- bordure --></span>
 		</header>
-
-		<!-- Badges circulaires 
-		<div class="wrapper-badges">
-			<div class="wrapper shape-badge-b">
-				<span>Découvrir</span>
-			</div>
-
-			<div class="wrapper shape-badge-m">
-				<span>Rencontrer</span>
-			</div>
-
-			<div class="wrapper shape-badge-m">
-				<span>Expérimenter</span>
-			</div>
-		</div>
-		-->
 	</section>
 
 
@@ -158,10 +142,10 @@ get_header();
 
 				<!-- Filtres -->
 				<div class="_filters button--filter">
-					<div>
+					<!--<div>
 						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
 						<label for="all">TOUS</label>
-					</div>
+					</div>-->
 
 					<?php foreach ($categoryTags as $tag) : ?>
 						<div>

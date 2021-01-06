@@ -14,6 +14,14 @@
 	}
 }
 
+/* colors*/
+
+.text {
+	&-warm {
+		color: $color-warm;
+	}
+}
+
 
 /* transform font */
 
@@ -32,5 +40,9 @@
 
 	&-justify {
 		text-align: justify;
+	}
+
+	&-right {
+		text-align: right;
 	}
 }
