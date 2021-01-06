@@ -8,7 +8,11 @@
  */
 
 $date = date_format(new DateTime($args['date']), 'd/m/Y');
-$time = date_format(new DateTime($args['date']), 'H:i');
+$time = date_format(new DateTime($args['startDate']), 'H:i');
+
+// Get the duration of the event
+$duree = $endTime->getTimestamp() - $startTime->getTimestamp();
+$duree = date('H:i', $duree);
 ?>
 
 <article class="grid-item wrapper wrap-card <?$args['categoriesSlug'][0]?> <?=$args['categoriesSlug'][1]?>" data-category="<?=$args['categoriesSlug'][0]?>">
@@ -21,6 +25,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
             <ul class="list-row">
                 <li>Date : <?=$date?></li>
                 <li>Début : <?=$time?></li>
+                <li>Durée : <?=$duree?></li>
                 <li><?= implode(", ",  $args['categories'])?></li>
             </ul>
         </header>

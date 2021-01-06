@@ -21,8 +21,10 @@ $startTime = new DateTime($event['startDate']);
 $endTime = new DateTime($event['endDate']);
 // Get the start date of the event
 $date = date_format($startTime, 'd/m/Y');
+
 // Get the start time of the event
 $time = date_format($endTime, 'H:i');
+
 // Get the duration of the event
 $duree = $endTime->getTimestamp() - $startTime->getTimestamp();
 $duree = date('H:i', $duree);
@@ -64,7 +66,8 @@ foreach($totalEvents as $totalEvent) {
 
 				<ul class="wrapper-row">
 					<li>Date : <?=$date?></li>
-					<li>Début : <?=$duree?></li>
+					<li>Début : <?=$time?></li>
+					<li>Durée : <?=$durée?></li>
 					<li><?=implode(', ', $event['categoriesTag'])?></li>
 				</ul>
 			</header>
