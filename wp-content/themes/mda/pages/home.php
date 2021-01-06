@@ -75,7 +75,7 @@ get_header();
 					<!-- bordure --></span>
 			</h2>
 
-			<h6 class="_subtitle">Une journée pour apprendre et découvrir</h6>
+			<h6 class="_subtitle">Une semaine pour apprendre et découvrir</h6>
 		</header>
 
 		<!-- description de la section--->
@@ -144,7 +144,7 @@ get_header();
 
 	<section class="container-row padding-s-y display-center-y border-y-light" style="column-gap: 20px;">
 		<i class="fas fa-calendar-check text-m display-flex display-center-y" style="align-items: center;"></i>
-		<h2>Réservez vos ateliers des maintenant</h2>
+		<h2>Réservez vos ateliers dès maintenant</h2>
 	</section>
 	
 	<section class="container-row padding-y display-center-y">
@@ -180,6 +180,9 @@ get_header();
 		<div class="wrapper">
 
 			<!-- Liste des articles -->
+			
+			<!--<p class="text-m text-grey padding-y-m">Les ateliers sont en cours d'élaboration, ils seront disponibles bientôt !</p>-->
+
 			<div class="grid" style="display: flex; flex-wrap: wrap">
 				<?php foreach ($events as $event) :
 					get_template_part('template-parts/event-card', null, array(
