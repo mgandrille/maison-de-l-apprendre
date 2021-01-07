@@ -13,7 +13,7 @@
  * get all information in an array ($event) for one article
  */
 $event = get_post_infos();
-
+// d($event);
 
 /**
  * Conversion for all time/date
@@ -105,8 +105,8 @@ foreach ($totalEvents as $totalEvent) {
 				</header>
 
 				<div class="_paragraphe">
-					<p><?= $event['presta'] ?></p>
-					<a href="<?= $event['web_site_presta'] ?>"><?= $event['web_site_presta'] ?></a>
+					<p><?= $event['intervenant'] ?></p>
+					<a href="<?= $event['siteWeb'] ?>"><?= $event['siteWeb'] ?></a>
 				</div>
 			</div>
 		</aside>

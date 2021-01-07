@@ -53,8 +53,32 @@ function automatic_posts() {
     }
 }
 
-
 add_action('init', 'automatic_posts');
+
+
+function edit_posts() {
+    $existingPosts = get_posts(['numberposts' => -1]);
+    $datas = get_json_data();
+
+    if(!empty($existingPosts)) {
+        foreach($existingPosts as $existingPost) {
+            $post = (array) $existingPost;
+            foreach($datas as $data) {
+                if(array_search($data->HelloAsso, $post)) {
+                    $values = array(
+                        'post_content'  => $data->detail,
+                        // 'post_category'=> [$data->typeEvent, $data->Public]
+                    );
+                    array_push($post, $values);
+                    wp_insert_post( $post );
+                };
+            }
+        }
+    }
+}
+
+// add_action('init', 'edit_posts');
+
 
 
 /**
@@ -75,6 +99,13 @@ function get_api_key_helloAsso() {
     $helloAsso_vars = get_fields($helloAsso);
 
     return $helloAsso_vars;
+}
+
+
+function get_json_data() {
+    $jsonDatas = file_get_contents(content_url().'/themes/mda/inc/doc/datasCopie.json');
+    $datas = json_decode($jsonDatas);
+    return $datas;
 }
 
 
@@ -120,6 +151,18 @@ function get_all_posts_infos() {
 				$event = array_merge($post, $article);
             }
         }
+        // d($article);
+        // $datas = get_json_data();
+        // foreach($datas as $data) {
+        //     // d($data->HelloAsso);
+        //     if(array_search($data->HelloAsso, $article)) {
+        //         $event['fullDescription'] = $data->detail;
+        //         $event['intervenant'] = $data->structure;
+        //         $event['siteWeb'] = $data->site_web;
+        //     }
+        // }
+
+
         // d($event);
         array_push($events, $event);
 	}
@@ -154,6 +197,15 @@ function get_post_infos() {
         if(array_search($event['post_title'], $article)) {
             $event = array_merge($event, $article);
         }
+        $datas = get_json_data();
+        foreach($datas as $data) {
+            if(array_search($data->HelloAsso, $article)) {
+                // d($data);
+                $event['intervenant'] = $data->structure;
+                $event['siteWeb'] = $data->site_web;
+            }
+        }
+
     }
 
     return $event;
