@@ -1078,6 +1078,48 @@ body {
 	}
 }
 
+.wrapper-gallery {
+	width: 100%;
+	flex-wrap: wrap;
+	padding: 60px;
+	justify-content: space-between;
+	column-gap: 20px;
+}
+
+.wrapper-gallery > * {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-radius: 0.25rem;
+}
+
+.wrapper-gallery > * a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: padding 150ms ease-in, border 150ms ease-in;
+}
+
+.wrapper-gallery > * a:hover {
+	padding: .30rem;
+	border: 1px solid #e9e6e6;
+	color: #e9e6e6;
+}
+
+.wrapper-gallery > * a img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
 .wrap-card {
 	height: auto;
 	width: calc( 100% - (2.85rem * 2));
