@@ -60,7 +60,7 @@ foreach ($totalEvents as $totalEvent) {
 		</h2>
 	</header>
 
-	<section class="wrapper">
+	<section class="wrapper margin-bottom-m">
 		<header class="card-legended">
 			<img class="img" src="<?= $event['banner']->publicUrl ?>" alt="banniere-atelier">
 
@@ -74,7 +74,7 @@ foreach ($totalEvents as $totalEvent) {
 	</section>
 
 	<section class="wrapper-row display-wrap display-nowrap-md">
-		<div>
+		<div style="flex: 2;">
 			<h2>Au programme</h2>
 
 			<?php
@@ -95,10 +95,10 @@ foreach ($totalEvents as $totalEvent) {
 			?>
 		</div>
 
-		<aside class="wrapper-aside display-flex">
+		<aside class="wrapper-aside display-flex" style="flex: 1;">
 			<div class="wrapper wrapper-aside-section">
 				<header class="heading-simple">
-					<h3 class="_title">Intervenants</h3>
+					<h3 class="_title">Intervenant</h3>
 					<span class="_dotted-border">
 						<!-- bordure -->
 					</span>
