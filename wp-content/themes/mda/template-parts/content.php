@@ -15,6 +15,19 @@
 $event = get_post_infos();
 // d($event);
 
+$jsonData = get_json_data();
+foreach($jsonData as $data) {
+	// d($data);
+	if($data->HelloAsso == $event['post_name']) {
+		$content = $data->detail;
+		$intervenant = $data->structure;
+		$siteWeb = $data->site_web;
+		$duree = $data->duree;
+		$type = $data->type;
+		$public = $data->public;
+	}
+}
+
 /**
  * Conversion for all time/date
  */
@@ -25,10 +38,6 @@ $date = date_format($startTime, 'd/m/Y');
 
 // Get the start time of the event
 $time = date_format($endTime, 'H:i');
-
-// Get the duration of the event
-$duree = $endTime->getTimestamp() - $startTime->getTimestamp();
-$duree = date('H:i', $duree);
 
 /**
  * Get all events for making a search in categories
@@ -56,7 +65,7 @@ foreach ($totalEvents as $totalEvent) {
 		</h1>
 
 		<h2 class="_subtitle">
-			<?= implode(', ', $event['categoriesTag']) ?>
+			<?= $public .' , '. $type ?>
 		</h2>
 	</header>
 
@@ -67,8 +76,8 @@ foreach ($totalEvents as $totalEvent) {
 			<ul class="wrapper-row">
 				<li>Date : <?= $date ?></li>
 				<li>Début : <?= $time ?></li>
-				<li>Durée : <?= $durée ?></li>
-				<li><?= implode(', ', $event['categoriesTag']) ?></li>
+				<li>Durée : <?= $duree ?></li>
+				<li><?= $public .' , '. $type ?></li>
 			</ul>
 		</header>
 	</section>
@@ -77,22 +86,7 @@ foreach ($totalEvents as $totalEvent) {
 		<div>
 			<h2>Au programme</h2>
 
-			<?php
-			the_content(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'mda'),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post(get_the_title())
-				)
-			);
-			?>
+			<?= nl2br($content); ?>
 		</div>
 
 		<aside class="wrapper-aside display-flex">
@@ -105,8 +99,8 @@ foreach ($totalEvents as $totalEvent) {
 				</header>
 
 				<div class="_paragraphe">
-					<p><?= $event['intervenant'] ?></p>
-					<a href="<?= $event['siteWeb'] ?>"><?= $event['siteWeb'] ?></a>
+					<p><?= $intervenant ?></p>
+					<a href="<?= $siteWeb ?>"><?= $siteWeb ?></a>
 				</div>
 			</div>
 		</aside>

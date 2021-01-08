@@ -102,6 +102,11 @@ function get_api_key_helloAsso() {
 }
 
 
+/**
+ * get_json_data
+ *
+ * @return $datas
+ */
 function get_json_data() {
     $jsonDatas = file_get_contents(content_url().'/themes/mda/inc/doc/datasCopie.json');
     $datas = json_decode($jsonDatas);
@@ -151,19 +156,7 @@ function get_all_posts_infos() {
 				$event = array_merge($post, $article);
             }
         }
-        // d($article);
-        // $datas = get_json_data();
-        // foreach($datas as $data) {
-        //     // d($data->HelloAsso);
-        //     if(array_search($data->HelloAsso, $article)) {
-        //         $event['fullDescription'] = $data->detail;
-        //         $event['intervenant'] = $data->structure;
-        //         $event['siteWeb'] = $data->site_web;
-        //     }
-        // }
 
-
-        // d($event);
         array_push($events, $event);
 	}
 
@@ -196,14 +189,6 @@ function get_post_infos() {
         }
         if(array_search($event['post_title'], $article)) {
             $event = array_merge($event, $article);
-        }
-        $datas = get_json_data();
-        foreach($datas as $data) {
-            if(array_search($data->HelloAsso, $article)) {
-                // d($data);
-                $event['intervenant'] = $data->structure;
-                $event['siteWeb'] = $data->site_web;
-            }
         }
 
     }
