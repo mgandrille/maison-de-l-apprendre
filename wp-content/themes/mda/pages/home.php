@@ -148,6 +148,7 @@ get_header();
 
 					<label for="date">Choisir une date</label>
 					<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
+					<span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
 
 					<?php foreach ($categoryTags as $tag) : ?>
 						<div>
