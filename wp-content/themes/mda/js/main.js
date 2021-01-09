@@ -76,18 +76,42 @@ searchbar.addEventListener( 'keyup', debounce( function(e) {
 	
 }, 200 ) );
 
-
-
 const grid = document.querySelector('.grid-gallery');
 let iso;
 
-imagesLoaded( grid, function() {
+/*imagesLoaded( grid, function() {
 	// init Isotope after all images have loaded
 	iso = new Isotope( grid, {
-	  itemSelector: '.wp-block-image',
-	  percentPosition: true,
-	  masonry: {
+		itemSelector: '.wp-block-image',
+		percentPosition: true,
+		masonry: {
 		columnWidth: '.grid-gallery-sizer'
-	  }
+		}
 	});
-  });
+});*/
+
+
+/* tri par date */
+
+const events = [...document.querySelectorAll(".grid-item")];
+const datePicker = document.getElementById("date");
+const resetDateBtn = document.getElementById("reset-btn");
+
+const reset = () => {
+	events.forEach( event => event.classList.remove("display-none") );
+}
+
+datePicker.addEventListener("change", function(e) {
+	const dateValue = e.target.value
+	const dateDay = dateValue.split("-")[2];
+
+	events.forEach(event => {
+		const eventDateValue = event.getAttribute("data-date");
+		const eventDay = eventDateValue.split('/')[0];
+
+		if (dateDay != eventDay) {
+			event.classList.add("display-none");
+		}
+		
+	});
+})
