@@ -34,10 +34,10 @@ foreach($jsonData as $data) {
 $startTime = new DateTime($event['startDate']);
 $endTime = new DateTime($event['endDate']);
 // Get the start date of the event
-$date = date_format($startTime, 'd/m/Y');
+//$date = date_format($startTime, 'd/m/Y');
 
 // Get the start time of the event
-$time = date_format($endTime, 'H:i');
+//$time = date_format($endTime, 'H:i');
 
 /**
  * Get all events for making a search in categories

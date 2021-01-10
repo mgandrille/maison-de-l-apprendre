@@ -20,7 +20,6 @@ foreach ($categories as $category) {
 	}
 }
 
-
 //add header section
 get_header();
 ?>
@@ -146,6 +145,10 @@ get_header();
 						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
 						<label for="all">TOUS</label>
 					</div>-->
+
+					<label for="date">Choisir une date</label>
+					<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
+					<span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
 
 					<?php foreach ($categoryTags as $tag) : ?>
 						<div>

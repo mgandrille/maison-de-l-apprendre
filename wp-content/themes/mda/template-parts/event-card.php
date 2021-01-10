@@ -15,7 +15,7 @@ $time = date_format(new DateTime($args['startDate']), 'H:i');
 //$duree = date('H:i', $duree);
 ?>
 
-<article class="grid-item wrapper wrap-card <?=$args['categoriesSlug'][0]?> <?=$args['categoriesSlug'][1]?>" data-category="<?=$args['categoriesSlug'][0]?>" onclick="location.href='<?php echo get_permalink($args['id'])?>'">
+<article class="grid-item wrapper wrap-card <?=$args['categoriesSlug'][0]?> <?=$args['categoriesSlug'][1]?>" data-category="<?=$args['categoriesSlug'][0]?>" data-date="<?=$date?>" onclick="location.href='<?php echo get_permalink($args['id'])?>'">
     <div class="wrapper-row _body  display-end-x text-right text-warm">
         <p class="padding-y-none" style="padding-top:0;padding-bottom:0; font-size: .85rem;"><?= implode(", ",  $args['categories'])?> </p>
     </div>
