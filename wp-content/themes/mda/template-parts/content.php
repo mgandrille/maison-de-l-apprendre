@@ -18,6 +18,7 @@ $jsonData = get_json_data();
 foreach($jsonData as $data) {
 	if($data->HelloAsso == $event['post_name']) {
 		$content = $data->detail;
+		$materiel = $data->materiel;
 		$intervenant = $data->structure;
 		$siteWeb = $data->site_web;
 		$duree = $data->duree;
@@ -25,6 +26,7 @@ foreach($jsonData as $data) {
 		$public = $data->public;
 	}
 }
+
 
 /**
  * Conversion for all time/date
@@ -86,6 +88,10 @@ foreach ($totalEvents as $totalEvent) {
 			<h2>Au programme</h2>
 
 			<?= nl2br($content); ?>
+			<?php if(!empty($materiel) && $materiel != "-") : ?>
+				<p>✅ Matériel nécessaire : <?= nl2br($materiel); ?></p>
+			<?php endif; ?>
+
 		</div>
 
 		<aside class="wrapper-aside display-flex" style="flex: 1;">

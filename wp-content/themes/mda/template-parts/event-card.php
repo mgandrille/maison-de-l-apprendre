@@ -8,7 +8,7 @@
  */
 
 $date = date_format(new DateTime($args['date']), 'd/m/Y');
-$time = date_format(new DateTime($args['startDate']), 'H:i');
+$time = date_format(new DateTime($args['date']), 'H:i');
 
 // Get the duration of the event
 //$duree = $endTime->getTimestamp() - $startTime->getTimestamp();
