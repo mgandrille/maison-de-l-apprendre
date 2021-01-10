@@ -29,7 +29,6 @@ $time = date_format(new DateTime($args['startDate']), 'H:i');
             <ul class="list-row">
                 <li>Date : <?=$date?></li>
                 <li>Début : <?=$time?></li>
-                <li>Durée : </li>
             </ul>
         </header>
 

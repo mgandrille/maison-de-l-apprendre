@@ -44,8 +44,6 @@ get_header();
 	</section>
 
 
-
-
 	<!-- === PRESENTATION === -->
 
 	<section class="container-row wrapper-section-presentation">
@@ -125,9 +123,15 @@ get_header();
 		</div>
 	</section>
 
-	<section class="container-row padding-s-y display-center-y border-y-light" style="column-gap: 20px;">
-		<i class="fas fa-calendar-check text-m display-flex display-center-y" style="align-items: center;"></i>
-		<h2>Réservez vos ateliers dès maintenant</h2>
+	<section class="container-row padding-s-y display-center-y display-between-x border-y-light">
+		<header class="display-flex display-center-y" style="column-gap: 20px;">
+			<i class="fas fa-calendar-check text-m display-flex display-center-y" style="align-items: center;"></i>
+			<h2>Réservez vos ateliers dès maintenant</h2>
+		</header>
+
+		<button class="btn btn-display-content">
+			<a href="https://www.festivaldelapprendre.fr/wp-content/uploads/2021/01/Festival-2021-Programme.pdf" target="_blank">Programme</a>
+		</button>
 	</section>
 	
 	<section class="container-row padding-y display-center-y">
