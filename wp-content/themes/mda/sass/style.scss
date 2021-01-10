@@ -125,3 +125,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Backgrounds
 --------------------------------------------- */
 @import "generic/backgrounds";
+
+
+input[type="date"]::-webkit-inner-spin-button,    
+input[type="date"]::-webkit-clear-button { display: none; }
