@@ -141,10 +141,6 @@ get_header();
 
 				<!-- Filtres -->
 				<div class="_filters button--filter">
-					<!--<div>
-						<input type="checkbox" name="all" id="all" data-filter="*" class="is-checked" selected>
-						<label for="all">TOUS</label>
-					</div>-->
 
 					<label for="date">Choisir une date</label>
 					<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">

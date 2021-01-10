@@ -13,11 +13,9 @@
  * get all information in an array ($event) for one article
  */
 $event = get_post_infos();
-// d($event);
 
 $jsonData = get_json_data();
 foreach($jsonData as $data) {
-	// d($data);
 	if($data->HelloAsso == $event['post_name']) {
 		$content = $data->detail;
 		$intervenant = $data->structure;
@@ -33,11 +31,12 @@ foreach($jsonData as $data) {
  */
 $startTime = new DateTime($event['startDate']);
 $endTime = new DateTime($event['endDate']);
+
 // Get the start date of the event
-//$date = date_format($startTime, 'd/m/Y');
+$date = date_format($startTime, 'd/m/Y');
 
 // Get the start time of the event
-//$time = date_format($endTime, 'H:i');
+$time = date_format($endTime, 'H:i');
 
 /**
  * Get all events for making a search in categories

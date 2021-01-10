@@ -106,9 +106,15 @@ window.addEventListener("load", function() {
 	}
 	resetDateBtn.addEventListener("click", reset);
 
+	const hideInputRestButtonChrome = document.querySelector("button#reset-button.datetime-reset-button");
+
 	datePicker.addEventListener("change", function(e) {
 		const dateValue = e.target.value
 		const dateDay = dateValue.split("-")[2];
+
+		if (hideInputRestButtonChrome != null) {
+			hideInputRestButtonChrome.setAttribute("style", "display: none");
+		}
 
 		events.forEach(event => {
 			const eventDateValue = event.getAttribute("data-date");
@@ -125,4 +131,8 @@ window.addEventListener("load", function() {
 
 		isotope.arrange();
 	})
+
+	
+
 })
+
