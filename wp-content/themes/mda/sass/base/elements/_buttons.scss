@@ -71,3 +71,23 @@ input[type="submit"] {
 		min-width:320px;
 	}
 }
+
+
+.btn-display-content {
+	padding: $padding-s $padding;
+	color: $color-white;
+	border-radius: $radius-b;
+	border: none;
+	background-color: $color-main;
+	transition: box-shadow 150ms ease-in,
+    transform 150ms ease-in;
+
+	&:hover {
+        box-shadow: -5px 5px 0 $color-secondary; 
+        transform: translate(5px, -5px); 
+    }
+
+	& a {
+		color: $color-white;
+	}
+}

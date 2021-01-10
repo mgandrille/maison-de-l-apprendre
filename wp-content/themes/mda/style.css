@@ -1483,6 +1483,24 @@ input[type="submit"]:focus {
 	min-width: 320px;
 }
 
+.btn-display-content {
+	padding: 0.6rem 1rem;
+	color: #f4f4f4;
+	border-radius: 0.65rem;
+	border: none;
+	background-color: #ea0084;
+	transition: box-shadow 150ms ease-in, transform 150ms ease-in;
+}
+
+.btn-display-content:hover {
+	box-shadow: -5px 5px 0 #43beba;
+	transform: translate(5px, -5px);
+}
+
+.btn-display-content a {
+	color: #f4f4f4;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
