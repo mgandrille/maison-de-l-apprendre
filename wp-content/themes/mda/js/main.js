@@ -117,12 +117,10 @@ window.addEventListener("load", function() {
 	const hideInputRestButtonChrome = document.querySelector("button#reset-button.datetime-reset-button");
 
 	datePicker.addEventListener("change", function(e) {
+		reset();
+
 		const dateValue = e.target.value
 		const dateDay = dateValue.split("-")[2];
-
-		if (hideInputRestButtonChrome != null) {
-			hideInputRestButtonChrome.setAttribute("style", "display: none");
-		}
 
 		events.forEach(event => {
 			const eventDateValue = event.getAttribute("data-date");
@@ -134,13 +132,12 @@ window.addEventListener("load", function() {
 				if ( resetDateBtn.classList.contains("display-none") ) {
 					resetDateBtn.classList.remove("display-none");
 				}
+
 			}
 		});
 
 		isotope.arrange();
 	})
-
-	
 
 })
 
