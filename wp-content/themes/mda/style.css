@@ -2625,6 +2625,11 @@ input[type="time"]::-webkit-clear-button {
 	background: linear-gradient(90deg, rgba(134, 208, 233, 0.3) 0%, rgba(242, 218, 244, 0.8) 100%);
 }
 
+.grey-filter,
+.grey-filter-children img {
+	filter: grayscale(100%);
+}
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
 	display: none;

@@ -221,6 +221,7 @@ function get_articles() {
             // d($event, $event->endDate);
 
             $eventInfo = get_object_vars($event);
+
             try {
                 if(new DateTime($event->endDate) >= $today)
                 {
