@@ -64,7 +64,7 @@ get_header();
 			<h4>Festival de l’Apprendre : de quoi s’agit-il ?</h4>
 
 			<p>
-				L’intention de la Fête de l’Apprendre est un temps fort organisé partout en France pour célébrer tous les apprentissages, 
+				L’intention du festival de l’Apprendre est un temps fort organisé partout en France pour célébrer tous les apprentissages, 
 				tous les acteurs et tous les lieux qui les permettent dans chaque territoire.
 			</p>
 
@@ -98,7 +98,7 @@ get_header();
 				<span class="_dotted-border"></span>
 			</h2>
 
-			<h6 class="_subtitle">Comprendre le monde de demain</h6>
+			<h6 class="_subtitle">Comprendre et agir pour le monde de demain</h6>
 		</header>
 
 		<div class="_paragraphe">
@@ -107,7 +107,7 @@ get_header();
 			<p>
 				Chaque année,  la Maison de l’Apprendre invite les acteurs du territoire lyonnais à prendre part au Festival de l’Apprendre.
 				Associations, entreprises, collectivités, établissement scolaire ou d’enseignement supérieur, toutes les structures agissant pour le développement des talents 
-				et la transmission des compétences sont la bienvenue.
+				et la transmission des compétences sont bienvenues.
 			</p>
 
 			<p>
@@ -130,7 +130,7 @@ get_header();
 		</header>
 
 		<button class="btn btn-display-content">
-			<a href="https://www.festivaldelapprendre.fr/wp-content/uploads/2021/01/Festival-2021-Programme.pdf" target="_blank">Programme</a>
+			<a href="https://www.canva.com/design/DAESc4bVShQ/2yq6WbyIGD1sVdSO907yOQ/view?utm_content=DAESc4bVShQ&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank">Programme</a>
 		</button>
 	</section>
 	
@@ -225,6 +225,15 @@ get_header();
 				</button>
 			</div>
 		</div>
+	</section>
+
+	<section class="container-row display-between-x display-center-y bg-main text-white padding-m">
+		<p style="width: auto;">
+			Le Festival de l'Apprendre se renouvelle grâce au soutien de celles et ceux qui y prennent part.</br>
+			Vous souhaitez soutenir l'action de la Maison de l'Apprendre ? Partagez-nous votre don et retrouvons-nous lors du prochain Festival !
+		</p>
+
+		<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/formulaires/1/widget-bouton" style="width:auto;height:70px;border:none;"></iframe>
 	</section>
 </main>
 

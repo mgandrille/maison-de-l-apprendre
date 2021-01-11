@@ -121,13 +121,14 @@ function get_json_data() {
  */
 function get_all_posts_infos() {
 	$articles = get_articles();
-	$posts = get_posts(['numberposts' => -1]);
+    $posts = get_posts(['numberposts' => -1]);
+    
     $events = array();
 
 	foreach($articles as $article) {
 		foreach($posts as $post) {
             // Récupère les champs ACF
-            $add_fields = get_fields($post->ID);
+            //$add_fields = get_fields($post->ID);
 
             // pour récupérer la catégorie du post
             $categoryTags = get_the_category($post->ID);
