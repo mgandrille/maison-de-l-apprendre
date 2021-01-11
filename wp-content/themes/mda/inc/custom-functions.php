@@ -100,35 +100,42 @@ function get_all_posts_infos() {
     $posts = get_posts(['numberposts' => -1]);
     $events = array();
 
-	foreach($articles as $article) { // 84 articles
-		foreach($posts as $post) {
-    //         // pour récupérer les catégories du post
-            $categoryTags = get_the_category($post->ID);
+    foreach($posts as $post) {
+        // pour récupérer les catégories du post
+        $categoryTags = get_the_category($post->ID);
 
-            $post = (array) $post;
+        $post = (array) $post;
 
-            // Tous les noms des catégories du post sont récupérés d'un coup sous forme de tableau
-            $categorySlug = array_map(function($categorie) {
-                return $categorie->slug;
-            }, $categoryTags);
+        // Tous les noms des catégories du post sont récupérés d'un coup sous forme de tableau
+        $categorySlug = array_map(function($categorie) {
+            return $categorie->slug;
+        }, $categoryTags);
 
-            $categoryNames = array_map(function($categorie) {
-                return $categorie->name;
-            }, $categoryTags);
+        $categoryNames = array_map(function($categorie) {
+            return $categorie->name;
+        }, $categoryTags);
 
-            // J'ai ajouté un nouveau champ sur le post avec les catégories en valeur
-            $post['categoriesTag'] = $categoryNames;
-            $post['categoriesTagSlug'] = $categorySlug;
+        // J'ai ajouté un nouveau champ sur le post avec les catégories en valeur
+        $post['categoriesTag'] = $categoryNames;
+        $post['categoriesTagSlug'] = $categorySlug;
 
-			if(array_search($post['post_name'], $article)) {
+        // d($post);
+        foreach($articles as $article) { // 84 articles
+            if(strpos($article['formSlug'], 'festival-de-l-apprendre-lyon-') !== false) {
+                $slug = str_replace('festival-de-l-apprendre-lyon-', '', $article['formSlug']);
+            } else {
+                $slug = $article['formSlug'];
+            }
+            // d($post['post_name'], $article['formSlug']);
+            if($post['post_name'] == $slug) {
+                // d($post, $article);
                 $event = array_merge($post, $article);
+                array_push($events, $event);  // 1tableau avec les 84events
             }
         }
-
-        array_push($events, $event);  // 1tableau avec les 84events
     }
-        // d($events);
-    
+    // d($events);
+
 	return $events;
 }
 
