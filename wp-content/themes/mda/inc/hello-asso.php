@@ -222,19 +222,12 @@ function get_articles() {
 
             $eventInfo = get_object_vars($event);
             try {
-                if(new DateTime($event->endDate) >= $today)
-                {
-                    array_push($eventDatas, $eventInfo);
-                }
-
+                array_push($eventDatas, $eventInfo);
             }
             catch (Exception $e) {
             }
         }
     }
-
-    // echo($eventDatas);
-
     // d($eventDatas);
     return $eventDatas;
 }
