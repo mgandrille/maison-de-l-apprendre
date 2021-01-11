@@ -5,9 +5,17 @@ window.addEventListener("load", function() {
 	const navMenu = document.querySelector('.main-menu');
 	const navMenuList = document.querySelector('.main-menu ul');
 	const navMenuBtn = document.getElementById('nav-btn');
+	const closeNavBtn = document.getElementById('close-nav-btn');
 
 	navMenuBtn.addEventListener( 'click', () => {
 		navMenu.classList.toggle( 'display-flex' );
+		closeNavBtn.classList.remove('display-none');
+		closeNavBtn.setAttribute('style', "z-index: 600; cursor: pointer; color: white");
+	} );
+
+	closeNavBtn.addEventListener( 'click', () => {
+		navMenu.classList.toggle( 'display-flex' );
+		closeNavBtn.classList.add('display-none');
 	} );
 
 	/**
