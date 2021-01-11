@@ -38,7 +38,7 @@ $endTime = new DateTime($event['endDate']);
 $date = date_format($startTime, 'd/m/Y');
 
 // Get the start time of the event
-$time = date_format($endTime, 'H:i');
+$time = date_format($startTime, 'H:i');
 
 /**
  * Get all events for making a search in categories
