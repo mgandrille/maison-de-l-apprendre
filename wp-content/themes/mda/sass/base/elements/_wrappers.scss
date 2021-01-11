@@ -214,22 +214,45 @@
 		/* flex */
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 
 		& ._searchbar {
-			width: auto;
+			width: 100%;
+
+			@media screen and (min-width: 1024px){
+				width: auto;
+			}
 		}
 
 		& ._filters {
-			width: auto;
+			width: 100%;
 			/* flex */
 			display: flex;
+			flex-wrap: wrap;
 			flex-direction: row;
 			align-items: center;
+
+			@media screen and (min-width: 1024px){
+				width: auto;
+			}
 			
 			& > * {
+				width: 100%;
+				margin-top: $margin;
+				margin-bottom: $margin;
 				padding: 0 $padding;
+
+				@media screen and (min-width: 1024px){
+					width: auto;
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+
+				& > * {
+					padding: 0 $padding;
+				}
 			}
 		}
 	}

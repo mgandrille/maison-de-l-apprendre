@@ -76,8 +76,8 @@ foreach ($totalEvents as $totalEvent) {
 
 			<ul class="wrapper-row">
 				<li>Date : <?= $date ?></li>
-				<li>Début : <?= $time ?></li>
-				<li>Durée : <?= $duree ?></li>
+				<li>Début : <?= $time ?> H</li>
+				<li>Durée : <?= $duree ?> H</li>
 				<li><?= $public .' , '. $type ?></li>
 			</ul>
 		</header>
@@ -105,7 +105,7 @@ foreach ($totalEvents as $totalEvent) {
 
 				<div class="_paragraphe">
 					<p><?= $intervenant ?></p>
-					<a href="<?= $siteWeb ?>"><?= $siteWeb ?></a>
+					<a href="<?= $siteWeb ?>" target="_blank"><?= $siteWeb ?></a>
 				</div>
 			</div>
 		</aside>

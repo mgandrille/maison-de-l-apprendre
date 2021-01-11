@@ -144,18 +144,23 @@ get_header();
 				</div>
 
 				<!-- Filtres -->
-				<div class="_filters button--filter">
+				<div class="_filters button--filter display-between-x">
 
-					<label for="date">Choisir une date</label>
-					<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
-					<span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
-
-					<?php foreach ($categoryTags as $tag) : ?>
-						<div>
-							<input type="checkbox" name="<?= $tag->slug ?>" id="<?= $tag->slug ?>" data-filter=".<?= $tag->slug ?>">
-							<label for="<?= $tag->slug ?>"><?= strtoupper($tag->name) ?></label>
-						</div>
-					<?php endforeach; ?>
+					<div>
+						<label for="date">Choisir une date</label>
+						<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
+						<span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
+					</div>
+					
+					<div class="display-flex display-between-x">
+						<?php foreach ($categoryTags as $tag) : ?>
+							<div>
+								<input type="checkbox" name="<?= $tag->slug ?>" id="<?= $tag->slug ?>" data-filter=".<?= $tag->slug ?>">
+								<label class="text-uppercase" for="<?= $tag->slug ?>"><?= strtoupper($tag->name) ?></label>
+							</div>
+						<?php endforeach; ?>
+					</div>
+					
 				</div>
 			</form>
 		</header>

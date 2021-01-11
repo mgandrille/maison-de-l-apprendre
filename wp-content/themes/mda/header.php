@@ -38,6 +38,7 @@
 	<nav class="container-row main-navigation">
 		<a href="https://www.festivaldelapprendre.fr/"><img src="<?=content_url()?>/themes/mda/img/logo_festival.png" class="main-logo" alt="logo"></a>
 		<i id="nav-btn" class="main-navigation-toggle-icon fas fa-bars"></i>
+		<span id="close-nav-btn" class="display-none"><i class="fas fa-times"></i></span>
 
 		<?php
 			wp_nav_menu(

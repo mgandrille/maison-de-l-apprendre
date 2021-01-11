@@ -30,6 +30,10 @@
 		font-size: 1rem;
 	}
 
+	&-uppercase {
+		text-transform: uppercase;
+	}
+
 	&-m {
 		font-size: 1.25rem;
 	}
@@ -44,5 +48,9 @@
 
 	&-right {
 		text-align: right;
+	}
+
+	&-center {
+		text-align: center;
 	}
 }

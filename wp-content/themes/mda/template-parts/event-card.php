@@ -28,7 +28,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
         <header class="_head">
             <ul class="list-row">
                 <li>Date : <?=$date?></li>
-                <li>Début : <?=$time?></li>
+                <li>Début : <?=$time?> H</li>
             </ul>
         </header>
 
@@ -38,8 +38,8 @@ $time = date_format(new DateTime($args['date']), 'H:i');
     </div>
 
     <footer class="wrapper-row _foot display-end-x">
-        <button class="btn-s btn-seemore">
-			<a href="<?php echo get_permalink($args['id'])?>">Voir l'évenement</a>
+        <button class="btn-s btn-seemore" onclick="location.href='<?php echo get_permalink($args['id'])?>'">
+		Voir l'évenement
 		</button>
     </footer>
 </article>
