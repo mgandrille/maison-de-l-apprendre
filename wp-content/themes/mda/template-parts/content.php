@@ -17,7 +17,11 @@ $event = get_post_infos();
 $jsonData = get_json_data();
 foreach($jsonData as $json) {
 	if($json->HelloAsso == $event['post_name']) {
-		$content = $json->detail;
+		if(empty($json->detail)) {
+			$content = $json->courte;
+		} else {
+			$content = $json->detail;
+		}
 		$materiel = $json->materiel;
 		$intervenant = $json->structure;
 		$siteWeb = $json->site_web;

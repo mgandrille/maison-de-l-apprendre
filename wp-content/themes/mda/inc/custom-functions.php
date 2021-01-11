@@ -25,7 +25,7 @@ function automatic_posts() {
             'comment_status'        => 'closed',
             'ping_status'           => 'closed',
             'post_modified'         => $article['meta']->updatedAt,
-            'post_category'=> []
+            // 'post_category'         => []
         );
         array_push($posts, $values);
 
@@ -42,42 +42,18 @@ function automatic_posts() {
     // d($existingPosts, $existingPostSlug);
     if(!empty($posts)) {
         foreach($posts as $post) {
-            if(!empty($existingPosts)) {
-                if(!in_array($post['post_name'], $existingPostSlug)) {
+            if(!empty($existingPosts)) {  // si il existe des posts dans le BO
+                if(!in_array($post['post_name'], $existingPostSlug)) {  // on vérifie que le slug de post n'existe pas dans le tableau des slugs existants dans le BO
                     wp_insert_post( $post );
                 }
-            } else {
+            } else {  // si il n'y a aucun post dans le BO
                 wp_insert_post( $post );
             }
         };
     }
 }
 
-//add_action('init', 'automatic_posts');
-
-
-function edit_posts() {
-    $existingPosts = get_posts(['numberposts' => -1]);
-    $datas = get_json_data();
-
-    if(!empty($existingPosts)) {
-        foreach($existingPosts as $existingPost) {
-            $post = (array) $existingPost;
-            foreach($datas as $data) {
-                if(array_search($data->HelloAsso, $post)) {
-                    $values = array(
-                        'post_content'  => $data->detail,
-                        // 'post_category'=> [$data->typeEvent, $data->Public]
-                    );
-                    array_push($post, $values);
-                    wp_insert_post( $post );
-                };
-            }
-        }
-    }
-}
-
-// add_action('init', 'edit_posts');
+add_action('init', 'automatic_posts');
 
 
 
@@ -120,17 +96,13 @@ function get_json_data() {
  * @return array
  */
 function get_all_posts_infos() {
-	$articles = get_articles();
+	$articles = get_articles();  // events de HelloAsso
     $posts = get_posts(['numberposts' => -1]);
-    
     $events = array();
 
-	foreach($articles as $article) {
+	foreach($articles as $article) { // 84 articles
 		foreach($posts as $post) {
-            // Récupère les champs ACF
-            //$add_fields = get_fields($post->ID);
-
-            // pour récupérer la catégorie du post
+    //         // pour récupérer les catégories du post
             $categoryTags = get_the_category($post->ID);
 
             $post = (array) $post;
@@ -148,17 +120,14 @@ function get_all_posts_infos() {
             $post['categoriesTag'] = $categoryNames;
             $post['categoriesTagSlug'] = $categorySlug;
 
-			if($add_fields) {
-                $post = array_merge($post, $add_fields );
-            }
-
-			if(array_search($post['post_title'], $article)) {
-				$event = array_merge($post, $article);
+			if(array_search($post['post_name'], $article)) {
+                $event = array_merge($post, $article);
             }
         }
 
-        array_push($events, $event);
+        array_push($events, $event);  // 1tableau avec les 84events
     }
+        // d($events);
     
 	return $events;
 }
