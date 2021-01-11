@@ -15,15 +15,15 @@
 $event = get_post_infos();
 
 $jsonData = get_json_data();
-foreach($jsonData as $data) {
-	if($data->HelloAsso == $event['post_name']) {
-		$content = $data->detail;
-		$materiel = $data->materiel;
-		$intervenant = $data->structure;
-		$siteWeb = $data->site_web;
-		$duree = $data->duree;
-		$type = $data->type;
-		$public = $data->public;
+foreach($jsonData as $json) {
+	if($json->HelloAsso == $event['post_name']) {
+		$content = $json->detail;
+		$materiel = $json->materiel;
+		$intervenant = $json->structure;
+		$siteWeb = $json->site_web;
+		$duree = $json->duree;
+		$type = $json->type;
+		$public = $json->public;
 	}
 }
 
@@ -132,10 +132,10 @@ foreach ($totalEvents as $totalEvent) {
 						'id' => $data['ID'],
 						'image' => $data['logo']->publicUrl,
 						'title' => $data['post_title'],
-						'categories' => $event['categoriesTag'],
-						'categoriesSlug' => $event['categoriesTagSlug'],
+						'categories' => $data['categoriesTag'],
+						'categoriesSlug' => $data['categoriesTagSlug'],
 						'date' => $data['startDate'],
-						'small_content' => substr($event['description'], 0, 110) . "...",
+						'small_content' => substr($data['description'], 0, 110) . "...",
 					));
 				endif;
 			endforeach;	?>
