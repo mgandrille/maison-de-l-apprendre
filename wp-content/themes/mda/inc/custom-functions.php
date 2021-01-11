@@ -53,7 +53,7 @@ function automatic_posts() {
     }
 }
 
-add_action('init', 'automatic_posts');
+//add_action('init', 'automatic_posts');
 
 
 function edit_posts() {
@@ -123,7 +123,6 @@ function get_all_posts_infos() {
 	$articles = get_articles();
 	$posts = get_posts(['numberposts' => -1]);
     $events = array();
-    // d($posts, $articles);
 
 	foreach($articles as $article) {
 		foreach($posts as $post) {
@@ -158,8 +157,8 @@ function get_all_posts_infos() {
         }
 
         array_push($events, $event);
-	}
-
+    }
+    
 	return $events;
 }
 
