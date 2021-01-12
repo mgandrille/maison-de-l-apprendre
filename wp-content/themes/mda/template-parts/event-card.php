@@ -35,7 +35,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
             </ul>
         </header>
 
-        <p class="text-grey" style="font-size: .90rem; margin-bottom: 0; padding-bottom: 0">$args['intervenant']</p>
+        <p class="text-grey" style="font-size: .90rem; margin-bottom: 0; padding-bottom: 0"><?=$args['intervenant']?></p>
         <h3 class="_title"> <?=$args['title']?> </h3>
 
         <p class="_paragraphe"> <?=substr($args['small_content'], 0, 110) . "..."?> </p>
