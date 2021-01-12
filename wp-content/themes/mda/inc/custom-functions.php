@@ -159,11 +159,13 @@ function get_post_infos() {
     $event['categoriesTag'] = $categoryNames;
 
     foreach($articles as $article) {
-        $add_fields = get_fields($event['ID']);
-        if($add_fields) {
-            $event = array_merge($event, $add_fields);
+        if(strpos($article['formSlug'], 'festival-de-l-apprendre-lyon-') !== false) {
+            $slug = str_replace('festival-de-l-apprendre-lyon-', '', $article['formSlug']);
+        } else {
+            $slug = $article['formSlug'];
         }
-        if(array_search($event['post_title'], $article)) {
+        // d($event['post_name'], $article['formSlug']);
+        if($event['post_name'] == $slug) {
             $event = array_merge($event, $article);
         }
 
