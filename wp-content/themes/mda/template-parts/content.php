@@ -139,7 +139,8 @@ foreach ($totalEvents as $totalEvent) {
 						'categories' => $data['categoriesTag'],
 						'categoriesSlug' => $data['categoriesTagSlug'],
 						'date' => $data['startDate'],
-						'small_content' => substr($data['description'], 0, 110) . "...",
+						'small_content' => $data['description'],
+						'intervenant' => get_field('presta', $data['ID']),
 					));
 				endif;
 			endforeach;	?>
