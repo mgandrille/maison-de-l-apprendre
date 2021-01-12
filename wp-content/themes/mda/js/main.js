@@ -62,82 +62,92 @@ window.addEventListener("load", function() {
 		};
 	}
 
-	form.addEventListener('change', function(event) {
-		const checkbox = event.target;
-		const filterName = checkbox.getAttribute('data-filter');
-
-		if (checkbox.checked) {
-			checkbox.classList.add('is-checked');
-			storedFilterNames.push(filterName);
-
+	if (form != null) {
+		form.addEventListener('change', function(event) {
+			const checkbox = event.target;
+			const filterName = checkbox.getAttribute('data-filter');
+	
+			if (checkbox.checked) {
+				checkbox.classList.add('is-checked');
+				storedFilterNames.push(filterName);
+	
+				return isotope.arrange();
+			}
+			
+			checkbox.classList.remove("is-checked");
+			storedFilterNames = storedFilterNames.filter(filter => !filter.includes(filterName))
+	
 			return isotope.arrange();
-		}
-		
-		checkbox.classList.remove("is-checked");
-		storedFilterNames = storedFilterNames.filter(filter => !filter.includes(filterName))
-
-		return isotope.arrange();
-	})
-
-	searchbar.addEventListener( 'keyup', debounce( function(e) {
-		searchRegex = new RegExp( e.target.value, 'gi' );
-		isotope.arrange();
-		
-	}, 200 ) );
-
-	const grid = document.querySelector('.grid-gallery');
-	let iso;
-
-	/*imagesLoaded( grid, function() {
-		// init Isotope after all images have loaded
-		iso = new Isotope( grid, {
-			itemSelector: '.wp-block-image',
-			percentPosition: true,
-			masonry: {
-			columnWidth: '.grid-gallery-sizer'
-			}
-		});
-	});*/
-
-
-	/* tri par date */
-
-	const events = [...document.querySelectorAll(".grid-item")];
-	const datePicker = document.getElementById("date");
-	const resetDateBtn = document.getElementById("reset-btn");
-
-	// Reset l'affichage
-	const reset = () => {
-		events.forEach(event => event.classList.remove("display-none"));
-		resetDateBtn.classList.add("display-none");
-		isotope.arrange();
-	}
-	resetDateBtn.addEventListener("click", reset);
-
-	const hideInputRestButtonChrome = document.querySelector("button#reset-button.datetime-reset-button");
-
-	datePicker.addEventListener("change", function(e) {
-		reset();
-
-		const dateValue = e.target.value
-		const dateDay = dateValue.split("-")[2];
-
-		events.forEach(event => {
-			const eventDateValue = event.getAttribute("data-date");
-			const eventDay = eventDateValue.split('/')[0];
-
-			if (dateDay != eventDay) {
-				event.classList.add("display-none");
-
-				if ( resetDateBtn.classList.contains("display-none") ) {
-					resetDateBtn.classList.remove("display-none");
+		})
+	
+		searchbar.addEventListener( 'keyup', debounce( function(e) {
+			searchRegex = new RegExp( e.target.value, 'gi' );
+			isotope.arrange();
+			
+		}, 200 ) );
+	
+		const grid = document.querySelector('.grid-gallery');
+		let iso;
+	
+		/*imagesLoaded( grid, function() {
+			// init Isotope after all images have loaded
+			iso = new Isotope( grid, {
+				itemSelector: '.wp-block-image',
+				percentPosition: true,
+				masonry: {
+				columnWidth: '.grid-gallery-sizer'
 				}
+			});
+		});*/
+	
+	
+		/* tri par date */
+	
+		const events = [...document.querySelectorAll(".grid-item")];
+		const datePicker = document.getElementById("date");
+		const resetDateBtn = document.getElementById("reset-btn");
+	
+		// Reset l'affichage
+		const reset = () => {
+			events.forEach(event => event.classList.remove("display-none"));
+			resetDateBtn.classList.add("display-none");
+			isotope.arrange();
+		}
+		resetDateBtn.addEventListener("click", reset);
+	
+		const hideInputRestButtonChrome = document.querySelector("button#reset-button.datetime-reset-button");
+	
+		datePicker.addEventListener("change", function(e) {
+			reset();
+	
+			const dateValue = e.target.value
+			const dateDay = dateValue.split("-")[2];
+	
+			events.forEach(event => {
+				const eventDateValue = event.getAttribute("data-date");
+				const eventDay = eventDateValue.split('/')[0];
+	
+				if (dateDay != eventDay) {
+					event.classList.add("display-none");
+	
+					if ( resetDateBtn.classList.contains("display-none") ) {
+						resetDateBtn.classList.remove("display-none");
+					}
+	
+				}
+			});
+	
+			isotope.arrange();
+		})	
+	}
+	
 
-			}
-		});
+	const path = window.location.pathname;
 
-		isotope.arrange();
-	})
+	if (path.length) {
+		window.scrollTo(0, 0);
+	};
 
+	
 })
 
