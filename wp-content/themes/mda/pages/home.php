@@ -184,7 +184,8 @@ get_header();
 						'categories' => $event['categoriesTag'],
 						'categoriesSlug' => $event['categoriesTagSlug'],
 						'date' => $event['startDate'],
-						'small_content' => substr($event['description'], 0, 110) . "..."
+						'small_content' => substr($event['description'], 0, 110) . "...",
+						'intervenant' => get_field('presta', $event['ID']),
 					));
 				endforeach; ?>
 			</div>
