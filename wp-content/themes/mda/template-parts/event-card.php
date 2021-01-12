@@ -11,8 +11,6 @@ $date = date_format(new DateTime($args['date']), 'd/m/Y');
 $time = date_format(new DateTime($args['date']), 'H:i');
 
 
-//Pretataire => $args['intervenant']
-
 // Get the duration of the event
 //$duree = $endTime->getTimestamp() - $startTime->getTimestamp();
 //$duree = date('H:i', $duree);
@@ -37,7 +35,7 @@ $time = date_format(new DateTime($args['date']), 'H:i');
             </ul>
         </header>
 
-        <p class="text-grey" style="font-size: .90rem; margin-bottom: 0; padding-bottom: 0">Intervenant</p>
+        <p class="text-grey" style="font-size: .90rem; margin-bottom: 0; padding-bottom: 0">$args['intervenant']</p>
         <h3 class="_title"> <?=$args['title']?> </h3>
 
         <p class="_paragraphe"> <?=substr($args['small_content'], 0, 110) . "..."?> </p>
