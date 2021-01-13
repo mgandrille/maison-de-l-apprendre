@@ -267,7 +267,7 @@
         "date": "1/30/21",
         "courte": "Atelier philosophique intergénérationnel (1 enfant de plus de 6 ans + 1 adulte) sur le thème de \"l'Amour\"",
         "materiel": "-",
-        "detail": "Et si vous découvriez un atelier philo avec votre enfant / petit-enfant ? \r\nL’atelier philo permet de développer l’esprit critique, l’écoute, le partage et le respect.\r\nL’atelier SEVE débute par un exercice d’attention pour que chacun puisse ressentir un calme intérieur. Puis une discussion se déroule entre les enfants autour d’une question philosophique dans un cadre bienveillant qui leur permet d’exprimer librement leur pensée et de l’argumenter. Enfin, une synthèse est proposée par l’animateur.\r\n\r\nAttention : inscription en duo : un enfant de plus de 6 ans + un adulte\r\n",
+        "detail": "Et si vous découvriez un atelier philo avec votre enfant / petit-enfant ? \r\nL’atelier philo permet de développer l’esprit critique, l’écoute, le partage et le respect.\r\nL’atelier SEVE débute par un exercice d’attention pour que chacun puisse ressentir un calme intérieur. Puis une discussion se déroule entre les enfants autour d’une question philosophique dans un cadre bienveillant qui leur permet d’exprimer librement leur pensée et de l’argumenter. Enfin, une synthèse est proposée par l’animateur.\r\n\rAttention : inscription en duo : un enfant de plus de 6 ans + un adulte\r\n",
         "site_web": "https://www.asso.seve.org/",
         "theme": "SOI"
     },
@@ -464,12 +464,15 @@
     {
         "structure": "DGEFP",
         "nom": "Tiers-lieux et formation professionnelle, comment aller plus loin ?",
+        "HelloAsso": "pro-tiers-lieux-et-formation-professionnelle-comment-aller-plus-loin",
         "type": "CONFERENCE",
         "public": "PROFESSIONNELS",
         "duree": "-",
         "debut": "-",
         "fin": "-",
         "date": "TOUTE LA SEMAINE",
+        "courte": "Comment les tiers-lieux contribuent à renouveler les politiques d’emploi et de formation professionnelle ?\rDécouvrez la mobilisation de 5 tiers-lieux pour le retour à l’emploi de publics fragiles à travers des vidéos capter lors du webinaire organisé par le ministère de l’Emploi, de l’Insertion et de l’Emploi et de France Tiers-Lieux dans le cadre du Mois de l’Innovation Publique 2020.",
+        "detail": "WEBINAIRE TIERS-LIEUX & INCLUSION\r\nComment les tiers-lieux contribuent à renouveler les politiques d’emploi et de formation professionnelle ?\rDécouvrez la mobilisation de 5 tiers-lieux pour le retour à l’emploi de publics fragiles à travers des vidéos capter lors du webinaire organisé par le ministère de l’Emploi, de l’Insertion et de l’Emploi et de France Tiers-Lieux dans le cadre du Mois de l’Innovation Publique 2020.\r\nVoici les thèmes qui seront abordés:\r- Comment développer l’expérimentation sociale déployée dans les tiers-lieuxinclusifs ?\r- Comment faciliter le lien entre les tiers-lieux et le service public de l’emploi ?\r- Comment adapter et développer l’offre de formations des tiers-lieux pour les publics dits « fragiles » ?\r- Quelles formations pour ces nouveaux accompagnateurs ?\r\nVous recevrez les informations pour accéder au replay sur votre billeterie.",
         "theme": "AUTRES"
     },
     {
