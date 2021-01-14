@@ -88,7 +88,7 @@ foreach ($totalEvents as $totalEvent) {
 	</section>
 
 	<section class="wrapper-row display-wrap display-nowrap-md">
-		<div style="flex: 2;">
+		<div style="flex-grow: 2; flex-shrink: 1;">
 			<h2>Au programme</h2>
 
 			<?= nl2br($content); ?>

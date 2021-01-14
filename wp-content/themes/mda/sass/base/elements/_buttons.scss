@@ -58,6 +58,13 @@ input[type="submit"] {
 
 .btn {
 	width:auto;
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+
+	@media screen and (min-width: 800px){
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
 	&-s {
 		min-width: 75px;

@@ -828,11 +828,17 @@ body {
 	width: 100%;
 	height: auto;
 	margin: 0;
-	padding: 0.6rem 2.85rem;
+	padding: 0;
 	/*flex*/
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+}
+
+@media screen and (min-width: 800px) {
+	.container {
+		padding: 0.6rem 2.85rem;
+	}
 }
 
 .container-row {
@@ -1506,6 +1512,15 @@ input[type="submit"]:focus {
 
 .btn {
 	width: auto;
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+}
+
+@media screen and (min-width: 800px) {
+	.btn {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
 
 .btn-s {
@@ -2531,10 +2546,6 @@ textarea {
 }
 
 /* Positionnement flex */
-.display-between-x {
-	justify-content: space-between;
-}
-
 .display-center {
 	justify-content: center;
 	align-items: center;
@@ -2544,20 +2555,58 @@ textarea {
 	align-items: center;
 }
 
+.display-center-x {
+	justify-content: center;
+}
+
+.display-between-x {
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 800px) {
+	.display-between-x-800 {
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.display-between-x-1024 {
+		justify-content: space-between;
+	}
+}
+
 .display-end-x {
 	justify-content: flex-end;
+}
+
+@media screen and (min-width: 800px) {
+	.display-end-x-800 {
+		justify-content: flex-end;
+	}
 }
 
 .display-end-y {
 	align-items: flex-end;
 }
 
+.display-wrap {
+	flex-wrap: wrap;
+}
+
+@media screen and (min-width: 800px) {
+	.display-wrap-800 {
+		flex-wrap: wrap;
+	}
+}
+
 .display-nowrap {
 	flex-wrap: nowrap;
 }
 
-.display-wrap {
-	flex-wrap: wrap;
+@media screen and (min-width: 800px) {
+	.display-nowrap-800 {
+		flex-wrap: nowrap;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -2578,6 +2627,22 @@ textarea {
 
 input[type="time"]::-webkit-clear-button {
 	display: none !important;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+	.width-auto-800 {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.width-auto-1024 {
+		width: auto;
+	}
 }
 
 /* Backgrounds
