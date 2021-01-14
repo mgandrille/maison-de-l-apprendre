@@ -14,10 +14,6 @@
 /* Positionnement flex */
 
 .display {
-	&-between-x {
-		justify-content: space-between;
-	}
-
 	&-center {
 		justify-content: center;
 		align-items: center;
@@ -25,11 +21,38 @@
 		&-y {
 			align-items: center;
 		}
+		
+		&-x {
+			justify-content: center;
+		}
 	}
+
+	&-between-x {
+		justify-content: space-between;
+
+		&-800 {
+			@media screen and (min-width: 800px){
+				justify-content: space-between;
+			}
+		}
+
+		&-1024 {
+			@media screen and (min-width: 1024px){
+				justify-content: space-between;
+			}
+		}
+	}
+
 
 	&-end {
 		&-x {
 			justify-content: flex-end; 
+
+			&-800 {
+				@media screen and (min-width: 800px){
+					justify-content: flex-end; 
+				}
+			}
 		}
 
 		&-y {
@@ -38,12 +61,24 @@
 		
 	}
 
-	&-nowrap {
-		flex-wrap: nowrap;
-	}
-
 	&-wrap {
 		flex-wrap: wrap;
+
+		&-800 {
+			@media screen and (min-width: 800px){
+				flex-wrap: wrap;
+			}
+		}
+	}
+
+	&-nowrap {
+		flex-wrap: nowrap;
+		
+		&-800 {
+			@media screen and (min-width: 800px){
+				flex-wrap: nowrap;
+			}
+		}
 	}
 
 	&-nowrap-md {
@@ -66,3 +101,20 @@
 input[type="time"]::-webkit-clear-button {
     display: none !important;
 }
+
+.width-100 {
+	width: 100%;
+}
+
+.width-auto-800 {
+	@media screen and (min-width: 800px){
+		width: auto;
+	}
+}
+
+.width-auto-1024 {
+	@media screen and (min-width: 1024px){
+		width: auto;
+	}
+}
+

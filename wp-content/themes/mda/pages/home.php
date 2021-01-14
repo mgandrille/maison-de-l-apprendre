@@ -79,7 +79,7 @@ get_header();
 				économiques, nous invitons chacun.es à être acteur de sa vie et d’une société durable par le développement du pouvoir d’apprendre !
 			</p>
 
-			<div class="wrapper-row display-end-x"  style="column-gap: 20px;">
+			<div class="wrapper-row display-end-x-800 display-center-x"  style="column-gap: 20px;">
 				<button class="btn btn-link">
 					<a href="https://drive.google.com/file/d/1CXhFuykV5iDVa5lgv9sBQSMHdMvkO1xm/view?usp=sharing" target="_blank">Voir notre bilan 2020</a>
 				</button>
@@ -123,14 +123,14 @@ get_header();
 		</div>
 	</section>
 
-	<section class="container-row padding-s-y display-center-y display-between-x border-y-light">
+	<section class="container-row padding-s-y display-between-x-800 display-center-x display-center-y border-y-light">
 		<header class="display-flex display-center-y" style="column-gap: 20px;">
 			<i class="fas fa-calendar-check text-m display-flex display-center-y" style="align-items: center;"></i>
 			<h2>Réservez vos ateliers dès maintenant</h2>
 		</header>
 
 		<button class="btn btn-display-content">
-			<a href="https://www.canva.com/design/DAESc4bVShQ/2yq6WbyIGD1sVdSO907yOQ/view?utm_content=DAESc4bVShQ&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank">Programme</a>
+			<a href="https://www.canva.com/design/DAES7LVVrYw/rM7QWTdmpVZhsWW9bzOxBg/view?utm_content=DAES7LVVrYw&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank">Programme</a>
 		</button>
 	</section>
 	
@@ -139,22 +139,22 @@ get_header();
 			<form id="article-filter" class="_body">
 
 				<!-- Searchbar -->
-				<div class="_searchbar">
-					<input id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
+				<div class="_searchbar width-100 width-auto-1024">
+					<input class="width-100 width-auto-1024" id="searchbar" type="text" name="search" placeholder="Rechercher un atelier">
 				</div>
 
 				<!-- Filtres -->
-				<div class="_filters button--filter display-between-x">
+				<div class="_filters button--filter display-center-x display-between-x-1024 width-100 width-auto-1024">
 
-					<div>
+					<div class="width-100 width-auto-1024">
 						<label for="date">Choisir une date</label>
 						<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
 						<span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
 					</div>
 					
-					<div class="display-flex display-between-x">
+					<div class="display-flex display-between-x display-wrap display-nowrap-800">
 						<?php foreach ($categoryTags as $tag) : ?>
-							<div>
+							<div class="width-100 width-auto-800">
 								<input type="checkbox" name="<?= $tag->slug ?>" id="<?= $tag->slug ?>" data-filter=".<?= $tag->slug ?>">
 								<label class="text-uppercase" for="<?= $tag->slug ?>"><?= strtoupper($tag->name) ?></label>
 							</div>
@@ -172,9 +172,6 @@ get_header();
 		<div class="wrapper">
 
 			<!-- Liste des articles -->
-			
-			<!--<p class="text-m text-grey padding-y-m">Les ateliers sont en cours d'élaboration, ils seront disponibles bientôt !</p>-->
-
 			<div class="grid" style="display: flex; flex-wrap: wrap">
 				<?php foreach ($events as $event) :
 					get_template_part('template-parts/event-card', null, array(
