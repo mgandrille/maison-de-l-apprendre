@@ -130,7 +130,9 @@ foreach ($totalEvents as $totalEvent) {
 
 	<section class="wrapper bg-gradient">
 		<div class="grid" style="display: flex; flex-wrap: wrap">
-			<?php foreach ($datas as $data) :
+			<?php
+				shuffle($datas);
+				foreach ($datas as $data) :
 				if (is_array($data) && ($event['post_title'] !== $data['post_title'])) :
 					get_template_part('template-parts/event-card', null, array(
 						'id' => $data['ID'],

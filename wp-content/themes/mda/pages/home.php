@@ -118,7 +118,7 @@ get_header();
 			</p>
 
 			<p>
-				Cet évènement fédérateur et ouvert au grand public se déroule chaque année entre le 24 et le 31 Janvier.	
+				Cet évènement fédérateur et ouvert au grand public se déroule chaque année entre le 24 et le 31 Janvier.
 			</p>
 		</div>
 	</section>
@@ -133,7 +133,7 @@ get_header();
 			<a href="https://www.canva.com/design/DAES7LVVrYw/rM7QWTdmpVZhsWW9bzOxBg/view?utm_content=DAES7LVVrYw&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank">Programme</a>
 		</button>
 	</section>
-	
+
 	<section class="container-row padding-y display-center-y">
 		<header class="wrapper-row wrapper-filter-bar display-center-y" style="padding: unset; height: unset; justify-content: unset">
 			<form id="article-filter" class="_body">
@@ -151,7 +151,7 @@ get_header();
 						<input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
 						<span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
 					</div>
-					
+
 					<div class="display-flex display-between-x display-wrap display-nowrap-800">
 						<?php foreach ($categoryTags as $tag) : ?>
 							<div class="width-100 width-auto-800">
@@ -160,7 +160,6 @@ get_header();
 							</div>
 						<?php endforeach; ?>
 					</div>
-					
 				</div>
 			</form>
 		</header>
@@ -173,7 +172,9 @@ get_header();
 
 			<!-- Liste des articles -->
 			<div class="grid" style="display: flex; flex-wrap: wrap">
-				<?php foreach ($events as $event) :
+				<?php
+					shuffle($events);
+					foreach ($events as $event) :
 					get_template_part('template-parts/event-card', null, array(
 						'id' => $event['ID'],
 						'image' => $event['logo']->publicUrl,
