@@ -123,6 +123,15 @@ get_header();
 		</div>
 	</section>
 
+	<section class="container-row display-between-x display-center-y bg-main text-white padding-m">
+		<p style="width: auto; font-size: 1.25rem">
+			Le Festival de l'Apprendre se renouvelle grâce au soutien de celles et ceux qui y prennent part.</br>
+			Vous souhaitez soutenir l'action de la Maison de l'Apprendre ? Partagez-nous votre don et retrouvons-nous lors du prochain Festival !
+		</p>
+
+		<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/formulaires/1/widget-bouton" style="width:auto;height:70px;border:none;"></iframe>
+	</section>
+
 	<section class="container-row padding-s-y display-between-x-800 display-center-x display-center-y border-y-light">
 		<header class="display-flex display-center-y" style="column-gap: 20px;">
 			<i class="fas fa-calendar-check text-m display-flex display-center-y" style="align-items: center;"></i>
@@ -167,7 +176,7 @@ get_header();
 
 	<!-- === SELECTION DES ATELIERS === -->
 
-	<section class="container bg-gradient">
+	<section class="container bg-gradient" style="overflow: auto; height: 80vh;">
 		<div class="wrapper">
 
 			<!-- Liste des articles -->
@@ -201,22 +210,28 @@ get_header();
 		</header>
 
 		<div class="_paragraphe">
-			<h4>En savoir plus sur Learning Planet</h4>
 
-			<p>
-				Le Festival de l’Apprendre s’inscrit dans la dynamique Learning Planet impulsée par le Centre de Recherches Interdisciplinaire et l’Unesco.
-			</p>
+			<div class="wrapper-row">
 
-			<p>
-				LearningPlanet est un collectif ouvert qui s’est donné pour mission d’inspirer les apprenants de tous âges et de leur donner les moyens de 
-				contribuer à faire face aux défis sociétaux et environnementaux. De nouvelles manières d’apprendre, d’enseigner, de faire de la recherche et 
-				de mobiliser l’intelligence collective sont nécessaires pour cela.
-			</p>
+				<img class="width-50-1220 width-100" src="https://www.festivaldelapprendre.fr/wp-content/uploads/2021/01/Logo-Learning-Planet-Festival.png" alt="logo learning festival" style="height: auto">
 
-			<p>
-				Avec l’aide de nos partenaires internationaux, nous identifions, développons et amplifions les approches les plus innovantes permettant 
-				de résoudre collectivement les problèmes complexes, locaux et globaux, comme les Objectifs de développement durable (ODD).	
-			</p>
+				<div class="width-50-1220 width-100">
+					<p>
+						Le Festival de l’Apprendre s’inscrit dans la dynamique Learning Planet impulsée par le Centre de Recherches Interdisciplinaire et l’Unesco.
+					</p>
+
+					<p>
+						LearningPlanet est un collectif ouvert qui s’est donné pour mission d’inspirer les apprenants de tous âges et de leur donner les moyens de 
+						contribuer à faire face aux défis sociétaux et environnementaux. De nouvelles manières d’apprendre, d’enseigner, de faire de la recherche et 
+						de mobiliser l’intelligence collective sont nécessaires pour cela.
+					</p>
+
+					<p>
+						Avec l’aide de nos partenaires internationaux, nous identifions, développons et amplifions les approches les plus innovantes permettant 
+						de résoudre collectivement les problèmes complexes, locaux et globaux, comme les Objectifs de développement durable (ODD).	
+					</p>
+				</div>
+			</div>
 
 			<div class="wrapper-row display-end-x" style="column-gap: 20px;">
 				<button class="btn btn-link">
@@ -224,15 +239,6 @@ get_header();
 				</button>
 			</div>
 		</div>
-	</section>
-
-	<section class="container-row display-between-x display-center-y bg-main text-white padding-m">
-		<p style="width: auto;">
-			Le Festival de l'Apprendre se renouvelle grâce au soutien de celles et ceux qui y prennent part.</br>
-			Vous souhaitez soutenir l'action de la Maison de l'Apprendre ? Partagez-nous votre don et retrouvons-nous lors du prochain Festival !
-		</p>
-
-		<iframe id="haWidget" allowtransparency="true" src="https://www.helloasso.com/associations/la-maison-de-l-apprendre/formulaires/1/widget-bouton" style="width:auto;height:70px;border:none;"></iframe>
 	</section>
 </main>
 

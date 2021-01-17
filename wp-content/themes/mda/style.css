@@ -2645,6 +2645,18 @@ input[type="time"]::-webkit-clear-button {
 	}
 }
 
+@media screen and (min-width: 800px) {
+	.width-50-800 {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1220px) {
+	.width-50-1220 {
+		width: 50%;
+	}
+}
+
 /* Backgrounds
 --------------------------------------------- */
 /* Thème backgrounds */

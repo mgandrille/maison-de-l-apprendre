@@ -118,3 +118,16 @@ input[type="time"]::-webkit-clear-button {
 	}
 }
 
+.width-50-800 {
+	@media screen and (min-width: 800px){
+		width: 50%;
+	}
+}
+
+.width-50-1220 {
+	@media screen and (min-width: 1220px){
+		width: 50%;
+	}
+}
+
+
