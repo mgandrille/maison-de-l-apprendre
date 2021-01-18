@@ -686,12 +686,16 @@
     {
         "structure": "France Tiers-Lieu",
         "nom": "Les Tiers-lieux, faire ensemble pour apprendre ensemble",
+        "HelloAsso": "pro-les-tiers-lieux-faire-ensemble-pour-apprendre-ensemble",
         "type": "CONFERENCE",
         "public": "PROFESSIONNELS",
         "duree": "1:45",
         "debut": "11:00",
         "fin": "12:45",
         "date": "1/29/21",
+        "courte": "Regards croisés sur l’évolution de nos manières d’agir et d’apprendre ensemble.",
+        "materiel": "-",
+        "detail": "Cette conférence proposée par la Maison de l'Apprendre et France Tiers-Lieux rassemblera divers acteurs qui vous proposeront, à travers leurs visions transversales, un éclairage sur l’évolution de nos manières d’agir et d’apprendre.\r\n Dans un premier temps, Patrick Levy-Waitz, Président de France Tiers-Lieux nous parlera des différentes typologies de tiers-lieux ainsi que de leurs philosophie. Il s'agira d'un temps d'état des lieux qui abordera les tendances, les répartitions thématiques ou encore géographiques. \r\n Dans un second temps, François Taddeï, Président co-fondateur du CRI proposera un temps sur les dynamiques d'apprentissage dans les tiers-lieux et dans les communautés apprenantes. \r\n Marion Dugenet, Co-fondatrice de Tiers-Lieux Édu, professeur-documentaliste au collège Alexandre Varenne à Saint-Eloy-les-Mines (Puy-de-Dôme) nous présentera Tiers-Lieux Édu, le réseau national de tiers-lieux éducatif. \r\n Claire Héber-Suffrin, Docteure en psychosociologie des groupes en initiation et formation, initiatrice des Réseaux d’échanges réciproques de savoir, Marraine du DU Acteurs de la transition éducative du CRI nous fera son retour d’expérience sur le projet coopératif citoyen et pédagogique d’échanges de savoirs. Le questionnement : quelle transformation pour les individus, les organisations et les territoires ?Enfin, cette conférence sera conclue par Carine Seiler, Haut-Commissaire aux compétences, notamment sur le point de la formation par le faire et les tiers-lieux comme espaces de remobilisation vers l’emploi. La parole sera également donnée à Jean-Michel Blanquer, Ministre de l’Éducation Nationale, à propos du lien fort entre tiers-lieux et écoles, de l'apprendre par le faire, de l'accès au numérique et des lieux d’ancrage des associations socio-éducatives que permettent les tiers-lieux (sous réserve).",
         "site_web": "https://www.francetierslieux.fr/",
         "theme": "AUTRES"
     },
