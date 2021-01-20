@@ -101,7 +101,7 @@ foreach ($totalEvents as $totalEvent) {
 		<aside class="wrapper-aside display-flex" style="flex: 1;">
 			<div class="wrapper wrapper-aside-section">
 				<header class="heading-simple">
-					<h3 class="_title">Intervenant</h3>
+					<h3 class="_title">Intervenant(s)</h3>
 					<span class="_dotted-border">
 						<!-- bordure -->
 					</span>
