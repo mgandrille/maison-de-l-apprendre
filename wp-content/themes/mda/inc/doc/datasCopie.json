@@ -347,7 +347,7 @@
         "date": "1/28/21",
         "courte": "Découvrir un outil pour mieux se connaître et comprendre les autres",
         "materiel": "Une feuille, des crayons rouge jaune vert et bleu",
-        "detail": "Cet atelier vous initie au modèle Arc-En-Ciel DISC, une précieuse grille\r\nde lecture des comportements humains, basée sur la recherche en \r\npsychologie. Clair et pragmatique, elle permet de décrypter son mode de \r\nfonctionnement et celui de son interlocuteur pour s’y adapter. Elle est \r\nlargement utilisée en France et à l'international, pour des applications\r\nmultiples en entreprise : développement des soft skills et des talents,\r\ncohésion d’équipe, communication interpersonnelle, orientation \r\nprofessionnelle… Venez expérimentez cet outil de connaissance de soi, \r\nd’un usage quotidien, professionnel et personnel. Et pour ceux qui \r\ndétestent être mis dans une case, rassurez-vous, l’intervenante aussi \r\n!;)",
+        "detail": "Cet atelier vous initie au modèle Arc-En-Ciel DISC, une précieuse grille de lecture des comportements humains, basée sur la recherche en psychologie. \r\nClair et pragmatique, elle permet de décrypter son mode de fonctionnement et celui de son interlocuteur pour s’y adapter. \r\nElle est largement utilisée en France et à l'international, pour des applications multiples en entreprise : développement des soft skills et des talents, cohésion d’équipe, communication interpersonnelle, orientation professionnelle… \r\n\r\nVenez expérimentez cet outil de connaissance de soi, d’un usage quotidien, professionnel et personnel. \r\nEt pour ceux qui détestent être mis dans une case, rassurez-vous, l’intervenante aussi \r\n! 😉",
         "site_web": "https://www.carolinehamon.fr/",
         "theme": "SOI"
     },
@@ -458,7 +458,7 @@
         "date": "1/27/21",
         "courte": "Dialogue sur le thème de la co-éducation et des alliances éducatives : regards croisés sur les enjeux, les objectifs et les finalités.",
         "detail": "Qu'est-ce que la coéducation ? Quelles alliances éducatives existe-t-il ? Quelles en sont les enjeux et les finalités ? Comment peuvent-elles permettre de travailler sur la persévérance scolaire et la lutte contre le décrochage scolaire ? Comment peuvent-elles favoriser l’émancipation, l’engagement citoyen et l’élargissement des horizons d’éducation ? Comment servent-elles la construction des projets des jeunes ? Quelle est la vision des acteurs institutionnels ?",
-        "site_web": "http://www.dfie.ac-lyon.fr/portail-innovation/",
+        "site_web": "http://dfie.ac-lyon.fr/portail-innovation/",
         "theme": "AUTRES"
     },
     {
@@ -620,6 +620,22 @@
         "theme": "AUTRES"
     },
     {
+        "structure": "ETATS GENERAUX DE L'EDUCATION",
+        "nom": "Comment aider les jeunes les + fragiles à bien partir dans la vie?",
+        "HelloAsso": "tout-public-comment-aider-les-jeunes-les-plus-fragiles-a-bien-partir-dans-la-vie",
+        "type": "CONFERENCE",
+        "public": "TOUT PUBLIC",
+        "duree": "1:30",
+        "debut": "18:30",
+        "fin": "20:00",
+        "date": "1/27/21",
+        "courte": "« Comment aider les jeunes les plus fragiles à bien partir dans la vie ? »\r\nUne soirée publique accessible à tous en visio sur la plateforme Zoom et sur inscription est organisée de 18h30 à 20h00.",
+        "materiel": "-",
+        "detail": "La ville de Saint-Denis accueillera digitalement, le mercredi 27 janvier 2021, la cinquième étape des États Généraux de l’Éducation, une grande mobilisation citoyenne pour améliorer l’éducation en France.\r\nVersLeHaut est l’organisateur de cette démarche innovante qui va rassembler pendant une année, partout sur le territoire, des citoyens et des acteurs de terrain pour construire ensemble des propositions concrètes en matière d’éducation autour de 7 grands défis. \r\nCes propositions ainsi qu’une Charte de l’Éducation seront remises aux pouvoirs publics le 12 juin 2021. \r\nA Saint-Denis, l’accent sera mis sur : « Comment aider les jeunes les plus fragiles à bien partir dans la vie ? » \r\n\r\nUne soirée publique accessible à tous en visio sur la plateforme Zoom et sur inscription est organisée de 18h30 à 20h00.\r\n\r\nAvec les interventions de Jean-Michel Blanquer, ministre de l’Éducation nationale, de la Jeunesse et des Sports (sous réserve), Augustin de Romanet, président de la fondation du Groupe ADP et président-directeur général du Groupe ADP et Frédéric Bardeau, président et co-fondateur de simplon.co. \r\nEn présence de personnalités du monde de l’éducation, les citoyens sont invités à venir échanger avec des acteurs professionnels de l’éducation, des parents et des jeunes, proposer leurs idées et parler d’initiatives innovantes sur l’adaptation de l’éducation au monde qui change  !",
+        "site_web": "",
+        "theme": ""
+    },
+    {
         "structure": "ETRE POURPRE / ALEXANDRA DUBIEZ",
         "nom": "Découvrez le Journal Créatif® : l'expression et la découverte de soi de manière créative",
         "HelloAsso": "decouvrez-le-journal-creatif",
@@ -647,7 +663,7 @@
         "date": "1/27/21",
         "courte": "Présentation de la communauté des enseignants bricoleurs.",
         "materiel": "-",
-        "detail": "Présentation et lancement de la communauté des enseignants-bricoleurs et enseignantes-bricoleuses. Ouverte à tous les enseignant.e.s, cette communauté permet à celles et ceux qui le souhaitent de trouver ou de fabriquer du matériel pédagogique libre dans un FabLab ou un tiers-lieux. Voir article de blog :https://blog.faire-ecole.org/2020/12/23/la-communaute-des-enseignants-bricoleurs-de-quoi-parle-t-on/",
+        "detail": "Présentation et lancement de la communauté des enseignants-bricoleurs et enseignantes-bricoleuses. \r\nOuverte à tous les enseignant.e.s, cette communauté permet à celles et ceux qui le souhaitent de trouver ou de fabriquer du matériel pédagogique libre dans un FabLab ou un tiers-lieux. \r\n\r\nVoir article de blog : <a href='https://blog.faire-ecole.org/2020/12/23/la-communaute-des-enseignants-bricoleurs-de-quoi-parle-t-on' target='_blank'>lire ici</a>",
         "site_web": "http://www.faire-ecole.org/",
         "theme": "AUTRES"
     },
