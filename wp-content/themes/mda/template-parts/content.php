@@ -58,6 +58,7 @@ foreach ($totalEvents as $totalEvent) {
 	}
 }
 
+$replay = get_field('replay');
 
 
 ?>
@@ -115,10 +116,17 @@ foreach ($totalEvents as $totalEvent) {
 		</aside>
 	</section>
 
-	<section class="wrapper margin-bottom-xb">
-		<h2>S'inscrire</h2>
-		<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?= $event['widgetFullUrl'] ?>" style="width: 100%; height: 750px; border: none;" onload="window.scroll(0, this.offsetTop)"></iframe>
-	</section>
+	<?php //d($replay); ?>
+
+	<?php if($replay) : ?>
+		<section class="wrapper margin-bottom-xb">
+			<h2>Voir le replay</h2>
+			<?php //the_content(); ?>
+			<div style="text-align:center">
+				<?= $replay; ?>
+			</div>
+		</section>
+	<?php endif; ?>
 
 	<section class="wrapper margin-bottom-xb">
 		<header class="heading-section">

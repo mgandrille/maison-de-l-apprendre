@@ -207,6 +207,7 @@ require get_template_directory() . '/inc/setup.php';
  * CUSTOM POST TYPES
  */
 require get_template_directory() . '/inc/cpt/options.php';
+require get_template_directory() . '/inc/cpt/events.php';
 
 /**
  * Config file
