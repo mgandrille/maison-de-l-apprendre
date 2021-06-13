@@ -53,7 +53,7 @@ function automatic_posts() {
     }
 }
 
-add_action('init', 'automatic_posts');
+// add_action('init', 'automatic_posts');
 
 
 

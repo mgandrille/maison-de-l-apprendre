@@ -187,6 +187,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Custom Functions
  */
 require get_template_directory() . '/inc/custom-functions.php';
+require get_template_directory() . '/inc/acf-custom-functions.php';
 
 /**
  * Custom new menu
@@ -207,6 +208,7 @@ require get_template_directory() . '/inc/setup.php';
  * CUSTOM POST TYPES
  */
 require get_template_directory() . '/inc/cpt/options.php';
+require get_template_directory() . '/inc/cpt/events.php';
 
 /**
  * Config file
