@@ -27,12 +27,12 @@ $json_data = json_decode( $json_body );
 foreach( $json_data as $item ) {
     $title = $item->nom;
     $desc = $item->detail;
-    $guest_name = $item->structure;
-    // update_field('guest_name', $item->structure);
+    $excerpt = $item->courte;
 
     $new_post = array(
         'post_title' => $title,
         'post_content' => $desc,
+        'post_excerpt' => $excerpt,
         'post_status' => 'publish',
         'post_type' => 'events'
     );
@@ -50,6 +50,12 @@ add_filter('acf/load_value/name=guest_name', 'acf_guest_name_update_value', 10, 
 add_filter('acf/load_value/name=guest_web', 'acf_guest_web_update_value', 10, 3);
 add_filter('acf/load_value/name=event_date', 'acf_event_date_update_value', 10, 3);
 add_filter('acf/load_value/name=event_hour', 'acf_event_hour_update_value', 10, 3);
+add_filter('acf/load_value/name=event_lasts', 'acf_event_lasts_update_value', 10, 3);
+add_filter('acf/load_value/name=event_type', 'acf_event_type_update_value', 10, 3);
+add_filter('acf/load_value/name=event_public', 'acf_event_public_update_value', 10, 3);
+add_filter('acf/load_value/name=event_theme', 'acf_event_theme_update_value', 10, 3);
+add_filter('acf/load_value/name=material', 'acf_material_update_value', 10, 3);
+add_filter('acf/load_value/name=ha_link', 'acf_ha_link_update_value', 10, 3);
 
 
 function acf_guest_name_update_value( $value, $post_id, $field ) {
@@ -139,6 +145,125 @@ function acf_event_hour_update_value( $value, $post_id, $field ) {
         if ($post_id === $actual_post_id) {
             if( empty($value) ) {
                 $value = $event_hour;
+            }
+            return $value;
+        }
+    }
+}
+
+function acf_event_lasts_update_value( $value, $post_id, $field ) {
+    global $json_data;
+    $actual_post_id = intval($_GET['post']);
+
+    foreach( $json_data as $item ) {
+        $title = $item->nom;
+        $event_lasts = $item->duree;
+
+        // add value to event_lasts field
+        $post_id = post_exists( $title );
+        if ($post_id === $actual_post_id) {
+            if( empty($value) ) {
+                $value = $event_lasts;
+            }
+            return $value;
+        }
+    }
+}
+
+
+function acf_event_type_update_value( $value, $post_id, $field ) {
+    global $json_data;
+    $actual_post_id = intval($_GET['post']);
+
+    foreach( $json_data as $item ) {
+        $title = $item->nom;
+        $event_type = $item->type;
+
+        // add value to event_type field
+        $post_id = post_exists( $title );
+        if ($post_id === $actual_post_id) {
+            if( is_string($value) ) {
+                $value = $event_type;
+            }
+            return $value;
+        }
+    }
+}
+
+
+function acf_event_public_update_value( $value, $post_id, $field ) {
+    global $json_data;
+    $actual_post_id = intval($_GET['post']);
+
+    foreach( $json_data as $item ) {
+        $title = $item->nom;
+        $event_public = $item->public;
+
+        // add value to event_public field
+        $post_id = post_exists( $title );
+        if ($post_id === $actual_post_id) {
+            if( is_string($value) ) {
+                $value = $event_public;
+            }
+            return $value;
+        }
+    }
+}
+
+
+function acf_event_theme_update_value( $value, $post_id, $field ) {
+    global $json_data;
+    $actual_post_id = intval($_GET['post']);
+
+    foreach( $json_data as $item ) {
+        $title = $item->nom;
+        $event_theme = $item->theme;
+
+        // add value to event_theme field
+        $post_id = post_exists( $title );
+        if ($post_id === $actual_post_id) {
+            if( is_string($value) ) {
+                $value = $event_theme;
+            }
+            return $value;
+        }
+    }
+}
+
+
+function acf_material_update_value( $value, $post_id, $field ) {
+    global $json_data;
+    $actual_post_id = intval($_GET['post']);
+
+    foreach( $json_data as $item ) {
+        $title = $item->nom;
+        $material = $item->materiel;
+
+        // add value to material field
+        $post_id = post_exists( $title );
+        if ($post_id === $actual_post_id) {
+            if( is_string($value) ) {
+                $value = $material;
+            }
+            return $value;
+        }
+    }
+}
+
+
+function acf_ha_link_update_value( $value, $post_id, $field ) {
+    global $json_data;
+    $actual_post_id = intval($_GET['post']);
+
+    foreach( $json_data as $item ) {
+        $title = $item->nom;
+        $ha_link = $item->HelloAsso;
+
+        // add value to ha_link field
+        $post_id = post_exists( $title );
+        if ($post_id === $actual_post_id) {
+            if( is_string($value) ) {
+                $value = $ha_link;
             }
             return $value;
         }
