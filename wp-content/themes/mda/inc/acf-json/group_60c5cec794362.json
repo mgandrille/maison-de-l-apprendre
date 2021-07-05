@@ -166,7 +166,7 @@
             "key": "field_60c5d98e10a64",
             "label": "Lien HelloAsso",
             "name": "ha_link",
-            "type": "url",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -176,7 +176,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -196,5 +199,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1623579049
+    "modified": 1623580816
 }

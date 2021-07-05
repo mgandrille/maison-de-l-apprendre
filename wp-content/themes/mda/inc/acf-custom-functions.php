@@ -44,18 +44,18 @@ foreach( $json_data as $item ) {
     }
 }
 
-// And populate the fields
-add_filter('acf/load_value/name=guest_name', 'acf_guest_name_update_value', 10, 3);
-// add_filter('acf/load_field/name=guest_name', 'load_acf_guest_name');
-add_filter('acf/load_value/name=guest_web', 'acf_guest_web_update_value', 10, 3);
-add_filter('acf/load_value/name=event_date', 'acf_event_date_update_value', 10, 3);
-add_filter('acf/load_value/name=event_hour', 'acf_event_hour_update_value', 10, 3);
-add_filter('acf/load_value/name=event_lasts', 'acf_event_lasts_update_value', 10, 3);
-add_filter('acf/load_value/name=event_type', 'acf_event_type_update_value', 10, 3);
-add_filter('acf/load_value/name=event_public', 'acf_event_public_update_value', 10, 3);
-add_filter('acf/load_value/name=event_theme', 'acf_event_theme_update_value', 10, 3);
-add_filter('acf/load_value/name=material', 'acf_material_update_value', 10, 3);
-add_filter('acf/load_value/name=ha_link', 'acf_ha_link_update_value', 10, 3);
+// Populate the fields
+// add_filter('acf/load_value/name=guest_name', 'acf_guest_name_update_value', 10, 3);
+// // add_filter('acf/load_field/name=guest_name', 'load_acf_guest_name');
+// add_filter('acf/load_value/name=guest_web', 'acf_guest_web_update_value', 10, 3);
+// add_filter('acf/load_value/name=event_date', 'acf_event_date_update_value', 10, 3);
+// add_filter('acf/load_value/name=event_hour', 'acf_event_hour_update_value', 10, 3);
+// add_filter('acf/load_value/name=event_lasts', 'acf_event_lasts_update_value', 10, 3);
+// add_filter('acf/load_value/name=event_type', 'acf_event_type_update_value', 10, 3);
+// add_filter('acf/load_value/name=event_public', 'acf_event_public_update_value', 10, 3);
+// add_filter('acf/load_value/name=event_theme', 'acf_event_theme_update_value', 10, 3);
+// add_filter('acf/load_value/name=material', 'acf_material_update_value', 10, 3);
+// add_filter('acf/load_value/name=ha_link', 'acf_ha_link_update_value', 10, 3);
 
 
 function acf_guest_name_update_value( $value, $post_id, $field ) {
@@ -269,3 +269,36 @@ function acf_ha_link_update_value( $value, $post_id, $field ) {
         }
     }
 }
+
+// And save the post with all acf new values
+// add_action('acf/save_post', 'my_acf_save_post', 5);
+// function my_acf_save_post( $post_id ) {
+
+//     // Get previous values.
+//     $prev_values = get_fields( $post_id );
+
+//     // Get submitted values.
+//     $values = $_POST['acf'];
+
+//     // Check if a specific value was updated.
+//     if( isset($_POST['acf']['field_abc123']) ) {
+//         // Do something.
+//     }
+// }
+
+// add_action('acf/save_post', 'my_acf_save_post');
+// function my_acf_save_post( $post_id ) {
+
+//     // Get newly saved values.
+//     $values = get_fields( $post_id );
+
+//     // Check the new value of a specific field.
+//     $guest_name = get_field('guest_name', $post_id);
+//     // $hero_image = get_field('hero_image', $post_id);
+//     if( empty($guest_name) ) {
+//         update_field('guest_name', 'Nom de l\'intervenant');
+//         // add_filter('acf/load_value/name=ha_link', 'acf_ha_link_update_value', 10, 3);
+
+//         // Do something...
+//     }
+// }
