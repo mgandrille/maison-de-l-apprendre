@@ -31,23 +31,25 @@
 	</script> -->
 </head>
 
-<body>
+<body class="<?= get_field('body_class') ?>">
 	<?php wp_body_open(); ?>
 
+	<?php if($post->post_name !== 'bientot') : ?>
 	<!-- === Navigation === -->
 	<nav class="container-row main-navigation">
-		<a href="https://www.festivaldelapprendre.fr/"><img src="https://www.festivaldelapprendre.fr/wp-content/uploads/2021/01/Logo-festival.png" class="main-logo" alt="logo"></a>
+		<a href="<?php echo home_url(); ?>"><img src="https://www.festivaldelapprendre.fr/wp-content/uploads/2021/01/Logo-festival.png" class="main-logo" alt="logo"></a>
 		<i id="nav-btn" class="main-navigation-toggle-icon fas fa-bars"></i>
 		<span id="close-nav-btn" class="display-none"><i class="fas fa-times"></i></span>
 
 		<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'primary',
+					'theme_location' => 'menu-1',
 					'menu_id' => 'primary-menu',
 					'menu_class' => 'main-menu'
 				)
 			);
 		?>
 	</nav>
+	<?php endif; ?>
 

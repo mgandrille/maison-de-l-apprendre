@@ -824,6 +824,10 @@ body {
 	background-color: transparent;
 }
 
+.container-main.soon {
+	margin-top: 0;
+}
+
 .container {
 	width: 100%;
 	height: auto;
@@ -850,6 +854,50 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+.container.soon {
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 7vh;
+}
+
+.container.soon:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(244, 244, 244, 0.5);
+}
+
+@media screen and (max-width: 800px) {
+	.container.soon {
+		height: auto;
+	}
+}
+
+.container.soon .infos {
+	z-index: 9;
+	padding: 3rem 2.85rem 1rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.container.soon .infos ._title {
+	width: 85%;
+}
+
+.container.soon .infos ._dotted-border:last-child {
+	top: 10%;
+}
+
+.container.soon .infos h2 {
+	width: auto;
+	margin: 0 auto;
+	font-size: 3rem;
 }
 
 /* === ========================== */
@@ -1096,6 +1144,7 @@ body {
 	justify-content: center;
 	background-color: #f4f4f4;
 	border-top: 1px solid #e9e6e6;
+	z-index: 9;
 }
 
 .wrapper-footer ._footer-menu li a {
@@ -1478,7 +1527,7 @@ input[type="submit"]:focus {
 
 .btn-link {
 	padding: 0.6rem 1rem;
-	color: #f4f4f4;
+	color: #f4f4f4 !important;
 	border-radius: 0.65rem;
 	background-color: #43beba;
 	transition: box-shadow 150ms ease-in, transform 150ms ease-in;
@@ -1669,6 +1718,7 @@ textarea {
 	height: 100%;
 }
 
+.menu-menu-container,
 .main-menu {
 	position: fixed;
 	display: none;
@@ -1680,6 +1730,7 @@ textarea {
 	background-color: #43beba;
 }
 
+.menu-menu-container ul,
 .main-menu ul {
 	width: 100%;
 	height: 100%;
@@ -1690,34 +1741,40 @@ textarea {
 	justify-content: center;
 }
 
+.menu-menu-container ul li,
 .main-menu ul li {
 	padding: 0 1rem;
 	width: auto;
 }
 
+.menu-menu-container ul li a,
 .main-menu ul li a {
 	color: #f4f4f4;
 	font-family: "Economica", sans-serif;
 	font-size: calc(4rem * .33);
 }
 
+.menu-menu-container ul li a:hover,
 .main-menu ul li a:hover {
 	color: #151818;
 }
 
 @media screen and (min-width: 800px) {
+	.menu-menu-container ul li a:hover,
 	.main-menu ul li a:hover {
 		color: #4abc96;
 	}
 }
 
 @media screen and (min-width: 800px) {
+	.menu-menu-container ul li a,
 	.main-menu ul li a {
 		color: #151818;
 	}
 }
 
 @media screen and (min-width: 800px) {
+	.menu-menu-container ul,
 	.main-menu ul {
 		width: auto;
 		height: 100%;
@@ -1729,6 +1786,7 @@ textarea {
 }
 
 @media screen and (min-width: 800px) {
+	.menu-menu-container,
 	.main-menu {
 		position: static;
 		width: auto;
@@ -1992,6 +2050,17 @@ textarea {
 
 .gallery-caption {
 	display: block;
+}
+
+/* Formulaires
+--------------------------------------------- */
+body.form .menu-menu-container {
+	display: none;
+}
+
+body.form .wp-block-columns {
+	max-width: 1200px;
+	margin: auto;
 }
 
 /*--------------------------------------------------------------

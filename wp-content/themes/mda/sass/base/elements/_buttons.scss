@@ -22,7 +22,7 @@ input[type="submit"] {
 
 .btn-link {
 	padding: $padding-s $padding;
-	color: $color-white;
+	color: $color-white !important;
 	border-radius: $radius-b;
 	background-color: $color-secondary;
 	transition: box-shadow 150ms ease-in,
