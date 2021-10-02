@@ -51,6 +51,7 @@ if ( ! function_exists( 'mda_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'mda' ),
+				'menu-footer-links' => esc_html__( 'Footer Links', 'mda' ),
 			)
 		);
 

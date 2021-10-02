@@ -10,6 +10,15 @@
  */
 
 ?>
+	<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'menu-footer-links',
+				'menu_id' => 'menu-footer-links',
+				'menu_class' => 'footer-menu'
+			)
+		);
+	?>
 
 	<footer class="container-row wrapper-footer">
 		<ul class="list-row-auto _footer-menu">
