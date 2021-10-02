@@ -11,6 +11,7 @@
 
 ?>
 	<?php
+	if($post->post_name !== 'bientot' || $post->post_name !== 'mentions-legales') :
 		wp_nav_menu(
 			array(
 				'theme_location' => 'menu-footer-links',
@@ -18,6 +19,7 @@
 				'menu_class' => 'footer-menu'
 			)
 		);
+	endif;	
 	?>
 
 	<footer class="container-row wrapper-footer">

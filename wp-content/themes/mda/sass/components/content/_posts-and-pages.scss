@@ -21,3 +21,32 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+#contact-pink {
+	background-color: $color-main;
+	padding: $padding-xb $padding;
+
+	.title {
+		font-family: $font-head;
+		font-size: $h2;
+		text-align: center;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+#partenaires_footer {
+	text-align: center;
+	padding: $padding-xb $padding;
+
+	.title {
+		font-family: $font-head;
+		font-size: $h2;
+	}
+}

@@ -71,6 +71,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* === Warm === */
 /* === Gradient === */
 /* === Neutral === */
+/* === Theme colors === */
 @import url("https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,300;1,400;1,700&display=swap");
 /* === Font family === */
@@ -865,6 +866,7 @@ body {
 
 .container.soon:before {
 	content: "";
+	height: 100vh;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -1525,7 +1527,7 @@ input[type="submit"]:focus {
 	border-color: #4ba185;
 }
 
-.btn-link {
+.btn-link, .wpcf7-submit, .contact .wpcf7-submit, .wp-block-button__link {
 	padding: 0.6rem 1rem;
 	color: #f4f4f4 !important;
 	border-radius: 0.65rem;
@@ -1533,12 +1535,12 @@ input[type="submit"]:focus {
 	transition: box-shadow 150ms ease-in, transform 150ms ease-in;
 }
 
-.btn-link:hover {
+.btn-link:hover, .wpcf7-submit:hover, .wp-block-button__link:hover {
 	box-shadow: -5px 5px 0 #ea0084;
 	transform: translate(5px, -5px);
 }
 
-.btn-link a {
+.btn-link a, .wpcf7-submit a, .contact .wpcf7-submit a, .wp-block-button__link a {
 	color: #f4f4f4;
 }
 
@@ -1817,6 +1819,47 @@ textarea {
 	}
 }
 
+/** FOOTER MENU **/
+#menu-footer-links {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 2.85rem 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#menu-footer-links li {
+	padding: 0 2.85rem;
+	width: auto;
+}
+
+#menu-footer-links li a {
+	color: #f4f4f4;
+	font-family: "Economica", sans-serif;
+	font-size: calc(4rem * .42);
+	text-transform: uppercase;
+}
+
+#menu-footer-links li a:hover {
+	color: #151818;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 800px) {
+	#menu-footer-links li a:hover {
+		color: #4abc96;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#menu-footer-links li a {
+		color: #151818;
+	}
+}
+
 /*.main-navigation {
 	display: block;
 	width: 100%;
@@ -1892,43 +1935,6 @@ textarea {
 	}
 }*/
 /* Small menu. */
-/*.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}*/
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -1953,6 +1959,35 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+#contact-pink {
+	background-color: #ea0084;
+	padding: 2.85rem 1rem;
+}
+
+#contact-pink .title {
+	font-family: "Economica", sans-serif;
+	font-size: calc(4rem * .8);
+	text-align: center;
+}
+
+#contact-pink .title a {
+	color: #f4f4f4;
+}
+
+#contact-pink .title a:hover {
+	text-decoration: underline;
+}
+
+#partenaires_footer {
+	text-align: center;
+	padding: 2.85rem 1rem;
+}
+
+#partenaires_footer .title {
+	font-family: "Economica", sans-serif;
+	font-size: calc(4rem * .8);
 }
 
 /* Widgets
@@ -2061,6 +2096,107 @@ body.form .menu-menu-container {
 body.form .wp-block-columns {
 	max-width: 1200px;
 	margin: auto;
+}
+
+/*** CONTACT FORM ***/
+.contact .wpcf7-form-control {
+	line-height: 2.5;
+	border: none !important;
+	border-bottom: 2px solid #ea0084 !important;
+}
+
+.contact .wpcf7-form-control:focus {
+	border: none;
+	background: #FFF;
+	outline: none;
+}
+
+.contact .wpcf7-text {
+	background: initial;
+}
+
+.contact .wpcf7-textarea {
+	height: 8rem;
+	background: initial;
+	border-right: 2px solid #ea0084 !important;
+}
+
+.contact .wpcf7-submit {
+	line-height: initial;
+}
+
+/* Plugin Getwid
+--------------------------------------------- */
+.wp-block-getwid-section {
+	width: 100%;
+}
+
+.wp-block-getwid-section h2 {
+	margin-bottom: 1rem;
+}
+
+.wp-block-getwid-section h6 {
+	margin: 0;
+}
+
+.wp-block-getwid-section.no-padding .wp-block-getwid-section__wrapper {
+	padding: 0;
+}
+
+.wp-block-getwid-media-text-slider ul.slick-dots li {
+	width: 30px;
+	height: 30px;
+}
+
+.wp-block-getwid-media-text-slider ul.slick-dots li button::before {
+	font-size: 10px;
+}
+
+.wp-block-getwid-media-text-slider ul.slick-dots li.slick-active button::before {
+	color: #ea0084;
+}
+
+.wp-block-getwid-media-text-slider.testimonial .wp-block-getwid-media-text-slider-slide-content__media img,
+.wp-block-getwid-media-text-slider.testimonial .wp-block-getwid-media-text-slider-slide-content__media video {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.dotted-border h2::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	left: -50%;
+	top: 4%;
+	border-bottom: 6px dotted #ea0084;
+}
+
+.wp-block-getwid-counter {
+	width: 150px;
+	height: 150px;
+	padding: 2rem 0;
+	border-radius: 50%;
+	color: #f4f4f4;
+}
+
+.wp-block-getwid-counter.jaune {
+	background-color: #ffca18;
+}
+
+.wp-block-getwid-counter.bleu {
+	background-color: #5693d2;
+}
+
+.wp-block-getwid-counter.aqua {
+	background-color: #0ea0b8;
+}
+
+.wp-block-getwid-counter.rose {
+	background-color: #cc0b78;
+}
+
+.wp-block-getwid-counter .wp-block-getwid-counter__number {
+	font-weight: 700;
 }
 
 /*--------------------------------------------------------------
