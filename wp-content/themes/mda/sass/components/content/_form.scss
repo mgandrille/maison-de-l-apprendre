@@ -8,3 +8,37 @@ body.form {
     }
 }
 
+.wpcf7-submit {
+    @extend .btn-link;
+}
+
+/*** CONTACT FORM ***/
+.contact {
+    .wpcf7-form-control {
+        line-height: 2.5;
+        border: none !important;
+        // border-radius: 0 !important;
+        border-bottom: 2px solid $color-main !important;
+
+        &:focus {
+            border: none;
+            background: #FFF;
+            outline: none;
+        }
+    }
+
+    .wpcf7-text {
+        background: initial;
+    }
+
+    .wpcf7-textarea {
+        height: 8rem;
+        background: initial;
+        border-right: 2px solid $color-main !important;
+    }
+
+    .wpcf7-submit {
+        @extend .btn-link;
+        line-height: initial;
+    }
+}
