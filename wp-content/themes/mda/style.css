@@ -2199,6 +2199,14 @@ body.form .wp-block-columns {
 	font-weight: 700;
 }
 
+.wp-block-getwid-toggle .wp-block-getwid-media-text-slider-slide__content {
+	padding: 5rem;
+}
+
+.wp-block-getwid-toggle .wp-block-getwid-media-text-slider-slide__content .wp-block-getwid-media-text-slider-slide-content {
+	margin: auto;
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/

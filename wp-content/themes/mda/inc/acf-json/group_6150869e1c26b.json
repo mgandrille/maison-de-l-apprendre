@@ -22,29 +22,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_615086dc630ce",
-            "label": "Lien de contact",
-            "name": "contact_link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_615086b7630cd",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url"
-        },
-        {
             "key": "field_6150870b630cf",
             "label": "Ajouter les partenaires ?",
             "name": "has_partenaires",
@@ -86,5 +63,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632669628
+    "modified": 1633269061
 }

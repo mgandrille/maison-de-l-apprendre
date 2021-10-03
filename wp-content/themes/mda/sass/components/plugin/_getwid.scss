@@ -88,3 +88,28 @@
         font-weight: 700;
     }
 }
+
+.wp-block-getwid-toggle {
+//     text-align: center;
+//     display: flex;
+
+//     .wp-block-getwid-toggle__row {
+//         width: 150px;
+//         height: 150px;
+//         margin: 1rem auto;
+//         border: 1px solid;
+//         border-radius: 50%;
+
+//         .wp-block-getwid-toggle__header-wrapper {
+//             border: none;
+//             border-top: none;
+//             padding: 3.3rem 0;
+//         }
+//     }
+    .wp-block-getwid-media-text-slider-slide__content {
+        padding: 5rem;
+        .wp-block-getwid-media-text-slider-slide-content {
+            margin: auto;
+        }
+    }
+}
