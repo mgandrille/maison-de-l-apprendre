@@ -19,13 +19,13 @@
 				'menu_class' => 'footer-menu'
 			)
 		);
-	endif;	
+	endif;
 	?>
 
 	<footer class="container-row wrapper-footer">
 		<ul class="list-row-auto _footer-menu">
-			<li><a href="https://www.maisondelapprendre.org/" target="_blank">La Maison de l'Apprendre</a></li>
-			<li><a href="https://www.maisondelapprendre.org/contact" target="_blank">Nous Contacter</a></li>
+			<li>&copy; <?=date('Y');?> - <a href="https://www.maisondelapprendre.org/" target="_blank">La Maison de l'Apprendre</a></li>
+			<li>- fait avec ❤ par <a href="https://www.linkedin.com/in/carlyne-lapierre" target="_blank">Carlyne</a> et <a href="https://www.bgmp.fr/?utm_source=fda" target="_blank">Marie</a></li>
 		</ul>
 
 		<ul class="list-row-auto _footer-menu">

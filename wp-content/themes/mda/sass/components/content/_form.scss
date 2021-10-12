@@ -42,3 +42,63 @@ body.form {
         line-height: initial;
     }
 }
+
+.wpcf7-form {
+    .heading-section {
+        & ._title {
+            margin-top: $margin-m;
+            margin-bottom: $margin-s;
+            color: $color-secondary;
+            font-size: 3rem;
+            line-height:  3rem;
+
+            @media screen and (min-width:1024px) {
+                font-size: 2rem;
+                line-height:  2rem;
+            }
+        }
+
+        & ._subtitle {
+            text-align: left;
+            margin: $margin;
+            margin-bottom: $margin-s;
+        }
+    }
+
+    .container-row {
+        .wpcf7-form-control-wrap {
+            width: 40%;
+            margin: $margin $margin-s $margin 0;
+
+            &.organisation,
+            &.format,
+            &.motivation-autre,
+            &.cond-sanitaire {
+                width: 100%;
+            }
+
+            .wpcf7-radio,
+            .wpcf7-checkbox {
+                .wpcf7-list-item {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    .container {
+        ul {
+            margin-top: $margin-s;
+
+            li {
+                margin-left: $margin;
+
+                &:first-of-type {
+                    list-style-type: disclosure-closed;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
