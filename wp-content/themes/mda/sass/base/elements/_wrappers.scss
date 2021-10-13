@@ -366,6 +366,7 @@
 			width: 100%;
 			height: 100%;
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
 			transition: padding 150ms ease-in, border 150ms ease-in;
@@ -382,6 +383,17 @@
 			height: 100%;
 			object-fit: contain;
 			object-position: center;
+		}
+
+		& a figcaption {
+			text-align: center;
+		}
+	}
+
+	.benevoles & {
+		& > * {
+			width: 150px;
+			height: 150px;
 		}
 	}
 }
