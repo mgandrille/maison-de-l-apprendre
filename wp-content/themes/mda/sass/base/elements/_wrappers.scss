@@ -41,14 +41,14 @@
 	}
 
 	&.soon {
-		height: 100vh;
+		// height: 100vh;
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding-top: 7vh;
+		// padding-top: 7vh;
 
 		&:before {
 			content: "";
-			height: 100vh;
+			// height: 100vh;
 			position: absolute;
 			left: 0; right: 0;
 			top: 0; bottom: 0;
