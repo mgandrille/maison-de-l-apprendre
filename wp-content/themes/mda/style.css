@@ -1217,13 +1217,21 @@ body {
 	object-position: center;
 }
 
-.wrapper-gallery > * a figcaption {
-	text-align: center;
-}
-
-.benevoles .wrapper-gallery > * {
+.benevoles .wrapper-gallery .wp-block-lazyblock-logo-gallery {
+	display: block;
 	width: 150px;
 	height: 150px;
+}
+
+.benevoles .wrapper-gallery .wp-block-lazyblock-logo-gallery img {
+	width: 150px;
+	height: 150px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.benevoles .wrapper-gallery .wp-block-lazyblock-logo-gallery figcaption {
+	text-align: center;
 }
 
 .wrap-card {

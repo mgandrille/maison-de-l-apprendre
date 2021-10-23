@@ -384,16 +384,24 @@
 			object-fit: contain;
 			object-position: center;
 		}
-
-		& a figcaption {
-			text-align: center;
-		}
 	}
 
 	.benevoles & {
-		& > * {
+		.wp-block-lazyblock-logo-gallery {
+			display: block;
 			width: 150px;
 			height: 150px;
+
+			img {
+				width: 150px;
+				height: 150px;
+				object-fit: contain;
+				object-position: center;
+			}
+
+			figcaption {
+				text-align: center;
+			}
 		}
 	}
 }
