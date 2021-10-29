@@ -26,6 +26,7 @@
 
 .main-navigation {
     position: fixed;
+	width: 100vw;
     height: 10vh;
     top: 0;
     left: 0;
@@ -34,7 +35,7 @@
 	color: $color-dark;
 	display: flex;
 	flex-direction: row;
-		justify-content: space-between;
+	justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $color-light;
     background-color: $color-white;
@@ -51,6 +52,7 @@
 	}
 }
 
+.menu-menu-container,
 .main-menu {
 	position: fixed;
     display: none;
@@ -132,6 +134,50 @@
     }
 }
 
+
+/** FOOTER MENU **/
+.menu-menu-footer-container {
+	z-index: 9;
+}
+#menu-footer-links {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: $padding-xb $padding;
+
+	& li {
+		padding: 0 $padding-xb;
+		width: auto;
+
+		& a {
+			color: $color-dark;
+			font-family: $font-head;
+			font-size: $h5;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $color-dark;
+				font-weight: bold;
+
+				@media screen and (min-width: 800px) {
+					color: $color-action;
+				}
+			}
+
+			@media screen and (min-width: 800px) {
+				color: $color-dark;
+			}
+		}
+	}
+
+	@media (min-width: 600px) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
 /*.main-navigation {
 	display: block;
 	width: 100%;
@@ -208,41 +254,40 @@
 }*/
 
 /* Small menu. */
-/*.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// }
 
-@media screen and (min-width: 37.5em) {
+// @media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
-		display: none;
-	}
+// 	.menu-toggle {
+// 		display: none;
+// 	}
 
-	.main-navigation ul {
-		display: flex;
-	}
-}
+// 	.main-navigation ul {
+// 		display: flex;
+// 	}
+// }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+// .comment-navigation,
+// .posts-navigation,
+// .post-navigation {
 
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
+// 	.site-main & {
+// 		margin: 0 0 1.5em;
+// 	}
 
-	.nav-links {
-		display: flex;
-	}
+// 	.nav-links {
+// 		display: flex;
+// 	}
 
-	.nav-previous {
-		flex: 1 0 50%;
-	}
+// 	.nav-previous {
+// 		flex: 1 0 50%;
+// 	}
 
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}*/
-
+// 	.nav-next {
+// 		text-align: end;
+// 		flex: 1 0 50%;
+// 	}
+// }

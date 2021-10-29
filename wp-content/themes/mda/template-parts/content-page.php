@@ -7,9 +7,11 @@
  * @package mda
  */
 
+use WPMailSMTP\Vendor\GuzzleHttp\Psr7\Query;
+
 ?>
 
-<section class="container">
+<!-- <section class="container"> -->
 	<?php
 		the_content(
 			sprintf(
@@ -26,4 +28,30 @@
 			)
 		);
 	?>
-</section>
+<!-- </section> -->
+
+<!-- SECTION CONTACT (bande rose) -->
+<?php if(get_field('has_contact')) : ?>
+	<section id="contact-pink" class="container">
+		<div class="title">
+			<a href="<?=get_permalink( get_page_by_path( 'contact' ) );;?>">Nous contacter</a>
+		</div>
+	</section>
+<?php endif; ?>
+
+<!-- SECTION PARTENAIRES -->
+<?php if(get_field('has_partenaires')) : ?>
+	<section id="partenaires_footer" class="container">
+		<div class="title">Nos partenaires</div>
+
+			<?php
+			$page = get_page_by_title( 'partenaires' );
+			$content = apply_filters('the_content', $page->post_content);
+			?>
+
+			<div class="partenaires">
+				<?= $content; ?>
+			</div>
+		</div>
+	</section>
+<?php endif; ?>

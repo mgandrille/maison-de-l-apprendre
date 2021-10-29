@@ -12,6 +12,8 @@
  * @package mda
  */
 
+
+//  var_dump(get_field('body_class'));
 get_header();
 ?>
 
