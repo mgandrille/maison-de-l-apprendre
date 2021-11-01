@@ -40,7 +40,16 @@ if( !function_exists( 'create_events' ) ){
 
             'description'         => __( 'Tout sur Events'),
             // On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
-            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'supports'            => array(
+                'title',
+                'editor',
+                'excerpt',
+                'author',
+                'thumbnail',
+                'comments',
+                'revisions',
+                'custom-fields',
+            ),
             /*
             * Différentes options supplémentaires
             */
@@ -51,33 +60,10 @@ if( !function_exists( 'create_events' ) ){
 
         );
 
-        // On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
+        // On enregistre notre custom post type qu'on nomme ici "events" et ses arguments
         register_post_type( 'events', $args );
 
     }
 }
 
 add_action( 'init', 'create_events', 10 );
-
-
-/** META BOX */
-add_action('add_meta_boxes','initialisation_metaboxes');
-function initialisation_metaboxes(){
-    //on utilise la fonction add_metabox() pour initialiser une metabox
-    add_meta_box('id_ma_meta', 'Ma metabox', 'ma_meta_function', 'post', 'side', 'high');
-}
-
-function ma_meta_function($post){
-    // on récupère la valeur actuelle pour la mettre dans le champ
-    $val = get_post_meta($post->ID,'_ma_valeur',true);
-    echo '<label for="mon_champ">Mon champ : </label>';
-    echo '<input id="mon_champ" type="text" name="mon_champ" value="'.$val.'" />';
-}
-
-add_action('save_post','save_metaboxes');
-function save_metaboxes($post_ID){
-    // si la metabox est définie, on sauvegarde sa valeur
-    if(isset($_POST['mon_champ'])){
-        update_post_meta($post_ID,'_ma_valeur', esc_html($_POST['mon_champ']));
-    }
-}

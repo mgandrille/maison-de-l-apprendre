@@ -8,58 +8,41 @@
  * @package mda
  */
 
+$the_actual_post_id = $post->ID;
 
-/**
- * get all information in an array ($event) for one article
- */
-$event = get_post_infos();
-
-$jsonData = get_json_data();
-foreach($jsonData as $json) {
-	if($json->HelloAsso == $event['post_name']) {
-		if(empty($json->detail)) {
-			$content = $json->courte;
-		} else {
-			$content = $json->detail;
+$public = get_field('event_public');
+$type = get_field('event_type');
+$theme = get_field('event_theme');
+$date = get_field('event_date');
+$time = new DateTime(get_field('event_hour'));
+$time = date_format($time, 'H:i');
+$duree = new DateTime(get_field('event_lasts'));
+$duree = date_format($duree, 'H:i');
+$materiel = get_field('material');
+$intervenant = get_field('guest_name');
+$siteWeb = get_field('guest_web');
+$replay = get_field('');
+$helloAsso = get_field('ha_link');
+if(!empty($helloAsso)) {
+	$events = get_articles();
+	foreach ($events as $event) {
+		if($event['url'] == $helloAsso) {
+			$banner = $event['banner']->publicUrl;
 		}
-		$materiel = $json->materiel;
-		$intervenant = $json->structure;
-		$siteWeb = $json->site_web;
-		$duree = $json->duree;
-		$type = $json->type;
-		$public = $json->public;
 	}
+} else {
+	$banner = '';
 }
 
-
 /**
- * Conversion for all time/date
+ * Get all Events (cpt)
  */
-$startTime = new DateTime($event['startDate']);
-$endTime = new DateTime($event['endDate']);
-
-// Get the start date of the event
-$date = date_format($startTime, 'd/m/Y');
-
-// Get the start time of the event
-$time = date_format($startTime, 'H:i');
-
-/**
- * Get all events for making a search in categories
- */
-$categories = $event['categoriesTag'];
-
-$totalEvents = get_all_posts_infos();
-$datas = [];
-foreach ($totalEvents as $totalEvent) {
-	$result = array_diff($totalEvent['categoriesTag'], $categories);
-	if (count($result) <= 1) {
-		array_push($datas, $totalEvent);
-	}
-}
-
-$replay = get_field('replay');
-
+$args = array(
+	'post_type' => 'events',
+	'posts_per_page' => -1,
+	'orderby' => 'rand'
+);
+$all_events = new WP_Query($args);
 
 ?>
 
@@ -67,7 +50,7 @@ $replay = get_field('replay');
 
 	<header class="wrapper heading-article margin-bottom-m">
 		<h1 class="_title">
-			<?= $event['title'] ?>
+			<?= the_title() ?>
 		</h1>
 
 		<h2 class="_subtitle">
@@ -77,7 +60,7 @@ $replay = get_field('replay');
 
 	<section class="wrapper margin-bottom-m">
 		<header class="card-legended">
-			<img class="img" src="<?= $event['banner']->publicUrl ?>" alt="banniere-atelier">
+			<img class="img" src="<?=$banner?>" alt="banniere-atelier">
 
 			<ul class="wrapper-row">
 				<li>Date : <?= $date ?></li>
@@ -92,7 +75,7 @@ $replay = get_field('replay');
 		<div style="flex-grow: 2; flex-shrink: 1;">
 			<h2>Au programme</h2>
 
-			<?= nl2br($content); ?>
+			<?= the_content(); ?>
 			<?php if(!empty($materiel) && $materiel != "-") : ?>
 				<p>✅ Matériel nécessaire : <?= nl2br($materiel); ?></p>
 			<?php endif; ?>
@@ -139,21 +122,16 @@ $replay = get_field('replay');
 	<section class="wrapper bg-gradient">
 		<div class="grid" style="display: flex; flex-wrap: wrap">
 			<?php
-				shuffle($datas);
-				foreach ($datas as $data) :
-				if (is_array($data) && ($event['post_title'] !== $data['post_title'])) :
-					get_template_part('template-parts/event-card', null, array(
-						'id' => $data['ID'],
-						'image' => $data['logo']->publicUrl,
-						'title' => $data['post_title'],
-						'categories' => $data['categoriesTag'],
-						'categoriesSlug' => $data['categoriesTagSlug'],
-						'date' => $data['startDate'],
-						'small_content' => $data['description'],
-						'intervenant' => get_field('presta', $data['ID']),
-					));
-				endif;
-			endforeach;	?>
+			if($all_events->have_posts()) :
+				while ( $all_events->have_posts() ) : $all_events->the_post();
+					if ($post->ID !== $the_actual_post_id) :
+						get_template_part('template-parts/event-card', null, array(
+							'id' => $post->ID,
+							// 'image' => $data['logo']->publicUrl,
+						));
+					endif;
+				endwhile;
+			endif; ?>
 		</div>
 	</section>
 </article>

@@ -3,7 +3,7 @@
 /**
  * this function permits to add automatically posts
  */
-function automatic_posts() {
+/*function automatic_posts() {
     $posts = [];
 
     $articles = get_articles();
@@ -51,7 +51,7 @@ function automatic_posts() {
             }
         };
     }
-}
+}*/
 
 // add_action('init', 'automatic_posts');
 
@@ -83,11 +83,11 @@ function get_api_key_helloAsso() {
  *
  * @return $datas
  */
-function get_json_data() {
+/*function get_json_data() {
     $jsonDatas = file_get_contents(content_url().'/themes/mda/inc/doc/datasCopie.json');
     $datas = json_decode($jsonDatas);
     return $datas;
-}
+}*/
 
 
 /**
@@ -95,7 +95,7 @@ function get_json_data() {
  *
  * @return array
  */
-function get_all_posts_infos() {
+/*function get_all_posts_infos() {
 	$articles = get_articles();  // events de HelloAsso
     $posts = get_posts(['numberposts' => -1]);
     $events = array();
@@ -137,14 +137,14 @@ function get_all_posts_infos() {
     // d($events);
 
 	return $events;
-}
+}*/
 
 /**
  * get_post_infos
  *
  * @return array
  */
-function get_post_infos() {
+/*function get_post_infos() {
     $articles = get_articles();
     $post = get_post();
     $event = (array) $post;
@@ -172,4 +172,4 @@ function get_post_infos() {
     }
 
     return $event;
-}
+}*/
