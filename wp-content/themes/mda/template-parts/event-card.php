@@ -32,7 +32,7 @@ if(!empty($helloAsso)) {
 		}
 	}
 } else {
-	$banner = '';
+	$banner = get_the_post_thumbnail_url($id);
 }
 
 

@@ -31,7 +31,7 @@ if(!empty($helloAsso)) {
 		}
 	}
 } else {
-	$banner = '';
+	$banner = get_the_post_thumbnail_url();
 }
 
 /**
@@ -122,12 +122,19 @@ $all_events = new WP_Query($args);
 	<section class="wrapper bg-gradient">
 		<div class="grid" style="display: flex; flex-wrap: wrap">
 			<?php
+			$year = strtotime(str_replace('/', '-',$date));
+			$year = date('Y', $year);
+
 			if($all_events->have_posts()) :
 				while ( $all_events->have_posts() ) : $all_events->the_post();
-					if ($post->ID !== $the_actual_post_id) :
+					$post_date = get_field('event_date', $post->ID);
+					$post_year = strtotime(str_replace('/', '-',$post_date));
+					$post_year = date('Y', $post_year);
+
+					if ($post->ID !== $the_actual_post_id && $post_year === $year) :
 						get_template_part('template-parts/event-card', null, array(
 							'id' => $post->ID,
-							// 'image' => $data['logo']->publicUrl,
+							'year' => $year,
 						));
 					endif;
 				endwhile;
