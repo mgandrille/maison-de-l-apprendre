@@ -233,7 +233,7 @@
 .wrapper-aside {
 	position: relative;
 	width: 100%;
-	height: auto;
+	height: max-content;
 	margin: $margin-b 0 0 0;
 	padding: $padding-m;
 	/*background*/
@@ -253,6 +253,11 @@
 	& .heading-simple {
 		margin-bottom: $margin;
 	}
+}
+
+.wrapper-material {
+	position: absolute;
+	bottom: -5rem;
 }
 
 .wrapper-filter-bar {

@@ -645,6 +645,7 @@ h6, .h6 {
 }
 
 .heading-article {
+	position: relative;
 	margin-bottom: 2.85rem;
 	text-align: center;
 	/*flex*/
@@ -678,6 +679,37 @@ h6, .h6 {
 	font-weight: bold;
 	color: #ff914d;
 	font-size: calc(4rem * .42);
+}
+
+.heading-article ._modalite {
+	position: absolute;
+	right: 5rem;
+}
+
+.heading-article ._modalite img {
+	width: 200px;
+}
+
+@media (max-width: 800px) {
+	.heading-article ._modalite {
+		right: 3rem;
+	}
+	.heading-article ._modalite img {
+		width: 150px;
+	}
+}
+
+@media (max-width: 600px) {
+	.heading-article ._modalite {
+		right: initial;
+		position: relative;
+		text-align: right;
+		padding-right: 1.5rem;
+		margin-bottom: -1rem;
+	}
+	.heading-article ._modalite img {
+		width: 100px;
+	}
 }
 
 .text {
@@ -1056,7 +1088,7 @@ body {
 .wrapper-aside {
 	position: relative;
 	width: 100%;
-	height: auto;
+	height: max-content;
 	margin: 2rem 0 0 0;
 	padding: 1.75rem;
 	/*background*/
@@ -1078,6 +1110,11 @@ body {
 
 .wrapper-aside-section .heading-simple {
 	margin-bottom: 1rem;
+}
+
+.wrapper-material {
+	position: absolute;
+	bottom: -5rem;
 }
 
 .wrapper-filter-bar {
@@ -1275,13 +1312,14 @@ body {
 
 .wrap-card > ._head {
 	width: 100%;
-	height: 30vh;
+	height: 220px;
 	padding: 0.6rem 1rem;
 	font-size: .5rem;
 	/*background*/
 	background-position: left;
 	background-repeat: no-repeat;
 	background-color: #c1f3f1;
+	background-size: cover;
 }
 
 .wrap-card > ._body {
@@ -1302,6 +1340,10 @@ body {
 
 .wrap-card > ._body ._head > * {
 	padding: 0.6rem 1.75rem;
+}
+
+.wrap-card > ._body ._modalite {
+	width: 100px;
 }
 
 .wrap-card > ._body ._title {
@@ -2898,6 +2940,7 @@ body.form .wp-block-columns {
 
 .display-between-x {
 	justify-content: space-between;
+	align-items: center;
 }
 
 @media screen and (min-width: 800px) {

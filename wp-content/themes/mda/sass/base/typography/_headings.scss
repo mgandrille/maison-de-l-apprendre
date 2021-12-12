@@ -196,6 +196,7 @@ h6, .h6 {
 }
 
 .heading-article {
+	position: relative;
 	margin-bottom: $margin-xb;
 	text-align: center;
 	/*flex*/
@@ -224,6 +225,31 @@ h6, .h6 {
 		font-weight: bold;
 		color: $color-warm;
 		font-size: $h5;
+	}
+
+	& ._modalite {
+		position: absolute;
+		right: 5rem;
+		img {
+			width: 200px;
+		}
+
+		@media (max-width:800px) {
+			right: 3rem;
+			img {
+				width: 150px;
+			}
+		}
+		@media (max-width:600px) {
+			right: initial;
+			position: relative;
+			text-align: right;
+			padding-right: 1.5rem;
+			margin-bottom: -1rem;
+			img {
+				width: 100px;
+			}
+		}
 	}
 }
 

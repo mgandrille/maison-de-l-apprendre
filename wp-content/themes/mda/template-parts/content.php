@@ -10,16 +10,23 @@
 
 $the_actual_post_id = $post->ID;
 
-$public = get_field('event_public');
-$type = get_field('event_type');
-$theme = get_field('event_theme');
+$public = wp_get_post_terms($the_actual_post_id, 'public')[0]->name;
+$type = wp_get_post_terms($the_actual_post_id, 'types')[0]->name;
+$theme = wp_get_post_terms($the_actual_post_id, 'theme');  // Array []->name
+$modalité =  get_field('event_mode');
 $date = get_field('event_date');
+if(strpos($date, '-')) {
+	$date = new DateTime($date);
+	$date = date_format($date, 'd/m/Y');
+}
 $time = new DateTime(get_field('event_hour'));
 $time = date_format($time, 'H:i');
 $duree = new DateTime(get_field('event_lasts'));
 $duree = date_format($duree, 'H:i');
 $materiel = get_field('material');
-$intervenant = get_field('guest_name');
+$structure = get_field('structure');
+$intervenant_name = get_field('guest_name');
+$intervenant_firstname = get_field('guest_firstname');
 $siteWeb = get_field('guest_web');
 $replay = get_field('');
 $helloAsso = get_field('ha_link');
@@ -27,7 +34,9 @@ if(!empty($helloAsso)) {
 	$events = get_articles();
 	foreach ($events as $event) {
 		if($event['url'] == $helloAsso) {
+			// d($event);
 			$banner = $event['banner']->publicUrl;
+			$widget = $event['widgetFullUrl'];
 		}
 	}
 } else {
@@ -56,6 +65,12 @@ $all_events = new WP_Query($args);
 		<h2 class="_subtitle">
 			<?= $public .' , '. $type ?>
 		</h2>
+
+		<?php if($modalité) : ?>
+		<div class="_modalite">
+			<img class="img" src="<?=get_template_directory_uri()?>/img/<?=$modalité?>.png" alt="évènement en <?=$modalité?>">
+		</div>
+		<?php endif; ?>
 	</header>
 
 	<section class="wrapper margin-bottom-m">
@@ -76,9 +91,6 @@ $all_events = new WP_Query($args);
 			<h2>Au programme</h2>
 
 			<?= the_content(); ?>
-			<?php if(!empty($materiel) && $materiel != "-") : ?>
-				<p>✅ Matériel nécessaire : <?= nl2br($materiel); ?></p>
-			<?php endif; ?>
 
 		</div>
 
@@ -92,23 +104,38 @@ $all_events = new WP_Query($args);
 				</header>
 
 				<div class="_paragraphe">
-					<p><?= $intervenant ?></p>
+					<p><b><?= $structure ?></b>
+					</br><?= $intervenant_firstname ?> <?= $intervenant_name ?></p>
 					<a href="<?= $siteWeb ?>" target="_blank"><?= $siteWeb ?></a>
 				</div>
 			</div>
+
+			<?php if(!empty($materiel) && $materiel != "-") : ?>
+				<div class="wrapper wrapper-material">
+					<p>✅ Matériel nécessaire : <?= nl2br($materiel); ?></p>
+				</div>
+			<?php endif; ?>
+
 		</aside>
 	</section>
+
+	<?php if($helloAsso) : ?>
+		<section class="wrapper margin-bottom-xb">
+			<h2>S'inscrire</h2>
+			<iframe id="haWidget" allowtransparency="true" scrolling="auto" src="<?= $widget ?>" style="width: 100%; height: 750px; border: none;"></iframe>
+		</section>
+	<?php endif; ?>
 
 	<?php //d($replay); ?>
 
 	<?php if($replay) : ?>
-		<section class="wrapper margin-bottom-xb">
+		<!-- <section class="wrapper margin-bottom-xb">
 			<h2>Voir le replay</h2>
 			<?php //the_content(); ?>
 			<div style="text-align:center">
 				<?= $replay; ?>
 			</div>
-		</section>
+		</section> -->
 	<?php endif; ?>
 
 	<section class="wrapper margin-bottom-xb">

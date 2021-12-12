@@ -3,9 +3,47 @@
     "title": "Evènements",
     "fields": [
         {
+            "key": "field_61ab20da85a48",
+            "label": "Structure",
+            "name": "structure",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60c5cef57e983",
             "label": "Nom de l'intervenant",
             "name": "guest_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61ab2a56e10d1",
+            "label": "Prénom de l'intervenant",
+            "name": "guest_firstname",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -36,6 +74,30 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_61ab211085a49",
+            "label": "Modalités",
+            "name": "event_mode",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "presentiel": "Présentiel",
+                "distanciel": "Distanciel"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_60c5cecf7e981",
@@ -87,63 +149,6 @@
             "return_format": "H:i:s"
         },
         {
-            "key": "field_60c5d8ca10a60",
-            "label": "Type d'évènement",
-            "name": "event_type",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_60c5d8fd10a61",
-            "label": "Public visé",
-            "name": "event_public",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_60c5d96f10a63",
-            "label": "Thème",
-            "name": "event_theme",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_60c5d92610a62",
             "label": "Matériel",
             "name": "material",
@@ -180,6 +185,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61ab228e4f2b6",
+            "label": "Nombre de participants",
+            "name": "participants",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -188,6 +212,13 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "events"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
@@ -199,5 +230,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635785767
+    "show_in_rest": 0,
+    "modified": 1639318561
 }

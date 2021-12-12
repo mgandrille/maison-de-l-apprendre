@@ -33,13 +33,15 @@
 
     & > ._head {
         width: 100%;
-        height: 30vh;
+        // height: 30vh;
+        height: 220px;
         padding: $padding-s $padding;
         font-size: .5rem;
         /*background*/
         background-position:left;
         background-repeat: no-repeat;
         background-color: $color-secondary-pale;
+        background-size: cover;
     }
 
     & > ._body {
@@ -59,6 +61,10 @@
             & > * {
                 padding: $padding-s $padding-m;
             }
+        }
+
+        & ._modalite {
+            width: 100px;
         }
 
         & ._title {

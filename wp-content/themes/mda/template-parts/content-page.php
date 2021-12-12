@@ -30,6 +30,12 @@ use WPMailSMTP\Vendor\GuzzleHttp\Psr7\Query;
 	?>
 <!-- </section> -->
 
+<?php if($pagename === 'programme') : ?>
+
+	<?= get_template_part('template-parts/content', 'selection-ateliers'); ?>
+
+<?php endif; ?>
+
 <!-- SECTION CONTACT (bande rose) -->
 <?php if(get_field('has_contact')) : ?>
 	<section id="contact-pink" class="container">

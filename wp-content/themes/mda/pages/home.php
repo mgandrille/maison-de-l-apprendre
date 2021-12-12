@@ -9,7 +9,7 @@
 /**
  * get all posts/articles in an array ($events) to be dispatched in cards
  */
-$events = get_all_posts_infos();
+// $events = get_all_posts_infos();
 
 // Get all categories for the search bar
 $categories = (array) get_categories();
