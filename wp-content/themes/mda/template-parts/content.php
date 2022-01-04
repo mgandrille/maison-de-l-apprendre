@@ -30,6 +30,7 @@ $intervenant_firstname = get_field('guest_firstname');
 $siteWeb = get_field('guest_web');
 $replay = get_field('');
 $helloAsso = get_field('ha_link');
+
 if(!empty($helloAsso)) {
 	$events = get_articles();
 	foreach ($events as $event) {

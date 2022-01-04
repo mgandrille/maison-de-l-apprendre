@@ -176,8 +176,8 @@ function checkCurlError($response, $error)
 /**
  * Get all informations of all forms of the API Hello Asso for MDA
  */
-function get_forms_infos() {
-    $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?states=Public&formTypes=Event&pageIndex=1&pageSize=100";
+function get_forms_infos($nb_page) {
+    $url = "https://api.helloasso.com/v5/organizations/la-maison-de-l-apprendre/forms?states=Public&formTypes=Event&pageIndex={$nb_page}&pageSize=100";
     $request = "{$url}";
     $token = firstTokens();
 
@@ -212,7 +212,9 @@ function get_articles() {
 
     // d($today);
 
-    $events = get_forms_infos()->data;
+    $haEvents1 = get_forms_infos(1)->data;
+    $haEvents2 = get_forms_infos(2)->data;
+    $events = array_merge($haEvents1, $haEvents2);
 
     // d($events);
     if(!empty($events)) {
