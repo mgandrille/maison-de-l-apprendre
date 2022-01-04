@@ -15,13 +15,14 @@ $year = get_field('festival_year', $post->ID);
 
 $taxonomies = get_object_taxonomies( array( 'post_type' => 'events' ) );
 foreach( $taxonomies as $taxonomy ) {
-    $terms = get_terms( $taxonomy );
-    foreach($terms as $term) {
-        // if(strpos($term_name, '&amp;'))
-        $categoryTags[$term->slug] = $term->name;
+    if($taxonomy === 'types' || $taxonomy === 'public') {
+        $terms = get_terms( $taxonomy );
+        foreach($terms as $term) {
+            // if(strpos($term_name, '&amp;'))
+            $categoryTags[$term->slug] = $term->name;
+        }
     }
 }
-
 
 ?>
 
@@ -39,14 +40,14 @@ foreach( $taxonomies as $taxonomy ) {
 
                 <div class="width-100 width-auto-1024">
                     <label for="date">Choisir une date</label>
-                    <input type="date" id="date" name="date" min="2021-01-24" max="2021-01-31">
+                    <input type="date" id="date" name="date" min="2022-01-24" max="2022-01-31">
                     <span id="reset-btn" class="display-none"><i class="fas fa-times"></i></span>
                 </div>
 
                 <div class="display-flex display-between-x display-wrap display-nowrap-800">
-                    <?php foreach ($categoryTags as $sulg => $tag) : ?>
+                    <?php foreach ($categoryTags as $slug => $tag) : ?>
                         <div class="width-100 width-auto-800">
-                            <input type="checkbox" name="<?= $slug ?>" id="<?= $slug ?>" data-filter=".<?= $slug ?>">
+                            <input type="checkbox" name="<?= $slug ?>" id="<?= $slug ?>" data-filter=".<?= $slug ?>" value=".<?= $slug ?>">
                             <label class="text-uppercase" for="<?= $slug ?>"><?= strtoupper($tag) ?></label>
                         </div>
                     <?php endforeach; ?>
@@ -62,7 +63,7 @@ foreach( $taxonomies as $taxonomy ) {
 <!-- === SELECTION DES ATELIERS === -->
 
 <section class="wrapper bg-gradient">
-    <div class="grid" style="display: flex; flex-wrap: wrap">
+    <div class="grid" style="display: flex; flex-wrap: wrap;">
         <?php
         if($all_events->have_posts()) :
             while ( $all_events->have_posts() ) : $all_events->the_post();
@@ -73,10 +74,14 @@ foreach( $taxonomies as $taxonomy ) {
                 if ($post->ID !== $the_actual_post_id && $post_year === $year) :
                     get_template_part('template-parts/event-card', null, array(
                         'id' => $post->ID,
-                        'year' => $year,
+                        // 'year' => $year,
                     ));
                 endif;
             endwhile;
         endif; ?>
     </div>
 </section>
+
+
+<?php
+wp_reset_query();

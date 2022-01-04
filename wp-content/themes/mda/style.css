@@ -942,7 +942,7 @@ body {
 .wrapper {
 	width: 100%;
 	height: auto;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	/*flex*/
 	display: flex;
@@ -959,6 +959,12 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+.wrapper.bg-gradient {
+	max-height: 750px;
+	overflow: auto;
+	padding-bottom: 1.5rem;
 }
 
 .wrapper-hero {
@@ -1252,23 +1258,6 @@ body {
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
-}
-
-.benevoles .wrapper-gallery .wp-block-lazyblock-logo-gallery {
-	display: block;
-	width: 150px;
-	height: 150px;
-}
-
-.benevoles .wrapper-gallery .wp-block-lazyblock-logo-gallery img {
-	width: 150px;
-	height: 150px;
-	object-fit: contain;
-	object-position: center;
-}
-
-.benevoles .wrapper-gallery .wp-block-lazyblock-logo-gallery figcaption {
-	text-align: center;
 }
 
 .wrap-card {
@@ -2371,6 +2360,40 @@ body.form .wp-block-columns {
 
 .wp-block-getwid-content-timeline .wp-block-getwid-content-timeline__bar {
 	background: #ea0084;
+}
+
+.gallery .wp-block-getwid-section__inner-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery .wp-block-getwid-image-box {
+	max-width: 130px;
+	padding: 1rem;
+}
+
+.gallery.benevoles .wp-block-getwid-image-box {
+	max-width: 130px;
+}
+
+.gallery.benevoles .wp-block-getwid-image-box .wp-block-getwid-image-box__image-container {
+	margin: 0;
+}
+
+.gallery.benevoles .wp-block-getwid-image-box img {
+	width: 122px;
+	max-width: 122px;
+	height: 122px;
+	max-height: 122px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.gallery.benevoles .wp-block-getwid-image-box figcaption {
+	text-align: center;
 }
 
 /*--------------------------------------------------------------

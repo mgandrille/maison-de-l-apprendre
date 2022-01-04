@@ -154,3 +154,43 @@
         background: $color-main;
     }
 }
+
+.gallery {
+    .wp-block-getwid-section__inner-content {
+        display: flex;
+        flex-direction: row;
+		flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // overflow-x: scroll;
+    }
+
+    .wp-block-getwid-image-box {
+        max-width: 130px;
+        padding: 1rem;
+    }
+
+    &.benevoles {
+		.wp-block-getwid-image-box {
+			max-width: 130px;
+
+            .wp-block-getwid-image-box__image-container {
+                margin: 0;
+            }
+
+			img {
+                width: 122px;
+                max-width: 122px;
+                height: 122px;
+                max-height: 122px;
+                object-fit: contain;
+                object-position: center
+            }
+
+			figcaption {
+				text-align: center;
+			}
+		}
+	}
+
+}

@@ -28,22 +28,25 @@ $intervenant = get_field('guest_name', $id);
 $siteWeb = get_field('guest_web', $id);
 $replay = get_field('', $id);
 $helloAsso = get_field('ha_link', $id);
+$vignette = get_the_post_thumbnail_url($id);
 
-if(!empty($helloAsso)) {
-	$events = get_articles();
-	foreach ($events as $event) {
-		if($event['url'] == $helloAsso) {
-            $vignette = $event['logo']->publicUrl;
-		}
-	}
-} else {
-	$vignette = get_the_post_thumbnail_url($id);
+
+$taxonomies = get_object_taxonomies( array( 'post_type' => 'events' ) );
+foreach( $taxonomies as $taxonomy ) {
+    $terms = get_terms( $taxonomy );
+    foreach($terms as $term) {
+        if($term->name === $type ) {
+            $typeSlug = $term->slug;
+        }
+        if($term->name === $public ) {
+            $publicSlug = $term->slug;
+        }
+    }
 }
-
 
 ?>
 
-<article class="grid-item wrapper wrap-card <?=$type?> <?=$public?>" data-category="<?=$type?>" data-date="<?=$date?>" onclick="location.href='<?php echo get_permalink($args['id'])?>'">
+<article class="grid-item wrapper wrap-card <?=$typeSlug?> <?=$publicSlug?>" data-category="<?=$typeSlug?>" data-date="<?=$date?>" onclick="location.href='<?php echo get_permalink($args['id'])?>'">
     <div class="wrapper-row _body  display-between-x text-right text-warm">
         <img class="img _modalite" src="<?=get_template_directory_uri()?>/img/<?=$modalité?>.png" alt="évènement en <?=$modalité?>">
         <p class="padding-y-none margin-bottom-none" style="padding-top:0;padding-bottom:0;font-size:.90rem;text-transform:uppercase"><?= $public .' , '. $type ?></p>
@@ -69,7 +72,7 @@ if(!empty($helloAsso)) {
 
     <footer class="wrapper-row _foot display-end-x">
         <button class="btn-s btn-seemore" onclick="location.href='<?php echo get_permalink($args['id'])?>'">
-		Voir l'évenement
+            Voir l'évenement
 		</button>
     </footer>
 </article>
